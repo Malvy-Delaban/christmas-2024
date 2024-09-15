@@ -1,0 +1,365 @@
+<!DOCTYPE HTML>
+<html>
+
+<script>
+    // **
+    // CONSTANTS VALUES
+    // **
+    const RaritiesNames = {
+        COMMON: "COMMON",
+        UNCOMMON: "UNCOMMON",
+        RARE: "RARE",
+        EPIC: "EPIC",
+        ULTRA: "ULTRA",
+        LEGENDARY: "LEGENDARY"
+    };
+    const TypesNames = {
+        NORMAL: "NORMAL",
+        PLANTE: "PLANTE",
+        FEU: "FEU",
+        EAU: "EAU",
+        ELECTRIK: "ELECTRIK",
+        GLACE: "GLACE",
+        COMBAT: "COMBAT",
+        POISON: "POISON",
+        SOL: "SOL",
+        VOL: "VOL",
+        PSY: "PSY",
+        INSECTE: "INSECTE",
+        ROCHE: "ROCHE",
+        SPECTRE: "SPECTRE",
+        DRAGON: "DRAGON",
+        TENEBRES: "TENEBRES",
+        ACIER: "ACIER",
+        FEE: "FEE"
+    };
+    const Rarities = [
+        // COMMON
+        {
+            background_sprite: "./sprites/rarities/common.png",
+            color: "#A8A8A8", // Gris clair
+        },
+        // UNCOMMON
+        {
+            background_sprite: "./sprites/rarities/uncommon.png",
+            color: "#3CB371", // Vert moyen
+        },
+        // RARE
+        {
+            background_sprite: "./sprites/rarities/rare.png",
+            color: "#4169E1", // Bleu royal
+        },
+        // EPIC
+        {
+            background_sprite: "./sprites/rarities/epic.png",
+            color: "#9932CC", // Violet foncé
+        },
+        // ULTRA
+        {
+            background_sprite: "./sprites/rarities/ultra.png",
+            color: "#FF8C00", // Orange foncé
+        },
+        // LEGENDARY
+        {
+            background_sprite: "./sprites/rarities/legendary.png",
+            color: "#FFD700", // Or
+        }
+    ];
+    const Types = [
+        // NORMAL
+        {
+            color: "#aab09f",
+            textColor: "black",
+            strength: [],
+            weakness: [TypesNames.ROCHE, TypesNames.ACIER],
+            nullAttacks: [TypesNames.SPECTRE],
+        },
+        // PLANTE
+        {
+            color: "#71c558",
+            textColor: "black",
+            strength: [TypesNames.EAU, TypesNames.SOL, TypesNames.ROCHE],
+            weakness: [TypesNames.PLANTE, TypesNames.FEU, TypesNames.POISON, TypesNames.VOL, TypesNames.INSECTE, TypesNames.DRAGON, TypesNames.ACIER],
+            nullAttacks: [],
+        },
+        // FEU
+        {
+            color: "#ea7a3c",
+            textColor: "black",
+            strength: [TypesNames.PLANTE, TypesNames.GLACE, TypesNames.INSECTE, TypesNames.ACIER],
+            weakness: [TypesNames.FEU, TypesNames.EAU, TypesNames.ROCHE, TypesNames.DRAGON],
+            nullAttacks: [],
+        },
+        // EAU
+        {
+            color: "#539ae2",
+            textColor: "black",
+            strength: [TypesNames.FEU, TypesNames.SOL, TypesNames.ROCHE],
+            weakness: [TypesNames.EAU, TypesNames.PLANTE, TypesNames.DRAGON],
+            nullAttacks: [],
+        },
+        // ELECTRIK
+        {
+            color: "#eed535",
+            textColor: "black",
+            strength: [TypesNames.EAU, TypesNames.VOL],
+            weakness: [TypesNames.PLANTE, TypesNames.ELECTRIK, TypesNames.DRAGON],
+            nullAttacks: [TypesNames.SOL],
+        },
+        // GLACE
+        {
+            color: "#70cbd4",
+            textColor: "black",
+            strength: [TypesNames.PLANTE, TypesNames.SOL, TypesNames.VOL, TypesNames.DRAGON],
+            weakness: [TypesNames.FEU, TypesNames.EAU, TypesNames.GLACE, TypesNames.ACIER],
+            nullAttacks: [],
+        },
+        // COMBAT
+        {
+            color: "#d56723",
+            textColor: "black",
+            strength: [TypesNames.NORMAL, TypesNames.GLACE, TypesNames.ROCHE, TypesNames.ACIER, TypesNames.TENEBRES],
+            weakness: [TypesNames.POISON, TypesNames.VOL, TypesNames.PSY, TypesNames.INSECTE, TypesNames.FEE],
+            nullAttacks: [TypesNames.SPECTRE],
+        },
+        // POISON
+        {
+            color: "#b97fc9",
+            textColor: "black",
+            strength: [TypesNames.PLANTE, TypesNames.FEE],
+            weakness: [TypesNames.POISON, TypesNames.SOL, TypesNames.ROCHE, TypesNames.SPECTRE],
+            nullAttacks: [TypesNames.ACIER],
+        },
+        // SOL
+        {
+            color: "#e0c068",
+            textColor: "black",
+            strength: [TypesNames.FEU, TypesNames.ELECTRIK, TypesNames.POISON, TypesNames.ROCHE, TypesNames.ACIER],
+            weakness: [TypesNames.PLANTE, TypesNames.INSECTE],
+            nullAttacks: [TypesNames.VOL],
+        },
+        // VOL
+        {
+            color: "#a890f0",
+            textColor: "black",
+            strength: [TypesNames.PLANTE, TypesNames.COMBAT, TypesNames.INSECTE],
+            weakness: [TypesNames.ELECTRIK, TypesNames.ROCHE, TypesNames.ACIER],
+            nullAttacks: [],
+        },
+        // PSY
+        {
+            color: "#f85888",
+            textColor: "black",
+            strength: [TypesNames.COMBAT, TypesNames.POISON],
+            weakness: [TypesNames.PSY, TypesNames.ACIER],
+            nullAttacks: [TypesNames.TENEBRES],
+        },
+        // INSECTE
+        {
+            color: "#729f3f",
+            textColor: "black",
+            strength: [TypesNames.PLANTE, TypesNames.PSY, TypesNames.TENEBRES],
+            weakness: [TypesNames.FEU, TypesNames.COMBAT, TypesNames.POISON, TypesNames.VOL, TypesNames.SPECTRE, TypesNames.ACIER, TypesNames.FEE],
+            nullAttacks: [],
+        },
+        // ROCHE
+        {
+            color: "#a38c21",
+            textColor: "black",
+            strength: [TypesNames.FEU, TypesNames.GLACE, TypesNames.VOL, TypesNames.INSECTE],
+            weakness: [TypesNames.COMBAT, TypesNames.SOL, TypesNames.ACIER],
+            nullAttacks: [],
+        },
+        // SPECTRE
+        {
+            color: "#7b62a3",
+            textColor: "white",
+            strength: [TypesNames.PSY, TypesNames.SPECTRE],
+            weakness: [TypesNames.TENEBRES],
+            nullAttacks: [TypesNames.NORMAL],
+        },
+        // DRAGON
+        {
+            color: "#53a4cf",
+            textColor: "black",
+            strength: [TypesNames.DRAGON],
+            weakness: [TypesNames.ACIER],
+            nullAttacks: [TypesNames.FEE],
+        },
+        // TENEBRES
+        {
+            color: "#707070",
+            textColor: "white",
+            strength: [TypesNames.PSY, TypesNames.SPECTRE],
+            weakness: [TypesNames.COMBAT, TypesNames.TENEBRES, TypesNames.FEE],
+            nullAttacks: [],
+        },
+        // ACIER
+        {
+            color: "#9eb7b8",
+            textColor: "black",
+            strength: [TypesNames.GLACE, TypesNames.ROCHE, TypesNames.FEE],
+            weakness: [TypesNames.FEU, TypesNames.EAU, TypesNames.ELECTRIK, TypesNames.ACIER],
+            nullAttacks: [],
+        },
+        // FEE
+        {
+            color: "#f4c8e2",
+            textColor: "black",
+            strength: [TypesNames.COMBAT, TypesNames.DRAGON, TypesNames.TENEBRES],
+            weakness: [TypesNames.FEU, TypesNames.POISON, TypesNames.ACIER],
+            nullAttacks: [],
+        }
+    ];
+
+    // **
+    // SETUP THE STORAGE FOR CLIENT
+    // **
+    let pokedex = null;
+    let map_cases = null;
+    let owned_pokemons = null;
+
+    function CreatePokedex() {
+        let setup_pokedex = {
+            CARAPUCE: {
+                id: 1,
+                name: "Carapuce",
+                sprite: "./sprites/standard/carapuce.png",
+                sprite_shiny: "./sprites/shinies/carapuce.png",
+                has_been_seen: false,
+                has_been_captured: false,
+                rarity: Rarities.EPIC,
+                type: TypesNames.EAU,
+                max_hp_lvl1: 20,
+                attack_lvl1: 10,
+                needed_candies: 1,
+                elvolving_pokemon: null,
+            },
+            CARABAFFE: {
+                id: 2,
+                name: "Carabaffe",
+                sprite: "./sprites/standard/carabaffe.png",
+                sprite_shiny: "./sprites/shinies/carabaffe.png",
+                has_been_seen: false,
+                has_been_captured: false,
+                rarity: Rarities.EPIC,
+                type: TypesNames.EAU,
+                max_hp_lvl1: 25,
+                attack_lvl1: 12,
+                needed_candies: 2,
+                elvolving_pokemon: null,
+            },
+            TORTANK: {
+                id: 3,
+                name: "Tortank",
+                sprite: "./sprites/standard/tortank.png",
+                sprite_shiny: "./sprites/shinies/tortank.png",
+                has_been_seen: false,
+                has_been_captured: false,
+                rarity: Rarities.ULTRA,
+                type: TypesNames.EAU,
+                max_hp_lvl1: 32,
+                attack_lvl1: 16,
+                needed_candies: -1,
+                elvolving_pokemon: -1,
+            },
+        };
+        setup_pokedex = UpdatePokedexWithEvolutions(setup_pokedex);
+        stored_content = localStorage.getItem("pokedex");
+
+        if (!stored_content) {
+            localStorage.setItem("pokedex", JSON.stringify(setup_pokedex));
+            pokedex = setup_pokedex;
+            console.log("Pokedex initialisé.");
+        } else {
+            console.log("Une sauvegarde du Pokedex existe déjà. Utilisation de la sauvegarde.");
+            pokedex = JSON.parse(stored_content);
+        }
+    }
+    function CreateMapCases() {
+        let setup_map_cases = [
+            {
+                id: 0,
+                name: "Choisis ton starter !",
+                background_sprite: "./sprites/cases/lab.png",
+                unlock_day: -1,
+                has_been_used: false,
+                possible_pokemons: {
+                    CARAPUCE: 1,
+                    SALAMECHE: 1,
+                    BULBIZARRE: 1,
+                },
+            }
+        ];
+        stored_content = localStorage.getItem("map_cases");
+
+        if (!stored_content) {
+            localStorage.setItem("map_cases", JSON.stringify(setup_map_cases));
+            map_cases = setup_map_cases;
+            console.log("Map initialisée.");
+        } else {
+            console.log("Une sauvegarde de la Map existe déjà. Utilisation de la sauvegarde.");
+            map_cases = JSON.parse(stored_content);
+        }
+    }
+    function CreateOwnedPokemons() {
+        let setup_owned_pokemons = [];
+        stored_content = localStorage.getItem("owned_pokemons");
+
+        if (!stored_content) {
+            localStorage.setItem("owned_pokemons", JSON.stringify(setup_owned_pokemons));
+            owned_pokemons = setup_owned_pokemons;
+            console.log("Liste des pokémons initialisée.");
+        } else {
+            console.log("Une sauvegarde de la liste des pokémons existe déjà. Utilisation de la sauvegarde.");
+            owned_pokemons = JSON.parse(stored_content);
+        }
+    }
+    function UpdatePokedexWithEvolutions(pokedex) {
+        pokedex.CARAPUCE.evolving_pokemon = pokedex.CARABAFFE;
+        pokedex.CARABAFFE.evolving_pokemon = pokedex.TORTANK;
+
+        return pokedex;
+    }
+    function Setup() {
+        CreatePokedex();
+        CreateMapCases();
+        CreateOwnedPokemons();
+    }
+
+    // **
+    // COMMON FUNCTIONS
+    // **
+    function getRandomPokemons(pokemonList, count) {
+        // Creating weighted list
+        let weightedPokemons = [];
+        for (const [pokemonKey, weight] of Object.entries(pokemonList)) {
+            for (let i = 0; i < weight; i++) {
+                weightedPokemons.push(pokemonKey);
+            }
+        }
+        // Select without dubs
+        let selectedPokemons = [];
+        while (selectedPokemons.length < count) {
+            const randomIndex = Math.floor(Math.random() * weightedPokemons.length);
+            const chosenPokemon = weightedPokemons[randomIndex];
+            if (!selectedPokemons.includes(chosenPokemon)) {
+                selectedPokemons.push(chosenPokemon);
+            }
+        }
+        // return selected list
+        return selectedPokemons;
+    }
+    
+    // **
+    // NORMAL BEHAVIOR
+    // **
+    Setup();
+    console.log(getRandomPokemons(map_cases[0].possible_pokemons, 3));
+
+</script>
+
+<body>
+</body>
+
+</html>
