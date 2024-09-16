@@ -7,6 +7,7 @@ html {
     padding: 0;
 }
 
+
 body {
     margin: 0;
     padding: 0;
@@ -14,13 +15,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .choice-card {
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
 }
@@ -28,12 +30,14 @@ body {
 .choice-card-title {
     color: white;
     font-size: 4rem;
+    margin: 0;
     /* background: "sprites\rarities\rarity_epic.png"; */
 }
 
 .pokemon-choice {
     width: 70vw;
-    height: 80vw;
+    height: 70vw;
+    margin-top: -12rem;
     color: white;
     position: relative; /* Pour permettre un positionnement absolu interne */
 }
@@ -48,7 +52,7 @@ body {
 }
 
 .pokemon-choice-img {
-    width: 70%;
+    width: 60%;
     z-index: 1;
     margin: auto;
 }
@@ -80,7 +84,7 @@ body {
 
 .pokemon-choice-data-details-rarity {
     font-size: 3rem;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .pokemon-choice-data-details-type {
@@ -92,7 +96,7 @@ body {
     border-radius: 2rem;
     background-color: rgb(103, 161, 236);
     font-size: 2rem;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 .pokemon-choice-cta-container {
@@ -101,7 +105,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 .pokemon-choice-cta {
@@ -110,7 +114,6 @@ body {
     color: white;
     font-weight: bold;
     width: 60%;
-    background-color: rgb(103, 161, 236);
     border-radius: 3rem;
     display: flex;
     justify-content: center;
@@ -125,9 +128,17 @@ body {
     height: 60%; /* L'image occupe la moitié de la hauteur de pokemon-choice */
     z-index: -1; /* Place l'image derrière pokemon-data */
     object-fit: cover; /* Assure que l'image couvre bien l'espace sans distorsion */
-    background-image: url('sprites/rarities/rarity_epic.png');
     background-size: cover; /* Pour que l'image couvre entièrement la carte */
     background-position: center; /* Centre l'image */
     border-radius: 2rem;
 
+}
+
+.shiny-icon {
+    position: absolute;
+    height: 5rem;
+    width: 5rem;
+    bottom: 42%;
+    right: 4rem;
+    z-index: 2; /* Assurez-vous que l'icône est au-dessus de l'image */
 }
