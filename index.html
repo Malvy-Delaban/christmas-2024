@@ -1,5 +1,9 @@
 <!DOCTYPE HTML>
 <html>
+<link rel="stylesheet" href="index.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
 <script>
     // **
@@ -218,11 +222,96 @@
     let pokedex = null;
     let map_cases = null;
     let owned_pokemons = null;
+    const forcePokedexUpdate = false; // While developping, will force pokedex to update at each session
 
     function CreatePokedex() {
         let setup_pokedex = {
-            CARAPUCE: {
+            BULBIZARRE: {
                 id: 1,
+                name: "Bulbizarre",
+                sprite: "./sprites/standard/bulbizarre.png",
+                sprite_shiny: "./sprites/shinies/bulbizarre.png",
+                has_been_seen: false,
+                has_been_captured: false,
+                rarity: Rarities.EPIC,
+                type: TypesNames.PLANTE,
+                max_hp_lvl1: 23,
+                attack_lvl1: 8,
+                needed_candies: 1,
+                elvolving_pokemon: null,
+            },
+            HERBIZARRE: {
+                id: 2,
+                name: "Herbizarre",
+                sprite: "./sprites/standard/herbizarre.png",
+                sprite_shiny: "./sprites/shinies/herbizarre.png",
+                has_been_seen: false,
+                has_been_captured: false,
+                rarity: Rarities.EPIC,
+                type: TypesNames.PLANTE,
+                max_hp_lvl1: 28,
+                attack_lvl1: 10,
+                needed_candies: 2,
+                elvolving_pokemon: null,
+            },
+            FLORIZARRE: {
+                id: 3,
+                name: "Florizarre",
+                sprite: "./sprites/standard/dlorizarre.png",
+                sprite_shiny: "./sprites/shinies/dlorizarre.png",
+                has_been_seen: false,
+                has_been_captured: false,
+                rarity: Rarities.ULTRA,
+                type: TypesNames.PLANTE,
+                max_hp_lvl1: 36,
+                attack_lvl1: 14,
+                needed_candies: -1,
+                elvolving_pokemon: -1,
+            },
+            SALAMECHE: {
+                id: 4,
+                name: "Salamèche",
+                sprite: "./sprites/standard/salameche.png",
+                sprite_shiny: "./sprites/shinies/salameche.png",
+                has_been_seen: false,
+                has_been_captured: false,
+                rarity: Rarities.EPIC,
+                type: TypesNames.FEU,
+                max_hp_lvl1: 18,
+                attack_lvl1: 12,
+                needed_candies: 1,
+                elvolving_pokemon: null,
+            },
+            REPTINCEL: {
+                id: 5,
+                name: "Reptincel",
+                sprite: "./sprites/standard/reptincel.png",
+                sprite_shiny: "./sprites/shinies/reptincel.png",
+                has_been_seen: false,
+                has_been_captured: false,
+                rarity: Rarities.EPIC,
+                type: TypesNames.FEU,
+                max_hp_lvl1: 23,
+                attack_lvl1: 14,
+                needed_candies: 2,
+                elvolving_pokemon: null,
+            },
+            DRACAUFEU: {
+                id: 6,
+                name: "Dracaufeu",
+                sprite: "./sprites/standard/dracaufeu.png",
+                sprite_shiny: "./sprites/shinies/dracaufeu.png",
+                has_been_seen: false,
+                has_been_captured: false,
+                rarity: Rarities.ULTRA,
+                type: TypesNames.FEU,
+                max_hp_lvl1: 30,
+                attack_lvl1: 18,
+                needed_candies: -1,
+                elvolving_pokemon: -1,
+            },
+            CARAPUCE: {
+                id: 7,
                 name: "Carapuce",
                 sprite: "./sprites/standard/carapuce.png",
                 sprite_shiny: "./sprites/shinies/carapuce.png",
@@ -236,7 +325,7 @@
                 elvolving_pokemon: null,
             },
             CARABAFFE: {
-                id: 2,
+                id: 8,
                 name: "Carabaffe",
                 sprite: "./sprites/standard/carabaffe.png",
                 sprite_shiny: "./sprites/shinies/carabaffe.png",
@@ -250,7 +339,7 @@
                 elvolving_pokemon: null,
             },
             TORTANK: {
-                id: 3,
+                id: 9,
                 name: "Tortank",
                 sprite: "./sprites/standard/tortank.png",
                 sprite_shiny: "./sprites/shinies/tortank.png",
@@ -267,7 +356,7 @@
         setup_pokedex = UpdatePokedexWithEvolutions(setup_pokedex);
         stored_content = localStorage.getItem("pokedex");
 
-        if (!stored_content) {
+        if (!stored_content || forcePokedexUpdate) {
             localStorage.setItem("pokedex", JSON.stringify(setup_pokedex));
             pokedex = setup_pokedex;
             console.log("Pokedex initialisé.");
@@ -355,11 +444,36 @@
     // NORMAL BEHAVIOR
     // **
     Setup();
-    console.log(getRandomPokemons(map_cases[0].possible_pokemons, 3));
+    let choosen = getRandomPokemons(map_cases[0].possible_pokemons, 3);
+    console.log(choosen);
+    for (chosenOne of choosen) {
+        console.log(pokedex[chosenOne]);
+    }
 
 </script>
 
 <body>
-</body>
+    <div class="choice-card">
+        <p class="choice-card-title">Choisis ton starter !</p>
+        <div class="pokemon-choice">
+            <div class="pokemon-choice-data">
+                <img src="sprites/standard/squirtle.png" alt="Image de carapuce" class="pokemon-choice-img">
+                <div class="pokemon-choice-data-details">
+                    <div class="pokemon-choice-data-details-line">
+                        <div class="pokemon-choice-data-details-name">Carapuce</div>
+                        <div class="pokemon-choice-data-details-level">niv. 5</div>
+                    </div>
+                    <div class="pokemon-choice-data-details-line">
+                        <div class="pokemon-choice-data-details-rarity">Epic</div>
+                        <div class="pokemon-choice-data-details-type"><p>EAU</p></div>
+                    </div>
+                    <div class="pokemon-choice-cta-container">
+                        <button class="pokemon-choice-cta">Choisir</button>
+                    </div>
+                </div>
+            </div>
+            <img src="sprites/rarities/rarity_epic.png" alt="Background de rarity" class="rarity-background">
+        </div>
+    </div>
 
 </html>
