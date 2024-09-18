@@ -74,7 +74,7 @@ function generatePokemonChoiceDisplay(pokemonlist, currentCase) {
         // Ajouter l'icône shiny si nécessaire
         if (pokemonlist[i].isShiny) {
             const shinyIcon = document.createElement('img');
-            shinyIcon.src = 'sprites/Misc/shiny.png'; // Remplacez par le chemin de votre icône
+            shinyIcon.src = 'sprites/misc/shiny.png'; // Remplacez par le chemin de votre icône
             shinyIcon.alt = 'Icône Shiny';
             shinyIcon.className = 'shiny-icon';
             pokemonData.appendChild(shinyIcon); // Ajoute l'icône à l'image du Pokémon

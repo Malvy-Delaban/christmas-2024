@@ -1,31 +1,60 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Pokemon Adventure</title>
-    </head>
-<link rel="stylesheet" href="index.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="sprites/misc/pokeball_icon.png" sizes="32x32">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Pokemon Adventure</title>
+</head>
 
-<script src="objectsDefinitions.js"></script>
-<script src="generatePokemonChoice.js"></script>
-<script src="commonFunctions.js"></script>
+<script src="JS_files/objectsDefinitions.js"></script>
+<script src="JS_files/generatePokemonChoice.js"></script>
+<script src="JS_files/generateRouteList.js"></script>
+<script src="JS_files/commonFunctions.js"></script>
+
 <script>
     // Initialize all data / create them / retrieve them
     Setup();
 </script>
 
-
 <body id="body">
-</html>
+    <div class="main-page-container">
+        <div id="routes-container">            
+        </div>
+        <div class="bottom-ui">
+            <div class="button-group">
+                <button class="action-button">Duel du jour</button>
+                <button class="action-button">Carte de dresseur</button>
+            </div>
+            <div class="bottom-menu">
+                <div class="menu-item">
+                    <img src="sprites/misc/oran_icon.png" alt="Inventaire" class="icon">
+                    <div class="menu-label">Inventaire</div>
+                </div>
+                <div class="menu-item">
+                    <img src="sprites/misc/pokeball_icon.png" alt="Pokémons" class="icon">
+                    <div class="menu-label">Pokémons</div>
+                </div>
+                <div class="menu-item">
+                    <img src="sprites/misc/pearl_icon.png" alt="Boutique" class="icon">
+                    <div class="menu-label">Boutique</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 
 <script>
-    console.log(Rarities);
-    console.log(Rarities.EPIC);
-    let choosen = getRandomPokemons(map_cases[0], 3);
-    let choicePopup = generatePokemonChoiceDisplay(choosen, map_cases[0]);
-    let container = document.getElementById('body');
-    container.appendChild(choicePopup);
+    // Generate choice
+
+    // let choosen = getRandomPokemons(map_cases[0], 3);
+    // let choicePopup = generatePokemonChoiceDisplay(choosen, map_cases[0]);
+    // let container = document.getElementById('body');
+    // container.appendChild(choicePopup);
+
+    GenerateRouteListDisplay();
 </script>
+</html>

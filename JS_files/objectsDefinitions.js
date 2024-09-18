@@ -337,7 +337,7 @@
             {
                 id: 0,
                 name: "Choisis ton starter !",
-                background_sprite: "./sprites/cases/lab.png",
+                background_sprite: "./sprites/locations/location_04.png",
                 unlock_day: -1,
                 has_been_used: false,
                 shiny_lock: false,
@@ -348,7 +348,52 @@
                     SALAMECHE: 1,
                     BULBIZARRE: 1,
                 },
-            }
+            },
+            {
+                id: 1,
+                name: "Route 01",
+                background_sprite: "./sprites/locations/location_22.png",
+                unlock_day: new Date("2024-12-01"),
+                has_been_used: false,
+                shiny_lock: false,
+                base_level: 6,
+                level_randomness: 2,
+                possible_pokemons: {
+                    CARAPUCE: 1,
+                    SALAMECHE: 1,
+                    BULBIZARRE: 1,
+                },
+            },
+            {
+                id: 1,
+                name: "Route 02",
+                background_sprite: "./sprites/locations/location_02.png",
+                unlock_day: new Date("2024-12-02"),
+                has_been_used: false,
+                shiny_lock: false,
+                base_level: 7,
+                level_randomness: 2,
+                possible_pokemons: {
+                    CARAPUCE: 1,
+                    SALAMECHE: 1,
+                    BULBIZARRE: 1,
+                },
+            },
+            {
+                id: 1,
+                name: "Route 03",
+                background_sprite: "./sprites/locations/location_27.png",
+                unlock_day: new Date("2024-12-03"),
+                has_been_used: false,
+                shiny_lock: false,
+                base_level: 8,
+                level_randomness: 2,
+                possible_pokemons: {
+                    CARAPUCE: 1,
+                    SALAMECHE: 1,
+                    BULBIZARRE: 1,
+                },
+            },
         ];
         stored_content = localStorage.getItem("map_cases");
 
