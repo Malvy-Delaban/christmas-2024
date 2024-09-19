@@ -917,6 +917,10 @@
         }
     }
     function UpdatePokedexWithEvolutions(pokedex) {
+        pokedex.SALAMECHE.evolving_pokemon = [pokedex.REPTINCEL];
+        pokedex.REPTINCEL.evolving_pokemon = [pokedex.DRACAUFEU];
+        pokedex.BULBIZARRE.evolving_pokemon = [pokedex.HERBIZARRE];
+        pokedex.HERBIZARRE.evolving_pokemon = [pokedex.FLORIZARRE];
         pokedex.CARAPUCE.evolving_pokemon = [pokedex.CARABAFFE];
         pokedex.CARABAFFE.evolving_pokemon = [pokedex.TORTANK];
         pokedex.NIDORAN_F.elvolving_pokemon = [pokedex.NIDORINA];
@@ -932,6 +936,10 @@
         pokedex.PIKACHU.elvolving_pokemon = [pokedex.RAICHU, pokedex.RAICHU_A];
         pokedex.LAPOREILLE.elvolving_pokemon = [pokedex.LOCKPIN];
         pokedex.CABRIOLAINE.elvolving_pokemon = [pokedex.CHEVROUM];
+        pokedex.GOBOU.elvolving_pokemon = [pokedex.FLOBIO];
+        pokedex.FLOBIO.elvolving_pokemon = [pokedex.LAGGRON];
+        pokedex.HERICENDRE.elvolving_pokemon = [pokedex.FEURISSON];
+        pokedex.FEURISSON.elvolving_pokemon = [pokedex.TYPHLOSION, pokedex.TYPHLOSION_H];
 
         return pokedex;
     }
