@@ -15,12 +15,12 @@ html {
 body {
     margin: 0;
     padding: 0;
-    display: flex;
+    /* display: flex;
     justify-content: center;
     align-items: center;
     background: radial-gradient(#7C63A2, #453060);
     color: #fff;
-    text-align: center;
+    text-align: center; */
 }
 
 /*  */
@@ -40,15 +40,14 @@ body {
     color: white;
     font-size: 4rem;
     margin: 0;
-    /* background: "sprites\rarities\rarity_epic.png"; */
 }
 
 .pokemon-choice {
     width: 70vw;
     height: 70vw;
-    margin-top: -12rem;
+    margin-top: -3rem;
     color: white;
-    position: relative; /* Pour permettre un positionnement absolu interne */
+    position: relative;
 }
 
 .pokemon-choice-data {

@@ -1,8 +1,25 @@
+function GetSpriteByPokemon(pokedexEntry, isShiny) {
+    let pokedexIdParsed = String(pokedex[pokedexEntry].id);
+
+    let pokedex_id = pokedexIdParsed.includes('.') ? pokedexIdParsed.split('.')[0] : pokedexIdParsed;
+    let altFormNumber = pokedexIdParsed.includes('.') ? 1 : 0;
+
+    let formattedPokedexId = pokedex_id.toString().padStart(4, '0');
+    let formattedAltFormNumber = altFormNumber.toString().padStart(3, '0');
+    let shinySuffix = isShiny ? 'r' : 'n';
+
+    let spriteName = `sprites/pokemons/poke_capture_${formattedPokedexId}_${formattedAltFormNumber}_mf_n_00000000_f_${shinySuffix}.png`;
+
+    return spriteName;
+}
+
 function generatePokemonBasedOnPokedexEntry(pokedexEntry, currentCase) {
     let temp_isShiny = currentCase.shiny_lock ? false : (Math.floor(Math.random() * 20) + 1) === 1;
     let temp_level = Math.round(currentCase.base_level + (Math.random() * (2 * currentCase.level_randomness) - currentCase.level_randomness));
     let temp_maxHp = getMaxHpOfPokemon(pokedexEntry, temp_level);
     let temp_attack = getAttackOfPokemon(pokedexEntry, temp_level);
+    let temp_gender = Math.floor(Math.random() * 2) == 0 ? "male" : "female";
+    let temp_sprite = GetSpriteByPokemon(pokedexEntry, temp_isShiny);
 
     let newPokemon = {
         pokedexId: pokedexEntry,
@@ -11,6 +28,8 @@ function generatePokemonBasedOnPokedexEntry(pokedexEntry, currentCase) {
         max_hp: temp_maxHp,
         hp: temp_maxHp,
         attack: temp_attack,
+        gender: temp_gender,
+        sprite: temp_sprite
     };
 
     return newPokemon;
@@ -66,7 +85,7 @@ function generatePokemonChoiceDisplay(pokemonlist, currentCase) {
 
         // Image du Pokémon
         const pokemonImg = document.createElement('img');
-        pokemonImg.src = pokemonlist[i].isShiny ? pokedex[pokemonlist[i].pokedexId].sprite_shiny : pokedex[pokemonlist[i].pokedexId].sprite;
+        pokemonImg.src = pokemonlist[i].sprite;
         pokemonImg.alt = `Image de ${pokemonlist[i].name}`;
         pokemonImg.className = 'pokemon-choice-img';
         pokemonData.appendChild(pokemonImg);
