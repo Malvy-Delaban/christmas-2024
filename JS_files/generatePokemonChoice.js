@@ -14,7 +14,10 @@ function GetSpriteByPokemon(pokedexEntry, isShiny) {
 }
 
 function generatePokemonBasedOnPokedexEntry(pokedexEntry, currentCase) {
-    let temp_isShiny = currentCase.shiny_lock ? false : (Math.floor(Math.random() * 20) + 1) === 1;
+    const shinyChance = 22;
+    const shinyChanceBoosted = 18; // To make the odds in favor of Lucy
+
+    let temp_isShiny = currentCase.shiny_lock ? false : (Math.floor(Math.random() * shinyChance) + 1) === 1;
     let temp_level = Math.round(currentCase.base_level + (Math.random() * (2 * currentCase.level_randomness) - currentCase.level_randomness));
     let temp_maxHp = getMaxHpOfPokemon(pokedexEntry, temp_level);
     let temp_attack = getAttackOfPokemon(pokedexEntry, temp_level);

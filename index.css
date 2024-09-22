@@ -81,17 +81,17 @@ body {
 }
 
 .pokemon-choice-data-details-name {
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-weight: bold;
 }
 
 .pokemon-choice-data-details-level {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 500;
 }
 
 .pokemon-choice-data-details-rarity {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 700;
 }
 
@@ -117,6 +117,7 @@ body {
 }
 
 .pokemon-choice-cta {
+    border: none;
     height: 100%;
     font-size: 2.5rem;
     color: white;

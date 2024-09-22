@@ -2,7 +2,7 @@ const Types = {
     NORMAL: {
         name: "Normal",
         color: "#aab09f",
-        textColor: "black",
+        textColor: "white",
         strength: [],
         weakness: ["ROCHE", "ACIER"],
         nullAttacks: ["SPECTRE"]
@@ -34,7 +34,7 @@ const Types = {
     ELECTRIK: {
         name: "Électrik",
         color: "#eed535",
-        textColor: "black",
+        textColor: "white",
         strength: ["EAU", "VOL"],
         weakness: ["PLANTE", "ÉLECTRIK", "DRAGON"],
         nullAttacks: ["SOL"]
@@ -42,7 +42,7 @@ const Types = {
     GLACE: {
         name: "Glace",
         color: "#70cbd4",
-        textColor: "black",
+        textColor: "white",
         strength: ["PLANTE", "SOL", "VOL", "DRAGON"],
         weakness: ["FEU", "EAU", "GLACE", "ACIER"],
         nullAttacks: []
@@ -74,7 +74,7 @@ const Types = {
     VOL: {
         name: "Vol",
         color: "#a890f0",
-        textColor: "black",
+        textColor: "white",
         strength: ["PLANTE", "COMBAT", "INSECTE"],
         weakness: ["ÉLECTRIK", "ROCHE", "ACIER"],
         nullAttacks: []
@@ -130,7 +130,7 @@ const Types = {
     ACIER: {
         name: "Acier",
         color: "#9eb7b8",
-        textColor: "black",
+        textColor: "white",
         strength: ["GLACE", "ROCHE", "FEE"],
         weakness: ["FEU", "EAU", "ÉLECTRIK", "ACIER"],
         nullAttacks: []

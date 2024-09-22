@@ -5,9 +5,9 @@
     let map_cases = null;
     let owned_pokemons = null;
 
-    const forcePokedexUpdate = false; // While developping, will force pokedex to update at each session
-    const forceMapCasesUpdate = false; // While developping, will force pokedex to update at each session
-    const forceOwnedUpdate = false; // While developping, will force pokedex to update at each session
+    const forcePokedexUpdate = true; // While developping, will force pokedex to update at each session
+    const forceMapCasesUpdate = true; // While developping, will force map cases to update at each session
+    const forceOwnedUpdate = false; // While developping, will force owned pokemon to update at each session
 
     function CreatePokedex() {
         stored_content = localStorage.getItem("pokedex");
@@ -22,72 +22,6 @@
         }
     }
     function CreateMapCases() {
-        let setup_map_cases = [
-            {
-                id: 0,
-                name: "Choisis ton starter !",
-                background_sprite: "./sprites/locations/location_04.png",
-                unlock_day: -1,
-                has_been_used: false,
-                shiny_lock: false,
-                base_level: 5,
-                level_randomness: 0,
-                possible_pokemons: {
-                    CARAPUCE: 1,
-                    SALAMECHE: 1,
-                    BULBIZARRE: 1,
-                },
-            },
-            {
-                id: 1,
-                name: "Route 01",
-                background_sprite: "./sprites/locations/location_16.png",
-                unlock_day: new Date("2024-12-01"),
-                has_been_used: false,
-                shiny_lock: false,
-                base_level: 6,
-                level_randomness: 2,
-                possible_pokemons: {
-                    SABELETTE: 4,
-                    LAPOREILLE: 4,
-                    CABRIOLAINE: 4,
-                    MOUMOUTON: 4,
-                    NIDORAN_F: 3,
-                    NIDORAN_M: 3,
-                    TEDDIURSA: 3,
-                    TARSAL: 2,
-                    LIXY: 2,
-                    GOINFREX: 1,
-                    VIPELIERRE: 1,
-                },
-            },
-            {
-                id: 2,
-                name: "Route 02",
-                background_sprite: "./sprites/locations/location_17.png",
-                unlock_day: new Date("2024-12-02"),
-                has_been_used: false,
-                shiny_lock: false,
-                base_level: 7,
-                level_randomness: 2,
-                possible_pokemons: {
-                    SABELETTE: 4,
-                },
-            },
-            {
-                id: 3,
-                name: "Route 03",
-                background_sprite: "./sprites/locations/location_18.png",
-                unlock_day: new Date("2024-12-03"),
-                has_been_used: false,
-                shiny_lock: false,
-                base_level: 8,
-                level_randomness: 2,
-                possible_pokemons: {
-                    SABELETTE: 4,
-                },
-            },
-        ];
         stored_content = localStorage.getItem("map_cases");
 
         if (!stored_content || forceMapCasesUpdate) {
