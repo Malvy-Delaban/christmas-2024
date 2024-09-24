@@ -30,10 +30,14 @@ body {
 .choice-card {
     height: 100%;
     width: 100%;
+    position: fixed;
+    top: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    z-index: 10;
+    background: radial-gradient(#463460, #120F16);
 }
 
 .choice-card-title {

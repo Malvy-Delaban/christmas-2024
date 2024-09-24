@@ -6,7 +6,7 @@
     let owned_pokemons = null;
 
     const forcePokedexUpdate = true; // While developping, will force pokedex to update at each session
-    const forceMapCasesUpdate = true; // While developping, will force map cases to update at each session
+    const forceMapCasesUpdate = false; // While developping, will force map cases to update at each session
     const forceOwnedUpdate = false; // While developping, will force owned pokemon to update at each session
 
     function CreatePokedex() {
@@ -32,6 +32,7 @@
             console.log("Une sauvegarde de la Map existe deja. Utilisation de la sauvegarde.");
             map_cases = JSON.parse(stored_content);
         }
+        console.log(map_cases);
     }
     function CreateOwnedPokemons() {
         let setup_owned_pokemons = [];

@@ -29,7 +29,7 @@
 </script>
 
 <body id="body">
-    <!-- <div class="main-page-container">
+    <div class="main-page-container">
         <div id="routes-container">            
         </div>
         <div class="bottom-ui">
@@ -52,15 +52,11 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 </body>
 
 <script>
-    let choosen = getRandomPokemons(map_cases[3], 3);
-    let choicePopup = generatePokemonChoiceDisplay(choosen, map_cases[3]);
-    let container = document.getElementById('body');
-    container.appendChild(choicePopup);
-
-    // GenerateRouteListDisplay();
+    // generatePokemonChoiceDisplay(map_cases[3]);
+    GenerateRouteListDisplay();
 </script>
 </html>

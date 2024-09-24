@@ -39,6 +39,9 @@ function generatePokemonBasedOnPokedexEntry(pokedexEntry, currentCase) {
 }
 
 function getRandomPokemons(currentCase, count) {
+    if (currentCase.generated_pokemons.length === 3)
+        return;
+
     let pokemonList = currentCase.possible_pokemons;
 
     // Creating weighted list
@@ -58,15 +61,30 @@ function getRandomPokemons(currentCase, count) {
         }
     }
 
-    let generatedPokemons = [];
+    let generated_pokemons = [];
     for (let i = 0; i < selectedPokemons.length; i++)
-        generatedPokemons.push(generatePokemonBasedOnPokedexEntry(selectedPokemons[i], currentCase));
-    
-    // return generated pokemons list
-    return generatedPokemons;
+        currentCase.generated_pokemons.push(generatePokemonBasedOnPokedexEntry(selectedPokemons[i], currentCase));
+
+    updateMapCases();
 }
 
-function generatePokemonChoiceDisplay(pokemonlist, currentCase) {
+function chosePokemon(pokemon, currentCase) {
+    owned_pokemons.push(pokemon);
+    currentCase.has_been_used = true;
+    updateOwnedPokemons();
+    updateMapCases();
+
+    const divsToDelete = document.querySelectorAll('div.route-display');
+    divsToDelete.forEach(function(div) {
+        div.remove();
+    });
+    GenerateRouteListDisplay();
+}
+
+function generatePokemonChoiceDisplay(currentCase) {
+    document.body.style.overflow = 'hidden'; // Désactive le scroll
+    getRandomPokemons(currentCase, 3);
+
     // Création de la carte principale
     const card = document.createElement('div');
     card.className = 'choice-card';
@@ -77,7 +95,7 @@ function generatePokemonChoiceDisplay(pokemonlist, currentCase) {
     title.textContent = currentCase.name;
     card.appendChild(title);
 
-    for (let i = 0; i < pokemonlist.length; i++) {
+    for (let i = 0; i < currentCase.generated_pokemons.length; i++) {
         // Conteneur principal de choix de Pokémon
         const pokemonChoice = document.createElement('div');
         pokemonChoice.className = 'pokemon-choice';
@@ -88,18 +106,18 @@ function generatePokemonChoiceDisplay(pokemonlist, currentCase) {
 
         // Image du Pokémon
         const pokemonImg = document.createElement('img');
-        pokemonImg.src = pokemonlist[i].sprite;
-        pokemonImg.alt = `Image de ${pokemonlist[i].name}`;
+        pokemonImg.src = currentCase.generated_pokemons[i].sprite;
+        pokemonImg.alt = `Image de ${currentCase.generated_pokemons[i].name}`;
         pokemonImg.className = 'pokemon-choice-img';
         pokemonData.appendChild(pokemonImg);
 
         // Ajouter l'icône shiny si nécessaire
-        if (pokemonlist[i].isShiny) {
+        if (currentCase.generated_pokemons[i].isShiny) {
             const shinyIcon = document.createElement('img');
-            shinyIcon.src = 'sprites/misc/shiny.png'; // Remplacez par le chemin de votre icône
+            shinyIcon.src = 'sprites/misc/shiny.png';
             shinyIcon.alt = 'Icône Shiny';
             shinyIcon.className = 'shiny-icon';
-            pokemonData.appendChild(shinyIcon); // Ajoute l'icône à l'image du Pokémon
+            pokemonData.appendChild(shinyIcon);
         }
 
         // Conteneur pour les détails supplémentaires du Pokémon
@@ -112,12 +130,12 @@ function generatePokemonChoiceDisplay(pokemonlist, currentCase) {
 
         const pokemonName = document.createElement('div');
         pokemonName.className = 'pokemon-choice-data-details-name';
-        pokemonName.textContent = pokedex[pokemonlist[i].pokedexId].name;
+        pokemonName.textContent = pokedex[currentCase.generated_pokemons[i].pokedexId].name;
         nameLevelLine.appendChild(pokemonName);
 
         const pokemonLevel = document.createElement('div');
         pokemonLevel.className = 'pokemon-choice-data-details-level';
-        pokemonLevel.textContent = `niv. ${pokemonlist[i].level}`;
+        pokemonLevel.textContent = `niv. ${currentCase.generated_pokemons[i].level}`;
         nameLevelLine.appendChild(pokemonLevel);
         pokemonDetails.appendChild(nameLevelLine);
 
@@ -127,17 +145,17 @@ function generatePokemonChoiceDisplay(pokemonlist, currentCase) {
 
         const pokemonRarity = document.createElement('div');
         pokemonRarity.className = 'pokemon-choice-data-details-rarity';
-        pokemonRarity.textContent = pokedex[pokemonlist[i].pokedexId].rarity.name;
-        pokemonRarity.style.color = pokedex[pokemonlist[i].pokedexId].rarity.color;
+        pokemonRarity.textContent = pokedex[currentCase.generated_pokemons[i].pokedexId].rarity.name;
+        pokemonRarity.style.color = pokedex[currentCase.generated_pokemons[i].pokedexId].rarity.color;
 
         rarityTypeLine.appendChild(pokemonRarity);
 
         const pokemonType = document.createElement('div');
         pokemonType.className = 'pokemon-choice-data-details-type';
-        pokemonType.style.backgroundColor = pokedex[pokemonlist[i].pokedexId].type.color;
-        pokemonType.style.color = pokedex[pokemonlist[i].pokedexId].type.textColor;
+        pokemonType.style.backgroundColor = pokedex[currentCase.generated_pokemons[i].pokedexId].type.color;
+        pokemonType.style.color = pokedex[currentCase.generated_pokemons[i].pokedexId].type.textColor;
         const typeText = document.createElement('p');
-        typeText.textContent = pokedex[pokemonlist[i].pokedexId].type.name;
+        typeText.textContent = pokedex[currentCase.generated_pokemons[i].pokedexId].type.name;
         pokemonType.appendChild(typeText);
         rarityTypeLine.appendChild(pokemonType);
         pokemonDetails.appendChild(rarityTypeLine);
@@ -149,8 +167,8 @@ function generatePokemonChoiceDisplay(pokemonlist, currentCase) {
         const chooseButton = document.createElement('button');
         chooseButton.className = 'pokemon-choice-cta';
         chooseButton.textContent = 'Choisir';
-        chooseButton.style.color = pokedex[pokemonlist[i].pokedexId].type.textColor;
-        chooseButton.style.backgroundColor = pokedex[pokemonlist[i].pokedexId].type.color;
+        chooseButton.style.color = pokedex[currentCase.generated_pokemons[i].pokedexId].type.textColor;
+        chooseButton.style.backgroundColor = pokedex[currentCase.generated_pokemons[i].pokedexId].type.color;
         ctaContainer.appendChild(chooseButton);
         pokemonDetails.appendChild(ctaContainer);
 
@@ -162,16 +180,25 @@ function generatePokemonChoiceDisplay(pokemonlist, currentCase) {
 
         // Image de rareté
         const rarityImg = document.createElement('img');
-        rarityImg.src = pokedex[pokemonlist[i].pokedexId].rarity.background_sprite;
+        rarityImg.src = pokedex[currentCase.generated_pokemons[i].pokedexId].rarity.background_sprite;
         rarityImg.alt = `Background de rareté`;
         rarityImg.className = 'rarity-background';
 
         pokemonChoice.appendChild(rarityImg);
 
+        pokemonChoice.addEventListener('click', function() {
+            document.body.style.overflow = '';
+            const divsToDelete = document.querySelectorAll('div.choice-card');
+            divsToDelete.forEach(function(div) {
+                div.remove();
+            });
+            chosePokemon(currentCase.generated_pokemons[i], currentCase);
+        });    
+
         // Ajout du choix Pokémon à la carte
         card.appendChild(pokemonChoice);
     }
 
-    // Retour de la carte complétée
-    return card;
+    let container = document.getElementById('body');
+    container.appendChild(card);
 }

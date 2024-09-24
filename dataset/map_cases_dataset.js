@@ -8,6 +8,7 @@ let setup_map_cases = [
         shiny_lock: false,
         base_level: 5,
         level_randomness: 0,
+        generated_pokemons: [],
         possible_pokemons: {
             CARAPUCE: 1,
             SALAMECHE: 1,
@@ -23,6 +24,7 @@ let setup_map_cases = [
         shiny_lock: false,
         base_level: 6,
         level_randomness: 2,
+        generated_pokemons: [],
         possible_pokemons: {
             SABELETTE: 4,
             LAPOREILLE: 4,
@@ -46,6 +48,7 @@ let setup_map_cases = [
         shiny_lock: false,
         base_level: 7,
         level_randomness: 2,
+        generated_pokemons: [],
         possible_pokemons: {
             ABO: 4,
             MASCAIMAN: 4,
@@ -69,6 +72,7 @@ let setup_map_cases = [
         shiny_lock: false,
         base_level: 8,
         level_randomness: 2,
+        generated_pokemons: [],
         possible_pokemons: {
             MUSTEBOUEE: 4,
             MANZAI: 4,

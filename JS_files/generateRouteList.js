@@ -37,6 +37,10 @@ function GenerateSingleRouteDisplay(route) {
     routeDisplay.appendChild(imgElement);
     routeDisplay.appendChild(labelElement);
 
+    routeDisplay.addEventListener('click', function() {
+        generatePokemonChoiceDisplay(route);
+    });
+
     return routeDisplay;
 }
 
