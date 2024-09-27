@@ -1,0 +1,112 @@
+/* Conteneur principal du popup */
+.popup-your-pokemons {
+    position: absolute;
+    top: 0;
+    width: 90%;
+    height: 90%;
+    background-color: white;
+    border-radius: 3rem;
+    z-index: 5;
+}
+
+/* Titre du popup */
+.popup-title-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #4C4C4C;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ECECEC;
+}
+
+.popup-title-line p {
+    margin: 0;
+}
+
+/* Bouton de fermeture */
+.popup-title-line p:last-child {
+    font-size: 22px;
+    cursor: pointer;
+    color: #4C4C4C;
+}
+
+/* Liste des Pokémon */
+.popup-content-your-pokemons-list {
+    padding-top: 15px;
+}
+
+/* Conteneur de chaque Pokémon */
+.popup-content-single-pokemon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ECECEC;
+}
+
+/* Partie gauche : Image du Pokémon et type */
+.popup-content-left-side {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.popup-content-pokemon-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #f2f2f2; /* Couleur de fond pour une légère bordure */
+}
+
+.popup-content-type-chip {
+    background-color: #FF6B35;
+    color: white;
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Partie droite : Détails du Pokémon */
+.popup-content-right-side {
+    flex-grow: 1;
+    padding-left: 10px;
+}
+
+.popup-content-pokemon-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #4C4C4C;
+}
+
+.popup-content-pokemon-level,
+.popup-content-pokemon-attack {
+    font-size: 14px;
+    color: #7A7A7A;
+}
+
+/* Barre de vie */
+.health-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #E0E0E0;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.health-bar-filling {
+    height: 100%;
+    background-color: #78C850; /* Couleur verte pour la barre de vie */
+    border-radius: 4px;
+}
+
+/* Icônes de statut */
+.popup-content-pokemon-icons img {
+    width: 20px;
+    height: 20px;
+}

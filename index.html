@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="sprites/misc/pokeball_icon.png" sizes="32x32">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="popup.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
@@ -22,6 +23,7 @@
 <script src="JS_files/generatePokemonChoice.js"></script>
 <script src="JS_files/generateRouteList.js"></script>
 <script src="JS_files/commonFunctions.js"></script>
+<script src="JS_files/generateYourPokemonsPopup.js"></script>
 
 <script>
     // Initialize all data / create them / retrieve them
@@ -42,7 +44,7 @@
                     <img src="sprites/misc/oran_icon.png" alt="Inventaire" class="icon">
                     <div class="menu-label">Inventaire</div>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="generateYourPokemonsPopup()">
                     <img src="sprites/misc/pokeball_icon.png" alt="Pokémons" class="icon">
                     <div class="menu-label">Pokémons</div>
                 </div>
