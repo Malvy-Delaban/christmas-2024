@@ -20,6 +20,16 @@
     overflow-y: auto;
 }
 
+.popup-your-pokemon-detail {
+    position: relative;
+    width: 85%;
+    height: 85%;
+    background-color: white;
+    border-radius: 5rem;
+    z-index: 5;
+    overflow-y: auto;
+}
+
 /* Titre du popup */
 .popup-title-line {
     position: relative;

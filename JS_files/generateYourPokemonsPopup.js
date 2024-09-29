@@ -1,5 +1,5 @@
 function generateYourPokemonsPopup() {
-    // document.body.style.overflow = 'hidden'; // Désactive le scroll
+    document.body.style.overflow = 'hidden'; // Désactive le scroll
     
     // Créer les éléments principaux
     const popupBackgroundContainer = document.createElement('div');
@@ -22,7 +22,7 @@ function generateYourPokemonsPopup() {
     closeButton.src = 'sprites/misc/cross_icon.png';
     closeButton.style.cursor = 'pointer';
     closeButton.addEventListener('click', () => {
-        // document.body.style.overflow = '';
+        document.body.style.overflow = '';
         popupBackgroundContainer.remove(); // Ferme le popup en supprimant l'élément
     });
     closeButton.classList.add('popup-close-icon');
@@ -60,18 +60,11 @@ function generateYourPokemonsPopup() {
         pokemonImage.alt = owned_pokemons[i].name;
         pokemonImage.classList.add('popup-content-pokemon-image');
 
-        const typeChip = document.createElement('div');
-        typeChip.classList.add('popup-content-type-chip');
-        typeChip.style.backgroundColor = pokedex[owned_pokemons[i].pokedexId].type.color;
-        
-        const typeChipText = document.createElement('p');
-        typeChipText.textContent = pokedex[owned_pokemons[i].pokedexId].type.name;
-        typeChipText.classList.add('popup-content-type-chip-text');
+        const typeChip = createTypeChip(owned_pokemons[i]);
 
         leftSide.appendChild(rarityBackground);
         leftSide.appendChild(pokemonImage);
         leftSide.appendChild(typeChip);
-        typeChip.appendChild(typeChipText);
 
         // Partie droite avec les infos du Pokémon
         const rightSide = document.createElement('div');
@@ -129,6 +122,10 @@ function generateYourPokemonsPopup() {
         singlePokemon.appendChild(leftSide);
         singlePokemon.appendChild(rightSide);
         singlePokemon.appendChild(pokemonIcons);
+
+        singlePokemon.addEventListener('click', () => {
+            generatePokemonDetailPopup(owned_pokemons[i]);
+        });
 
         pokemonList.appendChild(singlePokemon);
     }

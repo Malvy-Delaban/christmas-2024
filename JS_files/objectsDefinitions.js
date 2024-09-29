@@ -6,7 +6,7 @@
     let owned_pokemons = null;
 
     const forcePokedexUpdate = false; // While developping, will force pokedex to update at each session
-    const forceMapCasesUpdate = false; // While developping, will force map cases to update at each session
+    const forceMapCasesUpdate = true; // While developping, will force map cases to update at each session
     const forceOwnedUpdate = false; // While developping, will force owned pokemon to update at each session
 
     function CreatePokedex() {
@@ -44,14 +44,6 @@
         } else {
             console.log("Une sauvegarde de la liste des pokémons existe deja. Utilisation de la sauvegarde.");
             owned_pokemons = JSON.parse(stored_content);
-            owned_pokemons.push(owned_pokemons[0]);
-            owned_pokemons.push(owned_pokemons[0]);
-            owned_pokemons.push(owned_pokemons[0]);
-            owned_pokemons.push(owned_pokemons[0]);
-            owned_pokemons.push(owned_pokemons[0]);
-            owned_pokemons.push(owned_pokemons[0]);
-            owned_pokemons.push(owned_pokemons[0]);
-            owned_pokemons.push(owned_pokemons[0]);
         }
     }
     function UpdatePokedexWithEvolutions(pokedex) {

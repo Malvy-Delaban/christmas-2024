@@ -170,6 +170,15 @@ function generatePokemonChoiceDisplay(currentCase) {
         chooseButton.textContent = 'Choisir';
         chooseButton.style.color = pokedex[currentCase.generated_pokemons[i].pokedexId].type.textColor;
         chooseButton.style.backgroundColor = pokedex[currentCase.generated_pokemons[i].pokedexId].type.color;
+        chooseButton.addEventListener('click', function() {
+            document.body.style.overflow = '';
+            const divsToDelete = document.querySelectorAll('div.choice-card');
+            divsToDelete.forEach(function(div) {
+                div.remove();
+            });
+            chosePokemon(currentCase.generated_pokemons[i], currentCase);
+        });   
+        
         ctaContainer.appendChild(chooseButton);
         pokemonDetails.appendChild(ctaContainer);
 
@@ -185,16 +194,7 @@ function generatePokemonChoiceDisplay(currentCase) {
         rarityImg.alt = `Background de rareté`;
         rarityImg.className = 'rarity-background';
 
-        pokemonChoice.appendChild(rarityImg);
-
-        pokemonChoice.addEventListener('click', function() {
-            document.body.style.overflow = '';
-            const divsToDelete = document.querySelectorAll('div.choice-card');
-            divsToDelete.forEach(function(div) {
-                div.remove();
-            });
-            chosePokemon(currentCase.generated_pokemons[i], currentCase);
-        });    
+        pokemonChoice.appendChild(rarityImg); 
 
         // Ajout du choix Pokémon à la carte
         card.appendChild(pokemonChoice);

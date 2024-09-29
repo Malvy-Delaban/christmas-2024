@@ -36,3 +36,16 @@ function getHPbarColor(pokemon) {
         return "orange";
     return "#ff2d2d";
 }
+
+function createTypeChip(pokemon) {
+    const typeChip = document.createElement('div');
+    typeChip.classList.add('popup-content-type-chip');
+    typeChip.style.backgroundColor = pokedex[pokemon.pokedexId].type.color;
+    
+    const typeChipText = document.createElement('p');
+    typeChipText.textContent = pokedex[pokemon.pokedexId].type.name;
+    typeChipText.classList.add('popup-content-type-chip-text');
+    typeChip.appendChild(typeChipText);
+
+    return typeChip
+}

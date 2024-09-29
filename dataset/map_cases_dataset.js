@@ -42,7 +42,7 @@ let setup_map_cases = [
     {
         id: 2,
         name: "Route 02",
-        background_sprite: "./sprites/locations/location_17.png",
+        background_sprite: "./sprites/locations/location_02.png",
         unlock_day: new Date("2024-12-02"),
         has_been_used: false,
         shiny_lock: false,
@@ -66,7 +66,7 @@ let setup_map_cases = [
     {
         id: 2,
         name: "Route 03",
-        background_sprite: "./sprites/locations/location_17.png",
+        background_sprite: "./sprites/locations/location_27.png",
         unlock_day: new Date("2024-12-03"),
         has_been_used: false,
         shiny_lock: false,
