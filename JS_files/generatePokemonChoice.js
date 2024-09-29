@@ -32,7 +32,8 @@ function generatePokemonBasedOnPokedexEntry(pokedexEntry, currentCase) {
         hp: temp_maxHp,
         attack: temp_attack,
         gender: temp_gender,
-        sprite: temp_sprite
+        sprite: temp_sprite,
+        isInTeam: false
     };
 
     return newPokemon;

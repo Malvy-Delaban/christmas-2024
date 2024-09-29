@@ -15,3 +15,24 @@ function updateMapCases() {
 function updateOwnedPokemons() {
     localStorage.setItem("owned_pokemons", JSON.stringify(owned_pokemons));
 }
+
+function getHPinPercent(pokemon) {
+    return (parseInt(pokemon.hp) / parseInt(pokemon.max_hp) * 100);
+}
+
+function getHPbarSize(pokemon) {
+    let percent = getHPinPercent(pokemon);
+    if (percent > 98)
+        return (`calc(${getHPinPercent(pokemon)}% - 6px)`);
+    return (`${getHPinPercent(pokemon)}%`);
+}
+
+function getHPbarColor(pokemon) {
+    let percent = getHPinPercent(pokemon);
+
+    if (percent > 50)
+        return "#78C850";
+    if (percent > 20)
+        return "orange";
+    return "#ff2d2d";
+}

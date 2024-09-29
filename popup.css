@@ -1,112 +1,166 @@
+.popup-background {
+    top: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Conteneur principal du popup */
 .popup-your-pokemons {
-    position: absolute;
-    top: 0;
-    width: 90%;
-    height: 90%;
+    width: 85%;
+    height: 85%;
     background-color: white;
-    border-radius: 3rem;
+    border-radius: 5rem;
     z-index: 5;
 }
 
 /* Titre du popup */
 .popup-title-line {
+    position: relative;
+    color: #4B3768;
+    font-size: 3.5rem;
+    font-weight: 900;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-    font-size: 18px;
-    color: #4C4C4C;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #ECECEC;
+    justify-content: center;
+    margin-top: 5rem;
 }
 
 .popup-title-line p {
     margin: 0;
 }
 
-/* Bouton de fermeture */
-.popup-title-line p:last-child {
-    font-size: 22px;
-    cursor: pointer;
-    color: #4C4C4C;
+.popup-close-icon {
+    position: absolute;
+    right: 4rem;
+    width: 3.2rem;
+    height: 3.2rem;
 }
 
 /* Liste des Pokémon */
 .popup-content-your-pokemons-list {
-    padding-top: 15px;
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 /* Conteneur de chaque Pokémon */
 .popup-content-single-pokemon {
+    position: relative;
+    height: 14rem;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
-    border-bottom: 1px solid #ECECEC;
+    gap: 3rem;
 }
 
 /* Partie gauche : Image du Pokémon et type */
 .popup-content-left-side {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 10px;
+    height: 100%;
+    width: 16rem;
 }
 
 .popup-content-pokemon-image {
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-    background-color: #f2f2f2; /* Couleur de fond pour une légère bordure */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 9;
 }
 
-.popup-content-type-chip {
-    background-color: #FF6B35;
+.popup-content-rarity-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 3rem;
+    z-index: 8;
+}
+
+.popup-content-type-chip { 
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    height: 3rem;
+    border-radius: 2rem;
+    z-index: 10;
+}
+
+.popup-content-type-chip-text { 
     color: white;
-    font-size: 12px;
-    padding: 2px 8px;
-    border-radius: 15px;
-    font-weight: bold;
+    font-size: 1.8rem;
+    font-weight: 400;
     text-transform: uppercase;
 }
 
 /* Partie droite : Détails du Pokémon */
 .popup-content-right-side {
+    position: relative;
     flex-grow: 1;
-    padding-left: 10px;
+    height: 100%;
 }
 
 .popup-content-pokemon-name {
-    font-size: 16px;
+    font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 5px;
-    color: #4C4C4C;
+    color: #4B3768;
 }
 
 .popup-content-pokemon-level,
 .popup-content-pokemon-attack {
-    font-size: 14px;
-    color: #7A7A7A;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #4B3768;
 }
 
 /* Barre de vie */
 .health-bar {
+    position: absolute;
+    bottom: 0;
     width: 100%;
-    height: 8px;
-    background-color: #E0E0E0;
-    border-radius: 4px;
-    margin-top: 5px;
+    height: 2.5rem;
+    background-color: #4B3768;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
 
 .health-bar-filling {
-    height: 100%;
-    background-color: #78C850; /* Couleur verte pour la barre de vie */
-    border-radius: 4px;
+    height: calc(100% - 6px);
+    border-radius: 2rem;
+    margin-left: 3px;
 }
 
-/* Icônes de statut */
+/* Icônes */
+.popup-content-pokemon-icons {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
 .popup-content-pokemon-icons img {
-    width: 20px;
-    height: 20px;
+    width: 100%;
 }

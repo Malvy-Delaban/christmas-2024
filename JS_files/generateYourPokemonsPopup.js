@@ -1,15 +1,10 @@
 function generateYourPokemonsPopup() {
-    let pokemon = {
-        sprite: "",
-        name: "",
-        type: "",
-        rarityBackground: "",
-        attack: "",
-        level: "",
-        healthBar: 100,
-    }
     document.body.style.overflow = 'hidden'; // Désactive le scroll
     
+    // Créer les éléments principaux
+    const popupBackgroundContainer = document.createElement('div');
+    popupBackgroundContainer.classList.add('popup-background');
+
     // Créer les éléments principaux
     const popupContainer = document.createElement('div');
     popupContainer.classList.add('popup-your-pokemons');
@@ -23,13 +18,14 @@ function generateYourPokemonsPopup() {
     const title = document.createElement('p');
     title.textContent = 'Mes Pokémons';
     
-    const closeButton = document.createElement('p');
-    closeButton.textContent = 'X';
+    const closeButton = document.createElement('img');
+    closeButton.src = 'sprites/misc/cross_icon.png';
     closeButton.style.cursor = 'pointer';
     closeButton.addEventListener('click', () => {
         document.body.style.overflow = '';
-        popupContainer.remove(); // Ferme le popup en supprimant l'élément
+        popupBackgroundContainer.remove(); // Ferme le popup en supprimant l'élément
     });
+    closeButton.classList.add('popup-close-icon');
 
     // Ajouter le titre et le bouton de fermeture
     titleLine.appendChild(title);
@@ -39,88 +35,106 @@ function generateYourPokemonsPopup() {
     const pokemonList = document.createElement('div');
     pokemonList.classList.add('popup-content-your-pokemons-list');
 
-    // Créer un Pokémon unique à afficher
-    const singlePokemon = document.createElement('div');
-    singlePokemon.classList.add('popup-content-single-pokemon');
+    for (let i = 0; i < Object.keys(owned_pokemons).length; i++) {
 
-    // Partie gauche avec l'image et le type
-    const leftSide = document.createElement('div');
-    leftSide.classList.add('popup-content-left-side');
+        // Créer un Pokémon unique à afficher
+        const singlePokemon = document.createElement('div');
+        singlePokemon.classList.add('popup-content-single-pokemon');
 
-    const rarityBackground = document.createElement('img');
-    rarityBackground.src = pokemon.rarityBackground;
-    rarityBackground.alt = 'rarity background';
-    rarityBackground.classList.add('popup-content-rarity-background');
+        // Partie gauche avec l'image et le type
+        const leftSide = document.createElement('div');
+        leftSide.classList.add('popup-content-left-side');
 
-    const pokemonImage = document.createElement('img');
-    pokemonImage.src = pokemon.sprite;
-    pokemonImage.alt = pokemon.name;
-    pokemonImage.classList.add('popup-content-pokemon-image');
+        const rarityBackground = document.createElement('img');
+        rarityBackground.src = pokedex[owned_pokemons[i].pokedexId].rarity.background_sprite;
+        rarityBackground.alt = 'rarity background';
+        rarityBackground.classList.add('popup-content-rarity-background');
 
-    const typeChip = document.createElement('p');
-    typeChip.textContent = pokemon.type;
-    typeChip.classList.add('popup-content-type-chip');
+        const pokemonImage = document.createElement('img');
+        pokemonImage.src = owned_pokemons[i].sprite;
+        pokemonImage.alt = owned_pokemons[i].name;
+        pokemonImage.classList.add('popup-content-pokemon-image');
 
-    leftSide.appendChild(rarityBackground);
-    leftSide.appendChild(pokemonImage);
-    leftSide.appendChild(typeChip);
+        const typeChip = document.createElement('div');
+        typeChip.classList.add('popup-content-type-chip');
+        typeChip.style.backgroundColor = pokedex[owned_pokemons[i].pokedexId].type.color;
+        
+        const typeChipText = document.createElement('p');
+        typeChipText.textContent = pokedex[owned_pokemons[i].pokedexId].type.name;
+        typeChipText.classList.add('popup-content-type-chip-text');
 
-    // Partie droite avec les infos du Pokémon
-    const rightSide = document.createElement('div');
-    rightSide.classList.add('popup-content-right-side');
+        leftSide.appendChild(rarityBackground);
+        leftSide.appendChild(pokemonImage);
+        leftSide.appendChild(typeChip);
+        typeChip.appendChild(typeChipText);
 
-    const pokemonName = document.createElement('div');
-    pokemonName.textContent = pokemon.name;
-    pokemonName.classList.add('popup-content-pokemon-name');
+        // Partie droite avec les infos du Pokémon
+        const rightSide = document.createElement('div');
+        rightSide.classList.add('popup-content-right-side');
 
-    const pokemonLevel = document.createElement('div');
-    pokemonLevel.textContent = `Niveau ${pokemon.level}`;
-    pokemonLevel.classList.add('popup-content-pokemon-level');
+        const pokemonName = document.createElement('div');
+        pokemonName.textContent = pokedex[owned_pokemons[i].pokedexId].name;
+        pokemonName.classList.add('popup-content-pokemon-name');
 
-    const pokemonAttack = document.createElement('div');
-    pokemonAttack.textContent = `Attaque : ${pokemon.attack}`;
-    pokemonAttack.classList.add('popup-content-pokemon-attack');
+        const pokemonLevel = document.createElement('div');
+        pokemonLevel.textContent = `Niveau ${owned_pokemons[i].level}`;
+        pokemonLevel.classList.add('popup-content-pokemon-level');
 
-    const healthBar = document.createElement('div');
-    healthBar.classList.add('health-bar');
+        const pokemonAttack = document.createElement('div');
+        pokemonAttack.textContent = `Attaque : ${owned_pokemons[i].attack}`;
+        pokemonAttack.classList.add('popup-content-pokemon-attack');
 
-    const healthBarFilling = document.createElement('div');
-    healthBarFilling.classList.add('health-bar-filling');
-    healthBarFilling.style.width = `${pokemon.health}%`; // Par exemple, la santé est en pourcentage
+        const healthBar = document.createElement('div');
+        healthBar.classList.add('health-bar');
 
-    rightSide.appendChild(pokemonName);
-    rightSide.appendChild(pokemonLevel);
-    rightSide.appendChild(pokemonAttack);
-    rightSide.appendChild(healthBar);
-    healthBar.appendChild(healthBarFilling);
+        const healthBarFilling = document.createElement('div');
+        healthBarFilling.classList.add('health-bar-filling');
+        console.log(getHPinPercent(owned_pokemons[i]));
+        healthBarFilling.style.width = getHPbarSize(owned_pokemons[i]);
+        healthBarFilling.style.backgroundColor = getHPbarColor(owned_pokemons[i]);
 
-    // Icônes de statut du Pokémon
-    const pokemonIcons = document.createElement('div');
-    pokemonIcons.classList.add('popup-content-pokemon-icons');
+        rightSide.appendChild(pokemonName);
+        rightSide.appendChild(pokemonLevel);
+        rightSide.appendChild(pokemonAttack);
+        rightSide.appendChild(healthBar);
+        healthBar.appendChild(healthBarFilling);
 
-    const shinyIcon = document.createElement('img');
-    shinyIcon.src = pokemon.shinyIcon;
-    shinyIcon.alt = 'Shiny';
-    shinyIcon.classList.add('popup-content-shiny-icon');
+        // Icônes de statut du Pokémon
+        const pokemonIcons = document.createElement('div');
+        pokemonIcons.classList.add('popup-content-pokemon-icons');
 
-    const inTeamIcon = document.createElement('img');
-    inTeamIcon.src = pokemon.inTeamIcon;
-    inTeamIcon.alt = 'In team';
-    inTeamIcon.classList.add('popup-content-in-team-icon');
+        if (owned_pokemons[i].isInTeam) {
+            const inTeamIcon = document.createElement('img');
+            inTeamIcon.src = "sprites/misc/pokeball_icon.png";
+            inTeamIcon.alt = 'In team';
+            inTeamIcon.classList.add('popup-content-in-team-icon');
 
-    pokemonIcons.appendChild(shinyIcon);
-    pokemonIcons.appendChild(inTeamIcon);
+            pokemonIcons.appendChild(inTeamIcon);
+        }
 
-    // Assemble le tout
-    singlePokemon.appendChild(leftSide);
-    singlePokemon.appendChild(rightSide);
-    singlePokemon.appendChild(pokemonIcons);
+        if (owned_pokemons[i].isShiny) {
+            const shinyIcon = document.createElement('img');
+            shinyIcon.src = "sprites/misc/shiny.png";
+            shinyIcon.alt = 'Shiny';
+            shinyIcon.classList.add('popup-content-shiny-icon');
 
-    pokemonList.appendChild(singlePokemon);
+            pokemonIcons.appendChild(shinyIcon);
+        }
+
+        // Assemble le tout
+        singlePokemon.appendChild(leftSide);
+        singlePokemon.appendChild(rightSide);
+        singlePokemon.appendChild(pokemonIcons);
+
+        pokemonList.appendChild(singlePokemon);
+
+    }
+
     popupContent.appendChild(titleLine);
     popupContent.appendChild(pokemonList);
     popupContainer.appendChild(popupContent);
+    popupBackgroundContainer.appendChild(popupContainer);
 
     // Ajouter le popup à la page
-    document.body.appendChild(popupContainer);
+    document.body.appendChild(popupBackgroundContainer);
 }
