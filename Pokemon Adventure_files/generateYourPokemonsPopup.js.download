@@ -31,11 +31,6 @@ function generateYourPokemonsPopup() {
     titleLine.appendChild(title);
     titleLine.appendChild(closeButton);
 
-    // Wrapper de la liste des Pokémon
-    const pokemonListWrapper = document.createElement('div');
-    pokemonListWrapper.classList.add('popup-content-wrapper');
-    titleLine.appendChild(pokemonListWrapper);
-
     // Contenu de la liste des Pokémon
     const pokemonList = document.createElement('div');
     pokemonList.classList.add('popup-content-your-pokemons-list');
@@ -131,11 +126,11 @@ function generateYourPokemonsPopup() {
         singlePokemon.appendChild(pokemonIcons);
 
         pokemonList.appendChild(singlePokemon);
+
     }
-    
-    pokemonListWrapper.appendChild(pokemonList);
+
     popupContent.appendChild(titleLine);
-    popupContent.appendChild(pokemonListWrapper);
+    popupContent.appendChild(pokemonList);
     popupContainer.appendChild(popupContent);
     popupBackgroundContainer.appendChild(popupContainer);
 

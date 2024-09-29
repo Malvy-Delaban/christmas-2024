@@ -11,13 +11,11 @@
 
 /* Conteneur principal du popup */
 .popup-your-pokemons {
-    position: relative;
     width: 85%;
     height: 85%;
     background-color: white;
     border-radius: 5rem;
     z-index: 5;
-    overflow-y: auto;
 }
 
 /* Titre du popup */
@@ -44,22 +42,15 @@
 }
 
 /* Liste des Pokémon */
-.popup-content-wrapper {
-    flex-grow: 1; /* Permet au wrapper d'occuper l'espace restant */
-    overflow-y: auto; /* Scroll vertical uniquement dans ce wrapper */
-}
-
 .popup-content-your-pokemons-list {
     padding-top: 5rem;
-    height: 80;
+    background-color: aquamarine;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 1rem;
     overflow-y: auto;
-    flex-grow: 1; /* Remplit tout l'espace disponible */
-    padding-bottom: 3rem;
 }
 
 /* Conteneur de chaque Pokémon */
