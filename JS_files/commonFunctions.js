@@ -37,7 +37,7 @@ function getHPbarColor(pokemon) {
     return "#ff2d2d";
 }
 
-function createTypeChip(pokemon) {
+function createTypeChipPopupYourPokemons(pokemon) {
     const typeChip = document.createElement('div');
     typeChip.classList.add('popup-content-type-chip');
     typeChip.style.backgroundColor = pokedex[pokemon.pokedexId].type.color;
@@ -45,6 +45,19 @@ function createTypeChip(pokemon) {
     const typeChipText = document.createElement('p');
     typeChipText.textContent = pokedex[pokemon.pokedexId].type.name;
     typeChipText.classList.add('popup-content-type-chip-text');
+    typeChip.appendChild(typeChipText);
+
+    return typeChip
+}
+
+function createTypeChipPopupDetail(pokemon) {
+    const typeChip = document.createElement('div');
+    typeChip.classList.add('pokemon-detail-type-chip');
+    typeChip.style.backgroundColor = pokedex[pokemon.pokedexId].type.color;
+    
+    const typeChipText = document.createElement('p');
+    typeChipText.textContent = pokedex[pokemon.pokedexId].type.name;
+    typeChipText.classList.add('pokemon-detail-type-chip-text');
     typeChip.appendChild(typeChipText);
 
     return typeChip

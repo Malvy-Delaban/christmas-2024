@@ -16,7 +16,7 @@ function generateYourPokemonsPopup() {
     titleLine.classList.add('popup-title-line');
 
     const title = document.createElement('p');
-    title.textContent = 'Mes Pokémons';
+    title.textContent = 'Mes Pokémons (' + Object.keys(owned_pokemons).length + ')';
     
     const closeButton = document.createElement('img');
     closeButton.src = 'sprites/misc/cross_icon.png';
@@ -60,7 +60,7 @@ function generateYourPokemonsPopup() {
         pokemonImage.alt = owned_pokemons[i].name;
         pokemonImage.classList.add('popup-content-pokemon-image');
 
-        const typeChip = createTypeChip(owned_pokemons[i]);
+        const typeChip = createTypeChipPopupYourPokemons(owned_pokemons[i]);
 
         leftSide.appendChild(rarityBackground);
         leftSide.appendChild(pokemonImage);
@@ -83,10 +83,10 @@ function generateYourPokemonsPopup() {
         pokemonAttack.classList.add('popup-content-pokemon-attack');
 
         const healthBar = document.createElement('div');
-        healthBar.classList.add('health-bar');
+        healthBar.classList.add('your-pokemons-health-bar');
 
         const healthBarFilling = document.createElement('div');
-        healthBarFilling.classList.add('health-bar-filling');
+        healthBarFilling.classList.add('your-pokemons-health-bar-filling');
         healthBarFilling.style.width = getHPbarSize(owned_pokemons[i]);
         healthBarFilling.style.backgroundColor = getHPbarColor(owned_pokemons[i]);
 
