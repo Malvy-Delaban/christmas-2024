@@ -1,3 +1,22 @@
+function updatePokemonDetailPopupIsInTeam(newValue) {
+    let isInTeamDiv = document.getElementById('detail-pokemon-in-team-icon');
+    let putInTeamButton = document.getElementById('detail-pokemon-button');
+    let parentDiv = document.getElementById('detail-pokemon-stats-right');
+    
+    if (!isInTeamDiv && newValue) {
+        const imgInTeamIcon = document.createElement('img');
+        imgInTeamIcon.id = 'detail-pokemon-in-team-icon';
+        imgInTeamIcon.className = 'detail-pokemon-in-team-icon';
+        imgInTeamIcon.src = 'sprites/misc/pokeball_icon.png';
+        imgInTeamIcon.alt = 'In team';
+        parentDiv.appendChild(imgInTeamIcon);
+        if (putInTeamButton)
+            putInTeamButton.remove();
+    } else if (isInTeamDiv && !newValue) {
+        parentDiv.removeChild(isInTeamDiv);
+    }
+}
+
 function generatePokemonDetailPopup(pokemon) {
     // Créer les éléments principaux
     const popupBackgroundContainer = document.createElement('div');
@@ -20,8 +39,10 @@ function generatePokemonDetailPopup(pokemon) {
     closeButton.src = 'sprites/misc/cross_icon.png';
     closeButton.style.cursor = 'pointer';
     closeButton.addEventListener('click', () => {
-        document.body.style.overflow = '';
         popupBackgroundContainer.remove(); // Ferme le popup en supprimant l'élément
+        const updateYourPokemonEvent = new CustomEvent("updateYourPokemonEvent", {});
+        console.log("here");
+        document.dispatchEvent(updateYourPokemonEvent);
     });
     closeButton.classList.add('popup-close-icon');
 
@@ -48,14 +69,7 @@ function generatePokemonDetailPopup(pokemon) {
     
     const detailPokemonStatsRight = document.createElement('div');
     detailPokemonStatsRight.className = 'detail-pokemon-stats-right';
-
-    if (pokemon.isInTeam) {
-        const imgInTeamIcon = document.createElement('img');
-        imgInTeamIcon.className = 'detail-pokemon-in-team-icon';
-        imgInTeamIcon.src = 'sprites/misc/pokeball_icon.png';
-        imgInTeamIcon.alt = 'In team';
-        detailPokemonStatsRight.appendChild(imgInTeamIcon);
-    }
+    detailPokemonStatsRight.id = 'detail-pokemon-stats-right';
 
     if (pokemon.isShiny) {
         const imgShinyIcon = document.createElement('img');
@@ -80,7 +94,6 @@ function generatePokemonDetailPopup(pokemon) {
     const pokemonRarity = document.createElement('div');
     pokemonRarity.className = 'detail-pokemon-rarity';
     pokemonRarity.textContent = pokedex[pokemon.pokedexId].rarity.name;
-    console.log(pokedex[pokemon.pokedexId].rarity);
     pokemonRarity.style.color = pokedex[pokemon.pokedexId].rarity.color;
 
     const healthContainer = document.createElement('div');
@@ -112,11 +125,38 @@ function generatePokemonDetailPopup(pokemon) {
     detailPokemonStats.appendChild(detailPokemonStatsLeft);
     detailPokemonStats.appendChild(detailPokemonStatsRight);
     
-    
     // Créer et ajouter la section des boutons
     const detailPokemonButtons = document.createElement('div');
     detailPokemonButtons.className = 'detail-pokemon-buttons';
-    
+
+    if (!pokemon.isInTeam) {
+        const detailPokemonButtonPutInTeam = document.createElement('button');
+        detailPokemonButtonPutInTeam.className = 'detail-pokemon-button';
+        detailPokemonButtonPutInTeam.id = 'detail-pokemon-button';
+        detailPokemonButtonPutInTeam.textContent = "Mettre dans l'équipe";
+        detailPokemonButtonPutInTeam.addEventListener('click', () => {
+            if (getInTeamPokemons().length > 2) {
+                generatePutInTeamPopup(pokemon);
+            } else {
+                pokemon.isInTeam = true;
+                updateOwnedPokemons();
+                updatePokemonDetailPopupIsInTeam(true);
+            }
+        });
+        detailPokemonButtons.appendChild(detailPokemonButtonPutInTeam);
+    }
+
+
+    if (pokedex[pokemon.pokedexId].evolving_pokemon != -1) {
+        const detailPokemonButtonEvolve = document.createElement('button');
+        detailPokemonButtonEvolve.className = 'detail-pokemon-button';
+        detailPokemonButtonEvolve.textContent = "Evolutions de " + pokedex[pokemon.pokedexId].name;
+        detailPokemonButtonEvolve.addEventListener('click', () => {
+            generateEvolutionPopup(pokemon);
+        });
+        detailPokemonButtons.appendChild(detailPokemonButtonEvolve);
+    }
+
     // Ajouter le popup à la page
     // detailPokemonStats.appendChild(detailPokemonWrapperWrapper);
     detailPokemonWrapper.appendChild(imgPokemon);
@@ -131,4 +171,8 @@ function generatePokemonDetailPopup(pokemon) {
     popupContainer.appendChild(popupContent);
     popupBackgroundContainer.appendChild(popupContainer);
     document.body.appendChild(popupBackgroundContainer);
+    
+    if (pokemon.isInTeam) {
+        updatePokemonDetailPopupIsInTeam(true);
+    }
 }

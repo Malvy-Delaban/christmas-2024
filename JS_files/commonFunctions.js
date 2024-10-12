@@ -40,10 +40,10 @@ function getHPbarColor(pokemon) {
 function createTypeChipPopupYourPokemons(pokemon) {
     const typeChip = document.createElement('div');
     typeChip.classList.add('popup-content-type-chip');
-    typeChip.style.backgroundColor = pokedex[pokemon.pokedexId].type.color;
+    typeChip.style.backgroundColor = pokemon.type.color;
     
     const typeChipText = document.createElement('p');
-    typeChipText.textContent = pokedex[pokemon.pokedexId].type.name;
+    typeChipText.textContent = pokemon.type.name;
     typeChipText.classList.add('popup-content-type-chip-text');
     typeChip.appendChild(typeChipText);
 
@@ -61,4 +61,90 @@ function createTypeChipPopupDetail(pokemon) {
     typeChip.appendChild(typeChipText);
 
     return typeChip
+}
+
+function createTypeChipFromPokedexID(PokedexID) {
+    const typeChip = document.createElement('div');
+    typeChip.classList.add('popup-evolution-type-chip');
+    typeChip.style.backgroundColor = pokedex[PokedexID].type.color;
+    
+    const typeChipText = document.createElement('p');
+    typeChipText.textContent = pokedex[PokedexID].type.name;
+    typeChipText.classList.add('popup-evolution-type-chip-text');
+    typeChip.appendChild(typeChipText);
+
+    return typeChip
+}
+
+function forceInTeamIfNeeded() {
+    let inTeamNbr = 0;
+
+    for (let i = 0; i < owned_pokemons.lenght; i++) {
+        if (owned_pokemons[i].isInTeam)
+            inTeamNbr++;
+    }
+    if (inTeamNbr == 0)
+        owned_pokemons[0].isInTeam = true;
+    updateOwnedPokemons();
+}
+
+function getInTeamPokemons() {
+    let team = [];
+
+    for (let i = 0; i < owned_pokemons.length; i++) {
+        if (owned_pokemons[i].isInTeam)
+            team.push(owned_pokemons[i]);
+    }
+    return team;
+}
+
+function generateUUID() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        const r = Math.random() * 16 | 0;
+        const v = c === 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+    });
+}
+
+function GetSpriteByPokemon(pokedexEntry, isShiny) {
+    let pokedexIdParsed = String(pokedex[pokedexEntry].id);
+
+    let pokedex_id = pokedexIdParsed.includes('.') ? pokedexIdParsed.split('.')[0] : pokedexIdParsed;
+    let altFormNumber = pokedexIdParsed.includes('.') ? 1 : 0;
+
+    let formattedPokedexId = pokedex_id.toString().padStart(4, '0');
+    let formattedAltFormNumber = altFormNumber.toString().padStart(3, '0');
+    let shinySuffix = isShiny ? 'r' : 'n';
+
+    let spriteName = `sprites/pokemons/poke_capture_${formattedPokedexId}_${formattedAltFormNumber}_mf_n_00000000_f_${shinySuffix}.png`;
+
+    return spriteName;
+}
+
+function GetSpriteByPokedexId(pokedexId, isShiny) {
+    let pokedexIdParsed = String(pokedex[pokedexId].id);
+
+    let pokedex_id = pokedexIdParsed.includes('.') ? pokedexIdParsed.split('.')[0] : pokedexIdParsed;
+    let altFormNumber = pokedexIdParsed.includes('.') ? 1 : 0;
+
+    let formattedPokedexId = pokedex_id.toString().padStart(4, '0');
+    let formattedAltFormNumber = altFormNumber.toString().padStart(3, '0');
+    let shinySuffix = isShiny ? 'r' : 'n';
+
+    let spriteName = `sprites/pokemons/poke_capture_${formattedPokedexId}_${formattedAltFormNumber}_mf_n_00000000_f_${shinySuffix}.png`;
+
+    return spriteName;
+}
+
+function getKeyPokedexFromId(targetId) {
+    let foundKey = null;
+
+    for (const [key, pokemon] of Object.entries(pokedex)) {
+        if (pokemon.id === targetId) {
+            foundKey = key; // Store the key when a match is found
+            break; // Exit the loop once the key is found
+        }
+    }
+    
+    return foundKey;
 }

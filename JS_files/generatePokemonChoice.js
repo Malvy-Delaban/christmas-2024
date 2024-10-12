@@ -1,18 +1,3 @@
-function GetSpriteByPokemon(pokedexEntry, isShiny) {
-    let pokedexIdParsed = String(pokedex[pokedexEntry].id);
-
-    let pokedex_id = pokedexIdParsed.includes('.') ? pokedexIdParsed.split('.')[0] : pokedexIdParsed;
-    let altFormNumber = pokedexIdParsed.includes('.') ? 1 : 0;
-
-    let formattedPokedexId = pokedex_id.toString().padStart(4, '0');
-    let formattedAltFormNumber = altFormNumber.toString().padStart(3, '0');
-    let shinySuffix = isShiny ? 'r' : 'n';
-
-    let spriteName = `sprites/pokemons/poke_capture_${formattedPokedexId}_${formattedAltFormNumber}_mf_n_00000000_f_${shinySuffix}.png`;
-
-    return spriteName;
-}
-
 function generatePokemonBasedOnPokedexEntry(pokedexEntry, currentCase) {
     const shinyChance = 22;
     const shinyChanceBoosted = 18; // To make the odds in favor of Lucy
@@ -25,6 +10,7 @@ function generatePokemonBasedOnPokedexEntry(pokedexEntry, currentCase) {
     let temp_sprite = GetSpriteByPokemon(pokedexEntry, temp_isShiny);
 
     let newPokemon = {
+        uuid: generateUUID(),
         pokedexId: pokedexEntry,
         isShiny: temp_isShiny,
         level: temp_level,
@@ -33,7 +19,8 @@ function generatePokemonBasedOnPokedexEntry(pokedexEntry, currentCase) {
         attack: temp_attack,
         gender: temp_gender,
         sprite: temp_sprite,
-        isInTeam: false
+        isInTeam: false,
+        duelWon: 0,
     };
 
     return newPokemon;
@@ -73,6 +60,7 @@ function chosePokemon(pokemon, currentCase) {
     owned_pokemons.push(pokemon);
     currentCase.has_been_used = true;
     updateOwnedPokemons();
+    forceInTeamIfNeeded();
     updateMapCases();
 
     const divsToDelete = document.querySelectorAll('div.route-display');

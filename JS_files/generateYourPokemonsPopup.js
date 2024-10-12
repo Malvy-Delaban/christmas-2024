@@ -1,45 +1,13 @@
-function generateYourPokemonsPopup() {
-    document.body.style.overflow = 'hidden'; // Désactive le scroll
-    
-    // Créer les éléments principaux
-    const popupBackgroundContainer = document.createElement('div');
-    popupBackgroundContainer.classList.add('popup-background');
-
-    // Créer les éléments principaux
-    const popupContainer = document.createElement('div');
-    popupContainer.classList.add('popup-your-pokemons');
-
-    const popupContent = document.createElement('div');
-    popupContent.classList.add('popup-content-your-pokemons');
-
-    const titleLine = document.createElement('div');
-    titleLine.classList.add('popup-title-line');
-
-    const title = document.createElement('p');
-    title.textContent = 'Mes Pokémons (' + Object.keys(owned_pokemons).length + ')';
-    
-    const closeButton = document.createElement('img');
-    closeButton.src = 'sprites/misc/cross_icon.png';
-    closeButton.style.cursor = 'pointer';
-    closeButton.addEventListener('click', () => {
-        document.body.style.overflow = '';
-        popupBackgroundContainer.remove(); // Ferme le popup en supprimant l'élément
+function addListenerYourPokemonsPopup(pokemonList) {
+    document.addEventListener("updateYourPokemonEvent", (event) => {
+        console.log("updateYourPokemonEvent triggered!");
+        pokemonList.innerHTML = "";
+        owned_pokemons.sort((a, b) => b.isInTeam - a.isInTeam);
+        fillYourPokemonsPopup(pokemonList);
     });
-    closeButton.classList.add('popup-close-icon');
+}
 
-    // Ajouter le titre et le bouton de fermeture
-    titleLine.appendChild(title);
-    titleLine.appendChild(closeButton);
-
-    // Wrapper de la liste des Pokémon
-    const pokemonListWrapper = document.createElement('div');
-    pokemonListWrapper.classList.add('popup-content-wrapper');
-    titleLine.appendChild(pokemonListWrapper);
-
-    // Contenu de la liste des Pokémon
-    const pokemonList = document.createElement('div');
-    pokemonList.classList.add('popup-content-your-pokemons-list');
-
+function fillYourPokemonsPopup(pokemonList) {
     for (let i = 0; i < Object.keys(owned_pokemons).length; i++) {
 
         // Créer un Pokémon unique à afficher
@@ -60,7 +28,7 @@ function generateYourPokemonsPopup() {
         pokemonImage.alt = owned_pokemons[i].name;
         pokemonImage.classList.add('popup-content-pokemon-image');
 
-        const typeChip = createTypeChipPopupYourPokemons(owned_pokemons[i]);
+        const typeChip = createTypeChipPopupYourPokemons(pokedex[owned_pokemons[i].pokedexId]);
 
         leftSide.appendChild(rarityBackground);
         leftSide.appendChild(pokemonImage);
@@ -128,7 +96,54 @@ function generateYourPokemonsPopup() {
         });
 
         pokemonList.appendChild(singlePokemon);
+        addListenerYourPokemonsPopup(pokemonList);
     }
+}
+
+function generateYourPokemonsPopup() {
+    document.body.style.overflow = 'hidden'; // Désactive le scroll
+    owned_pokemons.sort((a, b) => b.isInTeam - a.isInTeam);
+    
+    // Créer les éléments principaux
+    const popupBackgroundContainer = document.createElement('div');
+    popupBackgroundContainer.classList.add('popup-background');
+
+    // Créer les éléments principaux
+    const popupContainer = document.createElement('div');
+    popupContainer.classList.add('popup-your-pokemons');
+
+    const popupContent = document.createElement('div');
+    popupContent.classList.add('popup-content-your-pokemons');
+
+    const titleLine = document.createElement('div');
+    titleLine.classList.add('popup-title-line');
+
+    const title = document.createElement('p');
+    title.textContent = 'Mes Pokémons (' + Object.keys(owned_pokemons).length + ')';
+    
+    const closeButton = document.createElement('img');
+    closeButton.src = 'sprites/misc/cross_icon.png';
+    closeButton.style.cursor = 'pointer';
+    closeButton.addEventListener('click', () => {
+        document.body.style.overflow = '';
+        popupBackgroundContainer.remove(); // Ferme le popup en supprimant l'élément
+    });
+    closeButton.classList.add('popup-close-icon');
+
+    // Ajouter le titre et le bouton de fermeture
+    titleLine.appendChild(title);
+    titleLine.appendChild(closeButton);
+
+    // Wrapper de la liste des Pokémon
+    const pokemonListWrapper = document.createElement('div');
+    pokemonListWrapper.classList.add('popup-content-wrapper');
+    titleLine.appendChild(pokemonListWrapper);
+
+    // Contenu de la liste des Pokémon
+    const pokemonList = document.createElement('div');
+    pokemonList.classList.add('popup-content-your-pokemons-list');
+
+    fillYourPokemonsPopup(pokemonList);
     
     pokemonListWrapper.appendChild(pokemonList);
     popupContent.appendChild(titleLine);

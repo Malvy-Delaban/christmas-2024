@@ -310,3 +310,163 @@
     margin-top: 0.5rem;
     text-align: center;
 }
+
+.detail-pokemon-buttons {
+    width: 70%;
+    position: absolute;
+    bottom: 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.detail-pokemon-button {
+    width: 100%;
+    border-radius: 3rem;
+    color: white;
+    background-color: #685189;
+    border-style: none;
+    height: 6rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+    padding: 0 3rem;
+}
+
+/* Put in team popup */
+
+.popup-put-in-team-detail {
+    position: relative;
+    width: 85%;
+    height: 25%;
+    background-color: white;
+    border-radius: 5rem;
+    z-index: 5;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.popup-put-in-team-title {
+    color: #4B3768;
+    font-size: 3.5rem;
+    font-weight: 900;
+    width: 90%;
+    text-align: center;
+}
+
+.popup-put-in-team-pokemon-list {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup-put-in-team-pokemon-container {
+    position: relative;
+}
+
+.popup-put-in-team-pokemon-img {
+    width: 100%;
+}
+
+.popup-put-in-team-remove-img {
+    position: absolute;
+    width: 5rem;
+    bottom: 0;
+    right: 0;
+}
+
+/* Evolution popup */
+
+.popup-evolution-pokemon-list {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup-evolution-detail {
+    position: relative;
+    width: 85%;
+    height: 85%;
+    background-color: white;
+    border-radius: 5rem;
+    z-index: 5;
+    overflow-y: auto;
+}
+
+.popup-evolution-title {
+    color: #4B3768;
+    font-size: 3.5rem;
+    font-weight: 900;
+    width: 90%;
+    text-align: center;
+}
+
+.popup-evolution-requirements {
+    color: #4B3768;
+    font-size: 2.5rem;
+    text-align: center;
+    width: 90%;
+}
+
+.popup-evolution-single-container {
+    display: flex;
+    height: 18rem;
+}
+
+.popup-evolution-right-side {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.popup-evolution-button {
+    width: 100%;
+    border-radius: 3rem;
+    color: white;
+    background-color: #685189;
+    border-style: none;
+    height: 5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+    padding: 0 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup-evolution-button-left-side {
+    margin: 0;
+    padding: 0;
+}
+
+.popup-evolution-type-chip { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 3rem;
+    border-radius: 2rem;
+    z-index: 10;
+    width: 12rem;
+}
+
+.popup-evolution-type-chip-text { 
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.6rem 2rem;
+}
+
+.popup-evolution-img {
+    height: 18rem; 
+    width: 18rem;
+}

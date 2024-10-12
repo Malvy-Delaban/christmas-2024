@@ -64,7 +64,7 @@ let setup_map_cases = [
         },
     },
     {
-        id: 2,
+        id: 3,
         name: "Route 03",
         background_sprite: "./sprites/locations/location_27.png",
         unlock_day: new Date("2024-12-03"),
@@ -85,6 +85,22 @@ let setup_map_cases = [
             ABRA: 2,
             MINIDRACO: 1,
             TIPLOUF: 1,
+        },
+    },
+    {
+        id: 999,
+        name: "To delete",
+        background_sprite: "./sprites/locations/location_12.png",
+        unlock_day: new Date("2024-12-03"),
+        has_been_used: false,
+        shiny_lock: false,
+        base_level: 40,
+        level_randomness: 2,
+        generated_pokemons: [],
+        possible_pokemons: {
+            BASTIODON: 4,
+            CHARKOS: 4,
+            GRODRIVE: 4,
         },
     },
 ];
