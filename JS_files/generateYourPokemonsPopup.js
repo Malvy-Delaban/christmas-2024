@@ -1,6 +1,5 @@
 function addListenerYourPokemonsPopup(pokemonList) {
     document.addEventListener("updateYourPokemonEvent", (event) => {
-        console.log("updateYourPokemonEvent triggered!");
         pokemonList.innerHTML = "";
         owned_pokemons.sort((a, b) => b.isInTeam - a.isInTeam);
         fillYourPokemonsPopup(pokemonList);
@@ -96,7 +95,6 @@ function fillYourPokemonsPopup(pokemonList) {
         });
 
         pokemonList.appendChild(singlePokemon);
-        addListenerYourPokemonsPopup(pokemonList);
     }
 }
 
@@ -144,7 +142,8 @@ function generateYourPokemonsPopup() {
     pokemonList.classList.add('popup-content-your-pokemons-list');
 
     fillYourPokemonsPopup(pokemonList);
-    
+    addListenerYourPokemonsPopup(pokemonList);
+
     pokemonListWrapper.appendChild(pokemonList);
     popupContent.appendChild(titleLine);
     popupContent.appendChild(pokemonListWrapper);

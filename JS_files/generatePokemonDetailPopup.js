@@ -39,10 +39,9 @@ function generatePokemonDetailPopup(pokemon) {
     closeButton.src = 'sprites/misc/cross_icon.png';
     closeButton.style.cursor = 'pointer';
     closeButton.addEventListener('click', () => {
-        popupBackgroundContainer.remove(); // Ferme le popup en supprimant l'élément
         const updateYourPokemonEvent = new CustomEvent("updateYourPokemonEvent", {});
-        console.log("here");
         document.dispatchEvent(updateYourPokemonEvent);
+        popupBackgroundContainer.remove(); // Ferme le popup en supprimant l'élément
     });
     closeButton.classList.add('popup-close-icon');
 
@@ -147,7 +146,7 @@ function generatePokemonDetailPopup(pokemon) {
     }
 
 
-    if (pokedex[pokemon.pokedexId].evolving_pokemon != -1) {
+    if (pokedex[pokemon.pokedexId].evolving_pokemon && pokedex[pokemon.pokedexId].evolving_pokemon.length > 0) {
         const detailPokemonButtonEvolve = document.createElement('button');
         detailPokemonButtonEvolve.className = 'detail-pokemon-button';
         detailPokemonButtonEvolve.textContent = "Evolutions de " + pokedex[pokemon.pokedexId].name;

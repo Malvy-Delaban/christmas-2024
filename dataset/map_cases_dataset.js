@@ -99,7 +99,7 @@ let setup_map_cases = [
         generated_pokemons: [],
         possible_pokemons: {
             BASTIODON: 4,
-            CHARKOS: 4,
+            EVOLI: 4,
             GRODRIVE: 4,
         },
     },

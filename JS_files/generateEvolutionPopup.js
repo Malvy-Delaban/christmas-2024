@@ -23,7 +23,21 @@ function fillEvolutionList(evolutionListDiv, currentPokemon) {
         evolveButtonLeftSide.classList.add('popup-evolution-button-left-side');
         evolveButtonLeftSide.textContent = pokedex[evolvingPokemonKey].name;
 
+        const evolveButtonRightSide = document.createElement('div');
+        evolveButtonRightSide.classList.add('popup-evolution-button-right-side');
+
+        const evolveButtonRightSideCostImg = document.createElement('img');
+        evolveButtonRightSideCostImg.src = pokemon.needed_item[i].background_sprite;
+        evolveButtonRightSideCostImg.classList.add('popup-evolution-button-right-side-cost-img');
+
+        const evolveButtonRightSideCostText = document.createElement('p');
+        evolveButtonRightSideCostText.textContent = "x" + pokemon.needed_quantity[i];
+        evolveButtonRightSideCostText.classList.add('popup-evolution-button-right-side-cost-text');
+
+        evolveButtonRightSide.appendChild(evolveButtonRightSideCostImg);
+        evolveButtonRightSide.appendChild(evolveButtonRightSideCostText);
         evolveButton.appendChild(evolveButtonLeftSide);
+        evolveButton.appendChild(evolveButtonRightSide);
         rightSide.appendChild(typeChip);
         rightSide.appendChild(evolveButton);
         evolutionContainer.appendChild(evolutionImg);
