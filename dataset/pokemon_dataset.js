@@ -740,6 +740,19 @@ let setup_pokedex = {
         needed_item:[],
         evolving_pokemon:[]
     },
+    TAUPIQUEUR_A: {
+        id:"50.1",
+        name:"Taupiqueur d'Alola",
+        has_been_seen:false,
+        has_been_captured:false,
+        rarity:Rarities.COMMON,
+        type:Types.ACIER,
+        max_hp_lvl1:11,
+        attack_lvl1:11,
+        needed_quanity:[],
+        needed_item:[],
+        evolving_pokemon:[]
+    },
     TRIOPIKEUR: {
         id:51,
         name:"Triopikeur",
@@ -747,6 +760,19 @@ let setup_pokedex = {
         has_been_captured:false,
         rarity:Rarities.COMMON,
         type:Types.SOL,
+        max_hp_lvl1:24,
+        attack_lvl1:20,
+        needed_quanity:[],
+        needed_item:[],
+        evolving_pokemon:[]
+    },
+    TRIOPIKEUR_A: {
+        id:51,
+        name:"Triopikeur d'Alola",
+        has_been_seen:false,
+        has_been_captured:false,
+        rarity:Rarities.COMMON,
+        type:Types.ACIER,
         max_hp_lvl1:24,
         attack_lvl1:20,
         needed_quanity:[],
@@ -762,6 +788,32 @@ let setup_pokedex = {
         type:Types.NORMAL,
         max_hp_lvl1:20,
         attack_lvl1:9,
+        needed_quanity:[],
+        needed_item:[],
+        evolving_pokemon:[]
+    },
+    MIAOUSS_A: {
+        id:"52.1",
+        name:"Miaouss d'Alola",
+        has_been_seen:false,
+        has_been_captured:false,
+        rarity:Rarities.COMMON,
+        type:Types.TENEBRES,
+        max_hp_lvl1:20,
+        attack_lvl1:9,
+        needed_quanity:[],
+        needed_item:[],
+        evolving_pokemon:[]
+    },
+    MIAOUSS_G: {
+        id:"52.2",
+        name:"Miaouss de Galar",
+        has_been_seen:false,
+        has_been_captured:false,
+        rarity:Rarities.COMMON,
+        type:Types.ACIER,
+        max_hp_lvl1:18,
+        attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
         evolving_pokemon:[]
@@ -1897,6 +1949,32 @@ let setup_pokedex = {
         needed_item:[],
         evolving_pokemon:[]
     },
+    MMIME: {
+        id:122,
+        name:"M. Mime",
+        has_been_seen:false,
+        has_been_captured:false,
+        rarity:Rarities.UNCOMMON,
+        type:Types.PSY,
+        max_hp_lvl1:26,
+        attack_lvl1:20,
+        needed_quanity:[],
+        needed_item:[],
+        evolving_pokemon:[]
+    },
+    MMIME_G: {
+        id:122,
+        name:"M. Mime de Galar",
+        has_been_seen:false,
+        has_been_captured:false,
+        rarity:Rarities.UNCOMMON,
+        type:Types.GLACE,
+        max_hp_lvl1:31,
+        attack_lvl1:18,
+        needed_quanity:[],
+        needed_item:[],
+        evolving_pokemon:[]
+    },
     INSECATEUR: {
         id:123,
         name:"Insécateur",
@@ -2166,6 +2244,19 @@ let setup_pokedex = {
         type:Types.NORMAL,
         max_hp_lvl1:80,
         attack_lvl1:22,
+        needed_quanity:[],
+        needed_item:[],
+        evolving_pokemon:[]
+    },
+    ARTIKODIN: {
+        id:144,
+        name:"Artikodin",
+        has_been_seen:false,
+        has_been_captured:false,
+        rarity:Rarities.LEGENDARY,
+        type:Types.GLACE,
+        max_hp_lvl1:45,
+        attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
         evolving_pokemon:[]
@@ -3479,6 +3570,19 @@ let setup_pokedex = {
         type:Types.COMBAT,
         max_hp_lvl1:31,
         attack_lvl1:19,
+        needed_quanity:[],
+        needed_item:[],
+        evolving_pokemon:[]
+    },
+    LIPPOUTI: {
+        id:238,
+        name:"Lippouti",
+        has_been_seen:false,
+        has_been_captured:false,
+        rarity:Rarities.RARE,
+        type:Types.PSY,
+        max_hp_lvl1:28,
+        attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
         evolving_pokemon:[]
@@ -6070,6 +6174,19 @@ let setup_pokedex = {
         needed_item:[],
         evolving_pokemon:[]
     },
+    MIMEJR: {
+        id:439,
+        name:"Mime Jr.",
+        has_been_seen:false,
+        has_been_captured:false,
+        rarity:Rarities.COMMON,
+        type:Types.PSY,
+        max_hp_lvl1:16,
+        attack_lvl1:14,
+        needed_quanity:[],
+        needed_item:[],
+        evolving_pokemon:[]
+    },
     PTIRAVI: {
         id:440,
         name:"Ptiravi",
@@ -7792,7 +7909,7 @@ let setup_pokedex = {
         has_been_seen:false,
         has_been_captured:false,
         rarity:Rarities.RARE,
-        type:Types.NORMAL,
+        type:Types.SPECTRE,
         max_hp_lvl1:18,
         attack_lvl1:17,
         needed_quanity:[],
@@ -7818,7 +7935,7 @@ let setup_pokedex = {
         has_been_seen:false,
         has_been_captured:false,
         rarity:Rarities.EPIC,
-        type:Types.NORMAL,
+        type:Types.SPECTRE,
         max_hp_lvl1:30,
         attack_lvl1:24,
         needed_quanity:[],
@@ -8585,9 +8702,22 @@ let setup_pokedex = {
         has_been_seen:false,
         has_been_captured:false,
         rarity:Rarities.RARE,
-        type:Types.NORMAL,
+        type:Types.VOL,
         max_hp_lvl1:50,
         attack_lvl1:25,
+        needed_quanity:[],
+        needed_item:[],
+        evolving_pokemon:[]
+    },
+    GUERIAIGLE_H: {
+        id:"628.3",
+        name:"Gueriaigle de Hisui",
+        has_been_seen:false,
+        has_been_captured:false,
+        rarity:Rarities.EPIC,
+        type:Types.PSY,
+        max_hp_lvl1:55,
+        attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
         evolving_pokemon:[]
@@ -9047,6 +9177,19 @@ let setup_pokedex = {
         needed_item:[],
         evolving_pokemon:[]
     },
+    LEPIDONILLE: {
+        id:664,
+        name:"Lépidonille",
+        has_been_seen:false,
+        has_been_captured:false,
+        rarity:Rarities.COMMON,
+        type:Types.INSECTE,
+        max_hp_lvl1:8,
+        attack_lvl1:7,
+        needed_quanity:[],
+        needed_item:[],
+        evolving_pokemon:[]
+    },
     PEREGRAIN: {
         id:665,
         name:"Pérégrain",
@@ -9095,6 +9238,19 @@ let setup_pokedex = {
         type:Types.FEU,
         max_hp_lvl1:43,
         attack_lvl1:22,
+        needed_quanity:[],
+        needed_item:[],
+        evolving_pokemon:[]
+    },
+    FLABEBE: {
+        id:669,
+        name:"Flabébé",
+        has_been_seen:false,
+        has_been_captured:false,
+        rarity:Rarities.COMMON,
+        type:Types.FEE,
+        max_hp_lvl1:28,
+        attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
         evolving_pokemon:[]
@@ -9567,6 +9723,19 @@ let setup_pokedex = {
         needed_item:[],
         evolving_pokemon:[]
     },
+    COLIMUCUS_H: {
+        id:"705.3",
+        name:"Colimucus de Hisui",
+        has_been_seen:false,
+        has_been_captured:false,
+        rarity:Rarities.COMMON,
+        type:Types.ACIER,
+        max_hp_lvl1:35,
+        attack_lvl1:17,
+        needed_quanity:[],
+        needed_item:[],
+        evolving_pokemon:[]
+    },
     MUPLODOCUS: {
         id:706,
         name:"Muplodocus",
@@ -9575,6 +9744,19 @@ let setup_pokedex = {
         rarity:Rarities.COMMON,
         type:Types.DRAGON,
         max_hp_lvl1:51,
+        attack_lvl1:22,
+        needed_quanity:[],
+        needed_item:[],
+        evolving_pokemon:[]
+    },
+    MUPLODOCUS_H: {
+        id:706,
+        name:"Muplodocus de Hisui",
+        has_been_seen:false,
+        has_been_captured:false,
+        rarity:Rarities.COMMON,
+        type:Types.DRAGON,
+        max_hp_lvl1:46,
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
@@ -9820,7 +10002,7 @@ let setup_pokedex = {
         has_been_seen:false,
         has_been_captured:false,
         rarity:Rarities.ULTRA,
-        type:Types.PLANTE,
+        type:Types.COMBAT,
         max_hp_lvl1:44,
         attack_lvl1:22,
         needed_quanity:[],
@@ -10100,8 +10282,34 @@ let setup_pokedex = {
         needed_item:[],
         evolving_pokemon:[]
     },
-    LOUGAROC: {
+    LOUGAROC_1: {
         id:745,
+        name:"Lougaroc",
+        has_been_seen:false,
+        has_been_captured:false,
+        rarity:Rarities.RARE,
+        type:Types.ROCHE,
+        max_hp_lvl1:42,
+        attack_lvl1:23,
+        needed_quanity:[],
+        needed_item:[],
+        evolving_pokemon:[]
+    },
+    LOUGAROC_2: {
+        id:"745.1",
+        name:"Lougaroc",
+        has_been_seen:false,
+        has_been_captured:false,
+        rarity:Rarities.RARE,
+        type:Types.ROCHE,
+        max_hp_lvl1:42,
+        attack_lvl1:23,
+        needed_quanity:[],
+        needed_item:[],
+        evolving_pokemon:[]
+    },
+    LOUGAROC_3: {
+        id:"745.2",
         name:"Lougaroc",
         has_been_seen:false,
         has_been_captured:false,
@@ -10447,6 +10655,19 @@ let setup_pokedex = {
         type:Types.EAU,
         max_hp_lvl1:34,
         attack_lvl1:12,
+        needed_quanity:[],
+        needed_item:[],
+        evolving_pokemon:[]
+    },
+    TYPE0: {
+        id:772,
+        name:"Type:0",
+        has_been_seen:false,
+        has_been_captured:false,
+        rarity:Rarities.COMMON,
+        type:Types.ACIER,
+        max_hp_lvl1:48,
+        attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
         evolving_pokemon:[]
@@ -11049,6 +11270,19 @@ let setup_pokedex = {
         needed_item:[],
         evolving_pokemon:[]
     },
+    LARVADAR: {
+        id:824,
+        name:"Larvadar",
+        has_been_seen:false,
+        has_been_captured:false,
+        rarity:Rarities.COMMON,
+        type:Types.INSECTE,
+        max_hp_lvl1:20,
+        attack_lvl1:7,
+        needed_quanity:[],
+        needed_item:[],
+        evolving_pokemon:[]
+    },
     COLEODOME: {
         id:825,
         name:"Coléodôme",
@@ -11569,6 +11803,32 @@ let setup_pokedex = {
         needed_item:[],
         evolving_pokemon:[]
     },
+    PALARTICHO: {
+        id:865,
+        name:"Palarticho",
+        has_been_seen:false,
+        has_been_captured:false,
+        rarity:Rarities.RARE,
+        type:Types.COMBAT,
+        max_hp_lvl1:37,
+        attack_lvl1:27,
+        needed_quanity:[],
+        needed_item:[],
+        evolving_pokemon:[]
+    },
+    MGLAQUETTE: {
+        id:866,
+        name:"M. Glaquette",
+        has_been_seen:false,
+        has_been_captured:false,
+        rarity:Rarities.RARE,
+        type:Types.GLACE,
+        max_hp_lvl1:46,
+        attack_lvl1:22,
+        needed_quanity:[],
+        needed_item:[],
+        evolving_pokemon:[]
+    },
     TUTETEKRI: {
         id:867,
         name:"Tutétékri",
@@ -11881,13 +12141,26 @@ let setup_pokedex = {
         needed_item:[],
         evolving_pokemon:[]
     },
-    SHIFOURS: {
+    SHIFOURS_W: {
         id:892,
         name:"Shifours",
         has_been_seen:false,
         has_been_captured:false,
-        rarity:Rarities.COMMON,
-        type:Types.COMBAT,
+        rarity:Rarities.EPIC,
+        type:Types.EAU,
+        max_hp_lvl1:50,
+        attack_lvl1:26,
+        needed_quanity:[],
+        needed_item:[],
+        evolving_pokemon:[]
+    },
+    SHIFOURS_D: {
+        id:"892.1",
+        name:"Shifours",
+        has_been_seen:false,
+        has_been_captured:false,
+        rarity:Rarities.EPIC,
+        type:Types.TENEBRES,
         max_hp_lvl1:50,
         attack_lvl1:26,
         needed_quanity:[],
@@ -13099,6 +13372,19 @@ let setup_pokedex = {
         type:Types.DRAGON,
         max_hp_lvl1:58,
         attack_lvl1:29,
+        needed_quanity:[],
+        needed_item:[],
+        evolving_pokemon:[]
+    },
+    MORDUDOR: {
+        id:999,
+        name:"Gromago",
+        has_been_seen:false,
+        has_been_captured:false,
+        rarity:Rarities.COMMON,
+        type:Types.ACIER,
+        max_hp_lvl1:30,
+        attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
         evolving_pokemon:[]

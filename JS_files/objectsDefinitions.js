@@ -5,8 +5,8 @@
     let map_cases = null;
     let owned_pokemons = null;
 
-    const forcePokedexUpdate = false; // While developping, will force pokedex to update at each session
-    const forceMapCasesUpdate = false; // While developping, will force map cases to update at each session
+    const forcePokedexUpdate = true; // While developping, will force pokedex to update at each session
+    const forceMapCasesUpdate = true; // While developping, will force map cases to update at each session
     const forceOwnedUpdate = false; // While developping, will force owned pokemon to update at each session
 
     function CreatePokedex() {

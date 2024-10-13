@@ -106,11 +106,20 @@ function generateUUID() {
     });
 }
 
+function GetSpriteAltNumberSpecialCases(id) {
+    let specialCasesId = ["745.2"];
+
+    if (!specialCasesId.includes(id))
+        return 1;
+    if (id == specialCasesId[0])
+        return 2;
+}
+
 function GetSpriteByPokemon(pokedexEntry, isShiny) {
     let pokedexIdParsed = String(pokedex[pokedexEntry].id);
 
     let pokedex_id = pokedexIdParsed.includes('.') ? pokedexIdParsed.split('.')[0] : pokedexIdParsed;
-    let altFormNumber = pokedexIdParsed.includes('.') ? 1 : 0;
+    let altFormNumber = pokedexIdParsed.includes('.') ? GetSpriteAltNumberSpecialCases(pokedexIdParsed) : 0;
 
     let formattedPokedexId = pokedex_id.toString().padStart(4, '0');
     let formattedAltFormNumber = altFormNumber.toString().padStart(3, '0');

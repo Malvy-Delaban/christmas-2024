@@ -79,11 +79,6 @@ const Items = {
         background_sprite: "./sprites/shop_items/prism_scale.png",
         shop_price: 3,
     },
-    TEACUP: {
-        name: "Bol",
-        background_sprite: "./sprites/shop_items/teacup.png",
-        shop_price: 3,
-    },
     GALARICA_CUFF: {
         name: "Bracelet Galanoa",
         background_sprite: "./sprites/shop_items/galarica_cuff.png",
@@ -137,12 +132,7 @@ const Items = {
     GIMMIGHOUL_COIN: {
         name: "Pièce de Mordudor",
         background_sprite: "./sprites/shop_items/gimmighoul_coin.png",
-        shop_price: 3,
-    },
-    METAL_ALLOY: {
-        name: "Métal Composite",
-        background_sprite: "./sprites/shop_items/metal_alloy.png",
-        shop_price: 3,
+        shop_price: 1,
     },
     OVAL_STONE: {
         name: "Pierre Ovale",
@@ -157,11 +147,6 @@ const Items = {
     SWEET_APPLE: {
         name: "Pomme Sucrée",
         background_sprite: "./sprites/shop_items/sweet_apple.png",
-        shop_price: 3,
-    },
-    SYRUPY_APPLE: {
-        name: "Pomme Nectar",
-        background_sprite: "./sprites/shop_items/syrupy_apple.png",
         shop_price: 3,
     },
     PROTECTOR: {
