@@ -106,20 +106,32 @@ function generateUUID() {
     });
 }
 
-function GetSpriteAltNumberSpecialCases(id) {
-    let specialCasesId = ["745.2"];
+function GetSpriteAltNumberSpecialCases(id, isShiny) {
+    let specialCasesId = ["745.2", "413.1", "413.2", "413.3", "80.2", "774.1"];
 
     if (!specialCasesId.includes(id))
         return 1;
-    if (id == specialCasesId[0])
+    if (id == specialCasesId[0]) // LOUGAROC
+        return 0;
+    if (id == specialCasesId[1]) // CHENISELLE PLANTE
+        return 0;
+    if (id == specialCasesId[2]) // CHENISELLE SOL
+        return 1;
+    if (id == specialCasesId[3]) // CHENISELLE ACIER
         return 2;
+    if (id == specialCasesId[4]) // FLAGADOSS GALAR
+        return 2;
+    if (id == specialCasesId[5] && isShiny) // METENO
+        return 7;
+    if (id == specialCasesId[5]) // METENO
+        return Math.floor(Math.random() * 7) + 7;
 }
 
 function GetSpriteByPokemon(pokedexEntry, isShiny) {
     let pokedexIdParsed = String(pokedex[pokedexEntry].id);
 
     let pokedex_id = pokedexIdParsed.includes('.') ? pokedexIdParsed.split('.')[0] : pokedexIdParsed;
-    let altFormNumber = pokedexIdParsed.includes('.') ? GetSpriteAltNumberSpecialCases(pokedexIdParsed) : 0;
+    let altFormNumber = pokedexIdParsed.includes('.') ? GetSpriteAltNumberSpecialCases(pokedexIdParsed, isShiny) : 0;
 
     let formattedPokedexId = pokedex_id.toString().padStart(4, '0');
     let formattedAltFormNumber = altFormNumber.toString().padStart(3, '0');

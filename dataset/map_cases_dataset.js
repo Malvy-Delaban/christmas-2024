@@ -98,9 +98,9 @@ let setup_map_cases = [
         level_randomness: 2,
         generated_pokemons: [],
         possible_pokemons: {
-            BASTIODON: 4,
-            EVOLI: 4,
-            GRODRIVE: 4,
+            BRINDIBOU: 4,
+            EFFLECHE: 4,
+            MATOUFEU: 4,
         },
     },
 ];

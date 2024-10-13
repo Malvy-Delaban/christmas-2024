@@ -1,6 +1,9 @@
 function fillEvolutionList(evolutionListDiv, currentPokemon) {
     let pokemon = pokedex[currentPokemon.pokedexId];
 
+    console.log(pokemon.evolving_pokemon);
+    console.log(pokemon);
+
     for (let i = 0; i < pokemon.evolving_pokemon.length; i++) {
         let evolvingPokemonKey = getKeyPokedexFromId(pokemon.evolving_pokemon[i].id);
 

@@ -133,7 +133,7 @@ function setEvolvingRelations() {
 
     pokedex.ORTIDE.evolving_pokemon = [pokedex.RAFFLESIA, pokedex.JOLIFLOR];
     pokedex.ORTIDE.needed_item = [Items.LEAF_STONE, Items.SUN_STONE];
-    pokedex.ORTIDE.needed_quantity = [2];
+    pokedex.ORTIDE.needed_quantity = [1, 1];
 
     pokedex.PARAS.evolving_pokemon = [pokedex.PARASECT];
     pokedex.PARAS.needed_item = [Items.ORAN_BERRY];
@@ -319,9 +319,9 @@ function setEvolvingRelations() {
     pokedex.OSSELAIT.needed_item = [Items.ORAN_BERRY, Items.ORAN_BERRY];
     pokedex.OSSELAIT.needed_quantity = [1, 2];
 
-    pokedex.DEBUGANT.evolving_pokemon = [pokedex.KICKLEE];
-    pokedex.DEBUGANT.needed_item = [Items.ORAN_BERRY];
-    pokedex.DEBUGANT.needed_quantity = [1];
+    pokedex.DEBUGANT.evolving_pokemon = [pokedex.KICKLEE, pokedex.TYGNON, pokedex.KAPOERA];
+    pokedex.DEBUGANT.needed_item = [Items.ORAN_BERRY, Items.ORAN_BERRY, Items.ORAN_BERRY];
+    pokedex.DEBUGANT.needed_quantity = [1, 1, 1];
 
     pokedex.EXCELANGUE.evolving_pokemon = [pokedex.COUDLANGUE];
     pokedex.EXCELANGUE.needed_item = [Items.ORAN_BERRY];
@@ -367,13 +367,13 @@ function setEvolvingRelations() {
     pokedex.STARI.needed_item = [Items.WATER_STONE];
     pokedex.STARI.needed_quantity = [1];
 
-    pokedex.MIMEJR.evolving_pokemon = [pokedex.MMIME];
-    pokedex.MIMEJR.needed_item = [Items.ORAN_BERRY];
-    pokedex.MIMEJR.needed_quantity = [1];
+    pokedex.MIMEJR.evolving_pokemon = [pokedex.MMIME, pokedex.MMIME_G];
+    pokedex.MIMEJR.needed_item = [Items.ORAN_BERRY, Items.ORAN_BERRY];
+    pokedex.MIMEJR.needed_quantity = [1, 1];
 
-    pokedex.MMIME.evolving_pokemon = [pokedex.MGLAQUETTE];
-    pokedex.MMIME.needed_item = [Items.ORAN_BERRY];
-    pokedex.MMIME.needed_quantity = [2];
+    pokedex.MMIME_G.evolving_pokemon = [pokedex.MGLAQUETTE];
+    pokedex.MMIME_G.needed_item = [Items.ORAN_BERRY];
+    pokedex.MMIME_G.needed_quantity = [2];
 
     pokedex.INSECATEUR.evolving_pokemon = [pokedex.CIZAYOX, pokedex.HACHECATEUR];
     pokedex.INSECATEUR.needed_item = [Items.METAL_COAT, Items.BLACK_AUGURITE];
@@ -675,13 +675,17 @@ function setEvolvingRelations() {
     pokedex.LINEON_G.needed_item = [Items.ORAN_BERRY];
     pokedex.LINEON_G.needed_quantity = [2];
 
-    pokedex.CHENIPOTTE.evolving_pokemon = [pokedex.ARMULYS];
-    pokedex.CHENIPOTTE.needed_item = [Items.ORAN_BERRY];
-    pokedex.CHENIPOTTE.needed_quantity = [1];
+    pokedex.CHENIPOTTE.evolving_pokemon = [pokedex.ARMULYS, pokedex.BLINDALYS];
+    pokedex.CHENIPOTTE.needed_item = [Items.ORAN_BERRY, Items.ORAN_BERRY];
+    pokedex.CHENIPOTTE.needed_quantity = [1, 1];
 
     pokedex.ARMULYS.evolving_pokemon = [pokedex.CHARMILLON];
     pokedex.ARMULYS.needed_item = [Items.ORAN_BERRY];
     pokedex.ARMULYS.needed_quantity = [2];
+
+    pokedex.BLINDALYS.evolving_pokemon = [pokedex.PAPYNOX];
+    pokedex.BLINDALYS.needed_item = [Items.ORAN_BERRY];
+    pokedex.BLINDALYS.needed_quantity = [2];
 
     pokedex.NENUPIOT.evolving_pokemon = [pokedex.LOMBRE];
     pokedex.NENUPIOT.needed_item = [Items.ORAN_BERRY];
@@ -731,9 +735,9 @@ function setEvolvingRelations() {
     pokedex.VIGOROTH.needed_item = [Items.ORAN_BERRY];
     pokedex.VIGOROTH.needed_quantity = [2];
 
-    pokedex.NINGALE.evolving_pokemon = [pokedex.NINJASK];
-    pokedex.NINGALE.needed_item = [Items.ORAN_BERRY];
-    pokedex.NINGALE.needed_quantity = [1];
+    pokedex.NINGALE.evolving_pokemon = [pokedex.NINJASK, pokedex.MUNJA];
+    pokedex.NINGALE.needed_item = [Items.ORAN_BERRY, Items.ORAN_BERRY];
+    pokedex.NINGALE.needed_quantity = [1, 1];
 
     pokedex.CHUCHMUR.evolving_pokemon = [pokedex.RAMBOUM];
     pokedex.CHUCHMUR.needed_item = [Items.ORAN_BERRY];
@@ -943,9 +947,9 @@ function setEvolvingRelations() {
     pokedex.DINOCLIER.needed_item = [Items.ORAN_BERRY];
     pokedex.DINOCLIER.needed_quantity = [1];
 
-    pokedex.CHENITI.evolving_pokemon = [pokedex.CHENISELLE];
-    pokedex.CHENITI.needed_item = [Items.ORAN_BERRY];
-    pokedex.CHENITI.needed_quantity = [1];
+    pokedex.CHENITI.evolving_pokemon = [pokedex.CHENISELLE_1, pokedex.CHENISELLE_2, pokedex.CHENISELLE_3, pokedex.PAPILORD];
+    pokedex.CHENITI.needed_item = [Items.ORAN_BERRY, Items.ORAN_BERRY, Items.ORAN_BERRY, Items.ORAN_BERRY];
+    pokedex.CHENITI.needed_quantity = [1, 1, 1, 1];
 
     pokedex.APITRINI.evolving_pokemon = [pokedex.APIREINE];
     pokedex.APITRINI.needed_item = [Items.ORAN_BERRY];
@@ -1591,9 +1595,9 @@ function setEvolvingRelations() {
     pokedex.COSMOG.needed_item = [Items.ORAN_BERRY];
     pokedex.COSMOG.needed_quantity = [1];
 
-    pokedex.COSMOVUM.evolving_pokemon = [pokedex.SOLGALEO];
-    pokedex.COSMOVUM.needed_item = [Items.ORAN_BERRY];
-    pokedex.COSMOVUM.needed_quantity = [2];
+    pokedex.COSMOVUM.evolving_pokemon = [pokedex.SOLGALEO, pokedex.LUNALA];
+    pokedex.COSMOVUM.needed_item = [Items.ORAN_BERRY, Items.ORAN_BERRY];
+    pokedex.COSMOVUM.needed_quantity = [4, 4];
 
     pokedex.VEMINI.evolving_pokemon = [pokedex.MANDRILLON];
     pokedex.VEMINI.needed_item = [Items.ORAN_BERRY];
@@ -1683,9 +1687,9 @@ function setEvolvingRelations() {
     pokedex.EMBROCHET.needed_item = [Items.ORAN_BERRY];
     pokedex.EMBROCHET.needed_quantity = [1];
 
-    pokedex.TOXIZAP.evolving_pokemon = [pokedex.SALARSEN];
-    pokedex.TOXIZAP.needed_item = [Items.ORAN_BERRY];
-    pokedex.TOXIZAP.needed_quantity = [1];
+    pokedex.TOXIZAP.evolving_pokemon = [pokedex.SALARSEN_1, pokedex.SALARSEN_2];
+    pokedex.TOXIZAP.needed_item = [Items.ORAN_BERRY, Items.ORAN_BERRY];
+    pokedex.TOXIZAP.needed_quantity = [1, 1];
 
     pokedex.GRILLEPATTES.evolving_pokemon = [pokedex.SCOLOCENDRE];
     pokedex.GRILLEPATTES.needed_item = [Items.ORAN_BERRY];

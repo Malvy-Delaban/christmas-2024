@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="sprites/misc/pokeball_icon.png" sizes="32x32">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="popup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Pokemon Adventure</title>
+</head>
+
+<!-- INITIALIZE DATASETS -->
+<script src="dataset/items_dataset.js"></script>
+<script src="dataset/types_dataset.js"></script>
+<script src="dataset/rarities_dataset.js"></script>
+<script src="dataset/pokemon_dataset.js"></script>
+<script src="dataset/map_cases_dataset.js"></script>
+
+<!-- INCLUDE ALL FILES -->
+<script src="JS_files/objectsDefinitions.js"></script>
+<script src="JS_files/pokemonEvolutionsDefinition.js"></script>
+<script src="JS_files/generatePokemonChoice.js"></script>
+<script src="JS_files/generateRouteList.js"></script>
+<script src="JS_files/commonFunctions.js"></script>
+<script src="JS_files/generateYourPokemonsPopup.js"></script>
+<script src="JS_files/generatePokemonDetailPopup.js"></script>
+<script src="JS_files/generatePutInTeamPopup.js"></script>
+<script src="JS_files/generateEvolutionPopup.js"></script>
+
+<script>
+    // Initialize all data / create them / retrieve them
+    Setup();
+</script>
+
+<style>
+    .debug-display {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .debug-item {
+        height: 10rem;
+        width: 10rem;
+    }
+</style>
+
+<body id="body">
+</body>
+
+<script>
+    const debugDisplay = document.createElement('div');
+    debugDisplay.className = 'debug-display';
+        
+    for (let key in pokedex) {
+    // for (let i = 0; i < 50; i++) {
+
+        const my_img = document.createElement('img');
+        my_img.className = 'debug-item';
+        my_img.src = GetSpriteByPokemon("METENO", false);
+        
+        debugDisplay.appendChild(my_img);
+    }
+    document.body.appendChild(debugDisplay);
+
+
+</script>
+</html>
