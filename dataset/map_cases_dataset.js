@@ -97,10 +97,6 @@ let setup_map_cases = [
         base_level: 40,
         level_randomness: 2,
         generated_pokemons: [],
-        possible_pokemons: {
-            BULBIZARRE: 4,
-            CARAPUCE: 4,
-            SALAMECHE: 1,
-        },
+        possible_pokemons: -1
     },
 ];

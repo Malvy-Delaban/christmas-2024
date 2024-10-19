@@ -38,7 +38,7 @@ function GenerateSingleRouteDisplay(route) {
     routeDisplay.appendChild(labelElement);
 
     routeDisplay.addEventListener('click', function() {
-        generatePokemonChoiceDisplay(route);
+        generateStartRoutePopup(route);
     });
 
     return routeDisplay;

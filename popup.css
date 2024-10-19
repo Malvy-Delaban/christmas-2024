@@ -224,7 +224,8 @@
 /* Detail pokemon */
 
 .detail-your-pokemon-detail,
-.detail-confirm-buying {
+.detail-confirm-buying,
+.detail-start-route {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -349,7 +350,8 @@
     justify-content: center;
 }
 
-.popup-confirm-buying {
+.popup-confirm-buying,
+.popup-start-route {
     position: relative;
     width: 85%;
     background-color: white;
@@ -363,13 +365,26 @@
 }
 
 .popup-put-in-team-title,
-.popup-confirm-buying-title {
+.popup-confirm-buying-title,
+.popup-start-route-title,
+.popup-start-route-route-name {
     color: #4B3768;
     font-size: 3.5rem;
     font-weight: 900;
     width: 90%;
     text-align: center;
     margin: 0;
+}
+
+.popup-start-route-route-name {
+    margin-top: 2rem;
+}
+
+.popup-start-route-route-level {
+    margin: 0;
+    color: #4B3768;
+    font-size: 3rem;
+    margin-bottom: 3rem;
 }
 
 .popup-put-in-team-pokemon-list {
@@ -611,7 +626,8 @@
 }
 
 .popup-content-item-price-text-with-margin,
-.popup-content-item-quantity-text-with-margin {
+.popup-content-item-quantity-text-with-margin,
+.popup-start-route-button-text {
     margin-right: 1rem;
     color: white;
     font-size: 2rem;
@@ -639,6 +655,11 @@
     margin-top: 2rem;
 }
 
+.detail-start-route-img {
+    width: 90%;
+    margin-top: 5rem;
+}
+
 .popup-confirm-buying-buttons-container {
     margin-top: 5rem;
     display: flex;
@@ -647,7 +668,8 @@
     width: 80%;
 }
 
-.popup-confirm-buying-button {
+.popup-confirm-buying-button,
+.popup-start-route-button {
     display: flex;
     justify-content: center;
     align-items: center;
