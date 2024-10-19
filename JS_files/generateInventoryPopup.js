@@ -1,9 +1,5 @@
-function fillShopPopup(itemList) {
-    for (const itemKey in Items) {
-        const currentItem = Items[itemKey];
-
-        if (currentItem.shop_price === -1)
-            continue;
+function fillInventoryPopup(itemList) {
+    for (const inventoryItem of inventory) {
 
         const singleItem = document.createElement('div');
         singleItem.classList.add('popup-content-single-item');
@@ -13,8 +9,8 @@ function fillShopPopup(itemList) {
         leftSide.classList.add('popup-content-left-side');
 
         const itemImg = document.createElement('img');
-        itemImg.src = currentItem.sprite;
-        itemImg.alt = currentItem.name;
+        itemImg.src = inventoryItem.item.sprite;
+        itemImg.alt = inventoryItem.item.name;
         itemImg.classList.add('popup-content-item-image');
 
         leftSide.appendChild(itemImg);
@@ -22,37 +18,27 @@ function fillShopPopup(itemList) {
         // Partie droite avec les infos du Pokémon
         const rightSide = document.createElement('div');
         rightSide.classList.add('popup-content-right-side');
-        rightSide.classList.add('popup-content-right-side-shop');
+        rightSide.classList.add('popup-content-right-side-inventory');
 
         const itemName = document.createElement('div');
-        itemName.textContent = currentItem.name;
+        itemName.textContent = inventoryItem.item.name;
         itemName.classList.add('popup-content-item-name');
 
         const itemDescription = document.createElement('div');
-        itemDescription.textContent = currentItem.description;
+        itemDescription.textContent = inventoryItem.item.description;
         itemDescription.classList.add('popup-content-item-description');
 
-        const itemPriceContainer = document.createElement('div');
-        itemPriceContainer.classList.add('popup-content-item-price');
-        itemPriceContainer.style.cursor = 'pointer';
-
-        const itemPriceImg = document.createElement('img');
-        itemPriceImg.src = './sprites/misc/oran_icon.png';
-        itemPriceImg.alt = "oran berry img";
-        itemPriceImg.classList.add('popup-content-item-price-img');
+        const itemQuantityContainer = document.createElement('div');
+        itemQuantityContainer.classList.add('popup-content-item-quantity');
+        itemQuantityContainer.style.cursor = 'pointer';
         
-        const itemPrice = document.createElement('div');
-        itemPrice.classList.add('popup-content-item-price-text');
-        itemPrice.textContent = "x" + currentItem.shop_price;
+        const itemQuantity = document.createElement('div');
+        itemQuantity.classList.add('popup-content-item-quantity-text');
+        itemQuantity.textContent = inventoryItem.quantity;
 
-        itemPriceContainer.addEventListener('click', () => {
-            generateConfirmBuyingPopup(currentItem);
-        });
+        itemQuantityContainer.appendChild(itemQuantity);
 
-        itemPriceContainer.appendChild(itemPriceImg);
-        itemPriceContainer.appendChild(itemPrice);
-
-        leftSide.appendChild(itemPriceContainer);
+        leftSide.appendChild(itemQuantityContainer);
         rightSide.appendChild(itemName);
         rightSide.appendChild(itemDescription);
 
@@ -64,7 +50,7 @@ function fillShopPopup(itemList) {
     }
 }
 
-function generateShopPopup() {
+function generateInventoryPopup() {
     document.body.style.overflow = 'hidden'; // Désactive le scroll
     
     // Créer les éléments principaux
@@ -73,31 +59,16 @@ function generateShopPopup() {
 
     // Créer les éléments principaux
     const popupContainer = document.createElement('div');
-    popupContainer.classList.add('popup-shop');
+    popupContainer.classList.add('popup-inventory');
 
     const popupContent = document.createElement('div');
-    popupContent.classList.add('popup-content-shop');
+    popupContent.classList.add('popup-content-inventory');
 
     const titleLine = document.createElement('div');
     titleLine.classList.add('popup-title-line');
 
-    const subtitleLine = document.createElement('div');
-    subtitleLine.classList.add('popup-subtitle-line');
-
-    const subtitleText = document.createElement('p');
-    subtitleText.textContent = "Vous avez actuellement " + currentQuantityInInventory(Items.ORAN_BERRY);
-    subtitleText.classList.add('popup-subtitle-text');
-
-    const subtitleImg = document.createElement('img');
-    subtitleImg.src = './sprites/misc/oran_icon.png';
-    subtitleImg.alt = "oran berry img";
-    subtitleImg.classList.add('popup-subtitle-image');
-
-    subtitleLine.appendChild(subtitleText);
-    subtitleLine.appendChild(subtitleImg);
-
     const title = document.createElement('p');
-    title.textContent = 'Boutique';
+    title.textContent = 'Inventaire';
     
     const closeButton = document.createElement('img');
     closeButton.src = 'sprites/misc/cross_icon.png';
@@ -120,13 +91,12 @@ function generateShopPopup() {
 
     // Contenu de la liste des Pokémon
     const itemList = document.createElement('div');
-    itemList.classList.add('popup-content-shop-list');
+    itemList.classList.add('popup-content-inventory-list');
 
-    fillShopPopup(itemList);
+    fillInventoryPopup(itemList);
 
     itemsListWrapper.appendChild(itemList);
     popupContent.appendChild(titleLine);
-    popupContent.appendChild(subtitleLine);
     popupContent.appendChild(itemsListWrapper);
     popupContainer.appendChild(popupContent);
     popupBackgroundContainer.appendChild(popupContainer);

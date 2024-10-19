@@ -90,17 +90,13 @@ let setup_map_cases = [
     {
         id: 999,
         name: "To delete",
-        sprite: "./sprites/locations/location_12.png",
+        sprite: "./sprites/locations/location_10.png",
         unlock_day: new Date("2024-12-03"),
         has_been_used: false,
         shiny_lock: false,
         base_level: 40,
         level_randomness: 2,
         generated_pokemons: [],
-        possible_pokemons: {
-            BRINDIBOU: 4,
-            EFFLECHE: 4,
-            MATOUFEU: 4,
-        },
+        possible_pokemons: -1
     },
 ];

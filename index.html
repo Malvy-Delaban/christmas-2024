@@ -30,6 +30,7 @@
 <script src="JS_files/generateEvolutionPopup.js"></script>
 <script src="JS_files/generateShopPopup.js"></script>
 <script src="JS_files/generateConfirmBuyingPopup.js"></script>
+<script src="JS_files/generateInventoryPopup.js"></script>
 
 <script>
     // Initialize all data / create them / retrieve them
@@ -46,7 +47,7 @@
                 <button class="action-button">Carte de dresseur</button>
             </div>
             <div class="bottom-menu">
-                <div class="menu-item">
+                <div class="menu-item" onclick="generateInventoryPopup()">
                     <img src="sprites/misc/oran_icon.png" alt="Inventaire" class="icon">
                     <div class="menu-label">Inventaire</div>
                 </div>
