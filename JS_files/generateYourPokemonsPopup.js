@@ -18,7 +18,7 @@ function fillYourPokemonsPopup(pokemonList) {
         leftSide.classList.add('popup-content-left-side');
 
         const rarityBackground = document.createElement('img');
-        rarityBackground.src = pokedex[owned_pokemons[i].pokedexId].rarity.background_sprite;
+        rarityBackground.src = pokedex[owned_pokemons[i].pokedexId].rarity.sprite;
         rarityBackground.alt = 'rarity background';
         rarityBackground.classList.add('popup-content-rarity-background');
 

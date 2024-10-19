@@ -223,7 +223,8 @@
 
 /* Detail pokemon */
 
-.detail-your-pokemon-detail {
+.detail-your-pokemon-detail,
+.detail-confirm-buying {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -348,12 +349,27 @@
     justify-content: center;
 }
 
-.popup-put-in-team-title {
+.popup-confirm-buying {
+    position: relative;
+    width: 85%;
+    background-color: white;
+    border-radius: 5rem;
+    z-index: 5;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 0;
+}
+
+.popup-put-in-team-title,
+.popup-confirm-buying-title {
     color: #4B3768;
     font-size: 3.5rem;
     font-weight: 900;
     width: 90%;
     text-align: center;
+    margin: 0;
 }
 
 .popup-put-in-team-pokemon-list {
@@ -444,6 +460,10 @@
     align-items: center;
 }
 
+.popup-evolution-button-greyed {
+    opacity: 30%;
+}
+
 .popup-evolution-button-left-side {
     margin: 0;
     padding: 0;
@@ -481,4 +501,170 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Shop popup */
+
+.popup-shop {
+    position: relative;
+    width: 85%;
+    height: 85%;
+    background-color: white;
+    border-radius: 5rem;
+    z-index: 5;
+    overflow-y: auto;
+}
+
+.popup-shop-detail {
+    position: relative;
+    width: 85%;
+    height: 85%;
+    background-color: white;
+    border-radius: 5rem;
+    z-index: 5;
+    overflow-y: auto;
+}
+
+.popup-content-shop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup-content-shop-list {
+    padding-top: 2rem;
+    height: 80;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-y: auto;
+    flex-grow: 1; /* Remplit tout l'espace disponible */
+    padding-bottom: 3rem;
+}
+
+.popup-content-single-item {
+    position: relative;
+    height: 14rem;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    gap: 3rem;
+}
+
+.popup-content-item-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 9;
+}
+
+.popup-content-item-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #4B3768;
+}
+
+.popup-content-item-description {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #4B3768;
+}
+
+.popup-content-item-price { 
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    bottom: 0;
+    right: -3rem;
+    margin: 0;
+    height: 5.5rem;
+    z-index: 10;
+    border-radius: 3rem;
+    color: white;
+    background-color: #685189;
+    border-style: none;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.popup-content-item-price-text { 
+    color: white;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.popup-content-item-price-text-with-margin {
+    margin-right: 1rem;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.popup-content-item-price-img {
+    max-height: 90%;
+    margin-right: 0.5rem;
+}
+
+.popup-content-right-side-shop {
+    margin-left: 5rem;
+
+}
+
+/* Confirm buying */
+
+.confirm-buying-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detail-confirm-buying-img {
+    margin-top: 2rem;
+}
+
+.popup-confirm-buying-buttons-container {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.popup-confirm-buying-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5.5rem;
+    border-radius: 3rem;
+    color: white;
+    background-color: #685189;
+    border-style: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0 3rem;
+}
+
+.popup-subtitle-line {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #685189;
+}
+
+.popup-subtitle-text {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.popup-subtitle-image {
+    height: 4rem;
 }

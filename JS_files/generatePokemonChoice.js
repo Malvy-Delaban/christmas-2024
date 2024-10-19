@@ -1,6 +1,6 @@
 function generatePokemonBasedOnPokedexEntry(pokedexEntry, currentCase) {
-    const shinyChance = 22;
-    const shinyChanceBoosted = 18; // To make the odds in favor of Lucy
+    const shinyChance = 25;
+    const shinyChanceBoosted = 20; // To make the odds in favor of Lucy
 
     let temp_isShiny = currentCase.shiny_lock ? false : (Math.floor(Math.random() * shinyChance) + 1) === 1;
     let temp_level = Math.round(currentCase.base_level + (Math.random() * (2 * currentCase.level_randomness) - currentCase.level_randomness));
@@ -178,7 +178,7 @@ function generatePokemonChoiceDisplay(currentCase) {
 
         // Image de rareté
         const rarityImg = document.createElement('img');
-        rarityImg.src = pokedex[currentCase.generated_pokemons[i].pokedexId].rarity.background_sprite;
+        rarityImg.src = pokedex[currentCase.generated_pokemons[i].pokedexId].rarity.sprite;
         rarityImg.alt = `Background de rareté`;
         rarityImg.className = 'rarity-background';
 

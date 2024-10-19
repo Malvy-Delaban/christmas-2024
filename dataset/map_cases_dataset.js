@@ -2,7 +2,7 @@ let setup_map_cases = [
     {
         id: 0,
         name: "Choisis ton starter !",
-        background_sprite: "./sprites/locations/location_04.png",
+        sprite: "./sprites/locations/location_04.png",
         unlock_day: -1,
         has_been_used: false,
         shiny_lock: false,
@@ -18,7 +18,7 @@ let setup_map_cases = [
     {
         id: 1,
         name: "Route 01",
-        background_sprite: "./sprites/locations/location_16.png",
+        sprite: "./sprites/locations/location_16.png",
         unlock_day: new Date("2024-12-01"),
         has_been_used: false,
         shiny_lock: false,
@@ -42,7 +42,7 @@ let setup_map_cases = [
     {
         id: 2,
         name: "Route 02",
-        background_sprite: "./sprites/locations/location_02.png",
+        sprite: "./sprites/locations/location_02.png",
         unlock_day: new Date("2024-12-02"),
         has_been_used: false,
         shiny_lock: false,
@@ -66,7 +66,7 @@ let setup_map_cases = [
     {
         id: 3,
         name: "Route 03",
-        background_sprite: "./sprites/locations/location_27.png",
+        sprite: "./sprites/locations/location_27.png",
         unlock_day: new Date("2024-12-03"),
         has_been_used: false,
         shiny_lock: false,
@@ -90,7 +90,7 @@ let setup_map_cases = [
     {
         id: 999,
         name: "To delete",
-        background_sprite: "./sprites/locations/location_12.png",
+        sprite: "./sprites/locations/location_12.png",
         unlock_day: new Date("2024-12-03"),
         has_been_used: false,
         shiny_lock: false,

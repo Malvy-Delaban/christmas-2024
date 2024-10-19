@@ -1,5 +1,4 @@
 function generatePutInTeamPopup(pokemon) {
-    console.log(pokemon);
     // Créer les éléments principaux
     const popupBackgroundContainer = document.createElement('div');
     popupBackgroundContainer.classList.add('popup-background');
@@ -37,9 +36,7 @@ function generatePutInTeamPopup(pokemon) {
         removeIcon.addEventListener('click', function() {
             let oldTeamMember = owned_pokemons.find(poke => poke.uuid === inTeam[i].uuid);
             oldTeamMember.isInTeam = false
-            console.log(pokemon);
             let newTeamMember = owned_pokemons.find(poke => poke.uuid === pokemon.uuid);
-            console.log(newTeamMember);
             newTeamMember.isInTeam = true
 
             updateOwnedPokemons();

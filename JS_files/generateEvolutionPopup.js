@@ -1,8 +1,5 @@
-function fillEvolutionList(evolutionListDiv, currentPokemon) {
+function fillEvolutionList(evolutionListDiv, currentPokemon, remainingDuels) {
     let pokemon = pokedex[currentPokemon.pokedexId];
-
-    console.log(pokemon.evolving_pokemon);
-    console.log(pokemon);
 
     for (let i = 0; i < pokemon.evolving_pokemon.length; i++) {
         let evolvingPokemonKey = getKeyPokedexFromId(pokemon.evolving_pokemon[i].id);
@@ -21,6 +18,8 @@ function fillEvolutionList(evolutionListDiv, currentPokemon) {
 
         const evolveButton = document.createElement('div');
         evolveButton.classList.add('popup-evolution-button');
+        if (remainingDuels > 0)
+            evolveButton.classList.add('popup-evolution-button-greyed');
 
         const evolveButtonLeftSide = document.createElement('p');
         evolveButtonLeftSide.classList.add('popup-evolution-button-left-side');
@@ -30,7 +29,7 @@ function fillEvolutionList(evolutionListDiv, currentPokemon) {
         evolveButtonRightSide.classList.add('popup-evolution-button-right-side');
 
         const evolveButtonRightSideCostImg = document.createElement('img');
-        evolveButtonRightSideCostImg.src = pokemon.needed_item[i].background_sprite;
+        evolveButtonRightSideCostImg.src = pokemon.needed_item[i].sprite;
         evolveButtonRightSideCostImg.classList.add('popup-evolution-button-right-side-cost-img');
 
         const evolveButtonRightSideCostText = document.createElement('p');
@@ -82,7 +81,7 @@ function generateEvolutionPopup(pokemon) {
     popupContent.appendChild(titleLine);
     
     const requirements = document.createElement('p');
-    let remainingDuels = 2;//pokedex[pokemon.pokedexId].duelToWin - pokemon.duelWon;
+    let remainingDuels = pokedex[pokemon.pokedexId].duelToWin - (pokemon.duelWon ? pokemon.duelWon : 0);
     if (remainingDuels > 0)
         requirements.textContent = "Vous devez encore remportez " + remainingDuels + " duels avec " + pokedex[pokemon.pokedexId].name + " dans votre équipe pour pouvoir le faire évoluer.";
     else
@@ -92,7 +91,7 @@ function generateEvolutionPopup(pokemon) {
     const evolutionList = document.createElement('div');
     evolutionList.classList.add('popup-evolution-pokemon-list');
 
-    fillEvolutionList(evolutionList, pokemon);
+    fillEvolutionList(evolutionList, pokemon, remainingDuels);
 
     popupContent.appendChild(titleLine);
     popupContent.appendChild(requirements);

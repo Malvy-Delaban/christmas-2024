@@ -24,7 +24,7 @@ function GenerateSingleRouteDisplay(route) {
 
     // Créer l'élément img avec la source et l'attribut alt
     const imgElement = document.createElement('img');
-    imgElement.src = route.background_sprite;
+    imgElement.src = route.sprite;
     imgElement.alt = "route picture";
     imgElement.classList.add('image-card');
 

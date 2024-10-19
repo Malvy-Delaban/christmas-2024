@@ -28,6 +28,8 @@
 <script src="JS_files/generatePokemonDetailPopup.js"></script>
 <script src="JS_files/generatePutInTeamPopup.js"></script>
 <script src="JS_files/generateEvolutionPopup.js"></script>
+<script src="JS_files/generateShopPopup.js"></script>
+<script src="JS_files/generateConfirmBuyingPopup.js"></script>
 
 <script>
     // Initialize all data / create them / retrieve them
@@ -52,7 +54,7 @@
                     <img src="sprites/misc/pokeball_icon.png" alt="Pokémons" class="icon">
                     <div class="menu-label">Pokémons</div>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="generateShopPopup()">
                     <img src="sprites/misc/pearl_icon.png" alt="Boutique" class="icon">
                     <div class="menu-label">Boutique</div>
                 </div>

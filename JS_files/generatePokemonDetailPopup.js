@@ -100,7 +100,7 @@ function generatePokemonDetailPopup(pokemon) {
 
     const healthTips = document.createElement('p');
     healthTips.className = 'pokemon-detail-health-tips';
-    healthTips.textContent = 'Les Pokémons restaurant leurs PV tout les jours';
+    healthTips.textContent = 'Les Pokémons restaurant leurs PV tous les jours';
 
     const healthNumber = document.createElement('p');
     healthNumber.className = 'pokemon-detail-health-number';

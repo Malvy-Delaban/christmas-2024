@@ -16,6 +16,10 @@ function updateOwnedPokemons() {
     localStorage.setItem("owned_pokemons", JSON.stringify(owned_pokemons));
 }
 
+function updateInventory() {
+    localStorage.setItem("inventory", JSON.stringify(inventory));
+}
+
 function getHPinPercent(pokemon) {
     return (parseInt(pokemon.hp) / parseInt(pokemon.max_hp) * 100);
 }
@@ -111,8 +115,8 @@ function GetSpriteAltNumberSpecialCases(id, isShiny) {
 
     if (!specialCasesId.includes(id))
         return 1;
-    if (id == specialCasesId[0]) // LOUGAROC
-        return 0;
+    if (id == specialCasesId[0]) // LOUGAROC DUSK
+        return 2;
     if (id == specialCasesId[1]) // CHENISELLE PLANTE
         return 0;
     if (id == specialCasesId[2]) // CHENISELLE SOL
@@ -168,4 +172,46 @@ function getKeyPokedexFromId(targetId) {
     }
     
     return foundKey;
+}
+
+function hasEnoughItemInInventory(item, needed) {
+    const itemIfExisting = inventory.find(inventoryItem => inventoryItem.item.id === item.id);
+
+    if (!itemIfExisting || itemIfExisting.quantity < needed)
+        return false;
+    return true;
+}
+
+function currentQuantityInInventory(item) {
+    const itemIfExisting = inventory.find(inventoryItem => inventoryItem.item.id === item.id);
+
+    if (!itemIfExisting)
+        return 0;
+    return itemIfExisting.quantity;
+}
+
+function addItemInInventory(item, quantityAdded) {
+    const itemIfExisting = inventory.find(inventoryItem => inventoryItem.item.id === item.id);
+
+    if (itemIfExisting) {
+        itemIfExisting.quantity += quantityAdded;
+    } else {
+        let newItemInInventory = {
+            item: item,
+            quantity: quantityAdded
+        };
+        inventory.push(newItemInInventory);
+    }
+    updateInventory();
+}
+
+function removeItemInInventory(item, quantityRemoved) {
+    const itemIndex = inventory.findIndex(inventoryItem => inventoryItem.item.id === item.id);
+
+    if (itemIndex !== -1) {
+        inventory[itemIndex].quantity -= quantityRemoved;
+        if (inventory[itemIndex].quantity <= 0)
+            inventory.splice(itemIndex, 1);
+    }
+    updateInventory();
 }
