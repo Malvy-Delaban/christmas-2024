@@ -12,6 +12,10 @@ function updateMapCases() {
     localStorage.setItem("map_cases", JSON.stringify(map_cases));
 }
 
+function updatePokedex() {
+    localStorage.setItem("pokedex", JSON.stringify(pokedex));
+}
+
 function updateOwnedPokemons() {
     localStorage.setItem("owned_pokemons", JSON.stringify(owned_pokemons));
 }
@@ -214,4 +218,15 @@ function removeItemInInventory(item, quantityRemoved) {
             inventory.splice(itemIndex, 1);
     }
     updateInventory();
+}
+
+function pokemonHasBeenSeen(pokemon) {
+    pokedex[pokemon].has_been_seen = true;
+    updatePokedex();
+}
+
+function pokemonHasBeenCaptured(pokemon) {
+    console.log(pokemon);
+    pokedex[pokemon].has_been_captured = true;
+    updatePokedex();
 }

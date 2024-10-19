@@ -2,7 +2,7 @@ let setup_map_cases = [
     {
         id: 0,
         name: "Choisis ton starter !",
-        sprite: "./sprites/locations/location_04.png",
+        sprite: "./sprites/locations/location_33.png",
         unlock_day: -1,
         has_been_used: false,
         shiny_lock: false,
@@ -97,6 +97,10 @@ let setup_map_cases = [
         base_level: 40,
         level_randomness: 2,
         generated_pokemons: [],
-        possible_pokemons: -1
+        possible_pokemons: {
+            BULBIZARRE: 4,
+            CARAPUCE: 4,
+            SALAMECHE: 1,
+        },
     },
 ];

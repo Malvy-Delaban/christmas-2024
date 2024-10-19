@@ -34,11 +34,20 @@ function getRandomPokemons(currentCase, count) {
 
     // Creating weighted list
     let weightedPokemons = [];
-    for (const [pokemonKey, weight] of Object.entries(pokemonList)) {
-        for (let i = 0; i < weight; i++) {
+
+    if (pokemonList != -1 && Object.keys(pokemonList).length >= 3) {
+        for (const [pokemonKey, weight] of Object.entries(pokemonList)) {
+            for (let i = 0; i < weight; i++) {
+                weightedPokemons.push(pokemonKey);
+            }
+        }
+    } else {
+        // if the list insn't long enough or just has a value of -1, it's considered a test  and we get a random pokemon of the pokedex
+        for (const [pokemonKey, content] of Object.entries(pokedex)) {
             weightedPokemons.push(pokemonKey);
         }
     }
+
     // Select without dubs
     let selectedPokemons = [];
     while (selectedPokemons.length < count) {
@@ -47,11 +56,12 @@ function getRandomPokemons(currentCase, count) {
         if (!selectedPokemons.includes(chosenPokemon)) {
             selectedPokemons.push(chosenPokemon);
         }
-    }
+    }   
 
-    let generated_pokemons = [];
-    for (let i = 0; i < selectedPokemons.length; i++)
+    for (let i = 0; i < selectedPokemons.length; i++) {
         currentCase.generated_pokemons.push(generatePokemonBasedOnPokedexEntry(selectedPokemons[i], currentCase));
+        pokemonHasBeenSeen(selectedPokemons[i]);
+    }
 
     updateMapCases();
 }
@@ -59,6 +69,7 @@ function getRandomPokemons(currentCase, count) {
 function chosePokemon(pokemon, currentCase) {
     owned_pokemons.push(pokemon);
     currentCase.has_been_used = true;
+    pokemonHasBeenCaptured(pokemon.pokedexId);
     updateOwnedPokemons();
     forceInTeamIfNeeded();
     updateMapCases();
