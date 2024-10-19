@@ -8,8 +8,8 @@ let inventory = null;
 
 const forcePokedexUpdate = true; // While developping, will force pokedex to update at each session
 const forceMapCasesUpdate = true; // While developping, will force map cases to update at each session
-const forceOwnedUpdate = true; // While developping, will force owned pokemon to update at each session
-const forceInventoryUpdate = false; // While developping, will force inventory to update at each session
+const forceOwnedUpdate = false; // While developping, will force owned pokemon to update at each session
+const forceInventoryUpdate = true; // While developping, will force inventory to update at each session
 
 function CreatePokedex() {
     stored_content = localStorage.getItem("pokedex");

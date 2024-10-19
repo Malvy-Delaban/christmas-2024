@@ -18,7 +18,7 @@ function fillEvolutionList(evolutionListDiv, currentPokemon, remainingDuels) {
 
         const evolveButton = document.createElement('div');
         evolveButton.classList.add('popup-evolution-button');
-        if (remainingDuels > 0)
+        if (remainingDuels > 0 || hasEnoughItemInInventory(pokedex[currentPokemon.pokedexId].needed_item[i], pokedex[currentPokemon.pokedexId].needed_quantity[i]))
             evolveButton.classList.add('popup-evolution-button-greyed');
 
         const evolveButtonLeftSide = document.createElement('p');

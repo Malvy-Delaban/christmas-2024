@@ -555,7 +555,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .popup-content-item-image {
@@ -586,7 +586,7 @@
     align-items: center;
     width: 80%;
     bottom: 0;
-    right: -3rem;
+    right: 0rem;
     margin: 0;
     height: 5.5rem;
     z-index: 10;
@@ -597,6 +597,10 @@
     font-size: 2rem;
     font-weight: bold;
     text-align: left;
+}
+
+.popup-content-item-quantity {
+    width: 6rem;
 }
 
 .popup-content-item-price-text,
@@ -675,5 +679,6 @@
 }
 
 .popup-content-right-side-inventory {
-    margin-left: 5rem;
+    margin-left: 3rem;
+    max-width: 60%;
 }

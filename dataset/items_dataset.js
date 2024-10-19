@@ -261,7 +261,7 @@ const Items = {
     ORAN_BERRY: {
         id: 37,
         name: "Baie Oran",
-        description: "Une simple baie oran. Sert de monnaie et permet de faire évoluer des Pokémons.",
+        description: "Une simple baie oran. Sert de monnaie et de ressource d'évolution.",
         sprite: "./sprites/misc/oran_icon.png",
         shop_price: -1,
     },
