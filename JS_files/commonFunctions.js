@@ -115,7 +115,7 @@ function generateUUID() {
 }
 
 function GetSpriteAltNumberSpecialCases(id, isShiny) {
-    let specialCasesId = ["745.2", "413.1", "413.2", "413.3", "80.2", "774.1"];
+    let specialCasesId = ["745.2", "413.1", "413.2", "413.3", "80.2", "774.1", "412.1", "412.2", "412.3"];
 
     if (!specialCasesId.includes(id))
         return 1;
@@ -133,6 +133,12 @@ function GetSpriteAltNumberSpecialCases(id, isShiny) {
         return 7;
     if (id == specialCasesId[5]) // METENO
         return Math.floor(Math.random() * 7) + 7;
+    if (id == specialCasesId[6]) // CHENITI PLANTE
+        return 0;
+    if (id == specialCasesId[7]) // CHENITI SOL
+        return 1;
+    if (id == specialCasesId[8]) // CHENITI ACIER
+        return 2;
 }
 
 function GetSpriteByPokemon(pokedexEntry, isShiny) {

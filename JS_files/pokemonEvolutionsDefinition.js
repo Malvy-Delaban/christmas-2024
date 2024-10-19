@@ -501,8 +501,8 @@ function setEvolvingRelations() {
 
     pokedex.MAGICARPE.evolving_pokemon = [pokedex.LEVIATOR];
     pokedex.MAGICARPE.needed_item = [Items.ORAN_BERRY];
-    pokedex.MAGICARPE.needed_quantity = [1];
-    pokedex.MAGICARPE.duelToWin = 1;
+    pokedex.MAGICARPE.needed_quantity = [2];
+    pokedex.MAGICARPE.duelToWin = 3;
 
     pokedex.EVOLI.evolving_pokemon = [pokedex.AQUALI, pokedex.VOLTALI, pokedex.PYROLI, pokedex.MENTALI, pokedex.NOCTALI, pokedex.PHYLLALI, pokedex.GIVRALI, pokedex.NYMPHALI];
     pokedex.EVOLI.needed_item = [Items.WATER_STONE, Items.THUNDER_STONE, Items.FIRE_STONE, Items.ORAN_BERRY, Items.ORAN_BERRY, Items.LEAF_STONE, Items.ICE_STONE, Items.ORAN_BERRY];
