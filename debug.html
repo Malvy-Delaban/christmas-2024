@@ -28,6 +28,10 @@
 <script src="JS_files/generatePokemonDetailPopup.js"></script>
 <script src="JS_files/generatePutInTeamPopup.js"></script>
 <script src="JS_files/generateEvolutionPopup.js"></script>
+<script src="JS_files/generateShopPopup.js"></script>
+<script src="JS_files/generateConfirmBuyingPopup.js"></script>
+<script src="JS_files/generateInventoryPopup.js"></script>
+<script src="JS_files/generateStartRoutePopup.js"></script>
 
 <script>
     // Initialize all data / create them / retrieve them
@@ -44,8 +48,18 @@
     }
 
     .debug-item {
-        height: 10rem;
-        width: 10rem;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .rarity-container {
+        margin-bottom: 2rem;
+    }
+
+    .rarity-title {
+        font-size: 5rem;
+        margin-bottom: 0.5rem;
+        color: white;
     }
 </style>
 
@@ -53,20 +67,46 @@
 </body>
 
 <script>
-    const debugDisplay = document.createElement('div');
-    debugDisplay.className = 'debug-display';
-        
-    for (let key in pokedex) {
-    // for (let i = 0; i < 50; i++) {
 
-        const my_img = document.createElement('img');
-        my_img.className = 'debug-item';
-        my_img.src = GetSpriteByPokemon("METENO", false);
-        
+const debugDisplay = document.createElement('div');
+
+const sortedPokedex = Object.values(pokedex).sort((pokemonA, pokemonB) => {
+    // return pokemonB.rarity.strength - pokemonA.rarity.strength;
+    return (pokemonB.max_hp_lvl1 + pokemonB.attack_lvl1) - (pokemonA.max_hp_lvl1 + pokemonA.attack_lvl1);
+});
+
+let currentRarity = null;
+let rarityContainer = null;
+
+sortedPokedex.forEach(pokemon => {
+    // if (currentRarity !== pokemon.rarity.strength) {
+    //     currentRarity = pokemon.rarity.strength;
+
+    //     rarityContainer = document.createElement('div');
+    //     rarityContainer.className = 'rarity-container';
+
+    //     const rarityTitle = document.createElement('h2');
+    //     rarityTitle.className = 'rarity-title';
+    //     rarityTitle.textContent = `Rarity : ${pokemon.rarity.name}`;
+    //     rarityTitle.style.color = pokemon.rarity.color;
+    //     rarityContainer.appendChild(rarityTitle);
+
+    //     debugDisplay.appendChild(rarityContainer);
+    // }
+
+    // Create the image element for the Pokémon
+    const my_img = document.createElement('img');
+    my_img.className = 'debug-item';
+    const key = getKeyPokedexFromId(pokemon.id);
+    my_img.src = GetSpriteByPokemon(key, false);
+    my_img.style.backgroundColor = pokemon.type.color;
+
+    if (pokemon.rarity.name !== "LEGENDARY" && pokemon.evolving_pokemon.length == 0)
         debugDisplay.appendChild(my_img);
-    }
-    document.body.appendChild(debugDisplay);
+    // rarityContainer.appendChild(my_img);
+});
 
-
+// Append the entire debug display to the body
+document.body.appendChild(debugDisplay);
 </script>
 </html>

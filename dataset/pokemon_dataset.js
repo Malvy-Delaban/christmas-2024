@@ -10,7 +10,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     HERBIZARRE: {
         id:2,
@@ -23,7 +24,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     FLORIZARRE: {
         id:3,
@@ -36,7 +38,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     SALAMECHE: {
         id:4,
@@ -49,7 +52,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     REPTINCEL: {
         id:5,
@@ -62,7 +66,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     DRACAUFEU: {
         id:6,
@@ -75,7 +80,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     CARAPUCE: {
         id:7,
@@ -88,7 +94,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     CARABAFFE: {
         id:8,
@@ -101,7 +108,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     TORTANK: {
         id:9,
@@ -114,7 +122,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     CHENIPAN: {
         id:10,
@@ -127,7 +136,8 @@ let setup_pokedex = {
         attack_lvl1:6,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHRYSACIER: {
         id:11,
@@ -140,7 +150,8 @@ let setup_pokedex = {
         attack_lvl1:5,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PAPILUSION: {
         id:12,
@@ -153,7 +164,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ASPICOT: {
         id:13,
@@ -166,7 +178,8 @@ let setup_pokedex = {
         attack_lvl1:7,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     COCONFORT: {
         id:14,
@@ -179,7 +192,8 @@ let setup_pokedex = {
         attack_lvl1:5,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DARDARGNAN: {
         id:15,
@@ -192,7 +206,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ROUCOOL: {
         id:16,
@@ -205,7 +220,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ROUCOUPS: {
         id:17,
@@ -218,7 +234,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ROUCARNAGE: {
         id:18,
@@ -231,7 +248,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     RATTATA_A: {
         id:"19.1",
@@ -244,7 +262,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     RATTATA: {
         id:19,
@@ -257,7 +276,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     RATTATAC_A: {
         id:"20.1",
@@ -270,7 +290,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     RATTATAC: {
         id:20,
@@ -283,7 +304,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PIAFABEC: {
         id:21,
@@ -296,7 +318,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     RAPASDEPIC: {
         id:22,
@@ -309,7 +332,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ABO: {
         id:23,
@@ -322,7 +346,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ARBOK: {
         id:24,
@@ -335,7 +360,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PIKACHU: {
         id:25,
@@ -348,7 +374,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     RAICHU_A: {
         id:"26.1",
@@ -361,7 +388,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     RAICHU: {
         id:26,
@@ -374,7 +402,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SABELETTE_A: {
         id:"27.1",
@@ -387,7 +416,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SABELETTE: {
         id:27,
@@ -400,7 +430,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SABLAIREAU_A: {
         id:"28.1",
@@ -413,7 +444,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SABLAIREAU: {
         id:28,
@@ -426,7 +458,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NIDORAN_F: {
         id:29,
@@ -439,7 +472,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NIDORINA: {
         id:30,
@@ -452,7 +486,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NIDOQUEEN: {
         id:31,
@@ -465,7 +500,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NIDORAN_M: {
         id:32,
@@ -478,7 +514,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NIDORINO: {
         id:33,
@@ -491,7 +528,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NIDOKING: {
         id:34,
@@ -504,7 +542,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MELOFEE: {
         id:35,
@@ -517,7 +556,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MELODELFE: {
         id:36,
@@ -530,7 +570,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GOUPIX_A: {
         id:"37.1",
@@ -543,7 +584,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GOUPIX: {
         id:37,
@@ -556,7 +598,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FEUNARD_A: {
         id:"38.1",
@@ -569,7 +612,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FEUNARD: {
         id:38,
@@ -582,7 +626,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     RONDOUDOU: {
         id:39,
@@ -595,7 +640,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GRODOUDOU: {
         id:40,
@@ -608,7 +654,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NOSFERAPTI: {
         id:41,
@@ -621,7 +668,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NOSFERALTO: {
         id:42,
@@ -634,7 +682,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MYSTHERBE: {
         id:43,
@@ -647,7 +696,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ORTIDE: {
         id:44,
@@ -660,7 +710,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     RAFFLESIA: {
         id:45,
@@ -673,7 +724,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PARAS: {
         id:46,
@@ -686,7 +738,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PARASECT: {
         id:47,
@@ -699,7 +752,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MIMITOSS: {
         id:48,
@@ -712,7 +766,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     AEROMITE: {
         id:49,
@@ -725,7 +780,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TAUPIQUEUR: {
         id:50,
@@ -738,7 +794,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TAUPIQUEUR_A: {
         id:"50.1",
@@ -751,7 +808,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TRIOPIKEUR: {
         id:51,
@@ -764,7 +822,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TRIOPIKEUR_A: {
         id:51,
@@ -777,7 +836,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MIAOUSS: {
         id:52,
@@ -790,7 +850,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MIAOUSS_A: {
         id:"52.1",
@@ -803,7 +864,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MIAOUSS_G: {
         id:"52.2",
@@ -816,7 +878,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PERSIAN_A: {
         id:"53.1",
@@ -829,7 +892,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PERSIAN: {
         id:53,
@@ -842,7 +906,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PSYKOKWAK: {
         id:54,
@@ -855,7 +920,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     AKWAKWAK: {
         id:55,
@@ -868,7 +934,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FEROSINGE: {
         id:56,
@@ -881,7 +948,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     COLOSSINGE: {
         id:57,
@@ -894,7 +962,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CANINOS_H: {
         id:"58.3",
@@ -907,7 +976,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CANINOS: {
         id:58,
@@ -920,7 +990,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ARCANIN_H: {
         id:"59.3",
@@ -933,7 +1004,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ARCANIN: {
         id:59,
@@ -946,7 +1018,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PTITARD: {
         id:60,
@@ -959,7 +1032,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TETARTE: {
         id:61,
@@ -972,7 +1046,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TARTARD: {
         id:62,
@@ -985,7 +1060,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ABRA: {
         id:63,
@@ -998,7 +1074,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     KADABRA: {
         id:64,
@@ -1011,7 +1088,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ALAKAZAM: {
         id:65,
@@ -1024,7 +1102,8 @@ let setup_pokedex = {
         attack_lvl1:27,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MACHOC: {
         id:66,
@@ -1037,7 +1116,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MACHOPEUR: {
         id:67,
@@ -1050,7 +1130,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MACKOGNEUR: {
         id:68,
@@ -1063,7 +1144,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHETIFLOR: {
         id:69,
@@ -1076,7 +1158,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BOUSTIFLOR: {
         id:70,
@@ -1089,7 +1172,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     EMPIFLOR: {
         id:71,
@@ -1102,7 +1186,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TENTACOOL: {
         id:72,
@@ -1115,7 +1200,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TENTACRUEL: {
         id:73,
@@ -1128,7 +1214,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     RACAILLOU_A: {
         id:"74.1",
@@ -1141,7 +1228,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     RACAILLOU: {
         id:74,
@@ -1154,7 +1242,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GRAVALANCH_A: {
         id:"75.1",
@@ -1167,7 +1256,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GRAVALANCH: {
         id:75,
@@ -1180,7 +1270,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GROLEM_A: {
         id:"76.1",
@@ -1193,7 +1284,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GROLEM: {
         id:76,
@@ -1206,7 +1298,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PONYTA_G: {
         id:"77.2",
@@ -1219,7 +1312,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PONYTA: {
         id:77,
@@ -1232,7 +1326,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GALOPA_G: {
         id:"78.2",
@@ -1245,7 +1340,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GALOPA: {
         id:78,
@@ -1258,7 +1354,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     RAMOLOSS_G: {
         id:"79.2",
@@ -1271,7 +1368,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     RAMOLOSS: {
         id:79,
@@ -1284,7 +1382,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FLAGADOSS_G: {
         id:"80.2",
@@ -1297,7 +1396,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FLAGADOSS: {
         id:80,
@@ -1310,7 +1410,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MAGNETI: {
         id:81,
@@ -1323,7 +1424,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MAGNETON: {
         id:82,
@@ -1336,7 +1438,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CANARTICHO_G: {
         id:83,
@@ -1349,7 +1452,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CANARTICHO: {
         id:83,
@@ -1362,7 +1466,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DODUO: {
         id:84,
@@ -1375,7 +1480,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DODRIO: {
         id:85,
@@ -1388,7 +1494,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     OTARIA: {
         id:86,
@@ -1401,7 +1508,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LAMANTINE: {
         id:87,
@@ -1414,7 +1522,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TADMORV_A: {
         id:"88.1",
@@ -1427,7 +1536,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TADMORV: {
         id:88,
@@ -1440,7 +1550,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GROTADMORV_A: {
         id:"89.1",
@@ -1453,7 +1564,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GROTADMORV: {
         id:89,
@@ -1466,7 +1578,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     KOKIYAS: {
         id:90,
@@ -1479,7 +1592,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CRUSTABRI: {
         id:91,
@@ -1492,7 +1606,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FANTOMINUS: {
         id:92,
@@ -1505,7 +1620,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SPECTRUM: {
         id:93,
@@ -1518,7 +1634,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ECTOPLASMA: {
         id:94,
@@ -1531,7 +1648,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ONIX: {
         id:95,
@@ -1544,7 +1662,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SOPORIFIK: {
         id:96,
@@ -1557,7 +1676,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     HYPNOMADE: {
         id:97,
@@ -1570,7 +1690,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     KRABBY: {
         id:98,
@@ -1583,7 +1704,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     KRABBOSS: {
         id:99,
@@ -1596,7 +1718,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     VOLTORBE_H: {
         id:"100.3",
@@ -1609,7 +1732,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     VOLTORBE: {
         id:100,
@@ -1622,7 +1746,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ELECTRODE_H: {
         id:"101.3",
@@ -1635,7 +1760,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ELECTRODE: {
         id:101,
@@ -1648,7 +1774,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NOEUNOEUF: {
         id:102,
@@ -1661,7 +1788,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NOADKOKO_A: {
         id:"103.1",
@@ -1674,7 +1802,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NOADKOKO: {
         id:103,
@@ -1687,7 +1816,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     OSSELAIT: {
         id:104,
@@ -1700,7 +1830,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     OSSATUEUR_A: {
         id:"105.1",
@@ -1713,7 +1844,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     OSSATUEUR: {
         id:105,
@@ -1726,7 +1858,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     KICKLEE: {
         id:106,
@@ -1739,7 +1872,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TYGNON: {
         id:107,
@@ -1752,7 +1886,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     EXCELANGUE: {
         id:108,
@@ -1765,7 +1900,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SMOGO: {
         id:109,
@@ -1778,7 +1914,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SMOGOGO_G: {
         id:"110.2",
@@ -1791,7 +1928,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SMOGOGO: {
         id:110,
@@ -1804,7 +1942,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     RHINOCORNE: {
         id:111,
@@ -1817,7 +1956,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     RHINOFEROS: {
         id:112,
@@ -1830,7 +1970,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LEVEINARD: {
         id:113,
@@ -1843,7 +1984,8 @@ let setup_pokedex = {
         attack_lvl1:7,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SAQUEDENEU: {
         id:114,
@@ -1856,7 +1998,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     KANGOUREX: {
         id:115,
@@ -1869,7 +2012,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     HYPOTREMPE: {
         id:116,
@@ -1882,7 +2026,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     HYPOCEAN: {
         id:117,
@@ -1895,7 +2040,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     POISSIRENE: {
         id:118,
@@ -1908,7 +2054,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     POISSOROY: {
         id:119,
@@ -1921,7 +2068,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     STARI: {
         id:120,
@@ -1934,7 +2082,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     STAROSS: {
         id:121,
@@ -1947,7 +2096,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MMIME: {
         id:122,
@@ -1960,7 +2110,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MMIME_G: {
         id:"122.2",
@@ -1973,7 +2124,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     INSECATEUR: {
         id:123,
@@ -1986,7 +2138,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LIPPOUTOU: {
         id:124,
@@ -1999,7 +2152,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ELEKTEK: {
         id:125,
@@ -2012,7 +2166,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MAGMAR: {
         id:126,
@@ -2025,7 +2180,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SCARABRUTE: {
         id:127,
@@ -2038,7 +2194,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TAUROS: {
         id:128,
@@ -2051,7 +2208,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MAGICARPE: {
         id:129,
@@ -2064,7 +2222,8 @@ let setup_pokedex = {
         attack_lvl1:3,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LEVIATOR: {
         id:130,
@@ -2077,7 +2236,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LOKHLASS: {
         id:131,
@@ -2090,7 +2250,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     METAMORPH: {
         id:132,
@@ -2103,7 +2264,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     EVOLI: {
         id:133,
@@ -2116,7 +2278,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     AQUALI: {
         id:134,
@@ -2129,7 +2292,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     VOLTALI: {
         id:135,
@@ -2142,7 +2306,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PYROLI: {
         id:136,
@@ -2155,7 +2320,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PORYGON: {
         id:137,
@@ -2168,7 +2334,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     AMONITA: {
         id:138,
@@ -2181,7 +2348,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     AMONISTAR: {
         id:139,
@@ -2194,7 +2362,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     KABUTO: {
         id:140,
@@ -2207,7 +2376,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     KABUTOPS: {
         id:141,
@@ -2220,7 +2390,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PTERA: {
         id:142,
@@ -2233,7 +2404,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     RONFLEX: {
         id:143,
@@ -2246,7 +2418,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ARTIKODIN: {
         id:144,
@@ -2259,7 +2432,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ARTIKODIN_G: {
         id:"144.2",
@@ -2272,7 +2446,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ELECTHOR_G: {
         id:"145.2",
@@ -2285,7 +2460,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ELECTHOR: {
         id:145,
@@ -2298,7 +2474,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SULFURA_G: {
         id:"146.2",
@@ -2311,7 +2488,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SULFURA: {
         id:146,
@@ -2324,7 +2502,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MINIDRACO: {
         id:147,
@@ -2337,7 +2516,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DRACO: {
         id:148,
@@ -2350,7 +2530,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DRACOLOSSE: {
         id:149,
@@ -2363,7 +2544,8 @@ let setup_pokedex = {
         attack_lvl1:27,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MEWTWO: {
         id:150,
@@ -2376,7 +2558,8 @@ let setup_pokedex = {
         attack_lvl1:31,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MEW: {
         id:151,
@@ -2389,7 +2572,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GERMIGNON: {
         id:152,
@@ -2402,7 +2586,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     MACRONIUM: {
         id:153,
@@ -2415,7 +2600,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     MEGANIUM: {
         id:154,
@@ -2428,7 +2614,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     HERICENDRE: {
         id:155,
@@ -2441,7 +2628,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     FEURISSON: {
         id:156,
@@ -2454,7 +2642,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     TYPHLOSION_H: {
         id:"157.3",
@@ -2467,7 +2656,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     TYPHLOSION: {
         id:157,
@@ -2480,7 +2670,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     KAIMINUS: {
         id:158,
@@ -2493,7 +2684,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     CROCRODIL: {
         id:159,
@@ -2506,7 +2698,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     ALIGATUEUR: {
         id:160,
@@ -2519,7 +2712,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     FOUINETTE: {
         id:161,
@@ -2532,7 +2726,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FOUINAR: {
         id:162,
@@ -2545,7 +2740,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     HOOTHOOT: {
         id:163,
@@ -2558,7 +2754,8 @@ let setup_pokedex = {
         attack_lvl1:7,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NOARFANG: {
         id:164,
@@ -2571,7 +2768,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     COXY: {
         id:165,
@@ -2584,7 +2782,8 @@ let setup_pokedex = {
         attack_lvl1:8,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     COXYCLAQUE: {
         id:166,
@@ -2597,7 +2796,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MIMIGAL: {
         id:167,
@@ -2610,7 +2810,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MIGALOS: {
         id:168,
@@ -2623,7 +2824,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NOSTENFER: {
         id:169,
@@ -2636,7 +2838,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LOUPIO: {
         id:170,
@@ -2649,7 +2852,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LANTURN: {
         id:171,
@@ -2657,12 +2861,13 @@ let setup_pokedex = {
         has_been_seen:false,
         has_been_captured:false,
         rarity:Rarities.RARE,
-        type:Types.EAU,
+        type:Types.ELECTRIK,
         max_hp_lvl1:62,
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PICHU: {
         id:172,
@@ -2675,7 +2880,8 @@ let setup_pokedex = {
         attack_lvl1:8,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MELO: {
         id:173,
@@ -2688,7 +2894,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TOUDOUDOU: {
         id:174,
@@ -2701,7 +2908,8 @@ let setup_pokedex = {
         attack_lvl1:8,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TOGEPI: {
         id:175,
@@ -2714,7 +2922,8 @@ let setup_pokedex = {
         attack_lvl1:8,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TOGETIC: {
         id:176,
@@ -2727,7 +2936,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NATU: {
         id:177,
@@ -2740,7 +2950,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     XATU: {
         id:178,
@@ -2753,7 +2964,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     WATTOUAT: {
         id:179,
@@ -2766,7 +2978,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LAINERGIE: {
         id:180,
@@ -2779,7 +2992,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PHARAMP: {
         id:181,
@@ -2792,7 +3006,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     JOLIFLOR: {
         id:182,
@@ -2805,7 +3020,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MARILL: {
         id:183,
@@ -2818,7 +3034,8 @@ let setup_pokedex = {
         attack_lvl1:4,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     AZUMARILL: {
         id:184,
@@ -2831,7 +3048,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SIMULARBRE: {
         id:185,
@@ -2844,7 +3062,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TARPAUD: {
         id:186,
@@ -2857,7 +3076,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GRANIVOL: {
         id:187,
@@ -2870,7 +3090,8 @@ let setup_pokedex = {
         attack_lvl1:7,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FLORAVOL: {
         id:188,
@@ -2883,7 +3104,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     COTOVOL: {
         id:189,
@@ -2896,7 +3118,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CAPUMAIN: {
         id:190,
@@ -2909,7 +3132,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TOURNEGRIN: {
         id:191,
@@ -2922,7 +3146,8 @@ let setup_pokedex = {
         attack_lvl1:6,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     HELIATRONC: {
         id:192,
@@ -2935,7 +3160,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     YANMA: {
         id:193,
@@ -2948,7 +3174,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     AXOLOTO_P: {
         id:"194.4",
@@ -2961,7 +3188,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     AXOLOTO: {
         id:194,
@@ -2974,7 +3202,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MARAISTE: {
         id:195,
@@ -2987,7 +3216,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MENTALI: {
         id:196,
@@ -3000,7 +3230,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NOCTALI: {
         id:197,
@@ -3013,7 +3244,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CORNEBRE: {
         id:198,
@@ -3026,7 +3258,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ROIGADA_G: {
         id:"199.2",
@@ -3039,7 +3272,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ROIGADA: {
         id:199,
@@ -3052,7 +3286,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FEUFOREVE: {
         id:200,
@@ -3065,7 +3300,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ZARBI: {
         id:201,
@@ -3078,7 +3314,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     QULBUTOKE: {
         id:202,
@@ -3091,7 +3328,8 @@ let setup_pokedex = {
         attack_lvl1:7,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GIRAFARIG: {
         id:203,
@@ -3104,7 +3342,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     POMDEPIK: {
         id:204,
@@ -3117,7 +3356,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FORETRESS: {
         id:205,
@@ -3130,7 +3370,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     INSOLOURDO: {
         id:206,
@@ -3143,7 +3384,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SCORPLANE: {
         id:207,
@@ -3156,7 +3398,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     STEELIX: {
         id:208,
@@ -3169,7 +3412,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SNUBBULL: {
         id:209,
@@ -3182,7 +3426,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GRANBULL: {
         id:210,
@@ -3195,7 +3440,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     QWILFISH_H: {
         id:"211.3",
@@ -3208,7 +3454,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     QWILFISH: {
         id:211,
@@ -3221,7 +3468,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CIZAYOX: {
         id:212,
@@ -3234,7 +3482,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CARATROC: {
         id:213,
@@ -3247,7 +3496,8 @@ let setup_pokedex = {
         attack_lvl1:2,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SCARHINO: {
         id:214,
@@ -3260,7 +3510,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FARFURET_H: {
         id:"215.3",
@@ -3273,7 +3524,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FARFURET: {
         id:215,
@@ -3286,7 +3538,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TEDDIURSA: {
         id:216,
@@ -3299,7 +3552,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     URSARING: {
         id:217,
@@ -3312,7 +3566,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LIMAGMA: {
         id:218,
@@ -3325,7 +3580,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     VOLCAROPOD: {
         id:219,
@@ -3338,7 +3594,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MARCACRIN: {
         id:220,
@@ -3351,7 +3608,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     COCHIGNON: {
         id:221,
@@ -3364,7 +3622,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CORAYON_G: {
         id:"222.2",
@@ -3377,7 +3636,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CORAYON: {
         id:222,
@@ -3390,7 +3650,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     REMORAID: {
         id:223,
@@ -3403,7 +3664,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     OCTILLERY: {
         id:224,
@@ -3416,7 +3678,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CADOIZO: {
         id:225,
@@ -3429,7 +3692,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DEMANTA: {
         id:226,
@@ -3442,7 +3706,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     AIRMURE: {
         id:227,
@@ -3455,7 +3720,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MALOSSE: {
         id:228,
@@ -3468,7 +3734,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DEMOLOSSE: {
         id:229,
@@ -3481,7 +3748,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     HYPOROI: {
         id:230,
@@ -3494,7 +3762,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PHANPY: {
         id:231,
@@ -3507,7 +3776,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DONPHAN: {
         id:232,
@@ -3520,7 +3790,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PORYGON2:{
         id:233,
@@ -3533,7 +3804,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CERFROUSSE: {
         id:234,
@@ -3546,7 +3818,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     QUEULORIOR: {
         id:235,
@@ -3559,7 +3832,8 @@ let setup_pokedex = {
         attack_lvl1:4,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DEBUGANT: {
         id:236,
@@ -3572,7 +3846,8 @@ let setup_pokedex = {
         attack_lvl1:7,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     KAPOERA: {
         id:237,
@@ -3585,7 +3860,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LIPPOUTI: {
         id:238,
@@ -3598,7 +3874,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ELEKID: {
         id:239,
@@ -3611,7 +3888,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MAGBY: {
         id:240,
@@ -3624,7 +3902,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ECREMEUH: {
         id:241,
@@ -3637,7 +3916,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LEUPHORIE: {
         id:242,
@@ -3650,7 +3930,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     RAIKOU: {
         id:243,
@@ -3663,7 +3944,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ENTEI: {
         id:244,
@@ -3676,7 +3958,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SUICUNE: {
         id:245,
@@ -3689,7 +3972,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     EMBRYLEX: {
         id:246,
@@ -3702,7 +3986,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     YMPHECT: {
         id:247,
@@ -3715,7 +4000,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TYRANOCIF: {
         id:248,
@@ -3728,7 +4014,8 @@ let setup_pokedex = {
         attack_lvl1:27,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LUGIA: {
         id:249,
@@ -3741,7 +4028,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     HOOH:{
         id:250,
@@ -3754,7 +4042,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CELEBI: {
         id:251,
@@ -3767,7 +4056,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ARCKO: {
         id:252,
@@ -3780,7 +4070,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     MASSKO: {
         id:253,
@@ -3793,7 +4084,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     JUNGKO: {
         id:254,
@@ -3806,7 +4098,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     POUSSIFEU: {
         id:255,
@@ -3819,7 +4112,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     GALIFEU: {
         id:256,
@@ -3832,7 +4126,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     BRASEGALI: {
         id:257,
@@ -3845,7 +4140,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     GOBOU: {
         id:258,
@@ -3858,7 +4154,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     FLOBIO: {
         id:259,
@@ -3871,7 +4168,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     LAGGRON: {
         id:260,
@@ -3884,7 +4182,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     MEDHYENA: {
         id:261,
@@ -3897,7 +4196,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GRAHYENA: {
         id:262,
@@ -3910,7 +4210,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ZIGZATON_G: {
         id:"263.2",
@@ -3923,7 +4224,8 @@ let setup_pokedex = {
         attack_lvl1:6,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ZIGZATON: {
         id:263,
@@ -3936,7 +4238,8 @@ let setup_pokedex = {
         attack_lvl1:6,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LINEON_G: {
         id:"264.2",
@@ -3949,7 +4252,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LINEON: {
         id:264,
@@ -3962,7 +4266,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHENIPOTTE: {
         id:265,
@@ -3975,7 +4280,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ARMULYS: {
         id:266,
@@ -3988,7 +4294,8 @@ let setup_pokedex = {
         attack_lvl1:7,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHARMILLON: {
         id:267,
@@ -4001,7 +4308,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BLINDALYS: {
         id:268,
@@ -4014,7 +4322,8 @@ let setup_pokedex = {
         attack_lvl1:7,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PAPINOX: {
         id:269,
@@ -4027,7 +4336,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NENUPIOT: {
         id:270,
@@ -4040,7 +4350,8 @@ let setup_pokedex = {
         attack_lvl1:8,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LOMBRE: {
         id:271,
@@ -4053,7 +4364,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LUDICOLO: {
         id:272,
@@ -4066,7 +4378,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GRAINIPIOT: {
         id:273,
@@ -4079,7 +4392,8 @@ let setup_pokedex = {
         attack_lvl1:8,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PIFEUIL: {
         id:274,
@@ -4092,7 +4406,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TENGALICE: {
         id:275,
@@ -4105,7 +4420,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NIRONDELLE: {
         id:276,
@@ -4118,7 +4434,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     HELEDELLE: {
         id:277,
@@ -4131,7 +4448,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GOELISE: {
         id:278,
@@ -4144,7 +4462,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BEKIPAN: {
         id:279,
@@ -4157,7 +4476,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TARSAL: {
         id:280,
@@ -4170,7 +4490,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     KIRLIA: {
         id:281,
@@ -4183,7 +4504,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GARDEVOIR: {
         id:282,
@@ -4196,7 +4518,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ARAKDO: {
         id:283,
@@ -4209,7 +4532,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MASKADRA: {
         id:284,
@@ -4222,7 +4546,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BALIGNON: {
         id:285,
@@ -4235,20 +4560,22 @@ let setup_pokedex = {
         attack_lvl1:8,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHAPIGNON: {
         id:286,
         name:"Chapignon",
         has_been_seen:false,
         has_been_captured:false,
-        rarity:Rarities.RARE,
+        rarity:Rarities.EPIC,
         type:Types.PLANTE,
         max_hp_lvl1:36,
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PARECOOL: {
         id:287,
@@ -4261,7 +4588,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     VIGOROTH: {
         id:288,
@@ -4274,7 +4602,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MONAFLEMIT: {
         id:289,
@@ -4287,7 +4616,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NINGALE: {
         id:290,
@@ -4300,7 +4630,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NINJASK: {
         id:291,
@@ -4313,7 +4644,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MUNJA: {
         id:292,
@@ -4326,7 +4658,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHUCHMUR: {
         id:293,
@@ -4339,7 +4672,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     RAMBOUM: {
         id:294,
@@ -4352,7 +4686,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BROUHABAM: {
         id:295,
@@ -4365,7 +4700,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MAKUHITA: {
         id:296,
@@ -4378,7 +4714,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     HARIYAMA: {
         id:297,
@@ -4391,7 +4728,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     AZURILL: {
         id:298,
@@ -4404,7 +4742,8 @@ let setup_pokedex = {
         attack_lvl1:4,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TARINOR: {
         id:299,
@@ -4417,7 +4756,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SKITTY: {
         id:300,
@@ -4430,7 +4770,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DELCATTY: {
         id:301,
@@ -4443,7 +4784,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TENEFIX: {
         id:302,
@@ -4456,7 +4798,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MYSDIBULE: {
         id:303,
@@ -4469,7 +4812,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GALEKID: {
         id:304,
@@ -4482,7 +4826,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GALEGON: {
         id:305,
@@ -4495,7 +4840,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GALEKING: {
         id:306,
@@ -4508,7 +4854,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MEDITIKKA: {
         id:307,
@@ -4521,7 +4868,8 @@ let setup_pokedex = {
         attack_lvl1:8,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHARMINA: {
         id:308,
@@ -4534,7 +4882,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DYNAVOLT: {
         id:309,
@@ -4547,7 +4896,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ELECSPRINT: {
         id:310,
@@ -4560,7 +4910,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     POSIPI: {
         id:311,
@@ -4573,7 +4924,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NEGAPI: {
         id:312,
@@ -4586,7 +4938,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MUCIOLE: {
         id:313,
@@ -4599,7 +4952,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LUMIVOLE: {
         id:314,
@@ -4612,7 +4966,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ROSELIA: {
         id:315,
@@ -4625,7 +4980,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GLOUPTI: {
         id:316,
@@ -4638,7 +4994,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     AVALTOUT: {
         id:317,
@@ -4651,7 +5008,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CARVANHA: {
         id:318,
@@ -4664,7 +5022,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SHARPEDO: {
         id:319,
@@ -4677,7 +5036,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     WAILMER: {
         id:320,
@@ -4690,7 +5050,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     WAILORD: {
         id:321,
@@ -4703,7 +5064,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHAMALLOT: {
         id:322,
@@ -4716,7 +5078,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CAMERUPT: {
         id:323,
@@ -4729,7 +5092,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHARTOR: {
         id:324,
@@ -4742,7 +5106,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SPOINK: {
         id:325,
@@ -4755,7 +5120,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GRORET: {
         id:326,
@@ -4768,7 +5134,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SPINDA: {
         id:327,
@@ -4781,7 +5148,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     KRAKNOIX: {
         id:328,
@@ -4794,7 +5162,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     VIBRANINF: {
         id:329,
@@ -4807,7 +5176,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LIBEGON: {
         id:330,
@@ -4820,7 +5190,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CACNEA: {
         id:331,
@@ -4833,7 +5204,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CACTURNE: {
         id:332,
@@ -4846,7 +5218,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TYLTON: {
         id:333,
@@ -4859,20 +5232,22 @@ let setup_pokedex = {
         attack_lvl1:8,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ALTARIA: {
         id:334,
         name:"Altaria",
         has_been_seen:false,
         has_been_captured:false,
-        rarity:Rarities.RARE,
+        rarity:Rarities.EPIC,
         type:Types.DRAGON,
         max_hp_lvl1:44,
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MANGRIFF: {
         id:335,
@@ -4885,7 +5260,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SEVIPER: {
         id:336,
@@ -4898,7 +5274,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SELEROC: {
         id:337,
@@ -4911,7 +5288,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SOLAROC: {
         id:338,
@@ -4924,7 +5302,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BARLOCHE: {
         id:339,
@@ -4937,7 +5316,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BARBICHA: {
         id:340,
@@ -4950,7 +5330,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ECRAPINCE: {
         id:341,
@@ -4963,7 +5344,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     COLHOMARD: {
         id:342,
@@ -4976,7 +5358,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BALBUTO: {
         id:343,
@@ -4989,7 +5372,8 @@ let setup_pokedex = {
         attack_lvl1:8,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     KAORINE: {
         id:344,
@@ -5002,7 +5386,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LILIA: {
         id:345,
@@ -5015,7 +5400,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     VACILYS: {
         id:346,
@@ -5028,7 +5414,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ANORITH: {
         id:347,
@@ -5041,7 +5428,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ARMALDO: {
         id:348,
@@ -5054,7 +5442,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BARPAU: {
         id:349,
@@ -5067,7 +5456,8 @@ let setup_pokedex = {
         attack_lvl1:3,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MILOBELLUS: {
         id:350,
@@ -5080,7 +5470,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MORPHEO: {
         id:351,
@@ -5093,7 +5484,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     KECLEON: {
         id:352,
@@ -5106,7 +5498,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     POLICHOMBR: {
         id:353,
@@ -5119,7 +5512,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BRANETTE: {
         id:354,
@@ -5132,7 +5526,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SKELENOX: {
         id:355,
@@ -5145,7 +5540,8 @@ let setup_pokedex = {
         attack_lvl1:8,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TERACLOPE: {
         id:356,
@@ -5158,7 +5554,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TROPIUS: {
         id:357,
@@ -5171,7 +5568,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     EOKO: {
         id:358,
@@ -5184,7 +5582,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ABSOL: {
         id:359,
@@ -5197,7 +5596,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     OKEOKE: {
         id:360,
@@ -5210,7 +5610,8 @@ let setup_pokedex = {
         attack_lvl1:5,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     STALGAMIN: {
         id:361,
@@ -5223,7 +5624,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ONIGLALI: {
         id:362,
@@ -5236,7 +5638,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     OBALIE: {
         id:363,
@@ -5249,7 +5652,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PHOGLEUR: {
         id:364,
@@ -5262,7 +5666,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     KAIMORSE: {
         id:365,
@@ -5275,7 +5680,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     COQUIPERL: {
         id:366,
@@ -5288,7 +5694,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SERPANG: {
         id:367,
@@ -5301,7 +5708,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ROSABYSS: {
         id:368,
@@ -5314,7 +5722,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     RELICANTH: {
         id:369,
@@ -5327,7 +5736,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LOVDISC: {
         id:370,
@@ -5340,7 +5750,8 @@ let setup_pokedex = {
         attack_lvl1:8,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DRABY: {
         id:371,
@@ -5353,7 +5764,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DRACKHAUS: {
         id:372,
@@ -5366,7 +5778,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DRATTAK: {
         id:373,
@@ -5379,7 +5792,8 @@ let setup_pokedex = {
         attack_lvl1:27,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TERHAL: {
         id:374,
@@ -5392,7 +5806,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     METANG: {
         id:375,
@@ -5405,7 +5820,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     METALOSSE: {
         id:376,
@@ -5418,7 +5834,8 @@ let setup_pokedex = {
         attack_lvl1:27,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     REGIROCK: {
         id:377,
@@ -5431,7 +5848,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     REGICE: {
         id:378,
@@ -5444,7 +5862,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     REGISTEEL: {
         id:379,
@@ -5457,7 +5876,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LATIAS: {
         id:380,
@@ -5470,7 +5890,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LATIOS: {
         id:381,
@@ -5483,7 +5904,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     KYOGRE: {
         id:382,
@@ -5496,7 +5918,8 @@ let setup_pokedex = {
         attack_lvl1:30,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GROUDON: {
         id:383,
@@ -5509,7 +5932,8 @@ let setup_pokedex = {
         attack_lvl1:30,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     RAYQUAZA: {
         id:384,
@@ -5522,7 +5946,8 @@ let setup_pokedex = {
         attack_lvl1:30,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     JIRACHI: {
         id:385,
@@ -5535,7 +5960,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DEOXYS: {
         id:386,
@@ -5548,7 +5974,8 @@ let setup_pokedex = {
         attack_lvl1:30,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TORTIPOUSS: {
         id:387,
@@ -5561,7 +5988,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     BOSKARA: {
         id:388,
@@ -5574,7 +6002,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     TORTERRA: {
         id:389,
@@ -5587,7 +6016,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     OUISTICRAM: {
         id:390,
@@ -5600,7 +6030,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     CHIMPENFEU: {
         id:391,
@@ -5613,7 +6044,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     SIMIABRAZ: {
         id:392,
@@ -5626,7 +6058,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     TIPLOUF: {
         id:393,
@@ -5639,7 +6072,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     PRINPLOUF: {
         id:394,
@@ -5652,7 +6086,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     PINGOLEON: {
         id:395,
@@ -5665,7 +6100,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     ETOURMI: {
         id:396,
@@ -5678,7 +6114,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ETOURVOL: {
         id:397,
@@ -5691,7 +6128,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ETOURAPTOR: {
         id:398,
@@ -5704,7 +6142,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     KEUNOTOR: {
         id:399,
@@ -5717,7 +6156,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CASTORNO: {
         id:400,
@@ -5730,7 +6170,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CRIKZIK: {
         id:401,
@@ -5743,7 +6184,8 @@ let setup_pokedex = {
         attack_lvl1:5,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MELOKRIK: {
         id:402,
@@ -5756,7 +6198,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LIXY: {
         id:403,
@@ -5769,7 +6212,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LUXIO: {
         id:404,
@@ -5782,7 +6226,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LUXRAY: {
         id:405,
@@ -5795,7 +6240,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ROZBOUTON: {
         id:406,
@@ -5808,7 +6254,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ROSERADE: {
         id:407,
@@ -5821,7 +6268,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     KRANIDOS: {
         id:408,
@@ -5834,7 +6282,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHARKOS: {
         id:409,
@@ -5847,7 +6296,8 @@ let setup_pokedex = {
         attack_lvl1:33,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DINOCLIER: {
         id:410,
@@ -5860,7 +6310,8 @@ let setup_pokedex = {
         attack_lvl1:8,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BASTIODON: {
         id:411,
@@ -5873,7 +6324,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHENITI_1: {
         id:"412.1",
@@ -5886,7 +6338,8 @@ let setup_pokedex = {
         attack_lvl1:6,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHENITI_2: {
         id:"412.2",
@@ -5899,7 +6352,8 @@ let setup_pokedex = {
         attack_lvl1:6,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHENITI_3: {
         id:"412.3",
@@ -5912,7 +6366,8 @@ let setup_pokedex = {
         attack_lvl1:6,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHENISELLE_1: {
         id:"413.1",
@@ -5925,7 +6380,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHENISELLE_2: {
         id:"413.2",
@@ -5938,7 +6394,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHENISELLE_3: {
         id:"413.3",
@@ -5951,7 +6408,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PAPILORD: {
         id:414,
@@ -5964,7 +6422,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     APITRINI: {
         id:415,
@@ -5977,7 +6436,8 @@ let setup_pokedex = {
         attack_lvl1:6,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     APIREINE: {
         id:416,
@@ -5990,7 +6450,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PACHIRISU: {
         id:417,
@@ -6003,7 +6464,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MUSTEBOUEE: {
         id:418,
@@ -6016,7 +6478,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MUSTEFLOTT: {
         id:419,
@@ -6029,7 +6492,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CERIBOU: {
         id:420,
@@ -6042,7 +6506,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CERIFLOR: {
         id:421,
@@ -6055,7 +6520,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SANCOKI: {
         id:422,
@@ -6068,7 +6534,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TRITOSOR: {
         id:423,
@@ -6081,7 +6548,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CAPIDEXTRE: {
         id:424,
@@ -6094,7 +6562,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BAUDRIVE: {
         id:425,
@@ -6107,7 +6576,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GRODRIVE: {
         id:426,
@@ -6120,7 +6590,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LAPOREILLE: {
         id:427,
@@ -6133,7 +6604,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LOCKPIN: {
         id:428,
@@ -6146,7 +6618,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MAGIREVE: {
         id:429,
@@ -6159,7 +6632,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CORBOSS: {
         id:430,
@@ -6172,7 +6646,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHAGLAM: {
         id:431,
@@ -6185,7 +6660,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHAFFREUX: {
         id:432,
@@ -6198,7 +6674,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     KORILLON: {
         id:433,
@@ -6211,7 +6688,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MOUFOUETTE: {
         id:434,
@@ -6224,7 +6702,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MOUFFLAIR: {
         id:435,
@@ -6237,7 +6716,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ARCHEOMIRE: {
         id:436,
@@ -6250,7 +6730,8 @@ let setup_pokedex = {
         attack_lvl1:5,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ARCHEODONG: {
         id:437,
@@ -6263,7 +6744,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MANZAI: {
         id:438,
@@ -6276,7 +6758,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MIMEJR: {
         id:439,
@@ -6289,7 +6772,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PTIRAVI: {
         id:440,
@@ -6302,7 +6786,8 @@ let setup_pokedex = {
         attack_lvl1:3,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PIJAKO: {
         id:441,
@@ -6315,7 +6800,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SPIRITOMB: {
         id:442,
@@ -6328,7 +6814,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GRIKNOT: {
         id:443,
@@ -6341,7 +6828,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CARMACHE: {
         id:444,
@@ -6354,7 +6842,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CARCHACROK: {
         id:445,
@@ -6367,7 +6856,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GOINFREX: {
         id:446,
@@ -6380,7 +6870,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     RIOLU: {
         id:447,
@@ -6393,7 +6884,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LUCARIO: {
         id:448,
@@ -6406,7 +6898,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     HIPPOPOTAS: {
         id:449,
@@ -6419,7 +6912,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     HIPPODOCUS: {
         id:450,
@@ -6432,7 +6926,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     RAPION: {
         id:451,
@@ -6445,7 +6940,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DRASCORE: {
         id:452,
@@ -6458,7 +6954,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CRADOPAUD: {
         id:453,
@@ -6471,7 +6968,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     COATOX: {
         id:454,
@@ -6484,7 +6982,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     VORTENTE: {
         id:455,
@@ -6497,7 +6996,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ECAYON: {
         id:456,
@@ -6510,7 +7010,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LUMINEON: {
         id:457,
@@ -6523,7 +7024,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BABIMANTA: {
         id:458,
@@ -6536,7 +7038,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BLIZZI: {
         id:459,
@@ -6549,7 +7052,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BLIZZAROI: {
         id:460,
@@ -6562,7 +7066,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DIMORET: {
         id:461,
@@ -6575,7 +7080,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MAGNEZONE: {
         id:462,
@@ -6588,7 +7094,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     COUDLANGUE: {
         id:463,
@@ -6601,7 +7108,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     RHINASTOC: {
         id:464,
@@ -6614,7 +7122,8 @@ let setup_pokedex = {
         attack_lvl1:28,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BOULDENEU: {
         id:465,
@@ -6627,7 +7136,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ELEKABLE: {
         id:466,
@@ -6640,7 +7150,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MAGANON: {
         id:467,
@@ -6653,7 +7164,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TOGEKISS: {
         id:468,
@@ -6666,7 +7178,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     YANMEGA: {
         id:469,
@@ -6679,7 +7192,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PHYLLALI: {
         id:470,
@@ -6692,7 +7206,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GIVRALI: {
         id:471,
@@ -6705,7 +7220,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SCORVOL: {
         id:472,
@@ -6718,7 +7234,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MAMMOCHON: {
         id:473,
@@ -6731,7 +7248,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PORYGONZ:{
         id:474,
@@ -6744,7 +7262,8 @@ let setup_pokedex = {
         attack_lvl1:27,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GALLAME: {
         id:475,
@@ -6757,7 +7276,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TARINORME: {
         id:476,
@@ -6770,7 +7290,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NOCTUNOIR: {
         id:477,
@@ -6783,7 +7304,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MOMARTIK: {
         id:478,
@@ -6796,7 +7318,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MOTISMA: {
         id:479,
@@ -6809,7 +7332,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CREHELF: {
         id:480,
@@ -6822,7 +7346,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CREFOLLET: {
         id:481,
@@ -6835,7 +7360,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CREFADET: {
         id:482,
@@ -6848,7 +7374,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DIALGA: {
         id:483,
@@ -6861,7 +7388,8 @@ let setup_pokedex = {
         attack_lvl1:30,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PALKIA: {
         id:484,
@@ -6874,7 +7402,8 @@ let setup_pokedex = {
         attack_lvl1:30,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     HEATRAN: {
         id:485,
@@ -6887,7 +7416,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     REGIGIGAS: {
         id:486,
@@ -6900,7 +7430,8 @@ let setup_pokedex = {
         attack_lvl1:32,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GIRATINA: {
         id:487,
@@ -6913,7 +7444,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CRESSELIA: {
         id:488,
@@ -6926,7 +7458,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PHIONE: {
         id:489,
@@ -6939,7 +7472,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MANAPHY: {
         id:490,
@@ -6952,7 +7486,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DARKRAI: {
         id:491,
@@ -6965,7 +7500,8 @@ let setup_pokedex = {
         attack_lvl1:27,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SHAYMIN: {
         id:492,
@@ -6978,7 +7514,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ARCEUS: {
         id:493,
@@ -6991,7 +7528,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     VICTINI: {
         id:494,
@@ -7004,7 +7542,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     VIPELIERRE: {
         id:495,
@@ -7017,7 +7556,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     LIANAJA: {
         id:496,
@@ -7030,7 +7570,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     MAJASPIC: {
         id:497,
@@ -7043,7 +7584,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     GRUIKUI: {
         id:498,
@@ -7056,7 +7598,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     GROTICHON: {
         id:499,
@@ -7069,7 +7612,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     ROITIFLAM: {
         id:500,
@@ -7082,7 +7626,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     MOUSTILLON: {
         id:501,
@@ -7095,7 +7640,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     MATELOUTRE: {
         id:502,
@@ -7108,7 +7654,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     CLAMIRAL_H: {
         id:"503.3",
@@ -7121,7 +7668,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     CLAMIRAL: {
         id:503,
@@ -7134,7 +7682,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     RATENTIF: {
         id:504,
@@ -7147,7 +7696,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MIRADAR: {
         id:505,
@@ -7160,7 +7710,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PONCHIOT: {
         id:506,
@@ -7173,7 +7724,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PONCHIEN: {
         id:507,
@@ -7186,7 +7738,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MASTOUFFE: {
         id:508,
@@ -7199,7 +7752,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHACRIPAN: {
         id:509,
@@ -7212,7 +7766,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LEOPARDUS: {
         id:510,
@@ -7225,7 +7780,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FEUILLAJOU: {
         id:511,
@@ -7238,7 +7794,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FEUILOUTAN: {
         id:512,
@@ -7251,7 +7808,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FLAMAJOU: {
         id:513,
@@ -7264,7 +7822,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FLAMOUTAN: {
         id:514,
@@ -7277,7 +7836,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FLOTAJOU: {
         id:515,
@@ -7290,7 +7850,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FLOTOUTAN: {
         id:516,
@@ -7303,7 +7864,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MUNNA: {
         id:517,
@@ -7316,7 +7878,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MUSHANA: {
         id:518,
@@ -7329,7 +7892,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     POICHIGEON: {
         id:519,
@@ -7342,7 +7906,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     COLOMBEAU: {
         id:520,
@@ -7355,7 +7920,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DEFLAISAN: {
         id:521,
@@ -7368,7 +7934,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ZEBIBRON: {
         id:522,
@@ -7381,7 +7948,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ZEBLITZ: {
         id:523,
@@ -7394,7 +7962,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NODULITHE: {
         id:524,
@@ -7407,7 +7976,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GEOLITHE: {
         id:525,
@@ -7420,7 +7990,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GIGALITHE: {
         id:526,
@@ -7433,7 +8004,8 @@ let setup_pokedex = {
         attack_lvl1:27,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHOVSOURIR: {
         id:527,
@@ -7446,7 +8018,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     RHINOLOVE: {
         id:528,
@@ -7459,7 +8032,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ROTOTAUPE: {
         id:529,
@@ -7472,7 +8046,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MINOTAUPE: {
         id:530,
@@ -7485,7 +8060,8 @@ let setup_pokedex = {
         attack_lvl1:27,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NANMEOUIE: {
         id:531,
@@ -7498,7 +8074,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHARPENTI: {
         id:532,
@@ -7511,7 +8088,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     OUVRIFIER: {
         id:533,
@@ -7524,7 +8102,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BETOCHEF: {
         id:534,
@@ -7537,7 +8116,8 @@ let setup_pokedex = {
         attack_lvl1:28,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TRITONDE: {
         id:535,
@@ -7550,7 +8130,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BATRACNE: {
         id:536,
@@ -7563,7 +8144,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CRAPUSTULE: {
         id:537,
@@ -7576,7 +8158,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     JUDOKRAK: {
         id:538,
@@ -7589,7 +8172,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     KARACLEE: {
         id:539,
@@ -7602,7 +8186,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LARVEYETTE: {
         id:540,
@@ -7615,7 +8200,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     COUVERDURE: {
         id:541,
@@ -7628,7 +8214,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MANTERNEL: {
         id:542,
@@ -7641,7 +8228,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     VENIPATTE: {
         id:543,
@@ -7654,7 +8242,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SCOBOLIDE: {
         id:544,
@@ -7667,7 +8256,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BRUTAPODE: {
         id:545,
@@ -7680,7 +8270,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DOUDOUVET: {
         id:546,
@@ -7693,7 +8284,8 @@ let setup_pokedex = {
         attack_lvl1:7,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FARFADUVET: {
         id:547,
@@ -7706,7 +8298,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHLOROBULE: {
         id:548,
@@ -7719,7 +8312,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FRAGILADY_H: {
         id:"549.3",
@@ -7732,7 +8326,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FRAGILADY: {
         id:549,
@@ -7745,7 +8340,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BARGANTUA: {
         id:550,
@@ -7758,7 +8354,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MASCAIMAN: {
         id:551,
@@ -7771,7 +8368,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ESCROCO: {
         id:552,
@@ -7784,7 +8382,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CROCORIBLE: {
         id:553,
@@ -7797,7 +8396,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DARUMAROND_G: {
         id:"554.2",
@@ -7810,7 +8410,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DARUMAROND: {
         id:554,
@@ -7823,7 +8424,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DARUMACHO: {
         id:555,
@@ -7836,7 +8438,8 @@ let setup_pokedex = {
         attack_lvl1:32,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MARACACHI: {
         id:556,
@@ -7849,7 +8452,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CRABICOQUE: {
         id:557,
@@ -7862,7 +8466,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CRABARAQUE: {
         id:558,
@@ -7875,7 +8480,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BAGGIGUANE: {
         id:559,
@@ -7888,7 +8494,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BAGGAID: {
         id:560,
@@ -7901,7 +8508,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CRYPTERO: {
         id:561,
@@ -7914,7 +8522,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TUTAFEH_G: {
         id:"562.2",
@@ -7927,7 +8536,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TUTAFEH: {
         id:562,
@@ -7940,7 +8550,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TUTANKAFER: {
         id:563,
@@ -7953,7 +8564,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CARAPAGOS: {
         id:564,
@@ -7966,7 +8578,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MEGAPAGOS: {
         id:565,
@@ -7979,7 +8592,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ARKEAPTI: {
         id:566,
@@ -7992,7 +8606,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     AEROPTERYX: {
         id:567,
@@ -8005,7 +8620,8 @@ let setup_pokedex = {
         attack_lvl1:28,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MIAMIASME: {
         id:568,
@@ -8018,7 +8634,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MIASMAX: {
         id:569,
@@ -8031,7 +8648,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ZORUA_H: {
         id:"570.3",
@@ -8044,7 +8662,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ZORUA: {
         id:570,
@@ -8057,7 +8676,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ZOROARK_H: {
         id:"571.3",
@@ -8070,7 +8690,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ZOROARK: {
         id:571,
@@ -8083,7 +8704,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHINCHIDOU: {
         id:572,
@@ -8096,7 +8718,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PASHMILLA: {
         id:573,
@@ -8109,7 +8732,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SCRUTELLA: {
         id:574,
@@ -8122,7 +8746,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MESMERELLA: {
         id:575,
@@ -8135,7 +8760,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SIDERELLA: {
         id:576,
@@ -8148,7 +8774,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NUCLEOS: {
         id:577,
@@ -8161,7 +8788,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MEIOS: {
         id:578,
@@ -8174,7 +8802,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SYMBIOS: {
         id:579,
@@ -8187,7 +8816,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     COUANETON: {
         id:580,
@@ -8200,7 +8830,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LAKMECYGNE: {
         id:581,
@@ -8213,7 +8844,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SORBEBE: {
         id:582,
@@ -8226,7 +8858,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SORBOUL: {
         id:583,
@@ -8239,7 +8872,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SORBOUBOUL: {
         id:584,
@@ -8252,7 +8886,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     VIVALDAIM: {
         id:585,
@@ -8265,7 +8900,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     HAYDAIM: {
         id:586,
@@ -8278,7 +8914,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     EMOLGA: {
         id:587,
@@ -8291,7 +8928,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CARABING: {
         id:588,
@@ -8304,7 +8942,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LANCARGOT: {
         id:589,
@@ -8317,7 +8956,8 @@ let setup_pokedex = {
         attack_lvl1:27,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TROMPIGNON: {
         id:590,
@@ -8330,7 +8970,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GAULET: {
         id:591,
@@ -8343,7 +8984,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     VISKUSE: {
         id:592,
@@ -8356,7 +8998,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MOYADE: {
         id:593,
@@ -8369,7 +9012,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MAMANBO: {
         id:594,
@@ -8382,7 +9026,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     STATITIK: {
         id:595,
@@ -8395,7 +9040,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MYGAVOLT: {
         id:596,
@@ -8408,7 +9054,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GRINDUR: {
         id:597,
@@ -8421,7 +9068,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NOACIER: {
         id:598,
@@ -8434,7 +9082,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TIC: {
         id:599,
@@ -8447,7 +9096,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CLIC: {
         id:600,
@@ -8460,7 +9110,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CLITICLIC: {
         id:601,
@@ -8473,7 +9124,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ANCHWATT: {
         id:602,
@@ -8486,7 +9138,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LAMPEROIE: {
         id:603,
@@ -8499,7 +9152,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     OHMASSACRE: {
         id:604,
@@ -8512,7 +9166,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LEWSOR: {
         id:605,
@@ -8525,7 +9180,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NEITRAM: {
         id:606,
@@ -8538,7 +9194,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FUNECIRE: {
         id:607,
@@ -8551,33 +9208,36 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MELANCOLUX: {
         id:608,
         name:"Mélancolux",
         has_been_seen:false,
         has_been_captured:false,
-        rarity:Rarities.RARE,
+        rarity:Rarities.EPIC,
         type:Types.SPECTRE,
         max_hp_lvl1:30,
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LUGULABRE: {
         id:609,
         name:"Lugulabre",
         has_been_seen:false,
         has_been_captured:false,
-        rarity:Rarities.EPIC,
+        rarity:Rarities.ULTRA,
         type:Types.SPECTRE,
         max_hp_lvl1:36,
         attack_lvl1:29,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     COUPENOTTE: {
         id:610,
@@ -8590,7 +9250,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     INCISACHE: {
         id:611,
@@ -8603,7 +9264,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TRANCHODON: {
         id:612,
@@ -8616,7 +9278,8 @@ let setup_pokedex = {
         attack_lvl1:29,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     POLARHUME: {
         id:613,
@@ -8629,7 +9292,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     POLAGRIFFE: {
         id:614,
@@ -8642,7 +9306,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     HEXAGEL: {
         id:615,
@@ -8655,7 +9320,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ESCARGAUME: {
         id:616,
@@ -8668,7 +9334,8 @@ let setup_pokedex = {
         attack_lvl1:8,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LIMASPEED: {
         id:617,
@@ -8681,7 +9348,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LIMONDE_G: {
         id:"618.2",
@@ -8694,7 +9362,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LIMONDE: {
         id:618,
@@ -8707,7 +9376,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     KUNGFOUINE: {
         id:619,
@@ -8720,7 +9390,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SHAOFOUINE: {
         id:620,
@@ -8733,7 +9404,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DRAKKARMIN: {
         id:621,
@@ -8746,7 +9418,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GRINGOLEM: {
         id:622,
@@ -8759,7 +9432,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GOLEMASTOC: {
         id:623,
@@ -8772,7 +9446,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SCALPION: {
         id:624,
@@ -8785,7 +9460,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SCALPROIE: {
         id:625,
@@ -8798,7 +9474,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FRISON: {
         id:626,
@@ -8811,7 +9488,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FURAIGLON: {
         id:627,
@@ -8824,7 +9502,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GUERIAIGLE: {
         id:628,
@@ -8837,7 +9516,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GUERIAIGLE_H: {
         id:"628.3",
@@ -8850,7 +9530,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     VOSTOURNO: {
         id:629,
@@ -8863,7 +9544,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     VAUTUTRICE: {
         id:630,
@@ -8876,7 +9558,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     AFLAMANOIR: {
         id:631,
@@ -8889,7 +9572,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FERMITE: {
         id:632,
@@ -8902,7 +9586,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SOLOCHI: {
         id:633,
@@ -8915,7 +9600,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DIAMAT: {
         id:634,
@@ -8928,7 +9614,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TRIOXHYDRE: {
         id:635,
@@ -8941,7 +9628,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PYRONILLE: {
         id:636,
@@ -8954,7 +9642,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PYRAX: {
         id:637,
@@ -8967,7 +9656,8 @@ let setup_pokedex = {
         attack_lvl1:27,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     COBALTIUM: {
         id:638,
@@ -8980,7 +9670,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TERRAKIUM: {
         id:639,
@@ -8993,7 +9684,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     VIRIDIUM: {
         id:640,
@@ -9006,7 +9698,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BOREAS: {
         id:641,
@@ -9019,7 +9712,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FULGURIS: {
         id:642,
@@ -9032,7 +9726,8 @@ let setup_pokedex = {
         attack_lvl1:29,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     RESHIRAM: {
         id:643,
@@ -9045,7 +9740,8 @@ let setup_pokedex = {
         attack_lvl1:30,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ZEKROM: {
         id:644,
@@ -9058,7 +9754,8 @@ let setup_pokedex = {
         attack_lvl1:30,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DEMETEROS: {
         id:645,
@@ -9071,7 +9768,8 @@ let setup_pokedex = {
         attack_lvl1:29,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     KYUREM: {
         id:646,
@@ -9084,7 +9782,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     KELDEO: {
         id:647,
@@ -9097,7 +9796,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MELOETTA: {
         id:648,
@@ -9110,7 +9810,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GENESECT: {
         id:649,
@@ -9123,7 +9824,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MARISSON: {
         id:650,
@@ -9136,7 +9838,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     BOGUERISSE: {
         id:651,
@@ -9149,7 +9852,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     BLINDEPIQUE: {
         id:652,
@@ -9162,7 +9866,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     FEUNNEC: {
         id:653,
@@ -9175,7 +9880,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     ROUSSIL: {
         id:654,
@@ -9188,7 +9894,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     GOUPELIN: {
         id:655,
@@ -9201,7 +9908,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     GRENOUSSE: {
         id:656,
@@ -9214,7 +9922,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     CROAPORAL: {
         id:657,
@@ -9227,7 +9936,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     AMPHINOBI: {
         id:658,
@@ -9240,7 +9950,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     SAPEREAU: {
         id:659,
@@ -9253,7 +9964,8 @@ let setup_pokedex = {
         attack_lvl1:7,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     EXCAVARENNE: {
         id:660,
@@ -9266,7 +9978,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PASSEROUGE: {
         id:661,
@@ -9279,7 +9992,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BRAISILLON: {
         id:662,
@@ -9292,7 +10006,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FLAMBUSARD: {
         id:663,
@@ -9305,7 +10020,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LEPIDONILLE: {
         id:664,
@@ -9318,7 +10034,8 @@ let setup_pokedex = {
         attack_lvl1:7,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PEREGRAIN: {
         id:665,
@@ -9331,7 +10048,8 @@ let setup_pokedex = {
         attack_lvl1:5,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PRISMILLON: {
         id:666,
@@ -9344,7 +10062,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     HELIONCEAU: {
         id:667,
@@ -9357,7 +10076,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NEMELIOS: {
         id:668,
@@ -9370,7 +10090,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FLABEBE: {
         id:669,
@@ -9383,7 +10104,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FLOETTE: {
         id:670,
@@ -9396,7 +10118,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FLORGES: {
         id:671,
@@ -9409,7 +10132,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CABRIOLAINE: {
         id:672,
@@ -9422,7 +10146,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHEVROUM: {
         id:673,
@@ -9435,7 +10160,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PANDESPIEGLE: {
         id:674,
@@ -9448,7 +10174,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PANDARBARE: {
         id:675,
@@ -9461,7 +10188,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     COUAFAREL: {
         id:676,
@@ -9474,7 +10202,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PSYSTIGRI: {
         id:677,
@@ -9487,7 +10216,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MISTIGRIX: {
         id:678,
@@ -9500,7 +10230,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MONORPALE: {
         id:679,
@@ -9513,7 +10244,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DIMOCLES: {
         id:680,
@@ -9526,7 +10258,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     EXAGIDE: {
         id:681,
@@ -9539,7 +10272,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FLUVETIN: {
         id:682,
@@ -9552,7 +10286,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     COCOTINE: {
         id:683,
@@ -9565,7 +10300,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SUCROQUIN: {
         id:684,
@@ -9578,7 +10314,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CUPCANAILLE: {
         id:685,
@@ -9591,7 +10328,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SEPIATOP: {
         id:686,
@@ -9604,7 +10342,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SEPIATROCE: {
         id:687,
@@ -9617,7 +10356,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     OPERMINE: {
         id:688,
@@ -9630,7 +10370,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GOLGOPATHE: {
         id:689,
@@ -9643,7 +10384,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     VENALGUE: {
         id:690,
@@ -9656,7 +10398,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     KRAVARECH: {
         id:691,
@@ -9669,7 +10412,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FLINGOUSTE: {
         id:692,
@@ -9682,7 +10426,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GAMBLAST: {
         id:693,
@@ -9695,7 +10440,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GALVARAN: {
         id:694,
@@ -9708,7 +10454,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     IGUOLTA: {
         id:695,
@@ -9721,7 +10468,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PTYRANIDUR: {
         id:696,
@@ -9734,7 +10482,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     REXILLIUS: {
         id:697,
@@ -9742,12 +10491,13 @@ let setup_pokedex = {
         has_been_seen:false,
         has_been_captured:false,
         rarity:Rarities.ULTRA,
-        type:Types.ROCHE,
+        type:Types.DRAGON,
         max_hp_lvl1:47,
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     AMAGARA: {
         id:698,
@@ -9755,12 +10505,13 @@ let setup_pokedex = {
         has_been_seen:false,
         has_been_captured:false,
         rarity:Rarities.EPIC,
-        type:Types.ROCHE,
+        type:Types.GLACE,
         max_hp_lvl1:38,
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DRAGMARA: {
         id:699,
@@ -9768,12 +10519,13 @@ let setup_pokedex = {
         has_been_seen:false,
         has_been_captured:false,
         rarity:Rarities.ULTRA,
-        type:Types.ROCHE,
+        type:Types.GLACE,
         max_hp_lvl1:62,
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NYMPHALI: {
         id:700,
@@ -9786,7 +10538,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BRUTALIBRE: {
         id:701,
@@ -9799,7 +10552,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DEDENNE: {
         id:702,
@@ -9812,7 +10566,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     STRASSIE: {
         id:703,
@@ -9825,7 +10580,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MUCUSCULE: {
         id:704,
@@ -9838,7 +10594,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     COLIMUCUS: {
         id:705,
@@ -9851,7 +10608,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     COLIMUCUS_H: {
         id:"705.3",
@@ -9864,7 +10622,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MUPLODOCUS: {
         id:706,
@@ -9877,7 +10636,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MUPLODOCUS_H: {
         id:"706.1",
@@ -9890,7 +10650,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TROUSSELIN: {
         id:707,
@@ -9903,7 +10664,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BROCELOME: {
         id:708,
@@ -9916,7 +10678,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DESSELIANDE: {
         id:709,
@@ -9929,7 +10692,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PITROUILLE: {
         id:710,
@@ -9942,7 +10706,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BANSHITROUYE: {
         id:711,
@@ -9955,7 +10720,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GRELACON: {
         id:712,
@@ -9968,7 +10734,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SERACRAWL_H: {
         id:"713.3",
@@ -9981,7 +10748,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SERACRAWL: {
         id:713,
@@ -9994,7 +10762,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SONISTRELLE: {
         id:714,
@@ -10007,7 +10776,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BRUYVERNE: {
         id:715,
@@ -10020,7 +10790,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     XERNEAS: {
         id:716,
@@ -10033,7 +10804,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     YVELTAL: {
         id:717,
@@ -10046,7 +10818,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ZYGARDE: {
         id:718,
@@ -10059,7 +10832,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DIANCIE: {
         id:719,
@@ -10072,7 +10846,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     HOOPA: {
         id:720,
@@ -10085,7 +10860,8 @@ let setup_pokedex = {
         attack_lvl1:34,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     VOLCANION: {
         id:721,
@@ -10098,7 +10874,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BRINDIBOU: {
         id:722,
@@ -10111,7 +10888,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     EFFLECHE: {
         id:723,
@@ -10124,7 +10902,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     ARCHEDUC_H: {
         id:"724.3",
@@ -10137,7 +10916,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     ARCHEDUC: {
         id:724,
@@ -10150,7 +10930,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     FLAMIAOU: {
         id:725,
@@ -10163,7 +10944,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     MATOUFEU: {
         id:726,
@@ -10176,7 +10958,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     FELINFERNO: {
         id:727,
@@ -10189,7 +10972,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     OTAQUIN: {
         id:728,
@@ -10202,7 +10986,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     OTARLETTE: {
         id:729,
@@ -10215,7 +11000,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     ORATORIA: {
         id:730,
@@ -10228,7 +11014,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     PICASSAUT: {
         id:731,
@@ -10241,7 +11028,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PICLAIRON: {
         id:732,
@@ -10254,7 +11042,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BAZOUCAN: {
         id:733,
@@ -10267,7 +11056,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MANGLOUTON: {
         id:734,
@@ -10280,7 +11070,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ARGOUSTE: {
         id:735,
@@ -10293,7 +11084,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LARVIBULE: {
         id:736,
@@ -10306,7 +11098,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHRYSAPILE: {
         id:737,
@@ -10319,7 +11112,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LUCANON: {
         id:738,
@@ -10332,7 +11126,8 @@ let setup_pokedex = {
         attack_lvl1:29,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CRABAGARRE: {
         id:739,
@@ -10345,7 +11140,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CRABOMINABLE: {
         id:740,
@@ -10358,7 +11154,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PLUMELINE: {
         id:741,
@@ -10371,7 +11168,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BOMBYDOU: {
         id:742,
@@ -10384,7 +11182,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     RUBOMBELLE: {
         id:743,
@@ -10397,7 +11196,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ROCABOT: {
         id:744,
@@ -10410,7 +11210,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LOUGAROC_1: {
         id:745,
@@ -10423,7 +11224,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LOUGAROC_2: {
         id:"745.1",
@@ -10436,7 +11238,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LOUGAROC_3: {
         id:"745.2",
@@ -10449,7 +11252,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FROUSSARDINE: {
         id:746,
@@ -10462,7 +11266,8 @@ let setup_pokedex = {
         attack_lvl1:5,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     VORASTERIE: {
         id:747,
@@ -10475,7 +11280,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PREDASTERIE: {
         id:748,
@@ -10488,7 +11294,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TIBOUDET: {
         id:749,
@@ -10501,7 +11308,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BOURRINOS: {
         id:750,
@@ -10514,7 +11322,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ARAQUA: {
         id:751,
@@ -10527,7 +11336,8 @@ let setup_pokedex = {
         attack_lvl1:8,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TARENBULLE: {
         id:752,
@@ -10540,7 +11350,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MIMANTIS: {
         id:753,
@@ -10553,7 +11364,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FLORAMANTIS: {
         id:754,
@@ -10566,7 +11378,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SPODODO: {
         id:755,
@@ -10579,7 +11392,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LAMPIGNON: {
         id:756,
@@ -10592,7 +11406,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TRITOX: {
         id:757,
@@ -10605,7 +11420,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MALAMANDRE: {
         id:758,
@@ -10618,7 +11434,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NOUNOURSON: {
         id:759,
@@ -10631,7 +11448,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHELOURS: {
         id:760,
@@ -10644,7 +11462,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CROQUINE: {
         id:761,
@@ -10657,7 +11476,8 @@ let setup_pokedex = {
         attack_lvl1:6,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CANDINE: {
         id:762,
@@ -10670,7 +11490,8 @@ let setup_pokedex = {
         attack_lvl1:8,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SUCREINE: {
         id:763,
@@ -10683,7 +11504,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GUERILANDE: {
         id:764,
@@ -10696,7 +11518,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GOUROUTAN: {
         id:765,
@@ -10709,7 +11532,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     QUARTERMAC: {
         id:766,
@@ -10722,7 +11546,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SOVKIPOU: {
         id:767,
@@ -10735,7 +11560,8 @@ let setup_pokedex = {
         attack_lvl1:7,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SARMURAI: {
         id:768,
@@ -10748,7 +11574,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BACABOUH: {
         id:769,
@@ -10761,7 +11588,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TREPASSABLE: {
         id:770,
@@ -10774,7 +11602,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CONCOMBAFFE: {
         id:771,
@@ -10787,7 +11616,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TYPE0: {
         id:772,
@@ -10800,7 +11630,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SILVALLIE: {
         id:773,
@@ -10813,7 +11644,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     METENO: {
         id:"774.1",
@@ -10826,7 +11658,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DODOALA: {
         id:775,
@@ -10839,7 +11672,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BOUMATA: {
         id:776,
@@ -10852,7 +11686,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TOGEDEMARU: {
         id:777,
@@ -10865,7 +11700,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MIMIQUI: {
         id:778,
@@ -10878,7 +11714,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DENTICRISSE: {
         id:779,
@@ -10891,7 +11728,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DRAIEUL: {
         id:780,
@@ -10904,7 +11742,8 @@ let setup_pokedex = {
         attack_lvl1:27,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SINISTRAIL: {
         id:781,
@@ -10917,7 +11756,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BEBECAILLE: {
         id:782,
@@ -10930,7 +11770,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ECAID: {
         id:783,
@@ -10943,7 +11784,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     EKAISER: {
         id:784,
@@ -10956,7 +11798,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TOKORICO: {
         id:785,
@@ -10969,7 +11812,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TOKOPIYON: {
         id:786,
@@ -10982,7 +11826,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TOKOTORO: {
         id:787,
@@ -10995,7 +11840,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TOKOPISCO: {
         id:788,
@@ -11008,7 +11854,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     COSMOG: {
         id:789,
@@ -11021,7 +11868,8 @@ let setup_pokedex = {
         attack_lvl1:6,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     COSMOVUM: {
         id:790,
@@ -11034,7 +11882,8 @@ let setup_pokedex = {
         attack_lvl1:6,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SOLGALEO: {
         id:791,
@@ -11047,7 +11896,8 @@ let setup_pokedex = {
         attack_lvl1:27,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LUNALA: {
         id:792,
@@ -11060,7 +11910,8 @@ let setup_pokedex = {
         attack_lvl1:27,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ZEROID: {
         id:793,
@@ -11073,7 +11924,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MOUSCOTO: {
         id:794,
@@ -11086,7 +11938,8 @@ let setup_pokedex = {
         attack_lvl1:28,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CANCRELOVE: {
         id:795,
@@ -11099,7 +11952,8 @@ let setup_pokedex = {
         attack_lvl1:27,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CABLIFERE: {
         id:796,
@@ -11112,7 +11966,8 @@ let setup_pokedex = {
         attack_lvl1:35,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BAMBOISELLE: {
         id:797,
@@ -11125,7 +11980,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     KATAGAMI: {
         id:798,
@@ -11138,7 +11994,8 @@ let setup_pokedex = {
         attack_lvl1:36,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ENGLOUTYRAN: {
         id:799,
@@ -11151,7 +12008,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NECROZMA: {
         id:800,
@@ -11164,7 +12022,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MAGEARNA: {
         id:801,
@@ -11177,7 +12036,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MARSHADOW: {
         id:802,
@@ -11190,7 +12050,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     VEMINI: {
         id:803,
@@ -11203,7 +12064,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MANDRILLON: {
         id:804,
@@ -11216,7 +12078,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     AMAAMA:{
         id:805,
@@ -11229,7 +12092,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PIERROTEKNIK: {
         id:806,
@@ -11242,7 +12106,8 @@ let setup_pokedex = {
         attack_lvl1:30,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ZERAORA: {
         id:807,
@@ -11255,7 +12120,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MELTAN: {
         id:808,
@@ -11268,7 +12134,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MELMETAL: {
         id:809,
@@ -11281,7 +12148,8 @@ let setup_pokedex = {
         attack_lvl1:29,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     OUISTEMPO: {
         id:810,
@@ -11294,7 +12162,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     BADABOUIN: {
         id:811,
@@ -11307,7 +12176,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     GORYTHMIC: {
         id:812,
@@ -11320,7 +12190,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     FLAMBINO: {
         id:813,
@@ -11333,7 +12204,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     LAPYRO: {
         id:814,
@@ -11346,7 +12218,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     PYROBUT: {
         id:815,
@@ -11359,7 +12232,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     LARMELEON: {
         id:816,
@@ -11372,7 +12246,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     ARROZARD: {
         id:817,
@@ -11385,7 +12260,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     LEZARGUS: {
         id:818,
@@ -11398,7 +12274,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     RONGOURMAND: {
         id:819,
@@ -11411,7 +12288,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     RONGRIGOU: {
         id:820,
@@ -11424,7 +12302,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MINISANGE: {
         id:821,
@@ -11437,7 +12316,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BLEUSEILLE: {
         id:822,
@@ -11450,7 +12330,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CORVAILLUS: {
         id:823,
@@ -11463,7 +12344,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LARVADAR: {
         id:824,
@@ -11476,7 +12358,8 @@ let setup_pokedex = {
         attack_lvl1:7,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     COLEODOME: {
         id:825,
@@ -11489,7 +12372,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ASTRONELLE: {
         id:826,
@@ -11502,7 +12386,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GOUPILOU: {
         id:827,
@@ -11515,7 +12400,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ROUBLENARD: {
         id:828,
@@ -11528,7 +12414,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TOURNICOTON: {
         id:829,
@@ -11541,7 +12428,8 @@ let setup_pokedex = {
         attack_lvl1:8,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BLANCOTON: {
         id:830,
@@ -11554,7 +12442,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MOUMOUTON: {
         id:831,
@@ -11567,7 +12456,8 @@ let setup_pokedex = {
         attack_lvl1:8,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MOUMOUFLON: {
         id:832,
@@ -11580,7 +12470,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     KHELOCROK: {
         id:833,
@@ -11593,7 +12484,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TORGAMORD: {
         id:834,
@@ -11606,7 +12498,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     VOLTOUTOU: {
         id:835,
@@ -11619,7 +12512,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FULGUDOG: {
         id:836,
@@ -11632,7 +12526,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHARBI: {
         id:837,
@@ -11645,7 +12540,8 @@ let setup_pokedex = {
         attack_lvl1:8,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     WAGOMINE: {
         id:838,
@@ -11658,7 +12554,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MONTHRACITE: {
         id:839,
@@ -11671,7 +12568,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     VERPOM: {
         id:840,
@@ -11684,7 +12582,8 @@ let setup_pokedex = {
         attack_lvl1:8,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     POMDRAPI: {
         id:841,
@@ -11697,7 +12596,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DRATATIN: {
         id:842,
@@ -11710,7 +12610,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DUNAJA: {
         id:843,
@@ -11723,7 +12624,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DUNACONDA: {
         id:844,
@@ -11736,7 +12638,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NIGOSIER: {
         id:845,
@@ -11749,7 +12652,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     EMBROCHET: {
         id:846,
@@ -11762,7 +12666,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     HASTACUDA: {
         id:847,
@@ -11775,7 +12680,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TOXIZAP: {
         id:848,
@@ -11788,7 +12694,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SALARSEN_1: {
         id:849,
@@ -11801,7 +12708,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SALARSEN_2: {
         id:"849.1",
@@ -11814,7 +12722,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GRILLEPATTES: {
         id:850,
@@ -11827,7 +12736,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SCOLOCENDRE: {
         id:851,
@@ -11840,7 +12750,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     POULPAF: {
         id:852,
@@ -11853,7 +12764,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     KRAKOS: {
         id:853,
@@ -11866,7 +12778,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     THEFFROI: {
         id:854,
@@ -11879,7 +12792,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     POLTHEGEIST: {
         id:855,
@@ -11892,7 +12806,8 @@ let setup_pokedex = {
         attack_lvl1:27,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BIBICHUT: {
         id:856,
@@ -11905,7 +12820,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHAPOTUS: {
         id:857,
@@ -11918,7 +12834,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SORCILENCE: {
         id:858,
@@ -11931,7 +12848,8 @@ let setup_pokedex = {
         attack_lvl1:27,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GRIMALIN: {
         id:859,
@@ -11944,7 +12862,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FOURBELIN: {
         id:860,
@@ -11957,7 +12876,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ANGOLIATH: {
         id:861,
@@ -11970,7 +12890,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     IXON: {
         id:862,
@@ -11983,7 +12904,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BERSERKATT: {
         id:863,
@@ -11996,7 +12918,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CORAYOME: {
         id:864,
@@ -12009,7 +12932,8 @@ let setup_pokedex = {
         attack_lvl1:29,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PALARTICHO: {
         id:865,
@@ -12022,7 +12946,8 @@ let setup_pokedex = {
         attack_lvl1:27,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MGLAQUETTE: {
         id:866,
@@ -12035,7 +12960,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TUTETEKRI: {
         id:867,
@@ -12048,7 +12974,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CREMY: {
         id:868,
@@ -12061,7 +12988,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHARMILLY: {
         id:869,
@@ -12074,7 +13002,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     HEXADRON: {
         id:870,
@@ -12087,7 +13016,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     WATTAPIK: {
         id:871,
@@ -12100,7 +13030,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FRISSONILLE: {
         id:872,
@@ -12113,7 +13044,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BELDENEIGE: {
         id:873,
@@ -12126,7 +13058,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DOLMAN: {
         id:874,
@@ -12139,7 +13072,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BEKAGLACON: {
         id:875,
@@ -12152,7 +13086,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     WIMESSIR: {
         id:876,
@@ -12165,7 +13100,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MORPEKO: {
         id:877,
@@ -12178,7 +13114,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHARIBARI: {
         id:878,
@@ -12191,7 +13128,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PACHYRADJAH: {
         id:879,
@@ -12204,7 +13142,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GALVAGON: {
         id:880,
@@ -12217,7 +13156,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GALVAGLA: {
         id:881,
@@ -12230,7 +13170,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     HYDRAGON: {
         id:882,
@@ -12243,7 +13184,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     HYDRAGLA: {
         id:883,
@@ -12256,7 +13198,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DURALUGON: {
         id:884,
@@ -12269,7 +13212,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FANTYRM: {
         id:885,
@@ -12282,7 +13226,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DISPAREPTIL: {
         id:886,
@@ -12295,7 +13240,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LANSSORIEN: {
         id:887,
@@ -12308,7 +13254,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ZACIAN: {
         id:888,
@@ -12321,7 +13268,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ZAMAZENTA: {
         id:889,
@@ -12334,7 +13282,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ETHERNATOS: {
         id:890,
@@ -12347,7 +13296,8 @@ let setup_pokedex = {
         attack_lvl1:29,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     WUSHOURS: {
         id:891,
@@ -12360,7 +13310,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SHIFOURS_W: {
         id:892,
@@ -12373,7 +13324,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SHIFOURS_D: {
         id:"892.1",
@@ -12386,7 +13338,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ZARUDE: {
         id:893,
@@ -12399,7 +13352,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     REGIELEKI: {
         id:894,
@@ -12412,7 +13366,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     REGIDRAGO: {
         id:895,
@@ -12425,7 +13380,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BLIZZEVAL: {
         id:896,
@@ -12438,7 +13394,8 @@ let setup_pokedex = {
         attack_lvl1:29,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SPECTREVAL: {
         id:897,
@@ -12451,7 +13408,8 @@ let setup_pokedex = {
         attack_lvl1:29,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SYLVEROY: {
         id:898,
@@ -12464,7 +13422,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CERBYLLIN: {
         id:899,
@@ -12477,7 +13436,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     HACHECATEUR: {
         id:900,
@@ -12490,7 +13450,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     URSAKING: {
         id:901,
@@ -12503,7 +13464,8 @@ let setup_pokedex = {
         attack_lvl1:28,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PARAGRUEL: {
         id:902,
@@ -12516,7 +13478,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FARFUREX: {
         id:903,
@@ -12529,7 +13492,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     QWILPIK: {
         id:904,
@@ -12542,7 +13506,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     POUSSACHA: {
         id:906,
@@ -12555,7 +13520,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     MATOURGEON: {
         id:907,
@@ -12568,7 +13534,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     MIASCARADE: {
         id:908,
@@ -12581,7 +13548,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     CHOCHODILE: {
         id:909,
@@ -12594,7 +13562,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     CROCOGRIL: {
         id:910,
@@ -12607,7 +13576,8 @@ let setup_pokedex = {
         attack_lvl1:18,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     FLAMIGATOR: {
         id:911,
@@ -12620,7 +13590,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     COIFFETON: {
         id:912,
@@ -12633,7 +13604,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     CANARBELLO: {
         id:913,
@@ -12646,7 +13618,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     PALMAVAL: {
         id:914,
@@ -12659,7 +13632,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: true
     },
     GOURMELET: {
         id:915,
@@ -12672,7 +13646,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FRAGROIN: {
         id:916,
@@ -12685,7 +13660,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TISSENBOULE: {
         id:917,
@@ -12698,7 +13674,8 @@ let setup_pokedex = {
         attack_lvl1:8,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FILENTRAPPE: {
         id:918,
@@ -12711,7 +13688,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LILLITERELLE: {
         id:919,
@@ -12724,7 +13702,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GAMBEX: {
         id:920,
@@ -12737,7 +13716,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     POHM: {
         id:921,
@@ -12750,7 +13730,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     POHMOTTE: {
         id:922,
@@ -12763,7 +13744,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     POHMARMOTTE: {
         id:923,
@@ -12776,7 +13758,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     COMPAGNOL: {
         id:924,
@@ -12789,7 +13772,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FAMIGNOL: {
         id:925,
@@ -12802,7 +13786,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PATACHIOT: {
         id:926,
@@ -12815,7 +13800,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BRIOCHIEN: {
         id:927,
@@ -12828,7 +13814,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     OLIVINI: {
         id:928,
@@ -12841,7 +13828,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     OLIVADO: {
         id:929,
@@ -12854,7 +13842,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ARBOLIVA: {
         id:930,
@@ -12867,7 +13856,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TAPATOES: {
         id:931,
@@ -12880,7 +13870,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SELUTIN: {
         id:932,
@@ -12893,7 +13884,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     AMASSEL: {
         id:933,
@@ -12906,7 +13898,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GIGANSEL: {
         id:934,
@@ -12919,7 +13912,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHARBAMBIN: {
         id:935,
@@ -12932,7 +13926,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CARMADURA: {
         id:936,
@@ -12945,7 +13940,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MALVALAME: {
         id:937,
@@ -12958,7 +13954,8 @@ let setup_pokedex = {
         attack_lvl1:25,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TETAMPOULE: {
         id:938,
@@ -12971,7 +13968,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     AMPIBIDOU: {
         id:939,
@@ -12984,7 +13982,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     ZAPETREL: {
         id:940,
@@ -12997,7 +13996,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FULGULAIRO: {
         id:941,
@@ -13010,7 +14010,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GRONDOGUE: {
         id:942,
@@ -13023,7 +14024,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DOGRINO: {
         id:943,
@@ -13036,7 +14038,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GRIBOURAIGNE: {
         id:944,
@@ -13049,7 +14052,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TAGTAG:{
         id:945,
@@ -13062,7 +14066,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     VIROVENT: {
         id:946,
@@ -13075,7 +14080,8 @@ let setup_pokedex = {
         attack_lvl1:13,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     VIREVORREUR: {
         id:947,
@@ -13088,7 +14094,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TERRACOOL: {
         id:948,
@@ -13101,7 +14108,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TERRACRUEL: {
         id:949,
@@ -13114,7 +14122,8 @@ let setup_pokedex = {
         attack_lvl1:16,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CRAPAROI: {
         id:950,
@@ -13127,7 +14136,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PIMITO: {
         id:951,
@@ -13140,7 +14150,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SCOVILAIN: {
         id:952,
@@ -13153,7 +14164,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LEBOULEROU: {
         id:953,
@@ -13166,7 +14178,8 @@ let setup_pokedex = {
         attack_lvl1:10,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BERASCA: {
         id:954,
@@ -13179,7 +14192,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FLOTILLON: {
         id:955,
@@ -13192,7 +14206,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CLEOPSYTRA: {
         id:956,
@@ -13205,7 +14220,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FORGERETTE: {
         id:957,
@@ -13218,7 +14234,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FORGELLA: {
         id:958,
@@ -13231,7 +14248,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FORGELINA: {
         id:959,
@@ -13244,7 +14262,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TAUPIKEAU: {
         id:960,
@@ -13257,7 +14276,8 @@ let setup_pokedex = {
         attack_lvl1:11,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TRIOPIKEAU: {
         id:961,
@@ -13270,7 +14290,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     LESTOMBAILE: {
         id:962,
@@ -13283,7 +14304,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DOFIN: {
         id:963,
@@ -13296,7 +14318,8 @@ let setup_pokedex = {
         attack_lvl1:9,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SUPERDOFIN: {
         id:964,
@@ -13309,7 +14332,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     VROMBI: {
         id:965,
@@ -13322,7 +14346,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     VROMBOTOR: {
         id:966,
@@ -13335,7 +14360,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MOTORIZARD: {
         id:967,
@@ -13348,7 +14374,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FERDETER: {
         id:968,
@@ -13361,7 +14388,8 @@ let setup_pokedex = {
         attack_lvl1:17,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GERMECLAT: {
         id:969,
@@ -13374,7 +14402,8 @@ let setup_pokedex = {
         attack_lvl1:21,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FLORECLAT: {
         id:970,
@@ -13387,7 +14416,8 @@ let setup_pokedex = {
         attack_lvl1:26,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TOUTOMBE: {
         id:971,
@@ -13400,7 +14430,8 @@ let setup_pokedex = {
         attack_lvl1:12,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TOMBERRO: {
         id:972,
@@ -13413,7 +14444,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FLAMENROULE: {
         id:973,
@@ -13426,7 +14458,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     PIETACE: {
         id:974,
@@ -13439,7 +14472,8 @@ let setup_pokedex = {
         attack_lvl1:14,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BALBALEZE: {
         id:975,
@@ -13452,7 +14486,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DELESTIN: {
         id:976,
@@ -13465,7 +14500,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     OYACATA: {
         id:977,
@@ -13478,7 +14514,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     NIGIRIGON: {
         id:978,
@@ -13491,7 +14528,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     COURROUSINGE: {
         id:979,
@@ -13504,7 +14542,8 @@ let setup_pokedex = {
         attack_lvl1:23,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     TERRAISTE: {
         id:980,
@@ -13517,7 +14556,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FARIGIRAF: {
         id:981,
@@ -13525,12 +14565,13 @@ let setup_pokedex = {
         has_been_seen:false,
         has_been_captured:false,
         rarity:Rarities.EPIC,
-        type:Types.NORMAL,
+        type:Types.PSY,
         max_hp_lvl1:60,
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DEUSOLOURDO: {
         id:982,
@@ -13543,7 +14584,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     SCALPEREUR: {
         id:983,
@@ -13556,7 +14598,8 @@ let setup_pokedex = {
         attack_lvl1:27,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     FRIGODO: {
         id:996,
@@ -13569,7 +14612,8 @@ let setup_pokedex = {
         attack_lvl1:15,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CRYODO: {
         id:997,
@@ -13582,7 +14626,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GLAIVODO: {
         id:998,
@@ -13595,7 +14640,8 @@ let setup_pokedex = {
         attack_lvl1:29,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MORDUDOR: {
         id:999,
@@ -13608,7 +14654,8 @@ let setup_pokedex = {
         attack_lvl1:20,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     GROMAGO: {
         id:1000,
@@ -13621,7 +14668,8 @@ let setup_pokedex = {
         attack_lvl1:27,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     CHONGJIAN: {
         id:1001,
@@ -13634,7 +14682,8 @@ let setup_pokedex = {
         attack_lvl1:19,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     BAOJIAN: {
         id:1002,
@@ -13647,7 +14696,8 @@ let setup_pokedex = {
         attack_lvl1:24,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     DINGLU: {
         id:1003,
@@ -13660,7 +14710,8 @@ let setup_pokedex = {
         attack_lvl1:22,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     YUYU: {
         id:1004,
@@ -13673,7 +14724,8 @@ let setup_pokedex = {
         attack_lvl1:27,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     KORAIDON: {
         id:1007,
@@ -13686,7 +14738,8 @@ let setup_pokedex = {
         attack_lvl1:27,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     },
     MIRAIDON: {
         id:1008,
@@ -13699,6 +14752,7 @@ let setup_pokedex = {
         attack_lvl1:27,
         needed_quanity:[],
         needed_item:[],
-        evolving_pokemon:[]
+        evolving_pokemon:[],
+        isStarterLine: false
     }
 }

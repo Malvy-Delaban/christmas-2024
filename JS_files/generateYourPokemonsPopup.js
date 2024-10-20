@@ -124,6 +124,7 @@ function generateYourPokemonsPopup() {
     closeButton.style.cursor = 'pointer';
     closeButton.addEventListener('click', () => {
         document.body.style.overflow = '';
+        checkInTeamNumber();
         popupBackgroundContainer.remove(); // Ferme le popup en supprimant l'élément
     });
     closeButton.classList.add('popup-close-icon');

@@ -1,32 +1,38 @@
 const Rarities = {
     COMMON: {
         name: "COMMON",
+        strength: 0,
         sprite: "./sprites/rarities/rarity_common.png",
         color: "#A8A8A8" // Gris clair
     },
     UNCOMMON: {
         name: "UNCOMMON",
+        strength: 1,
         sprite: "./sprites/rarities/rarity_uncommon.png",
         color: "#3CB371" // Vert moyen
     },
     RARE: {
         name: "RARE",
+        strength: 2,
         sprite: "./sprites/rarities/rarity_rare.png",
         color: "#4169E1" // Bleu royal
     },
     EPIC: {
         name: "EPIC",
+        strength: 3,
         sprite: "./sprites/rarities/rarity_epic.png",
         color: "#9932CC" // Violet foncé
     },
     ULTRA: {
         name: "ULTRA",
+        strength: 4,
         sprite: "./sprites/rarities/rarity_ultra.png",
         color: "#FF8C00" // Orange foncé
     },
     LEGENDARY: {
         name: "LEGENDARY",
+        strength: 5,
         sprite: "./sprites/rarities/rarity_legendary.png",
-        color: "#FFD700" // Or
+        color: "rgb(202, 0, 0)" // Or
     }
 };

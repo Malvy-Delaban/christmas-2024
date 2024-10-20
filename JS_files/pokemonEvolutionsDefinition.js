@@ -1184,10 +1184,20 @@ function setEvolvingRelations() {
     pokedex.DINOCLIER.needed_quantity = [1];
     pokedex.DINOCLIER.duelToWin = 1;
 
-    pokedex.CHENITI.evolving_pokemon = [pokedex.CHENISELLE_1, pokedex.CHENISELLE_2, pokedex.CHENISELLE_3, pokedex.PAPILORD];
-    pokedex.CHENITI.needed_item = [Items.ORAN_BERRY, Items.ORAN_BERRY, Items.ORAN_BERRY, Items.ORAN_BERRY];
-    pokedex.CHENITI.needed_quantity = [1, 1, 1, 1];
-    pokedex.CHENITI.duelToWin = 1;
+    pokedex.CHENITI_1.evolving_pokemon = [pokedex.CHENISELLE_1, pokedex.PAPILORD];
+    pokedex.CHENITI_1.needed_item = [Items.ORAN_BERRY, Items.ORAN_BERRY];
+    pokedex.CHENITI_1.needed_quantity = [1, 1];
+    pokedex.CHENITI_1.duelToWin = 1;
+
+    pokedex.CHENITI_2.evolving_pokemon = [pokedex.CHENISELLE_2, pokedex.PAPILORD];
+    pokedex.CHENITI_2.needed_item = [Items.ORAN_BERRY, Items.ORAN_BERRY];
+    pokedex.CHENITI_2.needed_quantity = [1, 1];
+    pokedex.CHENITI_2.duelToWin = 1;
+
+    pokedex.CHENITI_3.evolving_pokemon = [pokedex.CHENISELLE_3, pokedex.PAPILORD];
+    pokedex.CHENITI_3.needed_item = [Items.ORAN_BERRY, Items.ORAN_BERRY];
+    pokedex.CHENITI_3.needed_quantity = [1, 1];
+    pokedex.CHENITI_3.duelToWin = 1;
 
     pokedex.APITRINI.evolving_pokemon = [pokedex.APIREINE];
     pokedex.APITRINI.needed_item = [Items.ORAN_BERRY];

@@ -5,14 +5,16 @@ let pokedex = null;
 let map_cases = null;
 let owned_pokemons = null;
 let inventory = null;
+let trainer_card = null;
 
-const forcePokedexUpdate = true; // While developping, will force pokedex to update at each session
+const forcePokedexUpdate = false; // While developping, will force pokedex to update at each session
 const forceMapCasesUpdate = true; // While developping, will force map cases to update at each session
 const forceOwnedUpdate = false; // While developping, will force owned pokemon to update at each session
-const forceInventoryUpdate = true; // While developping, will force inventory to update at each session
+const forceInventoryUpdate = false; // While developping, will force inventory to update at each session
+const forceTrainerCardUpdate = false; // While developping, will force trainer card to update at each session
 
 function CreatePokedex() {
-    stored_content = localStorage.getItem("pokedex");
+    let stored_content = localStorage.getItem("pokedex");
 
     if (!stored_content || forcePokedexUpdate) {
         pokedex = setup_pokedex;
@@ -25,7 +27,7 @@ function CreatePokedex() {
     setEvolvingRelations();
 }
 function CreateMapCases() {
-    stored_content = localStorage.getItem("map_cases");
+    let stored_content = localStorage.getItem("map_cases");
 
     if (!stored_content || forceMapCasesUpdate) {
         localStorage.setItem("map_cases", JSON.stringify(setup_map_cases));
@@ -38,7 +40,7 @@ function CreateMapCases() {
 }
 function CreateOwnedPokemons() {
     let setup_owned_pokemons = [];
-    stored_content = localStorage.getItem("owned_pokemons");
+    let stored_content = localStorage.getItem("owned_pokemons");
 
     if (!stored_content || forceOwnedUpdate) {
         localStorage.setItem("owned_pokemons", JSON.stringify(setup_owned_pokemons));
@@ -50,7 +52,7 @@ function CreateOwnedPokemons() {
     }
 }
 function CreateInventory() {
-    stored_content = localStorage.getItem("inventory");
+    let stored_content = localStorage.getItem("inventory");
 
     if (!stored_content || forceInventoryUpdate) {
         inventory = [];
@@ -61,9 +63,27 @@ function CreateInventory() {
         inventory = JSON.parse(stored_content);
     }
 }
+function CreateTrainerCard() {
+    let stored_content = localStorage.getItem("trainer_card");
+
+    if (!stored_content || forceTrainerCardUpdate) {
+        let defaultTrainerImg = (Math.floor(Math.random() * 79) + 1);
+        let defaultTrainerName = (Math.floor(Math.random() * 2) + 1);
+        trainer_card = {
+            name: defaultTrainerName == 1 ? "Anna" : "Hank",
+            sprite: "sprites/trainers/trainer_" + defaultTrainerImg + ".png"
+        };
+        localStorage.setItem("trainer_card", JSON.stringify(trainer_card));
+        console.log("Carte de dresseur initialisée.");
+    } else {
+        console.log("Une sauvegarde de la carte de dresseur existe déjà. Utilisation de la sauvegarde.");
+        trainer_card = JSON.parse(stored_content);
+    }
+}
 function Setup() {
     CreatePokedex();
     CreateMapCases();
     CreateOwnedPokemons();
     CreateInventory();
+    CreateTrainerCard();
 }

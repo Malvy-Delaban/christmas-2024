@@ -225,7 +225,8 @@
 
 .detail-your-pokemon-detail,
 .detail-confirm-buying,
-.detail-start-route {
+.detail-start-route,
+.detail-trainer-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -351,7 +352,8 @@
 }
 
 .popup-confirm-buying,
-.popup-start-route {
+.popup-start-route,
+.popup-trainer-card {
     position: relative;
     width: 85%;
     background-color: white;
@@ -367,7 +369,8 @@
 .popup-put-in-team-title,
 .popup-confirm-buying-title,
 .popup-start-route-title,
-.popup-start-route-route-name {
+.popup-start-route-route-name,
+.popup-trainer-card-title {
     color: #4B3768;
     font-size: 3.5rem;
     font-weight: 900;
@@ -521,7 +524,8 @@
 /* Shop popup */
 
 .popup-shop,
-.popup-inventory {
+.popup-inventory,
+.popup-trainer-image {
     position: relative;
     width: 85%;
     height: 85%;
@@ -542,16 +546,17 @@
 }
 
 .popup-content-shop,
-.popup-content-inventory {
+.popup-content-inventory,
+.popup-content-trainer-image {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .popup-content-shop-list,
-.popup-content-inventory-list {
+.popup-content-inventory-list,
+.popup-content-trainer-image-list {
     padding-top: 2rem;
-    height: 80;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -560,6 +565,17 @@
     overflow-y: auto;
     flex-grow: 1; /* Remplit tout l'espace disponible */
     padding-bottom: 3rem;
+}
+
+.popup-content-trainer-image-list {
+    flex-direction: row;
+    overflow-y: auto;
+    flex-wrap: wrap;
+    padding-bottom: 3rem;
+}
+
+.popup-content-trainer-single-image {
+    width: 45%;
 }
 
 .popup-content-single-item {
@@ -655,6 +671,11 @@
     margin-top: 2rem;
 }
 
+.detail-trainer-card-img {
+    margin-top: 2rem;
+    width: 90%;
+}
+
 .detail-start-route-img {
     width: 90%;
     margin-top: 5rem;
@@ -668,8 +689,14 @@
     width: 80%;
 }
 
+.popup-trainer-card-buttons-container {
+    margin-top: 5rem;
+    width: 80%;
+}
+
 .popup-confirm-buying-button,
-.popup-start-route-button {
+.popup-start-route-button,
+.popup-trainer-card-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -703,4 +730,27 @@
 .popup-content-right-side-inventory {
     margin-left: 3rem;
     max-width: 60%;
+}
+
+.detail-trainer-card-name {
+    width: 80%;
+    height: 5rem;
+    font-size: 3rem;
+    text-align: center;
+    border-radius: 3rem;
+    border: solid 0.3rem #463460;
+    color: #463460;
+}
+
+.popup-trainer-card-captured-pokemons,
+.popup-trainer-card-seen-pokemons {
+    width: 90%;
+    color: #463460;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.popup-trainer-card-seen-pokemons {
+    margin-top: 2rem;
 }

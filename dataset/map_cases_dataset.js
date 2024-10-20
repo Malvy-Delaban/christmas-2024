@@ -1,6 +1,7 @@
 let setup_map_cases = [
     {
         id: 0,
+        code: '',
         name: "Choisis ton starter !",
         sprite: "./sprites/locations/location_33.png",
         unlock_day: -1,
@@ -17,6 +18,7 @@ let setup_map_cases = [
     },
     {
         id: 1,
+        code: '',
         name: "Route 01",
         sprite: "./sprites/locations/location_16.png",
         unlock_day: new Date("2024-12-01"),
@@ -41,6 +43,7 @@ let setup_map_cases = [
     },
     {
         id: 2,
+        code: '',
         name: "Route 02",
         sprite: "./sprites/locations/location_02.png",
         unlock_day: new Date("2024-12-02"),
@@ -60,11 +63,13 @@ let setup_map_cases = [
             KRANIDOS: 2,
             TERHAL: 2,
             GALEKID: 1,
-            FLAMIAOU: 1,
+            FLAMIcode: '',
+            AOU: 1,
         },
     },
     {
         id: 3,
+        code: '',
         name: "Route 03",
         sprite: "./sprites/locations/location_27.png",
         unlock_day: new Date("2024-12-03"),
@@ -89,6 +94,7 @@ let setup_map_cases = [
     },
     {
         id: 999,
+        code: 'CHEAT',
         name: "To delete",
         sprite: "./sprites/locations/location_10.png",
         unlock_day: new Date("2024-12-03"),

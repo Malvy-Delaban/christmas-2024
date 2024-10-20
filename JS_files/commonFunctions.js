@@ -24,6 +24,10 @@ function updateInventory() {
     localStorage.setItem("inventory", JSON.stringify(inventory));
 }
 
+function updateTrainerCard() {
+    localStorage.setItem("trainer_card", JSON.stringify(trainer_card));
+}
+
 function getHPinPercent(pokemon) {
     return (parseInt(pokemon.hp) / parseInt(pokemon.max_hp) * 100);
 }
@@ -87,9 +91,26 @@ function createTypeChipFromPokedexID(PokedexID) {
 function forceInTeamIfNeeded() {
     let inTeamNbr = 0;
 
-    for (let i = 0; i < owned_pokemons.lenght; i++) {
+    for (let i = 0; i < owned_pokemons.length; i++) {
         if (owned_pokemons[i].isInTeam)
             inTeamNbr++;
+    }
+    if (inTeamNbr == 0)
+        owned_pokemons[0].isInTeam = true;
+    updateOwnedPokemons();
+}
+
+function checkInTeamNumber() {
+    let inTeamNbr = 0;
+
+    for (let i = 0; i < owned_pokemons.length; i++) {
+        if (owned_pokemons[i].isInTeam)
+            inTeamNbr++;
+        if (inTeamNbr > 3) {
+            console.log("too much : " + owned_pokemons[i].pokedexId)
+            owned_pokemons[i].isInTeam = false;
+            inTeamNbr--;
+        }
     }
     if (inTeamNbr == 0)
         owned_pokemons[0].isInTeam = true;
@@ -139,6 +160,7 @@ function GetSpriteAltNumberSpecialCases(id, isShiny) {
         return 1;
     if (id == specialCasesId[8]) // CHENITI ACIER
         return 2;
+    return 1;
 }
 
 function GetSpriteByPokemon(pokedexEntry, isShiny) {
@@ -146,21 +168,6 @@ function GetSpriteByPokemon(pokedexEntry, isShiny) {
 
     let pokedex_id = pokedexIdParsed.includes('.') ? pokedexIdParsed.split('.')[0] : pokedexIdParsed;
     let altFormNumber = pokedexIdParsed.includes('.') ? GetSpriteAltNumberSpecialCases(pokedexIdParsed, isShiny) : 0;
-
-    let formattedPokedexId = pokedex_id.toString().padStart(4, '0');
-    let formattedAltFormNumber = altFormNumber.toString().padStart(3, '0');
-    let shinySuffix = isShiny ? 'r' : 'n';
-
-    let spriteName = `sprites/pokemons/poke_capture_${formattedPokedexId}_${formattedAltFormNumber}_mf_n_00000000_f_${shinySuffix}.png`;
-
-    return spriteName;
-}
-
-function GetSpriteByPokedexId(pokedexId, isShiny) {
-    let pokedexIdParsed = String(pokedex[pokedexId].id);
-
-    let pokedex_id = pokedexIdParsed.includes('.') ? pokedexIdParsed.split('.')[0] : pokedexIdParsed;
-    let altFormNumber = pokedexIdParsed.includes('.') ? 1 : 0;
 
     let formattedPokedexId = pokedex_id.toString().padStart(4, '0');
     let formattedAltFormNumber = altFormNumber.toString().padStart(3, '0');
@@ -235,4 +242,22 @@ function pokemonHasBeenCaptured(pokemon) {
     console.log(pokemon);
     pokedex[pokemon].has_been_captured = true;
     updatePokedex();
+}
+
+function getSeenPokemonNmbr() {
+    let seen = 0;
+
+    for (const [key, pokemon] of Object.entries(pokedex))
+        if (pokemon.has_been_seen)
+            seen++;
+    return seen;
+}
+
+function getCapturedPokemonNmbr() {
+    let captured = 0;
+
+    for (const [key, pokemon] of Object.entries(pokedex))
+        if (pokemon.has_been_captured)
+            captured++;
+    return captured;
 }
