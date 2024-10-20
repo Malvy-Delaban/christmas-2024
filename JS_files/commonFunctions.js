@@ -111,7 +111,7 @@ function checkInTeamNumber() {
             inTeamNbr--;
         }
     }
-    if (inTeamNbr == 0)
+    if (inTeamNbr == 0 && owned_pokemons && owned_pokemons.length > 0)
         owned_pokemons[0].isInTeam = true;
     updateOwnedPokemons();
 }

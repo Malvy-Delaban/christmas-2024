@@ -97,7 +97,7 @@ let setup_map_cases = [
         code: 'CHEAT',
         name: "To delete",
         sprite: "./sprites/locations/location_10.png",
-        unlock_day: new Date("2024-12-03"),
+        unlock_day: -1,
         has_been_used: false,
         shiny_lock: false,
         base_level: 40,
