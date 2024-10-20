@@ -17,6 +17,15 @@ function updatePokemonDetailPopupIsInTeam(newValue) {
     }
 }
 
+function generatePokemonDetailPopupById(id) {
+    Object.keys(owned_pokemons).forEach(key => {
+        if (owned_pokemons[key].uuid == id) {
+            generatePokemonDetailPopup(owned_pokemons[key]);
+            return;
+        }
+    });
+}
+
 function generatePokemonDetailPopup(pokemon) {
     // Créer les éléments principaux
     const popupBackgroundContainer = document.createElement('div');
@@ -151,7 +160,7 @@ function generatePokemonDetailPopup(pokemon) {
         detailPokemonButtonEvolve.className = 'detail-pokemon-button';
         detailPokemonButtonEvolve.textContent = "Evolutions de " + pokedex[pokemon.pokedexId].name;
         detailPokemonButtonEvolve.addEventListener('click', () => {
-            generateEvolutionPopup(pokemon);
+            generateEvolutionPopup(pokemon, popupBackgroundContainer);
         });
         detailPokemonButtons.appendChild(detailPokemonButtonEvolve);
     }

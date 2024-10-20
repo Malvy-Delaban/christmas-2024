@@ -107,7 +107,6 @@ function checkInTeamNumber() {
         if (owned_pokemons[i].isInTeam)
             inTeamNbr++;
         if (inTeamNbr > 3) {
-            console.log("too much : " + owned_pokemons[i].pokedexId)
             owned_pokemons[i].isInTeam = false;
             inTeamNbr--;
         }
@@ -222,6 +221,11 @@ function addItemInInventory(item, quantityAdded) {
     updateInventory();
 }
 
+function removeItemInInventoryById(id, quantityRemoved) {
+    let item = inventory.find(inventoryItem => inventoryItem.item.id === id);
+    removeItemInInventory(item.item, quantityRemoved);
+}
+
 function removeItemInInventory(item, quantityRemoved) {
     const itemIndex = inventory.findIndex(inventoryItem => inventoryItem.item.id === item.id);
 
@@ -239,7 +243,6 @@ function pokemonHasBeenSeen(pokemon) {
 }
 
 function pokemonHasBeenCaptured(pokemon) {
-    console.log(pokemon);
     pokedex[pokemon].has_been_captured = true;
     updatePokedex();
 }
@@ -260,4 +263,53 @@ function getCapturedPokemonNmbr() {
         if (pokemon.has_been_captured)
             captured++;
     return captured;
+}
+
+function getRouteFromCode(code) {
+    for (let singleCase of map_cases)
+        if (singleCase.code === code && !singleCase.has_been_used)
+            return singleCase;
+    return null;
+}
+
+function showNotification(message, status) {
+    const notification = document.getElementById('notification');
+    notification.textContent = message;
+    if (status === "error")
+        notification.style.backgroundColor = "#f44336";
+    else if (status === "validation")
+        notification.style.backgroundColor = "#4CAF50";
+    else
+        notification.style.backgroundColor = "#4CAF50";
+
+    
+    // Show the notification
+    notification.classList.add('show');
+
+    // Automatically hide it after 5 seconds (5000ms)
+    setTimeout(() => {
+        notification.classList.add('hide'); // Start the fade-out
+        setTimeout(() => {
+            notification.classList.remove('show', 'hide'); // Reset the notification
+        }, 500); // Wait for the fade-out animation to finish
+    }, 4000);
+}
+
+function evolvePokemon(id, newPokedexId, needed_item, needed_quantity) {
+    Object.keys(owned_pokemons).forEach(key => {
+        if (owned_pokemons[key].uuid == id) {
+            owned_pokemons[key].pokedexId = newPokedexId;
+            owned_pokemons[key].max_hp = getMaxHpOfPokemon(newPokedexId, owned_pokemons[key].level);
+            owned_pokemons[key].hp = owned_pokemons[key].max_hp;
+            owned_pokemons[key].attack = getAttackOfPokemon(newPokedexId, owned_pokemons[key].level);
+            owned_pokemons[key].sprite = GetSpriteByPokemon(owned_pokemons[key].pokedexId, owned_pokemons[key].isShiny);
+            pokedex[newPokedexId].has_been_seen = true;
+            pokedex[newPokedexId].has_been_captured = true;
+            const updateYourPokemonEvent = new CustomEvent("updateYourPokemonEvent", {});
+            document.dispatchEvent(updateYourPokemonEvent);
+            removeItemInInventoryById(needed_item, needed_quantity);
+            updateOwnedPokemons();
+        }
+    });
+    return null;
 }

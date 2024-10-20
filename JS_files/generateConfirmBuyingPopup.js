@@ -46,8 +46,6 @@ function generateConfirmBuyingPopup(item) {
     confirmButtonTextNo.classList.add('popup-content-item-price-text');
     confirmButtonTextNo.textContent = "Non";
 
-    console.log(inventory);
-
     if (hasEnoughItemInInventory(Items.ORAN_BERRY, item.shop_price)) {
         confirmButtonContainer.addEventListener('click', () => {
             removeItemInInventory(Items.ORAN_BERRY, item.shop_price);
@@ -56,6 +54,9 @@ function generateConfirmBuyingPopup(item) {
         });
     } else {
         confirmButtonContainer.style.opacity = "30%";
+        confirmButtonContainer.addEventListener('click', () => {
+            showNotification("Tu n'as pas assez de baies", "error");
+        });
     }
 
     cancelButtonContainer.addEventListener('click', () => {

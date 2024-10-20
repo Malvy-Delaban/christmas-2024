@@ -8,7 +8,7 @@ let inventory = null;
 let trainer_card = null;
 
 const forcePokedexUpdate = false; // While developping, will force pokedex to update at each session
-const forceMapCasesUpdate = true; // While developping, will force map cases to update at each session
+const forceMapCasesUpdate = false; // While developping, will force map cases to update at each session
 const forceOwnedUpdate = false; // While developping, will force owned pokemon to update at each session
 const forceInventoryUpdate = false; // While developping, will force inventory to update at each session
 const forceTrainerCardUpdate = false; // While developping, will force trainer card to update at each session
@@ -71,7 +71,8 @@ function CreateTrainerCard() {
         let defaultTrainerName = (Math.floor(Math.random() * 2) + 1);
         trainer_card = {
             name: defaultTrainerName == 1 ? "Anna" : "Hank",
-            sprite: "sprites/trainers/trainer_" + defaultTrainerImg + ".png"
+            sprite: "sprites/trainers/trainer_" + defaultTrainerImg + ".png",
+            last_loading: new Date("2024-10-18T20:16:55.631Z"),
         };
         localStorage.setItem("trainer_card", JSON.stringify(trainer_card));
         console.log("Carte de dresseur initialisée.");

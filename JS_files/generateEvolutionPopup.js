@@ -1,4 +1,4 @@
-function fillEvolutionList(evolutionListDiv, currentPokemon, remainingDuels) {
+function fillEvolutionList(evolutionListDiv, currentPokemon, remainingDuels, evolutionPopup, detailPopup) {
     let pokemon = pokedex[currentPokemon.pokedexId];
 
     for (let i = 0; i < pokemon.evolving_pokemon.length; i++) {
@@ -18,8 +18,22 @@ function fillEvolutionList(evolutionListDiv, currentPokemon, remainingDuels) {
 
         const evolveButton = document.createElement('div');
         evolveButton.classList.add('popup-evolution-button');
-        if (remainingDuels > 0 || hasEnoughItemInInventory(pokedex[currentPokemon.pokedexId].needed_item[i], pokedex[currentPokemon.pokedexId].needed_quantity[i]))
+        if (remainingDuels > 0 || !hasEnoughItemInInventory(pokedex[currentPokemon.pokedexId].needed_item[i], pokedex[currentPokemon.pokedexId].needed_quantity[i]))
             evolveButton.classList.add('popup-evolution-button-greyed');
+
+        evolveButton.addEventListener('click', () => {
+            if (remainingDuels > 0)
+                showNotification("Tu n'as pas gagné assez de combats avec " + pokedex[currentPokemon.pokedexId].name, "error");
+            else if (!hasEnoughItemInInventory(pokedex[currentPokemon.pokedexId].needed_item[i], pokedex[currentPokemon.pokedexId].needed_quantity[i]))
+                showNotification("Tu n'as pas les objets requis pour ça", "error");
+            else {
+                showNotification("Ton pokémon évolue en " + pokedex[evolvingPokemonKey].name + " !", "validation");
+                evolvePokemon(currentPokemon.uuid, evolvingPokemonKey, pokemon.needed_item[i].id, pokemon.needed_quantity[i]);
+                evolutionPopup.remove();
+                detailPopup.remove();
+                generatePokemonDetailPopup(currentPokemon);
+            }
+        });
 
         const evolveButtonLeftSide = document.createElement('p');
         evolveButtonLeftSide.classList.add('popup-evolution-button-left-side');
@@ -48,7 +62,7 @@ function fillEvolutionList(evolutionListDiv, currentPokemon, remainingDuels) {
     }
 }
 
-function generateEvolutionPopup(pokemon) {
+function generateEvolutionPopup(pokemon, detailPopup) {
     // Créer les éléments principaux
     const popupBackgroundContainer = document.createElement('div');
     popupBackgroundContainer.classList.add('popup-background');
@@ -91,7 +105,7 @@ function generateEvolutionPopup(pokemon) {
     const evolutionList = document.createElement('div');
     evolutionList.classList.add('popup-evolution-pokemon-list');
 
-    fillEvolutionList(evolutionList, pokemon, remainingDuels);
+    fillEvolutionList(evolutionList, pokemon, remainingDuels, popupBackgroundContainer, detailPopup);
 
     popupContent.appendChild(titleLine);
     popupContent.appendChild(requirements);

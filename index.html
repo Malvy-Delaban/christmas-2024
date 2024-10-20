@@ -34,13 +34,19 @@
 <script src="JS_files/generateStartRoutePopup.js"></script>
 <script src="JS_files/generateTrainerCardPopup.js"></script>
 <script src="JS_files/generateChangeTrainerImgPopup.js"></script>
+<script src="JS_files/generateEnterEventCodePopup.js"></script>
+<script src="JS_files/dailyEvents.js"></script>
 
 <script>
     // Initialize all data / create them / retrieve them
     Setup();
+    DailyEvents();
 </script>
 
 <body id="body">
+    <div id="notification" class="notification">
+        This is a temporary notification!
+    </div>
     <div class="main-page-container">
         <div id="routes-container">            
         </div>

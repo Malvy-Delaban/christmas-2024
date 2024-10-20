@@ -226,7 +226,8 @@
 .detail-your-pokemon-detail,
 .detail-confirm-buying,
 .detail-start-route,
-.detail-trainer-card {
+.detail-trainer-card,
+.detail-enter-code {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -353,7 +354,8 @@
 
 .popup-confirm-buying,
 .popup-start-route,
-.popup-trainer-card {
+.popup-trainer-card,
+.popup-enter-code {
     position: relative;
     width: 85%;
     background-color: white;
@@ -370,7 +372,8 @@
 .popup-confirm-buying-title,
 .popup-start-route-title,
 .popup-start-route-route-name,
-.popup-trainer-card-title {
+.popup-trainer-card-title,
+.popup-enter-code-title {
     color: #4B3768;
     font-size: 3.5rem;
     font-weight: 900;
@@ -643,8 +646,17 @@
 
 .popup-content-item-price-text-with-margin,
 .popup-content-item-quantity-text-with-margin,
-.popup-start-route-button-text {
+.popup-start-route-button-text,
+.popup-enter-code-button-text {
     margin-right: 1rem;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.popup-start-route-button-text,
+.popup-enter-code-button-text {
+    margin-right: 0;
     color: white;
     font-size: 2rem;
     font-weight: 600;
@@ -696,7 +708,8 @@
 
 .popup-confirm-buying-button,
 .popup-start-route-button,
-.popup-trainer-card-button {
+.popup-trainer-card-button,
+.popup-enter-code-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -732,7 +745,8 @@
     max-width: 60%;
 }
 
-.detail-trainer-card-name {
+.detail-trainer-card-name,
+.detail-enter-code-input {
     width: 80%;
     height: 5rem;
     font-size: 3rem;
@@ -740,6 +754,12 @@
     border-radius: 3rem;
     border: solid 0.3rem #463460;
     color: #463460;
+}
+
+.detail-enter-code-input {
+    width: 70%;
+    margin: 4rem 0;
+    font-weight: bold;
 }
 
 .popup-trainer-card-captured-pokemons,

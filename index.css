@@ -262,3 +262,32 @@ body {
     border-radius: 3rem;
     padding: 0.5rem 2rem;
 }
+
+.notification {
+    text-align: center;
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 2rem 4rem;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 3rem;
+    display: none; /* Hidden by default */
+    z-index: 1000; /* Make sure it's on top */
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Animation to fade in */
+.show {
+    display: block;
+    opacity: 1;
+}
+
+/* Animation to fade out */
+.hide {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}

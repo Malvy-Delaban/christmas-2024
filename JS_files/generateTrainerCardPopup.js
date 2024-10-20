@@ -66,6 +66,10 @@ function generateTrainerCardPopup() {
     eventCodeButton.style.cursor = 'pointer';
     eventCodeButton.textContent = "Entrer un code évènement";
 
+    eventCodeButton.addEventListener('click', () => {
+        generateEnterEventCodePopup(popupBackgroundContainer);
+    });
+
     buttonsContainer.appendChild(eventCodeButton);
 
     popupContent.appendChild(title);

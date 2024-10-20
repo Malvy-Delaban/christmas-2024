@@ -265,5 +265,11 @@ const Items = {
         sprite: "./sprites/misc/oran_icon.png",
         shop_price: -1,
     },
-    
+    SHINY_CHARM: {
+        id: 38,
+        name: "Charme chroma",
+        description: "Permet de trouver plus de pokémon shiny.",
+        sprite: "./sprites/shop_items/shiny_charm.png",
+        shop_price: 8,
+    },
 };
