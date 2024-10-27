@@ -327,7 +327,6 @@ body {
 }
 
 .duel-enemy-container,
-.duel-choices-container,
 .duel-player-container {
     width: 80%;
 }
@@ -337,8 +336,15 @@ body {
 }
 
 .duel-choices-container {
-    background-color: #b084e9;
-    height: 25%;
+    height: 30%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0000008f;
+    border-radius: 5rem;
+    padding: 5rem;
 }
 
 .duel-player-container {
@@ -456,4 +462,49 @@ body {
     color: white;
     font-size: 3rem;
     text-align: left;
+}
+
+.duel-buttons {
+    width: 85%;
+    height: 100%;
+}
+
+.duel-button-line-own {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 8rem;
+}
+
+.duel-button {
+    width: 30rem;
+    font-size: 3rem;
+    background: linear-gradient(0.7turn, #f51f80, #f53243);
+    border-radius: 5rem;
+    padding: 2rem 5rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.change-pokemon {
+    width: 100%;
+    font-size: 3rem;
+    background-color: #685189;    border-radius: 5rem;
+    padding: 2rem 5rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

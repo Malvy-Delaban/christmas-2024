@@ -314,10 +314,23 @@ function evolvePokemon(id, newPokedexId, needed_item, needed_quantity) {
     return null;
 }
 
-function getAttackNameByRarity(rarity, type) {
-    let attackIndex = Rarities[rarity].attackIndex
+function getAttackNameByRarity(rarity, type, isRandomAttack) {
+    return type.attacks[isRandomAttack ? 0 : rarity.attackIndex];
+}
 
-    return type.attacks[attackIndex];
+function getRandomType(typeToAvoid) {
+    let returnType = null;
+
+    while (!returnType) {
+        const typesKeys = Object.keys(Types);
+        const randomKey = typesKeys[Math.floor(Math.random() * typesKeys.length)];
+        const randomType = Types[randomKey];
+
+        if (randomType.name != typeToAvoid.name)
+            returnType = randomType;
+    }
+
+    return returnType;
 }
 
 function generatePokemon(pokedexEntry, isShiny, level, isEnemy) {

@@ -80,8 +80,42 @@ function fillEnemyContainer(parentDiv, enemy) {
     parentDiv.appendChild(teamView);
 }
 
-function fillChoicesContainer(parentDiv) {
-    
+function fillChoicesContainer(parentDiv, team) {
+    const randomType = getRandomType(pokedex[team[0].pokedexId].type);
+
+    const ownTypeAttackLine = document.createElement('div');
+    ownTypeAttackLine.className = 'duel-button-line-own';
+
+    const ownTypeAttack = document.createElement('div');
+    ownTypeAttack.className = 'duel-button';
+    ownTypeAttack.textContent = getAttackNameByRarity(pokedex[team[0].pokedexId].rarity, pokedex[team[0].pokedexId].type, false);
+
+    const ownTypeAttackLogo = document.createElement('img');
+    ownTypeAttackLogo.className = 'duel-button-own-logo';
+    ownTypeAttackLogo.src = "sprites/types/" + pokedex[team[0].pokedexId].type.name + ".png";
+
+    const randomTypeAttackLine = document.createElement('div');
+    randomTypeAttackLine.className = 'duel-button-line-own';
+
+    const randomTypeAttack = document.createElement('div');
+    randomTypeAttack.className = 'duel-button';
+    randomTypeAttack.textContent = getAttackNameByRarity(null, randomType, true);
+
+    const randomTypeAttackLogo = document.createElement('img');
+    randomTypeAttackLogo.className = 'duel-button-own-logo';
+    randomTypeAttackLogo.src = "sprites/types/" + randomType.name + ".png";
+
+    const changePokemonButton = document.createElement('div');
+    changePokemonButton.className = 'change-pokemon';
+    changePokemonButton.textContent = "Changer de Pokémon";
+
+    ownTypeAttackLine.appendChild(ownTypeAttack);
+    ownTypeAttackLine.appendChild(ownTypeAttackLogo);
+    randomTypeAttackLine.appendChild(randomTypeAttack);
+    randomTypeAttackLine.appendChild(randomTypeAttackLogo);
+    parentDiv.appendChild(ownTypeAttackLine);
+    parentDiv.appendChild(randomTypeAttackLine);
+    parentDiv.appendChild(changePokemonButton);
 }
 
 function fillPlayerContainer(parentDiv, team) {
@@ -136,6 +170,5 @@ function generateDuel(trainer) {
     }
     const playerTeam = getPlayerTeam();
 
-    console.log(playerTeam);
     generateBaseHTMLStructure(enemy, playerTeam);
 }
