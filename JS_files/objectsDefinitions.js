@@ -6,12 +6,14 @@ let map_cases = null;
 let owned_pokemons = null;
 let inventory = null;
 let trainer_card = null;
+let enemy_trainers = null;
 
 const forcePokedexUpdate = false; // While developping, will force pokedex to update at each session
-const forceMapCasesUpdate = false; // While developping, will force map cases to update at each session
+const forceMapCasesUpdate = true; // While developping, will force map cases to update at each session
 const forceOwnedUpdate = false; // While developping, will force owned pokemon to update at each session
 const forceInventoryUpdate = false; // While developping, will force inventory to update at each session
 const forceTrainerCardUpdate = false; // While developping, will force trainer card to update at each session
+const forceEnemyTrainerUpdate = true; // While developping, will force enemy trainers to update at each session
 
 function CreatePokedex() {
     let stored_content = localStorage.getItem("pokedex");
@@ -81,10 +83,23 @@ function CreateTrainerCard() {
         trainer_card = JSON.parse(stored_content);
     }
 }
+function CreateEnemyTrainers() {
+    let stored_content = localStorage.getItem("enemy_trainers");
+
+    if (!stored_content || forceEnemyTrainerUpdate) {
+        enemy_trainers = setup_trainers;
+        localStorage.setItem("enemy_trainers", JSON.stringify(enemy_trainers));
+        console.log("Liste des enemies initialisée.");
+    } else {
+        console.log("Une sauvegarde des enemies existe déjà. Utilisation de la sauvegarde.");
+        enemy_trainers = JSON.parse(stored_content);
+    }
+}
 function Setup() {
     CreatePokedex();
     CreateMapCases();
     CreateOwnedPokemons();
     CreateInventory();
     CreateTrainerCard();
+    CreateEnemyTrainers();
 }

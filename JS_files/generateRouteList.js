@@ -51,4 +51,11 @@ function GenerateRouteListDisplay() {
     for (let i = 0; i < Object.keys(routeToDisplay).length; i++) {
         container.appendChild(GenerateSingleRouteDisplay(routeToDisplay[i]));
     }
+    if (!routeToDisplay || routeToDisplay.length <= 0) {
+        const emptyList = document.createElement('div');
+        emptyList.classList.add('empty-list-route');
+        emptyList.textContent = "Aucune route à l'horizon, revenez plus tard";
+
+        container.appendChild(emptyList);
+    }
 }

@@ -13,6 +13,7 @@ function generatePokemonBasedOnPokedexEntry(pokedexEntry, currentCase) {
 
     let newPokemon = {
         uuid: generateUUID(),
+        is_enemy: false,
         pokedexId: pokedexEntry,
         isShiny: temp_isShiny,
         level: temp_level,

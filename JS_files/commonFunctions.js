@@ -313,3 +313,53 @@ function evolvePokemon(id, newPokedexId, needed_item, needed_quantity) {
     });
     return null;
 }
+
+function getAttackNameByRarity(rarity, type) {
+    let attackIndex = Rarities[rarity].attackIndex
+
+    return type.attacks[attackIndex];
+}
+
+function generatePokemon(pokedexEntry, isShiny, level, isEnemy) {
+    let temp_isShiny = isShiny;
+    let temp_level = level;
+    let temp_maxHp = getMaxHpOfPokemon(pokedexEntry, temp_level);
+    let temp_attack = getAttackOfPokemon(pokedexEntry, temp_level);
+    let temp_gender = Math.floor(Math.random() * 2) == 0 ? "male" : "female";
+    let temp_sprite = GetSpriteByPokemon(pokedexEntry, temp_isShiny);
+
+    let newPokemon = {
+        uuid: generateUUID(),
+        is_enemy: isEnemy,
+        pokedexId: pokedexEntry,
+        isShiny: temp_isShiny,
+        level: temp_level,
+        max_hp: temp_maxHp,
+        hp: temp_maxHp,
+        attack: temp_attack,
+        gender: temp_gender,
+        sprite: temp_sprite,
+        isInTeam: false,
+        duelWon: 0,
+        is_ko: false,
+    };
+
+    return newPokemon;
+}
+
+function getPokemonsOfTrainer(trainer) {
+    let pokemons = [];
+
+    trainer.pokemons.forEach(pokemon => {
+        const newPokemon = generatePokemon(pokemon.pokedexId, pokemon.is_shiny, pokemon.level, true);
+        pokemons.push(newPokemon);
+    });
+
+    return pokemons;
+}
+
+function getPlayerTeam() {
+    let pokemons = owned_pokemons.filter(pokemon => pokemon.isInTeam);
+
+    return pokemons;
+}

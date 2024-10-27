@@ -5,7 +5,8 @@ const Types = {
         textColor: "white",
         strength: [],
         weakness: ["ROCHE", "ACIER"],
-        nullAttacks: ["SPECTRE"]
+        nullAttacks: ["SPECTRE"],
+        attacks: ["Vive-Attaque", "Plaquage", "Ultralaser"],
     },
     PLANTE: {
         name: "Plante",
@@ -13,7 +14,8 @@ const Types = {
         textColor: "white",
         strength: ["EAU", "SOL", "ROCHE"],
         weakness: ["PLANTE", "FEU", "POISON", "VOL", "INSECTE", "DRAGON", "ACIER"],
-        nullAttacks: []
+        nullAttacks: [],
+        attacks: ["Fouet Lianes", "Lame-Feuille", "Tempête Verte"],
     },
     FEU: {
         name: "Feu",
@@ -21,7 +23,8 @@ const Types = {
         textColor: "white",
         strength: ["PLANTE", "GLACE", "INSECTE", "ACIER"],
         weakness: ["FEU", "EAU", "ROCHE", "DRAGON"],
-        nullAttacks: []
+        nullAttacks: [],
+        attacks: ["Flammèche", "Lance-Flamme", "Déflagration"],
     },
     EAU: {
         name: "Eau",
@@ -29,7 +32,8 @@ const Types = {
         textColor: "white",
         strength: ["FEU", "SOL", "ROCHE"],
         weakness: ["EAU", "PLANTE", "DRAGON"],
-        nullAttacks: []
+        nullAttacks: [],
+        attacks: ["Pistolet à O", "Surf", "Hydrocannon"],
     },
     ELECTRIK: {
         name: "Électrik",
@@ -37,7 +41,8 @@ const Types = {
         textColor: "white",
         strength: ["EAU", "VOL"],
         weakness: ["PLANTE", "ÉLECTRIK", "DRAGON"],
-        nullAttacks: ["SOL"]
+        nullAttacks: ["SOL"],
+        attacks: ["Éclair", "Tonnerre", "Fatal-Foudre"],
     },
     GLACE: {
         name: "Glace",
@@ -45,7 +50,8 @@ const Types = {
         textColor: "white",
         strength: ["PLANTE", "SOL", "VOL", "DRAGON"],
         weakness: ["FEU", "EAU", "GLACE", "ACIER"],
-        nullAttacks: []
+        nullAttacks: [],
+        attacks: ["Poudreuse", "Laser Glace", "Blizzard"],
     },
     COMBAT: {
         name: "Combat",
@@ -53,7 +59,8 @@ const Types = {
         textColor: "white",
         strength: ["NORMAL", "GLACE", "ROCHE", "ACIER", "TENEBRES"],
         weakness: ["POISON", "VOL", "PSY", "INSECTE", "FEE"],
-        nullAttacks: ["SPECTRE"]
+        nullAttacks: ["SPECTRE"],
+        attacks: ["Balayette", "Close Combat", "Mitra-Poing"],
     },
     POISON: {
         name: "Poison",
@@ -61,7 +68,8 @@ const Types = {
         textColor: "white",
         strength: ["PLANTE", "FEE"],
         weakness: ["POISON", "SOL", "ROCHE", "SPECTRE"],
-        nullAttacks: ["ACIER"]
+        nullAttacks: ["ACIER"],
+        attacks: ["Dard-Venin", "Bomb-Beurk", "Détricanon"],
     },
     SOL: {
         name: "Sol",
@@ -69,7 +77,8 @@ const Types = {
         textColor: "white",
         strength: ["FEU", "ÉLECTRIK", "POISON", "ROCHE", "ACIER"],
         weakness: ["PLANTE", "INSECTE"],
-        nullAttacks: ["VOL"]
+        nullAttacks: ["VOL"],
+        attacks: ["Piétisol", "Tunnel", "Séisme"],
     },
     VOL: {
         name: "Vol",
@@ -77,7 +86,8 @@ const Types = {
         textColor: "white",
         strength: ["PLANTE", "COMBAT", "INSECTE"],
         weakness: ["ÉLECTRIK", "ROCHE", "ACIER"],
-        nullAttacks: []
+        nullAttacks: [],
+        attacks: ["Picpic", "Cru-Aile", "Rapace"],
     },
     PSY: {
         name: "Psy",
@@ -85,7 +95,8 @@ const Types = {
         textColor: "white",
         strength: ["COMBAT", "POISON"],
         weakness: ["PSY", "ACIER"],
-        nullAttacks: ["TENEBRES"]
+        nullAttacks: ["TENEBRES"],
+        attacks: ["Choc Mental", "Rafale Psy", "Psyko"],
     },
     INSECTE: {
         name: "Insecte",
@@ -93,7 +104,8 @@ const Types = {
         textColor: "white",
         strength: ["PLANTE", "PSY", "TENEBRES"],
         weakness: ["FEU", "COMBAT", "POISON", "VOL", "SPECTRE", "ACIER", "FEE"],
-        nullAttacks: []
+        nullAttacks: [],
+        attacks: ["Dard-Nuée", "Plaie-Croix", "Mégacorne"],
     },
     ROCHE: {
         name: "Roche",
@@ -101,7 +113,8 @@ const Types = {
         textColor: "white",
         strength: ["FEU", "GLACE", "VOL", "INSECTE"],
         weakness: ["COMBAT", "SOL", "ACIER"],
-        nullAttacks: []
+        nullAttacks: [],
+        attacks: ["Jet-Pierres", "Lame de Roc", "Pouvoir Antique"],
     },
     SPECTRE: {
         name: "Spectre",
@@ -109,7 +122,8 @@ const Types = {
         textColor: "white",
         strength: ["PSY", "SPECTRE"],
         weakness: ["TENEBRES"],
-        nullAttacks: ["NORMAL"]
+        nullAttacks: ["NORMAL"],
+        attacks: ["Léchouille", "Ball'Ombre", "Revenant"],
     },
     DRAGON: {
         name: "Dragon",
@@ -117,7 +131,8 @@ const Types = {
         textColor: "white",
         strength: ["DRAGON"],
         weakness: ["ACIER"],
-        nullAttacks: ["FEE"]
+        nullAttacks: ["FEE"],
+        attacks: ["Dracosouffle", "Dracochoc", "Draco-Météore"],
     },
     TENEBRES: {
         name: "Ténèbres",
@@ -125,7 +140,8 @@ const Types = {
         textColor: "white",
         strength: ["PSY", "SPECTRE"],
         weakness: ["COMBAT", "TENEBRES", "FEE"],
-        nullAttacks: []
+        nullAttacks: [],
+        attacks: ["Coup Bas", "Morsure", "Vibrobscur"],
     },
     ACIER: {
         name: "Acier",
@@ -133,7 +149,8 @@ const Types = {
         textColor: "white",
         strength: ["GLACE", "ROCHE", "FEE"],
         weakness: ["FEU", "EAU", "ÉLECTRIK", "ACIER"],
-        nullAttacks: []
+        nullAttacks: [],
+        attacks: ["Griffe Acier", "Tête de Fer", "Luminocanon"],
     },
     FEE: {
         name: "Fée",
@@ -141,6 +158,7 @@ const Types = {
         textColor: "white",
         strength: ["COMBAT", "DRAGON", "TENEBRES"],
         weakness: ["FEU", "POISON", "ACIER"],
-        nullAttacks: []
+        nullAttacks: [],
+        attacks: ["Câlinerie", "Éclat Magique", "Pouvoir Lunaire"],
     }
 };
