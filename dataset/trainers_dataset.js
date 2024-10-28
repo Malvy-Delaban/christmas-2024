@@ -9,7 +9,7 @@ let setup_trainers = [
         base_level: 5,
         pokemons: [
             {
-                pokedexId: "SALAMECHE",
+                pokedexId: "TAUPIQUEUR",
                 level: 5,
                 is_shiny: false,
             },

@@ -373,6 +373,55 @@ function getPokemonsOfTrainer(trainer) {
 
 function getPlayerTeam() {
     let pokemons = owned_pokemons.filter(pokemon => pokemon.isInTeam);
+    if (!pokemons || pokemons.length <= 0 && (owned_pokemons && owned_pokemons.length >= 1))
+        forceInTeamIfNeeded();
 
     return pokemons;
+}
+
+function getTypeByName(typeName) {
+    const typeFound = Object.entries(Types).find(value => value[1].name === typeName)?.[1];
+
+    return typeFound;
+}
+
+function getTypeKeyById(typeId) {
+    const typeFound = Object.entries(Types).find(value => value[1].id === typeId)?.[0];
+
+    return typeFound;
+}
+
+function getAttackDamage(attackingPokemon, defendingPokemon, isRandomAttack, randomType) {
+    let attackingType = isRandomAttack ? randomType : pokedex[attackingPokemon.pokedexId].type;
+    let defendingType = getTypeKeyById(pokedex[defendingPokemon.pokedexId].type.id);
+    let listOfStrength = attackingType.strength;
+    let listOfWeakness = attackingType.weakness;
+    let listOfNulls = attackingType.nullAttacks;
+    let typeAdvantageModifier = 1;
+
+    if (listOfStrength.includes(defendingType)) {
+        typeAdvantageModifier = 1.2;
+    } else if (listOfWeakness.includes(defendingType)) {
+        typeAdvantageModifier = 0.5;
+    } else if (listOfNulls.includes(defendingType)) {
+        typeAdvantageModifier = 0;
+    }
+
+    console.log(typeAdvantageModifier);
+
+    let randomNerfModifier = isRandomAttack ? 0.8 : 1;
+    let damages = attackingPokemon.attack * typeAdvantageModifier * randomNerfModifier;
+    damages = Math.floor(damages);
+
+    return damages;
+}
+
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+  
+async function runWithDelay(delayInSecondes) {
+    console.log("Wait for 2 seconds...");
+    await delay(delayInSecondes * 1000);
+    console.log("2 seconds have passed!");
 }

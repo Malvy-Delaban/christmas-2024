@@ -1,5 +1,6 @@
 const Types = {
     NORMAL: {
+        id: 1,
         name: "Normal",
         color: "#aab09f",
         textColor: "white",
@@ -9,6 +10,7 @@ const Types = {
         attacks: ["Vive-Attaque", "Plaquage", "Ultralaser"],
     },
     PLANTE: {
+        id: 12,
         name: "Plante",
         color: "#71c558",
         textColor: "white",
@@ -18,6 +20,7 @@ const Types = {
         attacks: ["Fouet Lianes", "Lame-Feuille", "Tempête Verte"],
     },
     FEU: {
+        id: 10,
         name: "Feu",
         color: "#ea7a3c",
         textColor: "white",
@@ -27,6 +30,7 @@ const Types = {
         attacks: ["Flammèche", "Lance-Flamme", "Déflagration"],
     },
     EAU: {
+        id: 11,
         name: "Eau",
         color: "#539ae2",
         textColor: "white",
@@ -36,6 +40,7 @@ const Types = {
         attacks: ["Pistolet à O", "Surf", "Hydrocannon"],
     },
     ELECTRIK: {
+        id: 13,
         name: "Électrik",
         color: "#eed535",
         textColor: "white",
@@ -45,6 +50,7 @@ const Types = {
         attacks: ["Éclair", "Tonnerre", "Fatal-Foudre"],
     },
     GLACE: {
+        id: 15,
         name: "Glace",
         color: "#70cbd4",
         textColor: "white",
@@ -54,6 +60,7 @@ const Types = {
         attacks: ["Poudreuse", "Laser Glace", "Blizzard"],
     },
     COMBAT: {
+        id: 2,
         name: "Combat",
         color: "#d56723",
         textColor: "white",
@@ -63,6 +70,7 @@ const Types = {
         attacks: ["Balayette", "Close Combat", "Mitra-Poing"],
     },
     POISON: {
+        id: 4,
         name: "Poison",
         color: "#b97fc9",
         textColor: "white",
@@ -72,6 +80,7 @@ const Types = {
         attacks: ["Dard-Venin", "Bomb-Beurk", "Détricanon"],
     },
     SOL: {
+        id: 5,
         name: "Sol",
         color: "#e0c068",
         textColor: "white",
@@ -81,6 +90,7 @@ const Types = {
         attacks: ["Piétisol", "Tunnel", "Séisme"],
     },
     VOL: {
+        id: 3,
         name: "Vol",
         color: "#a890f0",
         textColor: "white",
@@ -90,6 +100,7 @@ const Types = {
         attacks: ["Picpic", "Cru-Aile", "Rapace"],
     },
     PSY: {
+        id: 14,
         name: "Psy",
         color: "#f85888",
         textColor: "white",
@@ -99,6 +110,7 @@ const Types = {
         attacks: ["Choc Mental", "Rafale Psy", "Psyko"],
     },
     INSECTE: {
+        id: 7,
         name: "Insecte",
         color: "#729f3f",
         textColor: "white",
@@ -108,6 +120,7 @@ const Types = {
         attacks: ["Dard-Nuée", "Plaie-Croix", "Mégacorne"],
     },
     ROCHE: {
+        id: 6,
         name: "Roche",
         color: "#a38c21",
         textColor: "white",
@@ -117,6 +130,7 @@ const Types = {
         attacks: ["Jet-Pierres", "Lame de Roc", "Pouvoir Antique"],
     },
     SPECTRE: {
+        id: 8,
         name: "Spectre",
         color: "#7b62a3",
         textColor: "white",
@@ -126,6 +140,7 @@ const Types = {
         attacks: ["Léchouille", "Ball'Ombre", "Revenant"],
     },
     DRAGON: {
+        id: 16,
         name: "Dragon",
         color: "#53a4cf",
         textColor: "white",
@@ -135,6 +150,7 @@ const Types = {
         attacks: ["Dracosouffle", "Dracochoc", "Draco-Météore"],
     },
     TENEBRES: {
+        id: 17,
         name: "Ténèbres",
         color: "#707070",
         textColor: "white",
@@ -144,6 +160,7 @@ const Types = {
         attacks: ["Coup Bas", "Morsure", "Vibrobscur"],
     },
     ACIER: {
+        id: 9,
         name: "Acier",
         color: "#9eb7b8",
         textColor: "white",
@@ -153,6 +170,7 @@ const Types = {
         attacks: ["Griffe Acier", "Tête de Fer", "Luminocanon"],
     },
     FEE: {
+        id: 18,
         name: "Fée",
         color: "#f4c8e2",
         textColor: "white",
