@@ -439,3 +439,8 @@ async function runWithDelay(delayInSecondes) {
     await delay(delayInSecondes * 1000);
     console.log("2 seconds have passed!");
 }
+
+function removeAllEventListeners(element) {
+    const clone = element.cloneNode(true);
+    element.parentNode.replaceChild(clone, element);
+}

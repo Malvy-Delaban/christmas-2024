@@ -9,18 +9,18 @@ let setup_trainers = [
         base_level: 5,
         pokemons: [
             {
-                pokedexId: "SALAMECHE",
-                level: 5,
+                pokedexId: "DRACAUFEU",
+                level: 10,
                 is_shiny: false,
             },
             {
-                pokedexId: "CARAPUCE",
-                level: 6,
+                pokedexId: "TORTANK",
+                level: 10,
                 is_shiny: false,
             },
             {
-                pokedexId: "BULBIZARRE",
-                level: 7,
+                pokedexId: "FLORIZARRE",
+                level: 10,
                 is_shiny: false,
             }
         ]
