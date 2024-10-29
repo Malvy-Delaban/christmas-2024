@@ -5,6 +5,7 @@ function getPokemonBar(team, pokemon, isLeft) {
     const pokemonImg = document.createElement('img');
     pokemonImg.src = pokemon.sprite;
     pokemonImg.className = 'duel-enemy-pokemon-img';
+    pokemonImg.id = isLeft ? 'enemy-pokemon-sprite' : 'player-pokemon-sprite';
 
     const pokemonStats = document.createElement('div');
     pokemonStats.src = pokemon.sprite;
@@ -25,19 +26,22 @@ function getPokemonBar(team, pokemon, isLeft) {
 
     const pokemonName = document.createElement('div');
     pokemonName.className = 'duel-enemy-pokemon-name';
+    pokemonName.id = isLeft ? 'enemy-pokemon-name' : 'player-pokemon-name';
     pokemonName.textContent = pokedex[pokemon.pokedexId].name;
     pokemonStats.appendChild(pokemonName);
 
     const pokemonLevelAndType = document.createElement('div');
     pokemonLevelAndType.className = 'duel-enemy-pokemon-level-and-type';
+    pokemonLevelAndType.id = isLeft ? 'enemy-pokemon-level-and-type' : 'player-pokemon-level-and-type';
     pokemonStats.appendChild(pokemonLevelAndType);
 
     const pokemonLevel = document.createElement('div');
     pokemonLevel.className = 'duel-enemy-pokemon-level';
     pokemonLevel.textContent = "niv. " + pokemon.level;
+    pokemonLevel.id = isLeft ? 'enemy-pokemon-level' : 'player-pokemon-level';
     pokemonLevelAndType.appendChild(pokemonLevel);
 
-    const typeChip = createTypeChipFromPokedexID(pokemon.pokedexId);
+    const typeChip = createTypeChipFromPokedexIDDuel(pokemon.pokedexId, isLeft);
     pokemonLevelAndType.appendChild(typeChip);
 
     const healthBar = document.createElement('div');
@@ -45,6 +49,7 @@ function getPokemonBar(team, pokemon, isLeft) {
     const healthBarFilling = document.createElement('div');
     healthBarFilling.classList.add('duel-health-bar-filling');
     healthBarFilling.style.width = getHPbarSize(pokemon);
+    healthBarFilling.id = isLeft ? 'enemy-pokemon-health' : 'player-pokemon-health';
     healthBarFilling.style.backgroundColor = getHPbarColor(pokemon);
     healthBar.appendChild(healthBarFilling);
     pokemonStats.appendChild(healthBar);
@@ -186,12 +191,6 @@ function makeEnemyTurn(enemy, playerTeam) {
     showNotification("Tour de l'enemie", "VALIDATION");
 }
 
-function makePlayerTurn(enemy, playerTeam) {
-    // TODO
-    showNotification("Tour du joueur", "VALIDATION");
-    DelayNode();
-}
-
 function areBothTeamValid(enemy, playerTeam) {
     let enemyTeamKOs = enemy.team.filter(value => value.hp === 0).length;
     let playerTeamKOs = playerTeam.filter(value => value.hp === 0).length;
@@ -202,16 +201,42 @@ function areBothTeamValid(enemy, playerTeam) {
         return true;
 }
 
-function updateRandomTypeUI(randomType) {
-    // TODO
-}
-
 function updateDuelUi(enemy, playerTeam) {
+    const enemyPokemonSprite = document.getElementById("enemy-pokemon-sprite");
+    enemyPokemonSprite.src = enemy.team[0].sprite;
+
+    const enemyPokemonName = document.getElementById("enemy-pokemon-name");
+    enemyPokemonName.textContent = pokedex[enemy.team[0].pokedexId].name;
+
+    const enemyPokemonLevel = document.getElementById("enemy-pokemon-level");
+    enemyPokemonLevel.textContent = "niv. " + enemy.team[0].level;
+
+    const enemyPokemonLevelAndType = document.getElementById("enemy-pokemon-level-and-type");
+    let enemyPokemonType = document.getElementById("enemy-pokemon-type");
+    enemyPokemonType.remove();
+    enemyPokemonType = createTypeChipFromPokedexIDDuel(enemy.team[0].pokedexId, true);
+    enemyPokemonLevelAndType.appendChild(enemyPokemonType);
+
+    const enemyPokemonHealth = document.getElementById("enemy-pokemon-health");
+    enemyPokemonHealth.style.width = getHPbarSize(enemy.team[0]);
+    enemyPokemonHealth.style.backgroundColor = getHPbarColor(enemy.team[0]);  
+}
+
+function duelIsOver(playerTeam) {
     // TODO
 }
 
-function checkForKO(enemy, playerTeam) {
-    // TODO : switch pokemons places if needed
+function switchEnemyPokemon(enemy) {
+    const koPokemon = enemy.team.shift();
+    enemy.team.push(koPokemon);
+}
+
+function attackEnemy(enemy, playerTeam, damages) {
+    enemy.team[0].hp -= damages;
+
+    if (enemy.team[0].hp <= 0 && areBothTeamValid(enemy, playerTeam))
+        switchEnemyPokemon(enemy);
+    updateDuelUi(enemy, playerTeam);
 }
 
 function showButtonsChoices(enemy, playerTeam, randomType) {
@@ -226,8 +251,8 @@ function showButtonsChoices(enemy, playerTeam, randomType) {
     const ownTypeButton = document.getElementById("duel-own-type-button");
     ownTypeButton.textContent = getAttackNameByRarity(pokedex[playerTeam[0].pokedexId].rarity, pokedex[playerTeam[0].pokedexId].type, false);
     ownTypeButton.addEventListener('click', () => {
-        console.log(getAttackDamage(playerTeam[0], enemy.team[0], false, null));
-        // TODO : Attack
+        let damages = getAttackDamage(playerTeam[0], enemy.team[0], false, null);
+        attackEnemy(enemy, playerTeam, damages);
     });
 
     const ownTypeLogo = document.getElementById("duel-button-own-logo");
@@ -236,8 +261,8 @@ function showButtonsChoices(enemy, playerTeam, randomType) {
     const randomTypeButton = document.getElementById("duel-random-type-button");
     randomTypeButton.textContent = getAttackNameByRarity(null, randomType, true);
     randomTypeButton.addEventListener('click', () => {
-        console.log(getAttackDamage(playerTeam[0], enemy.team[0], true, randomType));
-        // TODO : Attack
+        let damages = getAttackDamage(playerTeam[0], enemy.team[0], true, randomType);
+        attackEnemy(enemy, playerTeam, damages);
     });
 
     const randomTypeLogo = document.getElementById("duel-button-random-logo");
@@ -255,10 +280,11 @@ function hideButtonsChoices() {
 function gameLoop(enemy, playerTeam) {
     let randomType = getRandomType(pokedex[playerTeam[0].pokedexId].type);
     showButtonsChoices(enemy, playerTeam, randomType);
+    switchEnemyPokemon(enemy);
+    updateDuelUi(enemy, playerTeam)
     // while (areBothTeamValid(enemy, playerTeam)) {
     //     let randomType = getRandomType(pokedex[playerTeam[0].pokedexId].type);
     //     showButtonsChoices(enemy, playerTeam, randomType);
-    //     makePlayerTurn(enemy, playerTeam, randomType);
     //     hideButtonsChoices();
     //     updateDuelUi(enemy, playerTeam);
     //     checkForKO(enemy, playerTeam);

@@ -34,9 +34,11 @@ function getHPinPercent(pokemon) {
 
 function getHPbarSize(pokemon) {
     let percent = getHPinPercent(pokemon);
+    if (percent <= 0)
+        return 0;
     if (percent > 98)
-        return (`calc(${getHPinPercent(pokemon)}% - 6px)`);
-    return (`${getHPinPercent(pokemon)}%`);
+        return (`calc(${percent}% - 6px)`);
+    return (`${percent}%`);
 }
 
 function getHPbarColor(pokemon) {
@@ -78,6 +80,20 @@ function createTypeChipPopupDetail(pokemon) {
 function createTypeChipFromPokedexID(PokedexID) {
     const typeChip = document.createElement('div');
     typeChip.classList.add('popup-evolution-type-chip');
+    typeChip.style.backgroundColor = pokedex[PokedexID].type.color;
+    
+    const typeChipText = document.createElement('p');
+    typeChipText.textContent = pokedex[PokedexID].type.name;
+    typeChipText.classList.add('popup-evolution-type-chip-text');
+    typeChip.appendChild(typeChipText);
+
+    return typeChip
+}
+
+function createTypeChipFromPokedexIDDuel(PokedexID, isEnemy) {
+    const typeChip = document.createElement('div');
+    typeChip.classList.add('popup-evolution-type-chip');
+    typeChip.id = isEnemy ? "enemy-pokemon-type" : "player-pokemon-type";
     typeChip.style.backgroundColor = pokedex[PokedexID].type.color;
     
     const typeChipText = document.createElement('p');
@@ -406,8 +422,6 @@ function getAttackDamage(attackingPokemon, defendingPokemon, isRandomAttack, ran
     } else if (listOfNulls.includes(defendingType)) {
         typeAdvantageModifier = 0;
     }
-
-    console.log(typeAdvantageModifier);
 
     let randomNerfModifier = isRandomAttack ? 0.8 : 1;
     let damages = attackingPokemon.attack * typeAdvantageModifier * randomNerfModifier;

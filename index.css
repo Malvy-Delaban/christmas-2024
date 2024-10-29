@@ -436,6 +436,7 @@ body {
     height: calc(100% - 6px);
     border-radius: 2rem;
     margin-left: 3px;
+    transition: 0.5s ease;
 }
 
 .duel-player {

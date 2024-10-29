@@ -13,7 +13,7 @@ const forceMapCasesUpdate = false; // While developping, will force map cases to
 const forceOwnedUpdate = false; // While developping, will force owned pokemon to update at each session
 const forceInventoryUpdate = false; // While developping, will force inventory to update at each session
 const forceTrainerCardUpdate = false; // While developping, will force trainer card to update at each session
-const forceEnemyTrainerUpdate = false; // While developping, will force enemy trainers to update at each session
+const forceEnemyTrainerUpdate = true; // While developping, will force enemy trainers to update at each session
 
 function CreatePokedex() {
     let stored_content = localStorage.getItem("pokedex");
