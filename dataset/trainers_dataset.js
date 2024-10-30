@@ -20,7 +20,7 @@ let setup_trainers = [
                 is_shiny: false,
             },
             {
-                pokedexId: "TORTANK",
+                pokedexId: "SALAMECHE",
                 level: 2,
                 is_shiny: false,
             },
