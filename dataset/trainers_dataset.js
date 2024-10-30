@@ -7,20 +7,26 @@ let setup_trainers = [
         unlock_day: new Date("2024-12-01"),
         has_been_used: false,
         base_level: 5,
+        rewards: [
+            {
+                item: Items.ORAN_BERRY,
+                quantity: 1,
+            },
+        ],
         pokemons: [
             {
-                pokedexId: "DRACAUFEU",
-                level: 10,
+                pokedexId: "CORNEBRE",
+                level: 1,
                 is_shiny: false,
             },
             {
                 pokedexId: "TORTANK",
-                level: 10,
+                level: 2,
                 is_shiny: false,
             },
             {
-                pokedexId: "FLORIZARRE",
-                level: 10,
+                pokedexId: "BULBIZARRE",
+                level: 2,
                 is_shiny: false,
             }
         ]

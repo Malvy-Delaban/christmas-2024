@@ -430,17 +430,52 @@ function getAttackDamage(attackingPokemon, defendingPokemon, isRandomAttack, ran
     return damages;
 }
 
+function getAttackEfficiency(attackingPokemon, defendingPokemon, isRandomAttack, randomType) {
+    let attackingType = isRandomAttack ? randomType : pokedex[attackingPokemon.pokedexId].type;
+    let defendingType = getTypeKeyById(pokedex[defendingPokemon.pokedexId].type.id);
+    let listOfStrength = attackingType.strength;
+    let listOfWeakness = attackingType.weakness;
+    let listOfNulls = attackingType.nullAttacks;
+
+    if (listOfStrength.includes(defendingType)) {
+        return 2
+    } else if (listOfWeakness.includes(defendingType)) {
+        return 0.5
+    } else if (listOfNulls.includes(defendingType)) {
+        return 0
+    }
+
+    return 1;
+}
+
 function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
   
 async function runWithDelay(delayInSecondes) {
-    console.log("Wait for 2 seconds...");
     await delay(delayInSecondes * 1000);
-    console.log("2 seconds have passed!");
 }
 
 function removeAllEventListeners(element) {
     const clone = element.cloneNode(true);
     element.parentNode.replaceChild(clone, element);
+}
+
+function updateOwnedPokemonHpAfterDuel(playerTeam) {
+    console.log(playerTeam);
+    console.log(owned_pokemons);
+
+    playerTeam.forEach(duelPokemon => {
+        let originalPoke = owned_pokemons.find(value => value.uuid === duelPokemon.uuid);
+        originalPoke.hp = duelPokemon.hp <= 0 ? 0 : duelPokemon.hp;
+    });
+    updateOwnedPokemons();
+}
+
+function levelUpPokemon(pokemonId) {
+    let pokeToLevelUp = owned_pokemons.find(value => value.uuid === pokemonId);
+    pokeToLevelUp.level++;
+    pokeToLevelUp.max_hp = getMaxHpOfPokemon(pokeToLevelUp.pokedexId, pokeToLevelUp.level);
+    pokeToLevelUp.attack = getAttackOfPokemon(pokeToLevelUp.pokedexId, pokeToLevelUp.level);
+    pokeToLevelUp.hp = pokeToLevelUp.max_hp;
 }
