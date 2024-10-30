@@ -36,6 +36,7 @@
 <script src="JS_files/generateTrainerCardPopup.js"></script>
 <script src="JS_files/generateChangeTrainerImgPopup.js"></script>
 <script src="JS_files/generateEnterEventCodePopup.js"></script>
+<script src="JS_files/generateStartDuelPopup.js"></script>
 <script src="JS_files/dailyEvents.js"></script>
 <script src="JS_files/generateDuel.js"></script>
 
@@ -53,8 +54,8 @@
         <div id="routes-container">            
         </div>
         <div class="bottom-ui">
-            <div class="button-group">
-                <button class="action-button" onclick="generateDuel(enemy_trainers[0])">Duel du jour !</button>
+            <div class="button-group" id="button-group">
+                <!-- <button class="action-button" onclick="generateStartDuelPopup()">Duel du jour !</button> -->
             </div>
             <div class="bottom-menu">
                 <div class="menu-item" onclick="generateInventoryPopup()">
@@ -80,5 +81,6 @@
 
 <script>
     GenerateRouteListDisplay();
+    GenerateDuelButtonDisplay();
 </script>
 </html>

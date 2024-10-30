@@ -226,6 +226,7 @@
 .detail-your-pokemon-detail,
 .detail-confirm-buying,
 .detail-start-route,
+.detail-start-duel,
 .detail-trainer-card,
 .detail-enter-code {
     display: flex;
@@ -354,6 +355,7 @@
 
 .popup-confirm-buying,
 .popup-start-route,
+.popup-start-duel,
 .popup-trainer-card,
 .popup-enter-code {
     position: relative;
@@ -371,7 +373,9 @@
 .popup-put-in-team-title,
 .popup-confirm-buying-title,
 .popup-start-route-title,
+.popup-start-duel-title,
 .popup-start-route-route-name,
+.popup-start-route-duel-name,
 .popup-trainer-card-title,
 .popup-enter-code-title {
     color: #4B3768;
@@ -386,7 +390,8 @@
     margin-top: 2rem;
 }
 
-.popup-start-route-route-level {
+.popup-start-route-route-level,
+.popup-start-route-duel-level {
     margin: 0;
     color: #4B3768;
     font-size: 3rem;
@@ -648,6 +653,7 @@
 .popup-content-item-price-text-with-margin,
 .popup-content-item-quantity-text-with-margin,
 .popup-start-route-button-text,
+.popup-start-duel-button-text,
 .popup-enter-code-button-text {
     margin-right: 1rem;
     color: white;
@@ -689,7 +695,8 @@
     width: 90%;
 }
 
-.detail-start-route-img {
+.detail-start-route-img,
+.detail-start-duel-img {
     width: 90%;
     margin-top: 5rem;
 }
@@ -709,6 +716,7 @@
 
 .popup-confirm-buying-button,
 .popup-start-route-button,
+.popup-start-duel-button,
 .popup-trainer-card-button,
 .popup-enter-code-button {
     display: flex;
