@@ -375,8 +375,8 @@
 .popup-start-route-title,
 .popup-start-duel-title,
 .popup-start-route-route-name,
-.popup-start-route-duel-name,
 .popup-trainer-card-title,
+.popup-start-route-duel-name,
 .popup-enter-code-title {
     color: #4B3768;
     font-size: 3.5rem;
@@ -386,16 +386,26 @@
     margin: 0;
 }
 
+.popup-start-route-duel-name {
+    margin-top: 3rem;
+}
+
 .popup-start-route-route-name {
     margin-top: 2rem;
 }
 
-.popup-start-route-route-level,
-.popup-start-route-duel-level {
+.popup-start-route-route-level {
     margin: 0;
     color: #4B3768;
     font-size: 3rem;
     margin-bottom: 3rem;
+}
+
+.popup-start-route-duel-level,
+.popup-start-route-duel-ask-leader {
+    margin: 0;
+    color: #4B3768;
+    font-size: 3rem;
 }
 
 .popup-put-in-team-pokemon-list {
@@ -653,7 +663,6 @@
 .popup-content-item-price-text-with-margin,
 .popup-content-item-quantity-text-with-margin,
 .popup-start-route-button-text,
-.popup-start-duel-button-text,
 .popup-enter-code-button-text {
     margin-right: 1rem;
     color: white;
@@ -662,6 +671,7 @@
 }
 
 .popup-start-route-button-text,
+.popup-start-duel-button-text,
 .popup-enter-code-button-text {
     margin-right: 0;
     color: white;
@@ -695,10 +705,14 @@
     width: 90%;
 }
 
-.detail-start-route-img,
-.detail-start-duel-img {
+.detail-start-route-img {
     width: 90%;
     margin-top: 5rem;
+}
+
+.detail-start-duel-img {
+    width: 90%;
+    margin-bottom: 5rem;
 }
 
 .popup-confirm-buying-buttons-container {
@@ -730,6 +744,10 @@
     font-size: 2rem;
     font-weight: bold;
     padding: 0 3rem;
+}
+
+.popup-start-duel-button {
+    opacity: 50%;
 }
 
 .popup-subtitle-line {
@@ -782,4 +800,23 @@
 
 .popup-trainer-card-seen-pokemons {
     margin-top: 2rem;
+}
+
+.popup-start-duel-pokemon-list-icon {
+    height: 5rem;
+}
+
+.popup-start-duel-pokemon-own-icon {
+    max-width: 30%;
+    opacity: 100%;
+}
+
+.popup-start-duel-pokemon-own-icon-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.popup-start-duel-pokemon-own-icon-unselected {
+    opacity: 30%;
 }

@@ -479,3 +479,9 @@ function levelUpPokemon(pokemonId) {
     pokeToLevelUp.attack = getAttackOfPokemon(pokeToLevelUp.pokedexId, pokeToLevelUp.level);
     pokeToLevelUp.hp = pokeToLevelUp.max_hp;
 }
+
+function makePokemonFirstInOwnedPokemons(uuid) {
+    const foundItem = owned_pokemons.find(item => item.uuid === uuid);
+    owned_pokemons = foundItem ? [foundItem, ...owned_pokemons.filter(item => item.uuid !== uuid)] : owned_pokemons;
+    updateOwnedPokemons();
+}
