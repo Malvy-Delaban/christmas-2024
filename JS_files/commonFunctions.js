@@ -459,12 +459,10 @@ async function runWithDelay(delayInSecondes) {
 function removeAllEventListeners(element) {
     const clone = element.cloneNode(true);
     element.parentNode.replaceChild(clone, element);
+    return clone;
 }
 
-function updateOwnedPokemonHpAfterDuel(playerTeam) {
-    console.log(playerTeam);
-    console.log(owned_pokemons);
-
+function updateOwnedPokemonHpAfterDuel() {
     playerTeam.forEach(duelPokemon => {
         let originalPoke = owned_pokemons.find(value => value.uuid === duelPokemon.uuid);
         originalPoke.hp = duelPokemon.hp <= 0 ? 0 : duelPokemon.hp;

@@ -13,17 +13,17 @@ function getOwnPokemonListSelection() {
 }
 
 function makeSelectionPokemonClickable(confirmButtonContainer, trainer, popupBackgroundContainer) {
-    console.log("called");
     const images = document.querySelectorAll('.popup-start-duel-pokemon-own-icon');
-    console.log(images);
 
     images.forEach(image => {
         image.addEventListener('click', () => {
+            confirmButtonContainer = removeAllEventListeners(confirmButtonContainer);
             makePokemonFirstInOwnedPokemons(image.dataset.uuid);
             images.forEach(img => img.classList.add('popup-start-duel-pokemon-own-icon-unselected'));
             image.classList.remove('popup-start-duel-pokemon-own-icon-unselected');
 
             confirmButtonContainer.style.opacity = "100%";
+    
             confirmButtonContainer.addEventListener('click', () => {
                 generateDuel(trainer);
                 popupBackgroundContainer.remove(); // Ferme le popup en supprimant l'élément
@@ -69,6 +69,9 @@ function generateStartDuelPopup() {
     const confirmButtonContainer = document.createElement('div');
     confirmButtonContainer.classList.add('popup-start-duel-button');
     confirmButtonContainer.style.cursor = 'pointer';
+    confirmButtonContainer.addEventListener('click', () => {
+        showNotification("Sélectionnez un pokémon en tête d'équipe", "error");
+    })
 
     const routeLevel = document.createElement('p');
     routeLevel.classList.add('popup-start-route-duel-level');

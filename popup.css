@@ -1,4 +1,5 @@
-.popup-background {
+.popup-background,
+.popup-background-switch-pokemon {
     top: 0;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.8);
@@ -7,6 +8,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.popup-background-switch-pokemon {
+    z-index: 12;
 }
 
 /* Conteneur principal du popup */
@@ -804,6 +809,18 @@
 
 .popup-start-duel-pokemon-list-icon {
     height: 5rem;
+}
+
+.popup-switch-pokemon-pokemon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 30%;
+}
+
+.popup-switch-pokemon-pokemon-img {
+    width: 100%;
 }
 
 .popup-start-duel-pokemon-own-icon {

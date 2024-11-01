@@ -15,20 +15,10 @@ let setup_trainers = [
         ],
         pokemons: [
             {
-                pokedexId: "CORNEBRE",
+                pokedexId: "CARAPUCE",
                 level: 1,
                 is_shiny: false,
             },
-            {
-                pokedexId: "SALAMECHE",
-                level: 2,
-                is_shiny: false,
-            },
-            {
-                pokedexId: "BULBIZARRE",
-                level: 2,
-                is_shiny: false,
-            }
         ]
     },
 ];
