@@ -76,6 +76,7 @@ function chosePokemon(pokemon, currentCase) {
     updateOwnedPokemons();
     forceInTeamIfNeeded();
     updateMapCases();
+    updateDuelButton();
 
     const divsToDelete = document.querySelectorAll('div.route-display');
     divsToDelete.forEach(function(div) {

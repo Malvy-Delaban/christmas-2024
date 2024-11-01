@@ -32,10 +32,8 @@ function makeSelectionPokemonClickable(confirmButtonContainer, trainer, popupBac
     });
 }
 
-function generateStartDuelPopup() {
+function generateStartDuelPopup(trainer) {
     document.body.style.overflow = 'hidden';
-
-    const trainer = enemy_trainers[0];
 
     // Créer les éléments principaux
     const popupBackgroundContainer = document.createElement('div');
@@ -113,14 +111,49 @@ function generateStartDuelPopup() {
     makeSelectionPokemonClickable(confirmButtonContainer, trainer, popupBackgroundContainer);
 }
 
+function checkAvailableDuels() {
+    let date = new Date();
+
+    let trainersFound = enemy_trainers.filter(trainer => isToday(trainer.unlock_day) && trainer.has_been_used == false);
+    let trainersIdFound = [];
+    trainersFound.forEach(trainer => trainersIdFound.push(trainer.id));
+
+    return (trainersIdFound);
+}
+
 function GenerateDuelButtonDisplay() {
-    // TODO check date
+    let trainersId = checkAvailableDuels();
     const actionButton = document.createElement('button');
-    actionButton.className = 'action-button';
-    actionButton.textContent = 'Duel du jour !';
-    actionButton.addEventListener('click', () => {
-        generateStartDuelPopup()
-    });
+    actionButton.id = "duel-button";
+
+    if (trainersId && trainersId.length) {
+        actionButton.className = 'action-button';
+        actionButton.textContent = 'Duel du jour !';
+        checkInTeamNumber();
+        if (!owned_pokemons || owned_pokemons.length < 1 || getInTeamPokemons().length < 1) {
+            actionButton.addEventListener('click', () => showNotification("Vous n'avez pas de pokémon dans votre équipe", "error"));
+        } else {
+            actionButton.addEventListener('click', () => prepareStartDuelPopup());
+        }
+    }
+
     const bottomUiDiv = document.getElementById('button-group');
     bottomUiDiv.appendChild(actionButton);
+}
+
+function prepareStartDuelPopup() {
+    let trainersId = checkAvailableDuels();
+    let trainer = enemy_trainers.find(value => value.id === trainersId[0]);
+    generateStartDuelPopup(trainer);
+}
+
+function updateDuelButton() {
+    let actionButton = document.getElementById('duel-button');
+    actionButton = removeAllEventListeners(actionButton);
+
+    if (!owned_pokemons || owned_pokemons.length < 1 || getInTeamPokemons().length < 1) {
+        actionButton.addEventListener('click', () => showNotification("Vous n'avez pas de pokémon dans votre équipe", "error"));
+    } else {
+        actionButton.addEventListener('click', () => prepareStartDuelPopup());
+    }
 }

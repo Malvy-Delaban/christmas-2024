@@ -181,6 +181,8 @@ function generateBaseHTMLStructure(enemy) {
 }
 
 function generateDuel(trainer) {
+    trainer.has_been_used = true;
+    updateEnemyTrainers();
     const enemy = {
         trainer: trainer,
         team: getPokemonsOfTrainer(trainer)

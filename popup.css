@@ -834,6 +834,7 @@
     justify-content: center;
     margin-bottom: 5rem;
     gap: 1rem;
+    width: 100%;
 }
 
 .popup-start-duel-pokemon-own-icon-unselected {
