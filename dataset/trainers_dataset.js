@@ -4,7 +4,7 @@ let setup_trainers = [
         code: '',
         name: "Zoe",
         sprite: "./sprites/trainers/trainer_4.png",
-        unlock_day: new Date("2024-11-01"),
+        unlock_day: new Date("2024-12-01"),
         has_been_used: false,
         has_been_beaten: false,
         base_level: 5,
