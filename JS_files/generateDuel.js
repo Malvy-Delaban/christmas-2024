@@ -264,7 +264,6 @@ function updateDuelUi(enemy) {
 }
 
 function duelIsOver(enemy, didPlayerWin) {
-    showNotification(didPlayerWin ? "Vous avez gagné !" : "Vous avez été vaincu(e)", "VALIDATION");
     const duelCard = document.getElementById("duel-card");
     updateOwnedPokemonHpAfterDuel();
     duelCard.remove();
@@ -280,10 +279,13 @@ function duelIsOver(enemy, didPlayerWin) {
         enemy.trainer.rewards.forEach(reward => {
             addItemInInventory(reward.item, reward.quantity);
         });
+        generateDuelWinPopup(enemy.trainer);
     } else {
+        playerTeam.forEach(pokemon => pokemon.hasLeveledUp = false);
         let pokeIdOfLevelUp = Math.floor(Math.random() * playerTeam.length);
         levelUpPokemon(playerTeam[pokeIdOfLevelUp].uuid);
         playerTeam[pokeIdOfLevelUp].hasLeveledUp = true;
+        generateDuelLosePopup(enemy.trainer);
     }
     // display victory / defeat screen
 }

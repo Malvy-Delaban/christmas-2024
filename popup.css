@@ -10,6 +10,17 @@
     align-items: center;
 }
 
+.popup-background-end {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
 .popup-background-switch-pokemon {
     z-index: 12;
 }
@@ -232,6 +243,7 @@
 .detail-confirm-buying,
 .detail-start-route,
 .detail-start-duel,
+.detail-end-duel,
 .detail-trainer-card,
 .detail-enter-code {
     display: flex;
@@ -360,6 +372,7 @@
 
 .popup-confirm-buying,
 .popup-start-route,
+.popup-end-duel,
 .popup-start-duel,
 .popup-trainer-card,
 .popup-enter-code {
@@ -378,6 +391,7 @@
 .popup-put-in-team-title,
 .popup-confirm-buying-title,
 .popup-start-route-title,
+.popup-end-duel-title,
 .popup-start-duel-title,
 .popup-start-route-route-name,
 .popup-trainer-card-title,
@@ -654,6 +668,20 @@
     text-align: left;
 }
 
+.popup-end-duel-pokemon-level-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0;
+    height: 5.5rem;
+    border-radius: 3rem;
+    color: white;
+    background-color: #685189;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 .popup-content-item-quantity {
     width: 6rem;
 }
@@ -668,6 +696,7 @@
 .popup-content-item-price-text-with-margin,
 .popup-content-item-quantity-text-with-margin,
 .popup-start-route-button-text,
+.popup-end-duel-button-text,
 .popup-enter-code-button-text {
     margin-right: 1rem;
     color: white;
@@ -677,6 +706,7 @@
 
 .popup-start-route-button-text,
 .popup-start-duel-button-text,
+.popup-end-duel-button-text,
 .popup-enter-code-button-text {
     margin-right: 0;
     color: white;
@@ -736,6 +766,7 @@
 .popup-confirm-buying-button,
 .popup-start-route-button,
 .popup-start-duel-button,
+.popup-end-duel-button,
 .popup-trainer-card-button,
 .popup-enter-code-button {
     display: flex;
@@ -749,6 +780,10 @@
     font-size: 2rem;
     font-weight: bold;
     padding: 0 3rem;
+}
+
+.popup-end-duel-button {
+    margin-top: 3rem;
 }
 
 .popup-start-duel-button {
@@ -839,4 +874,39 @@
 
 .popup-start-duel-pokemon-own-icon-unselected {
     opacity: 30%;
+}
+
+.popup-end-duel-pokemon-list {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.popup-end-duel-pokemon {
+    flex: 1;
+    max-width: 25%;
+}
+
+.popup-end-duel-pokemon-img {
+    flex: 1;
+    width: 100%;
+}
+
+.popup-end-duel-pokemon-level-up {
+
+}
+
+.popup-end-duel-rewards {
+    margin-top: 2rem;
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.popup-end-duel-reward {
+    position: relative;
 }

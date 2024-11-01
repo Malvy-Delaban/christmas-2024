@@ -476,9 +476,13 @@ function updateOwnedPokemonHpAfterDuel() {
 
 function levelUpPokemon(pokemonId) {
     let pokeToLevelUp = owned_pokemons.find(value => value.uuid === pokemonId);
+    let isFullHealth = pokeToLevelUp.max_hp === pokeToLevelUp.hp;
     pokeToLevelUp.level++;
     pokeToLevelUp.max_hp = getMaxHpOfPokemon(pokeToLevelUp.pokedexId, pokeToLevelUp.level);
     pokeToLevelUp.attack = getAttackOfPokemon(pokeToLevelUp.pokedexId, pokeToLevelUp.level);
+    if (isFullHealth)
+        pokeToLevelUp.hp = pokeToLevelUp.max_hp;
+    updateOwnedPokemons();
 }
 
 function makePokemonFirstInOwnedPokemons(uuid) {

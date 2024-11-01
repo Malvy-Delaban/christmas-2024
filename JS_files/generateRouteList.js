@@ -5,7 +5,6 @@ function GetAllValidRouteToDisplay() {
         if (map_cases[i].unlock_day !== -1 && map_cases[i].has_been_used == false && isDatePastOrWithinNext3Days(map_cases[i].unlock_day))
             routeToDisplay.push(map_cases[i]);
 
-    console.log(routeToDisplay);
     return routeToDisplay;
 }
 

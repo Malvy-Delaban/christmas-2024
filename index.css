@@ -40,6 +40,15 @@ body {
     background: radial-gradient(#463460, #120F16);
 }
 
+.choice-card-end-duel {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background: radial-gradient(#463460, #120F16);
+}
+
 .choice-card-title {
     color: white;
     font-size: 4rem;
@@ -376,6 +385,24 @@ body {
     width: 100%;
     object-fit: contain;
     max-height: 80%;
+}
+
+.duel-enemy-trainer-img-end-duel {
+    flex-grow: 1;
+    width: 100%;
+    object-fit: contain;
+    max-height: 80%;
+    position: fixed;
+    top: 0;
+}
+
+.duel-player-img-end-duel {
+    flex-grow: 1;
+    width: 100%;
+    object-fit: contain;
+    max-height: 80%;
+    position: fixed;
+    bottom: 0;
 }
 
 .duel-enemy-trainer-name {

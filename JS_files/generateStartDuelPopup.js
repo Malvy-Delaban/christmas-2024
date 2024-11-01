@@ -144,12 +144,16 @@ function GenerateDuelButtonDisplay() {
 function prepareStartDuelPopup() {
     let trainersId = checkAvailableDuels();
     let trainer = enemy_trainers.find(value => value.id === trainersId[0]);
-    generateStartDuelPopup(trainer);
+    if (trainer)
+        generateStartDuelPopup(trainer);
+    else
+        actionButton.addEventListener('click', () => showNotification("Un problème est survenu, essayez de recharger la page", "error"));
 }
 
 function updateDuelButton() {
     let actionButton = document.getElementById('duel-button');
-    actionButton = removeAllEventListeners(actionButton);
+    actionButton.remove();
+    GenerateDuelButtonDisplay();
 
     if (!owned_pokemons || owned_pokemons.length < 1 || getInTeamPokemons().length < 1) {
         actionButton.addEventListener('click', () => showNotification("Vous n'avez pas de pokémon dans votre équipe", "error"));

@@ -13,11 +13,15 @@ let setup_trainers = [
                 item: Items.ORAN_BERRY,
                 quantity: 1,
             },
+            {
+                item: Items.WATER_STONE,
+                quantity: 4,
+            },
         ],
         pokemons: [
             {
-                pokedexId: "CARAPUCE",
-                level: 1,
+                pokedexId: "MEWTWO",
+                level: 1000,
                 is_shiny: false,
             },
         ]
