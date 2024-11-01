@@ -816,7 +816,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 30%;
+    width: 18rem;
+    max-width: 45%;
 }
 
 .popup-switch-pokemon-pokemon-img {
@@ -832,6 +833,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 5rem;
+    gap: 1rem;
 }
 
 .popup-start-duel-pokemon-own-icon-unselected {

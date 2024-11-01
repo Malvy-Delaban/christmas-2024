@@ -16,7 +16,7 @@ let setup_trainers = [
         pokemons: [
             {
                 pokedexId: "CARAPUCE",
-                level: 1,
+                level: 10,
                 is_shiny: false,
             },
         ]

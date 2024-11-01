@@ -469,10 +469,11 @@ function showButtonsChoices(enemy, randomType) {
     const randomTypeLogo = document.getElementById("duel-button-random-logo");
     randomTypeLogo.src = "sprites/types/" + randomType.name + ".png";
 
-    const switchPokemonButton = document.getElementById("switch-pokemon");
+    let switchPokemonButton = document.getElementById("switch-pokemon");
+    switchPokemonButton = removeAllEventListeners(switchPokemonButton);
     switchPokemonButton.addEventListener('click', () => {
         generateSwitchPokemonPopup(enemy);
-    })
+    });
 }
 
 function hideButtonsChoices() {

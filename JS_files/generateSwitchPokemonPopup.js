@@ -24,6 +24,7 @@ function getSwitchPokemonListSelection() {
 
             const healthBar = document.createElement('div');
             healthBar.classList.add('duel-health-bar');
+            healthBar.classList.add('switch-health-bar');
             const healthBarFilling = document.createElement('div');
             healthBarFilling.classList.add('duel-health-bar-filling');
             healthBarFilling.style.width = getHPbarSize(pokemon);
@@ -43,19 +44,18 @@ function getSwitchPokemonListSelection() {
 function makePokemonFirstInPlayerTeam(uuid) {
     const foundItem = playerTeam.find(item => item.uuid === uuid);
     playerTeam = foundItem ? [foundItem, ...playerTeam.filter(item => item.uuid !== uuid)] : playerTeam;
-    return playerTeam;
 }
 
-function makeSelectionSwitchPokemonClickable(popupBackgroundContainer, enemy) {
+function makeSelectionSwitchPokemonClickable(enemy) {
     const images = document.querySelectorAll('.popup-switch-pokemon-pokemon-container');
 
     images.forEach(div => {
         div.addEventListener('click', () => {
-            console.log(playerTeam);
+            const containers = document.querySelectorAll('.popup-background-switch-pokemon');
+            containers.forEach(container => container.remove());
             makePokemonFirstInPlayerTeam(div.dataset.uuid);
-            console.log(playerTeam);
-            popupBackgroundContainer.remove();
             updateDuelUi(enemy);
+            makeEnemyTurn(enemy);
         });
     });
 }
@@ -81,7 +81,6 @@ function generateSwitchPokemonPopup(enemy) {
     closeButton.style.cursor = 'pointer';
 
     closeButton.addEventListener('click', () => {
-        document.body.style.overflow = '';
         popupBackgroundContainer.remove(); // Ferme le popup en supprimant l'élément
     });
     closeButton.classList.add('popup-close-icon');
@@ -99,5 +98,5 @@ function generateSwitchPokemonPopup(enemy) {
     popupBackgroundContainer.appendChild(popupContainer);
     document.body.appendChild(popupBackgroundContainer);
 
-    makeSelectionSwitchPokemonClickable(popupBackgroundContainer, enemy);
+    makeSelectionSwitchPokemonClickable(enemy);
 }
