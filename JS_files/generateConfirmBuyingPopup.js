@@ -49,6 +49,7 @@ function generateConfirmBuyingPopup(item) {
     if (hasEnoughItemInInventory(Items.ORAN_BERRY, item.shop_price)) {
         confirmButtonContainer.addEventListener('click', () => {
             removeItemInInventory(Items.ORAN_BERRY, item.shop_price);
+            showNotification("Achat éfféctué", "validation");
             addItemInInventory(item, 1);
             popupBackgroundContainer.remove(); // Ferme le popup en supprimant l'élément
         });

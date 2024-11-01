@@ -194,8 +194,19 @@ body {
     flex-direction: column;
 }
 
+.image-card-container,
 .image-card {
     width: 100%;
+    position: relative;
+}
+
+.image-card-lock {
+    position: absolute;
+    height: 50%;
+    opacity: 80%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .route-label {

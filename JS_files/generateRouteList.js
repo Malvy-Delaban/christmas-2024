@@ -2,9 +2,10 @@ function GetAllValidRouteToDisplay() {
     let routeToDisplay = [];
 
     for (let i = 0; i < Object.keys(map_cases).length; i++)
-        if (map_cases[i].unlock_day !== -1 && map_cases[i].has_been_used == false)
+        if (map_cases[i].unlock_day !== -1 && map_cases[i].has_been_used == false && isDatePastOrWithinNext3Days(map_cases[i].unlock_day))
             routeToDisplay.push(map_cases[i]);
 
+    console.log(routeToDisplay);
     return routeToDisplay;
 }
 
@@ -22,11 +23,19 @@ function GenerateSingleRouteDisplay(route) {
     const routeDisplay = document.createElement('div');
     routeDisplay.classList.add('route-display');
 
+    const imgElementContainer = document.createElement('div');
+    imgElementContainer.classList.add('image-card-container');
+
     // Créer l'élément img avec la source et l'attribut alt
     const imgElement = document.createElement('img');
     imgElement.src = route.sprite;
     imgElement.alt = "route picture";
     imgElement.classList.add('image-card');
+
+    const imgLock = document.createElement('img');
+    imgLock.src = "sprites/misc/lock_icon.png";
+    imgLock.alt = "lock icon";
+    imgLock.classList.add('image-card-lock');
 
     // Créer l'élément div pour le label
     const labelElement = document.createElement('div');
@@ -34,12 +43,20 @@ function GenerateSingleRouteDisplay(route) {
     labelElement.textContent = currentDate >= route.unlock_day ? "Disponible maintenant !" : `Disponible le ${formatDate(route.unlock_day)}`;
 
     // Ajouter l'image et le label dans le 'route-display'
-    routeDisplay.appendChild(imgElement);
-    routeDisplay.appendChild(labelElement);
+    imgElementContainer.appendChild(imgElement);
+    if (currentDate < route.unlock_day) {
+        imgElementContainer.appendChild(imgLock);
+        routeDisplay.addEventListener('click', function() {
+            showNotification(`Disponible le ${formatDate(route.unlock_day)} à minuit`, "validation");
+        });
+    } else {
+        routeDisplay.addEventListener('click', function() {
+            generateStartRoutePopup(route);
+        });
+    }
 
-    routeDisplay.addEventListener('click', function() {
-        generateStartRoutePopup(route);
-    });
+    routeDisplay.appendChild(imgElementContainer);
+    routeDisplay.appendChild(labelElement);
 
     return routeDisplay;
 }
