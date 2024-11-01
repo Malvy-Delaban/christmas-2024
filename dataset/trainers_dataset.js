@@ -6,6 +6,7 @@ let setup_trainers = [
         sprite: "./sprites/trainers/trainer_4.png",
         unlock_day: new Date("2024-12-01"),
         has_been_used: false,
+        has_been_beaten: false,
         base_level: 5,
         rewards: [
             {
@@ -16,7 +17,7 @@ let setup_trainers = [
         pokemons: [
             {
                 pokedexId: "CARAPUCE",
-                level: 10,
+                level: 1,
                 is_shiny: false,
             },
         ]

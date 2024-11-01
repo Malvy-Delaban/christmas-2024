@@ -266,6 +266,8 @@ function duelIsOver(enemy, didPlayerWin) {
     const duelCard = document.getElementById("duel-card");
     updateOwnedPokemonHpAfterDuel();
     duelCard.remove();
+    enemy.trainer.has_been_beaten = true;
+    updateEnemyTrainers();
 
     if (didPlayerWin) {
         playerTeam.forEach(pokemon => {

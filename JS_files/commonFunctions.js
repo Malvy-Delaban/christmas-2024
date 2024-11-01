@@ -28,6 +28,10 @@ function updateTrainerCard() {
     localStorage.setItem("trainer_card", JSON.stringify(trainer_card));
 }
 
+function updateEnemyTrainers() {
+    localStorage.setItem("enemy_trainers", JSON.stringify(enemy_trainers));
+}
+
 function getHPinPercent(pokemon) {
     return (parseInt(pokemon.hp) / parseInt(pokemon.max_hp) * 100);
 }
@@ -475,7 +479,6 @@ function levelUpPokemon(pokemonId) {
     pokeToLevelUp.level++;
     pokeToLevelUp.max_hp = getMaxHpOfPokemon(pokeToLevelUp.pokedexId, pokeToLevelUp.level);
     pokeToLevelUp.attack = getAttackOfPokemon(pokeToLevelUp.pokedexId, pokeToLevelUp.level);
-    pokeToLevelUp.hp = pokeToLevelUp.max_hp;
 }
 
 function makePokemonFirstInOwnedPokemons(uuid) {
