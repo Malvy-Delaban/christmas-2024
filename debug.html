@@ -51,13 +51,13 @@
 <style>
     .debug-display {
         display: flex;
-        gap: 1rem;
+        gap: 0.5rem;
         flex-wrap: wrap;
     }
 
     .debug-item-container {
         height: 7rem;
-        width: 10rem;
+        width: 7rem;
     }
 
 .debug-item {
@@ -86,59 +86,105 @@
 
 <script>
 
-const debugDisplay = document.createElement('div');
-debugDisplay.className = "debug-display";
+function displaySpecific() {
+    const debugDisplay = document.createElement('div');
+    debugDisplay.className = "debug-display";
 
-const sortedPokedex = Object.values(pokedex).sort((pokemonA, pokemonB) => {
-    // return pokemonB.rarity.strength - pokemonA.rarity.strength;
-    return (pokemonB.max_hp_lvl1 + pokemonB.attack_lvl1) - (pokemonA.max_hp_lvl1 + pokemonA.attack_lvl1);
-});
+    const sortedPokedex = Object.values(pokedex).sort((pokemonA, pokemonB) => {
+        // return pokemonB.rarity.strength - pokemonA.rarity.strength;
+        return (pokemonB.max_hp_lvl1 + pokemonB.attack_lvl1) - (pokemonA.max_hp_lvl1 + pokemonA.attack_lvl1);
+    });
 
-let currentRarity = null;
-let rarityContainer = null;
-let hi = 0;
+    let currentRarity = null;
+    let rarityContainer = null;
+    let hi = 0;
 
-sortedPokedex.forEach(pokemon => {
-    // if (currentRarity !== pokemon.rarity.strength) {
-    //     currentRarity = pokemon.rarity.strength;
+    sortedPokedex.forEach(pokemon => {
+        const my_img_container = document.createElement('div');
+        my_img_container.className = 'debug-item-container';
 
-    //     rarityContainer = document.createElement('div');
-    //     rarityContainer.className = 'rarity-container';
+        const my_img = document.createElement('img');
+        my_img.className = 'debug-item';
 
-    //     const rarityTitle = document.createElement('h2');
-    //     rarityTitle.className = 'rarity-title';
-    //     rarityTitle.textContent = `Rarity : ${pokemon.rarity.name}`;
-    //     rarityTitle.style.color = pokemon.rarity.color;
-    //     rarityContainer.appendChild(rarityTitle);
+        const my_text = document.createElement('div');
+        my_text.className = 'debug-item-text';
+        my_text.textContent = pokemon.name + " " + hi;
 
-    //     debugDisplay.appendChild(rarityContainer);
-    // }
+        const key = getKeyPokedexFromId(pokemon.id);
+        my_img.src = GetSpriteByPokemon(key, false);
+        my_img.style.backgroundColor = pokemon.rarity.color;
 
-    // Create the image element for the Pokémon
-    const my_img_container = document.createElement('div');
-    my_img_container.className = 'debug-item-container';
+        if ((pokemon.rarity.name == "ULTRA" || pokemon.rarity.name == "EPIC") && !pokemon.isStarterLine) {
+            my_img_container.appendChild(my_img);
+            my_img_container.appendChild(my_text);
+            debugDisplay.appendChild(my_img_container);
+        }
+        hi++;
+    });
 
-    const my_img = document.createElement('img');
-    my_img.className = 'debug-item';
+    // Append the entire debug display to the body
+    document.body.appendChild(debugDisplay);
+}
 
-    const my_text = document.createElement('div');
-    my_text.className = 'debug-item-text';
-    my_text.textContent = pokemon.name + " " + hi;
+function displayCurrentlyFindable() {
+    let listOfFindable = [];
 
-    const key = getKeyPokedexFromId(pokemon.id);
-    my_img.src = GetSpriteByPokemon(key, false);
-    my_img.style.backgroundColor = pokemon.type.color;
+    map_cases.forEach(map => {
+        Object.keys(map.possible_pokemons).forEach(key => {
+            if (key && !listOfFindable.includes(pokedex[key]))
+                listOfFindable.push(pokedex[key]);
+        });
+    });
+    console.log(listOfFindable);
 
-    if (pokemon.rarity.name !== "LEGENDARY") {
-        my_img_container.appendChild(my_img);
-        my_img_container.appendChild(my_text);
-        debugDisplay.appendChild(my_img_container);
-    }
-    // rarityContainer.appendChild(my_img);
-    hi++;
-});
+    const debugDisplay = document.createElement('div');
+    debugDisplay.className = "debug-display";
 
-// Append the entire debug display to the body
-document.body.appendChild(debugDisplay);
+    const sortedPokedex = Object.values(listOfFindable).sort((pokemonA, pokemonB) => {
+        // return pokemonB.rarity.strength - pokemonA.rarity.strength;
+        // return (pokemonB.max_hp_lvl1 + pokemonB.attack_lvl1) - (pokemonA.max_hp_lvl1 + pokemonA.attack_lvl1);
+        return pokemonA.type.id - pokemonB.type.id;
+    });
+
+    let currentRarity = null;
+    let rarityContainer = null;
+    let hi = 0;
+
+    sortedPokedex.forEach(pokemon => {
+        const my_img_container = document.createElement('div');
+        my_img_container.className = 'debug-item-container';
+
+        const my_img = document.createElement('img');
+        my_img.className = 'debug-item';
+
+        const my_text = document.createElement('div');
+        my_text.className = 'debug-item-text';
+        my_text.textContent = pokemon.name + " " + hi;
+
+        const key = getKeyPokedexFromId(pokemon.id);
+        my_img.src = GetSpriteByPokemon(key, false);
+        my_img.style.backgroundColor = pokemon.type.color;
+
+        if (pokemon.rarity.name !== "LEGENDARY" && !pokemon.isStarterLine) {
+            my_img_container.appendChild(my_img);
+            my_img_container.appendChild(my_text);
+            debugDisplay.appendChild(my_img_container);
+        }
+        hi++;
+    });
+
+    // Append the entire debug display to the body
+    document.body.appendChild(debugDisplay);
+}
+
+
+
+
+
+displaySpecific();
+// displayCurrentlyFindable();
+
+
+
 </script>
 </html>
