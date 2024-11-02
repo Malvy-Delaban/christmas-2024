@@ -123,10 +123,10 @@ function checkAvailableDuels() {
 
 function GenerateDuelButtonDisplay() {
     let trainersId = checkAvailableDuels();
-    const actionButton = document.createElement('button');
-    actionButton.id = "duel-button";
-
+    
     if (trainersId && trainersId.length) {
+        const actionButton = document.createElement('button');
+        actionButton.id = "duel-button";
         actionButton.className = 'action-button';
         actionButton.textContent = 'Duel du jour !';
         checkInTeamNumber();
@@ -135,10 +135,10 @@ function GenerateDuelButtonDisplay() {
         } else {
             actionButton.addEventListener('click', () => prepareStartDuelPopup());
         }
+        const bottomUiDiv = document.getElementById('button-group');
+        bottomUiDiv.appendChild(actionButton);
     }
 
-    const bottomUiDiv = document.getElementById('button-group');
-    bottomUiDiv.appendChild(actionButton);
 }
 
 function prepareStartDuelPopup() {

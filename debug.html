@@ -17,6 +17,7 @@
 <script src="dataset/rarities_dataset.js"></script>
 <script src="dataset/pokemon_dataset.js"></script>
 <script src="dataset/map_cases_dataset.js"></script>
+<script src="dataset/trainers_dataset.js"></script>
 
 <!-- INCLUDE ALL FILES -->
 <script src="JS_files/objectsDefinitions.js"></script>
@@ -32,25 +33,42 @@
 <script src="JS_files/generateConfirmBuyingPopup.js"></script>
 <script src="JS_files/generateInventoryPopup.js"></script>
 <script src="JS_files/generateStartRoutePopup.js"></script>
+<script src="JS_files/generateTrainerCardPopup.js"></script>
+<script src="JS_files/generateChangeTrainerImgPopup.js"></script>
+<script src="JS_files/generateEnterEventCodePopup.js"></script>
+<script src="JS_files/generateStartDuelPopup.js"></script>
+<script src="JS_files/generateSwitchPokemonPopup.js"></script>
+<script src="JS_files/generateDuelEndPopup.js"></script>
+<script src="JS_files/dailyEvents.js"></script>
+<script src="JS_files/generateDuel.js"></script>
 
 <script>
     // Initialize all data / create them / retrieve them
     Setup();
+    DailyEvents();
 </script>
 
 <style>
     .debug-display {
-        width: 100%;
-        height: 100%;
         display: flex;
         gap: 1rem;
         flex-wrap: wrap;
     }
 
-    .debug-item {
-        height: 5rem;
-        width: 5rem;
+    .debug-item-container {
+        height: 7rem;
+        width: 10rem;
     }
+
+.debug-item {
+    height: 5rem;
+    width: 5rem;
+}
+
+.debug-item-text {
+    color: white;
+    font-size: 1rem;
+}
 
     .rarity-container {
         margin-bottom: 2rem;
@@ -69,6 +87,7 @@
 <script>
 
 const debugDisplay = document.createElement('div');
+debugDisplay.className = "debug-display";
 
 const sortedPokedex = Object.values(pokedex).sort((pokemonA, pokemonB) => {
     // return pokemonB.rarity.strength - pokemonA.rarity.strength;
@@ -77,6 +96,7 @@ const sortedPokedex = Object.values(pokedex).sort((pokemonA, pokemonB) => {
 
 let currentRarity = null;
 let rarityContainer = null;
+let hi = 0;
 
 sortedPokedex.forEach(pokemon => {
     // if (currentRarity !== pokemon.rarity.strength) {
@@ -95,15 +115,27 @@ sortedPokedex.forEach(pokemon => {
     // }
 
     // Create the image element for the Pokémon
+    const my_img_container = document.createElement('div');
+    my_img_container.className = 'debug-item-container';
+
     const my_img = document.createElement('img');
     my_img.className = 'debug-item';
+
+    const my_text = document.createElement('div');
+    my_text.className = 'debug-item-text';
+    my_text.textContent = pokemon.name + " " + hi;
+
     const key = getKeyPokedexFromId(pokemon.id);
     my_img.src = GetSpriteByPokemon(key, false);
     my_img.style.backgroundColor = pokemon.type.color;
 
-    if (pokemon.rarity.name !== "LEGENDARY" && pokemon.evolving_pokemon.length == 0)
-        debugDisplay.appendChild(my_img);
+    if (pokemon.rarity.name !== "LEGENDARY") {
+        my_img_container.appendChild(my_img);
+        my_img_container.appendChild(my_text);
+        debugDisplay.appendChild(my_img_container);
+    }
     // rarityContainer.appendChild(my_img);
+    hi++;
 });
 
 // Append the entire debug display to the body

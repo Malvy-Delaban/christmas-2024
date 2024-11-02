@@ -7,13 +7,15 @@ let owned_pokemons = null;
 let inventory = null;
 let trainer_card = null;
 let enemy_trainers = null;
+let updates_done = [];
 
-const forcePokedexUpdate = false; // While developping, will force pokedex to update at each session
-const forceMapCasesUpdate = false; // While developping, will force map cases to update at each session
-const forceOwnedUpdate = false; // While developping, will force owned pokemon to update at each session
-const forceInventoryUpdate = false; // While developping, will force inventory to update at each session
-const forceTrainerCardUpdate = false; // While developping, will force trainer card to update at each session
-const forceEnemyTrainerUpdate = false; // While developping, will force enemy trainers to update at each session
+let forcePokedexUpdate = false; // While developping, will force pokedex to update at each session
+let forceMapCasesUpdate = false; // While developping, will force map cases to update at each session
+let forceOwnedUpdate = false; // While developping, will force owned pokemon to update at each session
+let forceInventoryUpdate = false; // While developping, will force inventory to update at each session
+let forceTrainerCardUpdate = false; // While developping, will force trainer card to update at each session
+let forceEnemyTrainerUpdate = false; // While developping, will force enemy trainers to update at each session
+let forceUpdatesDoneUpdate = false; // While developping, will force updates done to update at each session
 
 function CreatePokedex() {
     let stored_content = localStorage.getItem("pokedex");
@@ -28,6 +30,7 @@ function CreatePokedex() {
     }
     setEvolvingRelations();
 }
+
 function CreateMapCases() {
     let stored_content = localStorage.getItem("map_cases");
 
@@ -38,8 +41,10 @@ function CreateMapCases() {
     } else {
         console.log("Une sauvegarde de la Map existe deja. Utilisation de la sauvegarde.");
         map_cases = JSON.parse(stored_content);
+        CheckForUpdatesInMapCases();
     }
 }
+
 function CreateOwnedPokemons() {
     let setup_owned_pokemons = [];
     let stored_content = localStorage.getItem("owned_pokemons");
@@ -53,6 +58,7 @@ function CreateOwnedPokemons() {
         owned_pokemons = JSON.parse(stored_content);
     }
 }
+
 function CreateInventory() {
     let stored_content = localStorage.getItem("inventory");
 
@@ -65,6 +71,7 @@ function CreateInventory() {
         inventory = JSON.parse(stored_content);
     }
 }
+
 function CreateTrainerCard() {
     let stored_content = localStorage.getItem("trainer_card");
 
@@ -83,6 +90,7 @@ function CreateTrainerCard() {
         trainer_card = JSON.parse(stored_content);
     }
 }
+
 function CreateEnemyTrainers() {
     let stored_content = localStorage.getItem("enemy_trainers");
 
@@ -95,7 +103,56 @@ function CreateEnemyTrainers() {
         enemy_trainers = JSON.parse(stored_content);
     }
 }
+
+function CreateUpdatesDone() {
+    let stored_content = localStorage.getItem("updates_done");
+
+    if (!stored_content || forceUpdatesDoneUpdate) {
+        localStorage.setItem("updates_done", JSON.stringify(updates_done));
+        console.log("Liste des updates initialisée.");
+    } else {
+        console.log("Une list d'update existe déjà. Utilisation de la liste.");
+        updates_done = JSON.parse(stored_content);
+    }
+}
+
+function checkForForcedUpdate() {
+    let needAnUpdate = false;
+
+    if (!updates_done.includes("2024-11-04") && isPastToday("2024-11-01")) { // November Playtests
+        needAnUpdate = true;
+        updates_done.push("2024-11-04");
+    }
+    if (!updates_done.includes("2024-12-01") && isPastToday("2024-11-31")) { // Launch date
+        needAnUpdate = true;
+        updates_done.push("2024-12-01");
+    }
+    localStorage.setItem("updates_done", JSON.stringify(updates_done));
+
+    return needAnUpdate;
+}
+
+function ClearPreviousSavesOnUpdateDates() {
+    forcePokedexUpdate = true;
+    forceMapCasesUpdate = true;
+    forceOwnedUpdate = true;
+    forceInventoryUpdate = true;
+    forceTrainerCardUpdate = true;
+    forceEnemyTrainerUpdate = true;
+}
+
+function CheckForUpdatesInMapCases() {
+    setup_map_cases.forEach(element => {
+        if (!map_cases.find(map_case => map_case.id === element.id))
+                map_cases.push(element);
+    });
+}
+
 function Setup() {
+    CreateUpdatesDone();
+    if (checkForForcedUpdate())
+        ClearPreviousSavesOnUpdateDates();
+
     CreatePokedex();
     CreateMapCases();
     CreateOwnedPokemons();
