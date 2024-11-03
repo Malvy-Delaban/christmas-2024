@@ -76,7 +76,9 @@ function chosePokemon(pokemon, currentCase) {
     updateOwnedPokemons();
     forceInTeamIfNeeded();
     updateMapCases();
-    updateDuelButton();
+    // updateDuelButton();
+    // I think I wanted to call another update function but misclicked on autofill
+    // but what function ... ?
 
     const divsToDelete = document.querySelectorAll('div.route-display');
     divsToDelete.forEach(function(div) {

@@ -1,7 +1,7 @@
 let setup_trainers = [
     {
         id: 0,
-        code: '',
+        code: 'LeSang',
         name: "Zoe",
         sprite: "./sprites/trainers/trainer_4.png",
         unlock_day: new Date("2024-11-04"),
@@ -13,15 +13,11 @@ let setup_trainers = [
                 item: Items.ORAN_BERRY,
                 quantity: 1,
             },
-            {
-                item: Items.WATER_STONE,
-                quantity: 4,
-            },
         ],
         pokemons: [
             {
-                pokedexId: "MEWTWO",
-                level: 1000,
+                pokedexId: "ROUCOOL",
+                level: 3,
                 is_shiny: false,
             },
         ]

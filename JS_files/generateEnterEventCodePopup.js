@@ -40,9 +40,15 @@ function generateEnterEventCodePopup(popupTrainer) {
 
     confirmButtonContainer.addEventListener('click', () => {
         const singleCase = getRouteFromCode(codeInput.value);
+        const trainer = getTrainerFromCode(codeInput.value);
+    
         if (singleCase) {
             showNotification("Code utilisé avec succés !", "validation");
             generateStartRoutePopup(singleCase);
+        } else if (trainer) {
+            console.log("trainer code used");
+            showNotification("Code utilisé avec succés !", "validation");
+            generateStartDuelPopup(trainer);
         } else
             showNotification("Code invalide", "error");
         popupBackgroundContainer.remove(); // Ferme le popup en supprimant l'élément

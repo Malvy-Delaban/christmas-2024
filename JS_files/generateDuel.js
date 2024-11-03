@@ -189,6 +189,7 @@ function generateDuel(trainer) {
     }
     playerTeam = getPlayerTeam();
 
+    enemy.team.forEach(pokemon => pokemonHasBeenSeen(pokemon.pokedexId));
     generateBaseHTMLStructure(enemy);
     gameLoop(enemy);
 }

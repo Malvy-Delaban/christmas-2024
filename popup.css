@@ -885,8 +885,11 @@
 }
 
 .popup-end-duel-pokemon {
+    display: flex;
     flex: 1;
     max-width: 25%;
+    align-items: center;
+    flex-direction: column;
 }
 
 .popup-end-duel-pokemon-img {

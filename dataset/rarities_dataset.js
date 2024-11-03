@@ -2,6 +2,7 @@ const Rarities = {
     COMMON: {
         name: "COMMON",
         strength: 0,
+        sacrifice_reward: 1,
         attackIndex: 0,
         sprite: "./sprites/rarities/rarity_common.png",
         color: "#A8A8A8", // Gris clair
@@ -9,6 +10,7 @@ const Rarities = {
     UNCOMMON: {
         name: "UNCOMMON",
         strength: 1,
+        sacrifice_reward: 1,
         attackIndex: 0,
         sprite: "./sprites/rarities/rarity_uncommon.png",
         color: "#3CB371" // Vert moyen
@@ -16,6 +18,7 @@ const Rarities = {
     RARE: {
         name: "RARE",
         strength: 2,
+        sacrifice_reward: 2,
         attackIndex: 1,
         sprite: "./sprites/rarities/rarity_rare.png",
         color: "#4169E1" // Bleu royal
@@ -23,6 +26,7 @@ const Rarities = {
     EPIC: {
         name: "EPIC",
         strength: 3,
+        sacrifice_reward: 2,
         attackIndex: 1,
         sprite: "./sprites/rarities/rarity_epic.png",
         color: "#9932CC" // Violet foncé
@@ -30,6 +34,7 @@ const Rarities = {
     ULTRA: {
         name: "ULTRA",
         strength: 4,
+        sacrifice_reward: 3,
         attackIndex: 2,
         sprite: "./sprites/rarities/rarity_ultra.png",
         color: "#FF8C00" // Orange foncé
@@ -37,6 +42,7 @@ const Rarities = {
     LEGENDARY: {
         name: "LEGENDARY",
         strength: 5,
+        sacrifice_reward: 5,
         attackIndex: 2,
         sprite: "./sprites/rarities/rarity_legendary.png",
         color: "rgb(202, 0, 0)" // Or

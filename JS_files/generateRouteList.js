@@ -68,6 +68,8 @@ function GenerateRouteListDisplay() {
         container.appendChild(GenerateSingleRouteDisplay(routeToDisplay[i]));
     }
     if (!routeToDisplay || routeToDisplay.length <= 0) {
+        while (container.firstChild)
+            container.removeChild(container.firstChild);
         const emptyList = document.createElement('div');
         emptyList.classList.add('empty-list-route');
         emptyList.textContent = "Aucune route à l'horizon, revenez plus tard";

@@ -292,6 +292,13 @@ function getRouteFromCode(code) {
     return null;
 }
 
+function getTrainerFromCode(code) {
+    for (let trainer of enemy_trainers)
+        if (trainer.code === code && !trainer.has_been_used)
+            return trainer;
+    return null;
+}
+
 function showNotification(message, status) {
     const notification = document.getElementById('notification');
     notification.textContent = message;
@@ -476,6 +483,10 @@ function updateOwnedPokemonHpAfterDuel() {
 
 function levelUpPokemon(pokemonId) {
     let pokeToLevelUp = owned_pokemons.find(value => value.uuid === pokemonId);
+    if (pokeToLevelUp.level >= 100) {
+        pokeToLevelUp.level = 100;
+        return;
+    }
     let isFullHealth = pokeToLevelUp.max_hp === pokeToLevelUp.hp;
     pokeToLevelUp.level++;
     pokeToLevelUp.max_hp = getMaxHpOfPokemon(pokeToLevelUp.pokedexId, pokeToLevelUp.level);
