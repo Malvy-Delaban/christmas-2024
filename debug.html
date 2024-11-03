@@ -114,7 +114,7 @@ function displaySpecific() {
         my_img.src = GetSpriteByPokemon(key, false);
         my_img.style.backgroundColor = pokemon.rarity.color;
 
-        if ((pokemon.rarity.name == "ULTRA" || pokemon.rarity.name == "EPIC") && !pokemon.isStarterLine) {
+        if (!pokemon.isStarterLine && pokemon.rarity.name == "RARE") {
             my_img_container.appendChild(my_img);
             my_img_container.appendChild(my_text);
             debugDisplay.appendChild(my_img_container);
@@ -225,9 +225,9 @@ function displayTrainers() {
     document.body.appendChild(debugDisplay);
 }
 
-// displaySpecific();
+displaySpecific();
 // displayCurrentlyFindable();
-displayTrainers();
-
+// displayTrainers();
+// 
 </script>
 </html>
