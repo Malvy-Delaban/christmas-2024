@@ -39,11 +39,12 @@ function GenerateSingleRouteDisplay(route) {
     // Créer l'élément div pour le label
     const labelElement = document.createElement('div');
     labelElement.classList.add('route-label');
-    labelElement.textContent = currentDate >= new Date(route.unlock_day) ? "Disponible maintenant !" : `Disponible le ${formatDate(route.unlock_day)}`;
+    let isAvailable = isPastToday(route.unlock_day);
+    labelElement.textContent = isAvailable ? "Disponible maintenant !" : `Disponible le ${formatDate(route.unlock_day)}`;
 
     // Ajouter l'image et le label dans le 'route-display'
     imgElementContainer.appendChild(imgElement);
-    if (currentDate < new Date(route.unlock_day)) {
+    if (!isAvailable) {
         imgElementContainer.appendChild(imgLock);
         routeDisplay.addEventListener('click', function() {
             showNotification(`Disponible le ${formatDate(route.unlock_day)} à minuit`, "validation");
