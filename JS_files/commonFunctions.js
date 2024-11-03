@@ -286,6 +286,8 @@ function getCapturedPokemonNmbr() {
 }
 
 function getRouteFromCode(code) {
+    if (!code || code == "")
+        return null;
     for (let singleCase of map_cases)
         if (singleCase.code === code && !singleCase.has_been_used)
             return singleCase;
@@ -293,6 +295,8 @@ function getRouteFromCode(code) {
 }
 
 function getTrainerFromCode(code) {
+    if (!code || code == "")
+        return null;
     for (let trainer of enemy_trainers)
         if (trainer.code === code && !trainer.has_been_used)
             return trainer;
@@ -500,4 +504,12 @@ function makePokemonFirstInOwnedPokemons(uuid) {
     const foundItem = owned_pokemons.find(item => item.uuid === uuid);
     owned_pokemons = foundItem ? [foundItem, ...owned_pokemons.filter(item => item.uuid !== uuid)] : owned_pokemons;
     updateOwnedPokemons();
+}
+
+function removePokemonFromOwned(pokemon) {
+    owned_pokemons = owned_pokemons.filter(item => item.uuid !== pokemon.uuid);
+    updateOwnedPokemons();
+    const updateYourPokemonEvent = new CustomEvent("updateYourPokemonEvent", {});
+    document.dispatchEvent(updateYourPokemonEvent);
+    checkInTeamNumber();
 }

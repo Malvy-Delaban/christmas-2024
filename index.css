@@ -524,6 +524,7 @@ body {
     color: white;
     font-size: 3rem;
     text-align: left;
+    text-shadow: 0 0 0.5rem black;
 }
 
 .duel-buttons {

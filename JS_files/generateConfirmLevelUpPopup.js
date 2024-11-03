@@ -1,4 +1,4 @@
-function generateConfirmBuyingPopup(item) {
+function generateConfirmLevelUpPopup(pokemon) {
     // Créer les éléments principaux
     const popupBackgroundContainer = document.createElement('div');
     popupBackgroundContainer.classList.add('popup-background');
@@ -12,10 +12,10 @@ function generateConfirmBuyingPopup(item) {
 
     const title = document.createElement('p');
     title.classList.add('popup-confirm-buying-title');
-    title.textContent = "Êtes-vous sûr(e) de vouloir acheter cet objet ?";
+    title.textContent = "Êtes-vous sûr(e) de vouloir monter en niveau " + pokedex[pokemon.pokedexId].name +" ?";
 
     const itemImg = document.createElement('img');
-    itemImg.src = item.sprite;
+    itemImg.src = "";
     itemImg.classList.add('detail-confirm-buying-img');
 
     const buttonsContainer = document.createElement('div');
@@ -36,7 +36,7 @@ function generateConfirmBuyingPopup(item) {
     
     const itemPrice = document.createElement('div');
     itemPrice.classList.add('popup-content-item-price-text');
-    itemPrice.textContent = "x" + item.shop_price;
+    itemPrice.textContent = "x1";
 
     const cancelButtonContainer = document.createElement('div');
     cancelButtonContainer.classList.add('popup-confirm-buying-button');
@@ -46,13 +46,13 @@ function generateConfirmBuyingPopup(item) {
     confirmButtonTextNo.classList.add('popup-content-item-price-text');
     confirmButtonTextNo.textContent = "Non";
 
-    if (hasEnoughItemInInventory(Items.ORAN_BERRY, item.shop_price)) {
+    if (hasEnoughItemInInventory(Items.ORAN_BERRY, 1)) {
         confirmButtonContainer.addEventListener('click', () => {
-            removeItemInInventory(Items.ORAN_BERRY, item.shop_price);
-            showNotification("Achat éfféctué", "validation");
-            addItemInInventory(item, 1);
-            updateBerryCount();
-            popupBackgroundContainer.remove(); // Ferme le popup en supprimant l'élément
+            removeItemInInventory(Items.ORAN_BERRY, 1);
+            levelUpPokemon(pokemon.uuid);
+            updatePokemonDetailPopupLevel(pokemon);
+            showNotification("Monté de niveau effectuée !", "validation");
+            popupBackgroundContainer.remove();
         });
     } else {
         confirmButtonContainer.style.opacity = "30%";
@@ -62,7 +62,7 @@ function generateConfirmBuyingPopup(item) {
     }
 
     cancelButtonContainer.addEventListener('click', () => {
-        popupBackgroundContainer.remove(); // Ferme le popup en supprimant l'élément
+        popupBackgroundContainer.remove();
     });
 
     confirmButtonContainer.appendChild(confirmButtonTextYes);

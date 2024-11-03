@@ -17,6 +17,19 @@ function updatePokemonDetailPopupIsInTeam(newValue) {
     }
 }
 
+function updatePokemonDetailPopupLevel(pokemon) {
+    let levelDiv = document.getElementById('detail-pokemon-level');
+    let attackDiv = document.getElementById('detail-pokemon-attack');
+    let hpDiv = document.getElementById('pokemon-detail-health-number');
+    let healthBarFilling = document.getElementById('pokemon-detail-health-bar-filling');
+
+    levelDiv.textContent = 'Niveau ' + pokemon.level;
+    attackDiv.textContent = 'Attaque : ' + pokemon.attack;
+    hpDiv.textContent = 'PV : ' + pokemon.hp + '/' + getMaxHpOfPokemon(pokemon.pokedexId, pokemon.level);
+    healthBarFilling.style.width = getHPbarSize(pokemon);
+    healthBarFilling.style.backgroundColor = getHPbarColor(pokemon);
+}
+
 function generatePokemonDetailPopupById(id) {
     Object.keys(owned_pokemons).forEach(key => {
         if (owned_pokemons[key].uuid == id) {
@@ -30,6 +43,7 @@ function generatePokemonDetailPopup(pokemon) {
     // Créer les éléments principaux
     const popupBackgroundContainer = document.createElement('div');
     popupBackgroundContainer.classList.add('popup-background');
+    popupBackgroundContainer.id = 'popup-your-pokemon-detail';
 
     // Créer les éléments principaux
     const popupContainer = document.createElement('div');
@@ -93,10 +107,12 @@ function generatePokemonDetailPopup(pokemon) {
 
     const pokemonLevel = document.createElement('div');
     pokemonLevel.className = 'detail-pokemon-level';
+    pokemonLevel.id = 'detail-pokemon-level';
     pokemonLevel.textContent = 'Niveau ' + pokemon.level;
 
     const pokemonAttack = document.createElement('div');
     pokemonAttack.className = 'detail-pokemon-attack';
+    pokemonAttack.id = 'detail-pokemon-attack';
     pokemonAttack.textContent = 'Attaque : ' + pokemon.attack;
     
     const pokemonRarity = document.createElement('div');
@@ -113,6 +129,7 @@ function generatePokemonDetailPopup(pokemon) {
 
     const healthNumber = document.createElement('p');
     healthNumber.className = 'pokemon-detail-health-number';
+    healthNumber.id = 'pokemon-detail-health-number';
     healthNumber.textContent = 'PV : ' + pokemon.hp + '/' + getMaxHpOfPokemon(pokemon.pokedexId, pokemon.level);
 
     const healthBar = document.createElement('div');
@@ -120,8 +137,9 @@ function generatePokemonDetailPopup(pokemon) {
 
     const healthBarFilling = document.createElement('div');
     healthBarFilling.className = 'pokemon-detail-health-bar-filling';
-    healthBarFilling.style.width = 'calc(100% - 6px)';
-    healthBarFilling.style.backgroundColor = 'rgb(120, 200, 80)';
+    healthBarFilling.id = 'pokemon-detail-health-bar-filling';
+    healthBarFilling.style.width = getHPbarSize(pokemon);
+    healthBarFilling.style.backgroundColor = getHPbarColor(pokemon);
 
     // Assembler les éléments
     healthBar.appendChild(healthBarFilling);
@@ -154,15 +172,37 @@ function generatePokemonDetailPopup(pokemon) {
         detailPokemonButtons.appendChild(detailPokemonButtonPutInTeam);
     }
 
+    const detailPokemonButtonLevelUpEvolutions = document.createElement('div');
+    detailPokemonButtonLevelUpEvolutions.className = "detail-pokemon-button-same-line";
 
     if (pokedex[pokemon.pokedexId].evolving_pokemon && pokedex[pokemon.pokedexId].evolving_pokemon.length > 0) {
         const detailPokemonButtonEvolve = document.createElement('button');
         detailPokemonButtonEvolve.className = 'detail-pokemon-button';
-        detailPokemonButtonEvolve.textContent = "Evolutions de " + pokedex[pokemon.pokedexId].name;
+        detailPokemonButtonEvolve.textContent = "Evolutions";
         detailPokemonButtonEvolve.addEventListener('click', () => {
             generateEvolutionPopup(pokemon, popupBackgroundContainer);
         });
-        detailPokemonButtons.appendChild(detailPokemonButtonEvolve);
+        detailPokemonButtonLevelUpEvolutions.appendChild(detailPokemonButtonEvolve);
+    }
+
+    const detailPokemonButtonLevelUp = document.createElement('button');
+    detailPokemonButtonLevelUp.className = 'detail-pokemon-button';
+    detailPokemonButtonLevelUp.textContent = "Level up";
+    detailPokemonButtonLevelUp.addEventListener('click', () => {
+        generateConfirmLevelUpPopup(pokemon);
+    });
+    detailPokemonButtonLevelUpEvolutions.appendChild(detailPokemonButtonLevelUp);
+
+    detailPokemonButtons.appendChild(detailPokemonButtonLevelUpEvolutions);
+
+    if (owned_pokemons.length > 1) {
+        const detailPokemonButtonDiscardPokemon = document.createElement('button');
+        detailPokemonButtonDiscardPokemon.className = 'detail-pokemon-button-warning';
+        detailPokemonButtonDiscardPokemon.textContent = "Relacher " + pokedex[pokemon.pokedexId].name;
+        detailPokemonButtonDiscardPokemon.addEventListener('click', () => {
+            generateConfirmDiscardPopup(pokemon);
+        });
+        detailPokemonButtons.appendChild(detailPokemonButtonDiscardPokemon);
     }
 
     // Ajouter le popup à la page

@@ -339,7 +339,7 @@
     bottom: 8rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .detail-pokemon-button {
@@ -351,7 +351,20 @@
     height: 6rem;
     font-size: 2rem;
     font-weight: bold;
-    text-align: left;
+    text-align: center;
+    padding: 0 3rem;
+}
+
+.detail-pokemon-button-warning {
+    width: 100%;
+    border-radius: 3rem;
+    color: white;
+    background-color: #db2c2c;
+    border-style: none;
+    height: 6rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
     padding: 0 3rem;
 }
 
@@ -912,4 +925,48 @@
 
 .popup-end-duel-reward {
     position: relative;
+}
+
+.detail-pokemon-button-same-line {
+    display: flex;
+    gap: 1rem;
+}
+
+.popup-confirm-discard-subtitle {
+    font-size: 3.5rem;
+    font-weight: 900;
+    width: 90%;
+    text-align: center;
+    margin: 0;
+    color: #db2c2c;
+    margin-top: 2rem;
+}
+
+.popup-content-discard-confirm {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+}
+
+.detail-pokemon-button-warning-confirm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5.5rem;
+    border-radius: 3rem;
+    color: white;
+    background-color: #db2c2c;
+    border-style: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0 3rem;
+}
+
+.popup-confirm-discard-explaination {
+    font-size: 2.5rem;
+    width: 90%;
+    text-align: center;
+    margin: 0;
+    color: #463460;
+    margin-top: 3rem;
 }

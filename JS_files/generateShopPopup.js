@@ -64,6 +64,11 @@ function fillShopPopup(itemList) {
     }
 }
 
+function updateBerryCount() {
+    let berryDiv = document.getElementById("popup-subtitle-text-berry-count");
+    berryDiv.textContent = "Vous avez actuellement " + currentQuantityInInventory(Items.ORAN_BERRY);
+}
+
 function generateShopPopup() {
     document.body.style.overflow = 'hidden'; // Désactive le scroll
     
@@ -87,6 +92,7 @@ function generateShopPopup() {
     const subtitleText = document.createElement('p');
     subtitleText.textContent = "Vous avez actuellement " + currentQuantityInInventory(Items.ORAN_BERRY);
     subtitleText.classList.add('popup-subtitle-text');
+    subtitleText.id = 'popup-subtitle-text-berry-count';
 
     const subtitleImg = document.createElement('img');
     subtitleImg.src = './sprites/misc/oran_icon.png';
