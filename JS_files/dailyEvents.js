@@ -20,6 +20,26 @@ function isToday(dateString) {
     return formattedDate === formattedToday;
 }
 
+function isPastTodayOrToday(dateString) {
+    const date = new Date(dateString);
+
+    // Obtenir la date actuelle dans le fuseau horaire Europe/Paris
+    const now = new Date();
+    const frenchDateFormat = new Intl.DateTimeFormat('fr-FR', { 
+        timeZone: 'Europe/Paris', 
+        year: 'numeric', 
+        month: '2-digit', 
+        day: '2-digit'
+    });
+
+    // Formater les dates (celle passée en paramètre et celle de l'heure actuelle)
+    const formattedDate = frenchDateFormat.format(date);
+    const formattedNow = frenchDateFormat.format(now);
+
+    // Vérifier si la date est dans le passé ou aujourd'hui
+    return formattedDate <= formattedNow;
+}
+
 function isPastToday(dateString) {
     const date = new Date(dateString);
 
