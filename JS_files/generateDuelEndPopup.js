@@ -107,12 +107,10 @@ function generateDuelEndPopup(didWin, trainer) {
 
 function generateDuelLosePopup(trainer) {
     generateDuelEndPopup(false, trainer);
-    // updateDuelButton();
-    // I don't remember why I'd put that here, hope it doesn't break everything if I remove it T-T
+    updateDuelButton();
 }
 
 function generateDuelWinPopup(trainer) {
     generateDuelEndPopup(true, trainer);
-    // updateDuelButton();
-    // I don't remember why I'd put that here, hope it doesn't break everything if I remove it T-T
+    updateDuelButton();
 }

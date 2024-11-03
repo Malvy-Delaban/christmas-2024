@@ -153,8 +153,12 @@ function prepareStartDuelPopup() {
 
 function updateDuelButton() {
     let actionButton = document.getElementById('duel-button');
-    actionButton.remove();
+    if (actionButton)
+        actionButton.remove();
     GenerateDuelButtonDisplay();
+    actionButton = document.getElementById('duel-button');
+    if (!actionButton)
+        return;
 
     if (!owned_pokemons || owned_pokemons.length < 1 || getInTeamPokemons().length < 1) {
         actionButton.addEventListener('click', () => showNotification("Vous n'avez pas de pokémon dans votre équipe", "error"));

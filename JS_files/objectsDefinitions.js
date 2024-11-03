@@ -10,11 +10,11 @@ let enemy_trainers = null;
 let updates_done = [];
 
 let forcePokedexUpdate = false; // While developping, will force pokedex to update at each session
-let forceMapCasesUpdate = true; // While developping, will force map cases to update at each session
+let forceMapCasesUpdate = false; // While developping, will force map cases to update at each session
 let forceOwnedUpdate = false; // While developping, will force owned pokemon to update at each session
 let forceInventoryUpdate = false; // While developping, will force inventory to update at each session
 let forceTrainerCardUpdate = false; // While developping, will force trainer card to update at each session
-let forceEnemyTrainerUpdate = true; // While developping, will force enemy trainers to update at each session
+let forceEnemyTrainerUpdate = false; // While developping, will force enemy trainers to update at each session
 let forceUpdatesDoneUpdate = false; // While developping, will force updates done to update at each session
 
 function CreatePokedex() {

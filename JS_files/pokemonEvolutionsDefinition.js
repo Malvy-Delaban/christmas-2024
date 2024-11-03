@@ -1656,8 +1656,8 @@ function setEvolvingRelations() {
 
     pokedex.SCALPROIE.evolving_pokemon = [pokedex.SCALPEREUR];
     pokedex.SCALPROIE.needed_item = [Items.ORAN_BERRY];
-    pokedex.SCALPROIE.needed_quantity = [2];
-    pokedex.SCALPROIE.duelToWin = 3;
+    pokedex.SCALPROIE.needed_quantity = [3];
+    pokedex.SCALPROIE.duelToWin = 4;
 
     pokedex.FURAIGLON.evolving_pokemon = [pokedex.GUERIAIGLE, pokedex.GUERIAIGLE_H];
     pokedex.FURAIGLON.needed_item = [Items.ORAN_BERRY, Items.ORAN_BERRY];
