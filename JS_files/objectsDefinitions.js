@@ -124,7 +124,7 @@ function checkForForcedUpdate() {
         needAnUpdate = true;
         updates_done.push("2024-11-04");
     }
-    if (!updates_done.includes("2024-12-01") && isPastToday("2024-11-31")) { // Launch date
+    if (!updates_done.includes("2024-12-01") && isPastToday("2024-11-30")) { // Launch date
         needAnUpdate = true;
         updates_done.push("2024-12-01");
     }

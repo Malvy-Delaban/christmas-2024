@@ -41,9 +41,7 @@ function isPastTodayOrToday(dateString) {
 }
 
 function isPastToday(dateString) {
-    alert(dateString);
     const date = new Date(dateString);
-    alert(dateString);
 
     // Obtenir la date actuelle dans le fuseau horaire Europe/Paris
     const now = new Date();
