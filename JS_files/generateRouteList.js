@@ -40,9 +40,6 @@ function GenerateSingleRouteDisplay(route) {
     const labelElement = document.createElement('div');
     labelElement.classList.add('route-label');
     let isAvailable = isPastTodayOrToday(route.unlock_day);
-    console.log(route.unlock_day);
-    console.log(new Date());
-    console.log(isPastToday(route.unlock_day));
     labelElement.textContent = isAvailable ? "Disponible maintenant !" : `Disponible le ${formatDate(route.unlock_day)}`;
 
     // Ajouter l'image et le label dans le 'route-display'

@@ -45,7 +45,16 @@
 <script src="JS_files/dailyEvents.js"></script>
 <script src="JS_files/generateDuel.js"></script>
 
+<div id="test-errors"></div>
+
 <script>
+    window.onerror = function(message, source, lineno, colno, error) {
+        const logContainer = document.getElementById("test-errors");
+        let newMessage = `<p>Erreur : ${message} à ${source}:${lineno}:${colno}</p>`;
+        logContainer.textContent += newMessage;
+        alert(newMessage);
+    };
+
     // Initialize all data / create them / retrieve them
     Setup();
     DailyEvents();

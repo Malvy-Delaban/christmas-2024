@@ -46,7 +46,6 @@ function generateEnterEventCodePopup(popupTrainer) {
             showNotification("Code utilisé avec succés !", "validation");
             generateStartRoutePopup(singleCase);
         } else if (trainer) {
-            console.log("trainer code used");
             showNotification("Code utilisé avec succés !", "validation");
             generateStartDuelPopup(trainer);
         } else

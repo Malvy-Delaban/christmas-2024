@@ -33,7 +33,6 @@ function makeSelectionPokemonClickable(confirmButtonContainer, trainer, popupBac
 }
 
 function generateStartDuelPopup(trainer) {
-    console.log("start duel");
     document.body.style.overflow = 'hidden';
 
     // Créer les éléments principaux
