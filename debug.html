@@ -95,6 +95,14 @@ function displaySpecific() {
         return (pokemonB.max_hp_lvl1 + pokemonB.attack_lvl1) - (pokemonA.max_hp_lvl1 + pokemonA.attack_lvl1);
     });
 
+    let listOfFindable = [];
+    map_cases.forEach(map => {
+        Object.keys(map.possible_pokemons).forEach(key => {
+            if (key && !listOfFindable.includes(pokedex[key]))
+                listOfFindable.push(pokedex[key]);
+        });
+    });
+
     let currentRarity = null;
     let rarityContainer = null;
     let hi = 0;
@@ -114,7 +122,8 @@ function displaySpecific() {
         my_img.src = GetSpriteByPokemon(key, false);
         my_img.style.backgroundColor = pokemon.rarity.color;
 
-        if (!pokemon.isStarterLine && pokemon.rarity.name == "RARE") {
+        // if (!pokemon.isStarterLine && !listOfFindable.includes(pokemon) && pokemon.rarity.name == "RARE") {
+        if (!pokemon.isStarterLine && pokemon.rarity.name == "LEGENDARY" && !listOfFindable.includes(pokemon)) {
             my_img_container.appendChild(my_img);
             my_img_container.appendChild(my_text);
             debugDisplay.appendChild(my_img_container);
