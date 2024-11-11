@@ -435,12 +435,6 @@ body {
     width: 30%;
 }
 
-.duel-enemy-pokemon-img {
-}
-
-.duel-player-pokemon-img {
-}
-
 .duel-enemy-pokemon-stats {
     width: 70%;
     display: flex;

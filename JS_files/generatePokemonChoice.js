@@ -1,8 +1,9 @@
 function generatePokemonBasedOnPokedexEntry(pokedexEntry, currentCase) {
     let shinyChance = 35;
-    if (trainer_card.name == "Lucy" || trainer_card.name == "Mallow" || trainer_card.name == "Lulu" || trainer_card.name == "Mallow_OwO") {
+    if (trainer_card.name == "Lucy" || trainer_card.name == "Mallow" || trainer_card.name == "Lulu" || trainer_card.name == "Mallow_OwO")
         shinyChance -= 5;
-    }
+    if (hasEnoughItemInInventory(Items.SHINY_CHARM, 1))
+        shinyChance -= 8;
 
     let temp_isShiny = currentCase.shiny_lock ? false : (Math.floor(Math.random() * shinyChance) + 1) === 1;
     let temp_level = Math.round(currentCase.base_level + (Math.random() * (2 * currentCase.level_randomness) - currentCase.level_randomness));
