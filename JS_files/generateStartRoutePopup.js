@@ -38,7 +38,7 @@ function generateStartRoutePopup(route) {
 
     const routeLevel = document.createElement('p');
     routeLevel.classList.add('popup-start-route-route-level');
-    routeLevel.textContent = "Niveau moyen : " + route.base_level;
+    routeLevel.textContent = route.adaptativeLevel ? "" : "Niveau moyen : " + route.base_level;
     
     const confirmButton = document.createElement('div');
     confirmButton.classList.add('popup-start-route-button-text');

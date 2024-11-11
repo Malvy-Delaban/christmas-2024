@@ -11,6 +11,8 @@ function generatePokemonBasedOnPokedexEntry(pokedexEntry, currentCase) {
     let temp_attack = getAttackOfPokemon(pokedexEntry, temp_level);
     let temp_gender = Math.floor(Math.random() * 2) == 0 ? "male" : "female";
     let temp_sprite = GetSpriteByPokemon(pokedexEntry, temp_isShiny);
+    if (currentCase.adaptativeLevel)
+        temp_level = Math.max(...owned_pokemons.map(pokemon => pokemon.level));
 
     let newPokemon = {
         uuid: generateUUID(),
