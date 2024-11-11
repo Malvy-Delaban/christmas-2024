@@ -50,6 +50,10 @@ function generateDuelEndPopup(didWin, trainer) {
             pokemonLevelUpText.textContent = "niv. " + pokemon.level + " !";
             pokemonLevelUpText.className = "popup-end-duel-pokemon-level-up";
             pokemonContainer.appendChild(pokemonLevelUpText);
+        } else {
+            const pokemonLevelUpTextBlank = document.createElement('div');
+            pokemonLevelUpTextBlank.className = "popup-end-duel-pokemon-level-up-blank";
+            pokemonContainer.appendChild(pokemonLevelUpTextBlank);
         }
 
         pokemonImgList.appendChild(pokemonContainer);

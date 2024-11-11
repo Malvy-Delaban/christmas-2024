@@ -30,37 +30,30 @@ function generatePokemonBasedOnPokedexEntry(pokedexEntry, currentCase) {
 }
 
 function getRandomPokemons(currentCase, count) {
-    if (currentCase.generated_pokemons.length === 3)
+    if (currentCase.generated_pokemons.length > 0)
         return;
-
     let pokemonList = currentCase.possible_pokemons;
-
-    // Creating weighted list
     let weightedPokemons = [];
-
-    if (pokemonList != -1 && Object.keys(pokemonList).length >= 3) {
+    
+    if (pokemonList != -1 && Object.keys(pokemonList).length >= 1) {
         for (const [pokemonKey, weight] of Object.entries(pokemonList)) {
-            for (let i = 0; i < weight; i++) {
+            for (let i = 0; i < weight; i++)
                 weightedPokemons.push(pokemonKey);
-            }
         }
     } else {
         // if the list insn't long enough or just has a value of -1, it's considered a test  and we get a random pokemon of the pokedex
-        for (const [pokemonKey, content] of Object.entries(pokedex)) {
+        for (const [pokemonKey, content] of Object.entries(pokedex))
             weightedPokemons.push(pokemonKey);
-        }
     }
-
-    // Select without dubs
+    
     let selectedPokemons = [];
     while (selectedPokemons.length < count) {
         const randomIndex = Math.floor(Math.random() * weightedPokemons.length);
         const chosenPokemon = weightedPokemons[randomIndex];
-        if (!selectedPokemons.includes(chosenPokemon)) {
+        if (!selectedPokemons.includes(chosenPokemon))
             selectedPokemons.push(chosenPokemon);
-        }
     }   
-
+    
     for (let i = 0; i < selectedPokemons.length; i++) {
         currentCase.generated_pokemons.push(generatePokemonBasedOnPokedexEntry(selectedPokemons[i], currentCase));
         pokemonHasBeenSeen(selectedPokemons[i]);
@@ -87,7 +80,8 @@ function chosePokemon(pokemon, currentCase) {
 
 function generatePokemonChoiceDisplay(currentCase) {
     document.body.style.overflow = 'hidden'; // Désactive le scroll
-    getRandomPokemons(currentCase, 3);
+    let pokemonListCount = Object.keys(currentCase.possible_pokemons).length;
+    getRandomPokemons(currentCase, pokemonListCount >= 3 ? 3 : pokemonListCount);
 
     // Création de la carte principale
     const card = document.createElement('div');

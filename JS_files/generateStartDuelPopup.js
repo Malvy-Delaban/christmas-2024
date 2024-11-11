@@ -4,7 +4,7 @@ function getOwnPokemonListSelection() {
     getInTeamPokemons().forEach(pokemon => {
         const imgOwnPokemon = document.createElement('img');
         imgOwnPokemon.src = pokemon.sprite;
-        imgOwnPokemon.classList.add('popup-start-duel-pokemon-own-icon');
+        imgOwnPokemon.classList.add('popup-start-duel-pokemon-own-icon', 'popup-start-duel-pokemon-own-icon-unselected');
         imgOwnPokemon.dataset.uuid = pokemon.uuid;
         titleTeamSelectionContainer.appendChild(imgOwnPokemon);
     });
@@ -27,6 +27,8 @@ function makeSelectionPokemonClickable(confirmButtonContainer, trainer, popupBac
             confirmButtonContainer.addEventListener('click', () => {
                 generateDuel(trainer);
                 popupBackgroundContainer.remove(); // Ferme le popup en supprimant l'élément
+                const startDuelBackground = document.querySelectorAll('.popup-background-start-duel');
+                startDuelBackground.forEach(bg => bg.remove());
             });
         });
     });

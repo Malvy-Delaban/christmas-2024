@@ -112,7 +112,7 @@ function CreateUpdatesDone() {
         localStorage.setItem("updates_done", JSON.stringify(updates_done));
         console.log("Liste des updates initialisée.");
     } else {
-        console.log("Une list d'update existe déjà. Utilisation de la liste.");
+        console.log("Une liste d'update existe déjà. Utilisation de la liste.");
         updates_done = JSON.parse(stored_content);
     }
 }

@@ -10,7 +10,7 @@ const Items = {
         id: 1,
         name: "Pierre Aube",
         description: "Permet de faire évoluer certains pokémons.",
-        sprite: "./sprites/shop_items/shiny_stone.png",
+        sprite: "./sprites/shop_items/dawn_stone.png",
         shop_price: 3,
     },
     DUSK_STONE: {

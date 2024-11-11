@@ -6159,6 +6159,20 @@ let setup_pokedex = {
         evolving_pokemon:[],
         isStarterLine: false
     },
+    KEUNOTOR_BACKWARD: {
+        id:"399.1",
+        name:"Fesses de Keunotor",
+        has_been_seen:false,
+        has_been_captured:false,
+        rarity:Rarities.COMMON,
+        type:Types.NORMAL,
+        max_hp_lvl1:32,
+        attack_lvl1:12,
+        needed_quanity:[],
+        needed_item:[],
+        evolving_pokemon:[],
+        isStarterLine: false
+    },
     CASTORNO: {
         id:400,
         name:"Castorno",

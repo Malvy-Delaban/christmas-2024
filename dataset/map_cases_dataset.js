@@ -344,4 +344,20 @@ let setup_map_cases = [
             POUSSACHA: 1,
         },
     },
+    {
+        id: 1000,
+        code: 'ESMA-2024',
+        name: "Pikachu est arrivé !",
+        sprite: "./sprites/locations/location_44.png",
+        unlock_day: -1,
+        has_been_used: false,
+        shiny_lock: true,
+        base_level: 5,
+        level_randomness: 0,
+        generated_pokemons: [],
+        possible_pokemons: {
+            PIKACHU: 1,
+            RAICHU: 1,
+        },
+    },
 ];
