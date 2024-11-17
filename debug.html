@@ -18,6 +18,7 @@
 <script src="dataset/pokemon_dataset.js"></script>
 <script src="dataset/map_cases_dataset.js"></script>
 <script src="dataset/trainers_dataset.js"></script>
+<script src="dataset/items_codes_dataset.js"></script>
 
 <!-- INCLUDE ALL FILES -->
 <script src="JS_files/objectsDefinitions.js"></script>
@@ -31,6 +32,10 @@
 <script src="JS_files/generateEvolutionPopup.js"></script>
 <script src="JS_files/generateShopPopup.js"></script>
 <script src="JS_files/generateConfirmBuyingPopup.js"></script>
+<script src="JS_files/generateConfirmLevelUpPopup.js"></script>
+<script src="JS_files/generateConfirmDiscardPopup.js"></script>
+<script src="JS_files/generateConfirmSellItemPopup.js"></script>
+<script src="JS_files/generateGiftReceivedPopup.js"></script>
 <script src="JS_files/generateInventoryPopup.js"></script>
 <script src="JS_files/generateStartRoutePopup.js"></script>
 <script src="JS_files/generateTrainerCardPopup.js"></script>
@@ -123,7 +128,7 @@ function displaySpecific() {
         my_img.style.backgroundColor = pokemon.rarity.color;
 
         // if (!pokemon.isStarterLine && !listOfFindable.includes(pokemon) && pokemon.rarity.name == "RARE") {
-        if (!pokemon.isStarterLine && pokemon.rarity.name == "LEGENDARY" && !listOfFindable.includes(pokemon)) {
+        if (!pokemon.isStarterLine && pokemon.rarity.name == "RARE") {
             my_img_container.appendChild(my_img);
             my_img_container.appendChild(my_text);
             debugDisplay.appendChild(my_img_container);
@@ -238,5 +243,6 @@ displaySpecific();
 // displayCurrentlyFindable();
 // displayTrainers();
 // 
+console.log(Object.keys(pokedex).length);
 </script>
 </html>

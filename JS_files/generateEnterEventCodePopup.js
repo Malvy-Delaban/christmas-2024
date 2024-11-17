@@ -42,6 +42,7 @@ function generateEnterEventCodePopup(popupTrainer) {
         const singleCase = getRouteFromCode(codeInput.value);
         const trainer = getTrainerFromCode(codeInput.value);
         const object = getObjectFromCode(codeInput.value);
+        const specificPokemonCase = getSpecificPokemonFromCode(codeInput.value);
     
         if (singleCase) {
             showNotification("Code utilisé avec succés !", "validation");
@@ -50,8 +51,12 @@ function generateEnterEventCodePopup(popupTrainer) {
             showNotification("Code utilisé avec succés !", "validation");
             generateStartDuelPopup(trainer);
         } else if (object) {
+            showNotification("Code utilisé avec succés !", "validation");
             generateGiftReceivedPopup(object.id);
-        } else {
+        } else if (specificPokemonCase) {
+            showNotification("Code utilisé avec succés !", "validation");
+            generateStartRoutePopup(specificPokemonCase);
+        } else{
             showNotification("Code invalide", "error");
         }
         popupBackgroundContainer.remove(); // Ferme le popup en supprimant l'élément

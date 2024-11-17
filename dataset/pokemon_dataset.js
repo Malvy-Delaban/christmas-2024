@@ -13318,7 +13318,7 @@ let setup_pokedex = {
         name:"Wushours",
         has_been_seen:false,
         has_been_captured:false,
-        rarity:Rarities.LEGENDARY,
+        rarity:Rarities.ULTRA,
         type:Types.COMBAT,
         max_hp_lvl1:30,
         attack_lvl1:18,
@@ -14769,4 +14769,4 @@ let setup_pokedex = {
         evolving_pokemon:[],
         isStarterLine: false
     }
-}
+};

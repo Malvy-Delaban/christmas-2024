@@ -704,7 +704,7 @@ let setup_trainers = [
             {
                 pokedexId: "QUEULORIOR",
                 level: 26,
-                is_shiny: false,
+                is_shiny: true,
             },
             {
                 pokedexId: "MMIME",

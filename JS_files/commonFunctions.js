@@ -312,6 +312,41 @@ function getObjectFromCode(code) {
     return null;
 }
 
+function getSpecificPokemonFromCode(code) {
+    const index = eventCodes.indexOf(code);
+
+    if (index === -1 || map_cases.some(obj => obj.id === index))
+        return null
+    else
+        return generateRouteFromCodeIndex(index);
+}
+
+function generateRouteFromCodeIndex(index) {
+    let pokemonKey = Object.entries(pokedex)[index];
+    console.log(pokemonKey);
+    console.log(index);
+
+    let route = {
+        id: "specific_" + index,
+        code: '',
+        name: "A la rencontre d'un " + pokedex[pokemonKey[0]].name,
+        sprite: "./sprites/locations/location_44.png",
+        unlock_day: -1,
+        has_been_used: false,
+        shiny_lock: false,
+        adaptativeLevel: true,
+        base_level: 1,
+        level_randomness: 0,
+        generated_pokemons: [],
+        possible_pokemons: {
+            [pokemonKey[0]]: 1,
+        },
+    };
+    map_cases.push(route);
+    updateMapCases();
+    return route;
+}
+
 function isDuelFinished(duelId) {
     if (!duelId || duelId < 0)
         return true;
