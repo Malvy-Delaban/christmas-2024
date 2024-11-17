@@ -255,7 +255,7 @@ let setup_trainers = [
         unlock_day: new Date("2024-11-12"),
         has_been_used: false,
         has_been_beaten: false,
-        base_level: 17,
+        base_level: 15,
         rewards: [
             {
                 item: Items.ORAN_BERRY,
@@ -265,12 +265,12 @@ let setup_trainers = [
         pokemons: [
             {
                 pokedexId: "GRANBULL",
-                level: 16,
+                level: 14,
                 is_shiny: false,
             },
             {
                 pokedexId: "LOCKPIN",
-                level: 18,
+                level: 15,
                 is_shiny: false,
             },
         ]
@@ -381,7 +381,7 @@ let setup_trainers = [
         unlock_day: new Date("2024-11-16"),
         has_been_used: false,
         has_been_beaten: false,
-        base_level: 18,
+        base_level: 16,
         rewards: [
             {
                 item: Items.ORAN_BERRY,
@@ -395,17 +395,17 @@ let setup_trainers = [
         pokemons: [
             {
                 pokedexId: "EXAGIDE",
-                level: 18,
+                level: 16,
                 is_shiny: false,
             },
             {
                 pokedexId: "MINOTAUPE",
-                level: 18,
+                level: 16,
                 is_shiny: false,
             },
             {
                 pokedexId: "STEELIX",
-                level: 18,
+                level: 16,
                 is_shiny: false,
             },
         ]
@@ -818,11 +818,6 @@ let setup_trainers = [
         pokemons: [
             {
                 pokedexId: "FLORAMANTIS",
-                level: 30,
-                is_shiny: false,
-            },
-            {
-                pokedexId: "ECTOPLASMA",
                 level: 30,
                 is_shiny: false,
             },

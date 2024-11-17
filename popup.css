@@ -978,3 +978,7 @@
     color: #463460;
     margin-top: 3rem;
 }
+
+.gift-list {
+    display: flex;
+}

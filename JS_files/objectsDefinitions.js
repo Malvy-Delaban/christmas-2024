@@ -7,6 +7,7 @@ let owned_pokemons = null;
 let inventory = null;
 let trainer_card = null;
 let enemy_trainers = null;
+let items_code = null;
 let updates_done = [];
 
 let forcePokedexUpdate = false; // While developping, will force pokedex to update at each session
@@ -15,6 +16,7 @@ let forceOwnedUpdate = false; // While developping, will force owned pokemon to 
 let forceInventoryUpdate = false; // While developping, will force inventory to update at each session
 let forceTrainerCardUpdate = false; // While developping, will force trainer card to update at each session
 let forceEnemyTrainerUpdate = false; // While developping, will force enemy trainers to update at each session
+let forceItemsCodeUpdate = false; // While developping, will force items code to update at each session
 let forceUpdatesDoneUpdate = false; // While developping, will force updates done to update at each session
 
 function CreatePokedex() {
@@ -105,6 +107,19 @@ function CreateEnemyTrainers() {
     }
 }
 
+function CreateItemsCode() {
+    let stored_content = localStorage.getItem("items_code");
+
+    if (!stored_content || forceItemsCodeUpdate) {
+        items_code = ItemsCodes;
+        localStorage.setItem("items_code", JSON.stringify(items_code));
+        console.log("Liste des codes objets initialisée.");
+    } else {
+        console.log("Une sauvegarde des codes objets existe déjà. Utilisation de la sauvegarde.");
+        items_code = JSON.parse(stored_content);
+    }
+}
+
 function CreateUpdatesDone() {
     let stored_content = localStorage.getItem("updates_done");
 
@@ -169,4 +184,5 @@ function Setup() {
     CreateInventory();
     CreateTrainerCard();
     CreateEnemyTrainers();
+    CreateItemsCode();
 }

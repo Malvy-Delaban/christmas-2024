@@ -303,6 +303,15 @@ function getTrainerFromCode(code) {
     return null;
 }
 
+function getObjectFromCode(code) {
+    if (!code || code == "")
+        return null;
+    for (let itemEvent of items_code)
+        if (itemEvent.code === code && !itemEvent.has_been_used)
+            return itemEvent;
+    return null;
+}
+
 function showNotification(message, status) {
     const notification = document.getElementById('notification');
     notification.textContent = message;
