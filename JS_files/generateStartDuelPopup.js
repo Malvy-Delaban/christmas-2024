@@ -25,10 +25,14 @@ function makeSelectionPokemonClickable(confirmButtonContainer, trainer, popupBac
             confirmButtonContainer.style.opacity = "100%";
     
             confirmButtonContainer.addEventListener('click', () => {
-                generateDuel(trainer);
-                popupBackgroundContainer.remove(); // Ferme le popup en supprimant l'élément
-                const startDuelBackground = document.querySelectorAll('.popup-background-start-duel');
-                startDuelBackground.forEach(bg => bg.remove());
+                if (!isDuelFinished(trainer.id)) {
+                    generateDuel(trainer);
+                    popupBackgroundContainer.remove(); // Ferme le popup en supprimant l'élément
+                    const startDuelBackground = document.querySelectorAll('.popup-background-start-duel');
+                    startDuelBackground.forEach(bg => bg.remove());
+                } else {
+                    showNotification("Un problème est survenu, essayez de recharger la page", "error");
+                }
             });
         });
     });

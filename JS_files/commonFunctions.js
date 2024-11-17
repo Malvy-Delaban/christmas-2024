@@ -312,6 +312,15 @@ function getObjectFromCode(code) {
     return null;
 }
 
+function isDuelFinished(duelId) {
+    if (!duelId || duelId < 0)
+        return true;
+    for (let trainer of enemy_trainers)
+        if (trainer.id === duelId)
+            return trainer.has_been_used;
+    return true;
+}
+
 function showNotification(message, status) {
     const notification = document.getElementById('notification');
     notification.textContent = message;
