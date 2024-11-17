@@ -165,9 +165,9 @@ function updateDuelButton() {
     if (!actionButton)
         return;
 
-    if (!owned_pokemons || owned_pokemons.length < 1 || getInTeamPokemons().length < 1) {
-        actionButton.addEventListener('click', () => showNotification("Vous n'avez pas de pokémon dans votre équipe", "error"));
-    } else {
-        actionButton.addEventListener('click', () => prepareStartDuelPopup());
-    }
+    // if (!owned_pokemons || owned_pokemons.length < 1 || getInTeamPokemons().length < 1) {
+    //     actionButton.addEventListener('click', () => showNotification("Vous n'avez pas de pokémon dans votre équipe", "error"));
+    // } else {
+    //     actionButton.addEventListener('click', () => prepareStartDuelPopup());
+    // }
 }
