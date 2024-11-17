@@ -275,7 +275,6 @@ function duelIsOver(enemy, didPlayerWin) {
         playerTeam.forEach(pokemon => {
             levelUpPokemon(pokemon.uuid);
             pokemon.hasLeveledUp = true;
-            pokemon.duelWon++;
         });
         enemy.trainer.rewards.forEach(reward => {
             addItemInInventory(reward.item, reward.quantity);
