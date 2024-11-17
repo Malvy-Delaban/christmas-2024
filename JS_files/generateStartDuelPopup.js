@@ -71,7 +71,7 @@ function generateStartDuelPopup(trainer) {
     confirmButtonContainer.style.cursor = 'pointer';
     confirmButtonContainer.addEventListener('click', () => {
         showNotification("Sélectionnez un pokémon en tête d'équipe", "error");
-    })
+    });
 
     const routeLevel = document.createElement('p');
     routeLevel.classList.add('popup-start-route-duel-level');

@@ -334,7 +334,8 @@ function addFeedbackMessage(message) {
     let newMessage = document.createElement('div');
     newMessage.className = "feedback-message";
     newMessage.textContent = message;
-    element.appendChild(newMessage);
+    if (element)
+        element.appendChild(newMessage);
 }
 
 async function displayFeedbackOfAttackEnemy(enemy, randomType) {

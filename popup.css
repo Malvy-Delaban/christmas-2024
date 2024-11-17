@@ -261,9 +261,6 @@
     gap: 3rem;
 }
 
-.detail-pokemon-image {
-}
-
 .detail-pokemon-stats {
     display: flex;
     position: relative;
