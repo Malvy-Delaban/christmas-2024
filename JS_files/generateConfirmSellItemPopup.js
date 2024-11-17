@@ -12,11 +12,7 @@ function generateConfirmSellItemPopup(item) {
 
     const title = document.createElement('p');
     title.classList.add('popup-confirm-buying-title');
-    title.textContent = "Êtes-vous sûr(e) de vouloir relâcher " + pokedex[pokemon.pokedexId].name +" ?";
-
-    const subtitle = document.createElement('p');
-    subtitle.classList.add('popup-confirm-discard-subtitle');
-    subtitle.textContent = "Cette action est définitive";
+    title.textContent = "Êtes-vous sûr(e) de vouloir vendre " + item.name + " ?";
 
     const gainExplanation = document.createElement('p');
     gainExplanation.classList.add('popup-confirm-discard-explaination');
@@ -31,7 +27,7 @@ function generateConfirmSellItemPopup(item) {
 
     const rewardQuantity = document.createElement('p');
     rewardQuantity.classList.add('popup-content-item-quantity');
-    rewardQuantity.textContent = "x" + pokedex[pokemon.pokedexId].rarity.sacrifice_reward;
+    rewardQuantity.textContent = "x" + (item.shop_price - 1);
 
     rewardParent.appendChild(rewardImg);
     rewardParent.appendChild(rewardQuantity);
@@ -45,7 +41,7 @@ function generateConfirmSellItemPopup(item) {
     
     const confirmButtonTextYes = document.createElement('div');
     confirmButtonTextYes.classList.add('popup-content-discard-confirm');
-    confirmButtonTextYes.textContent = "Relâcher";
+    confirmButtonTextYes.textContent = "Vendre";
 
     const cancelButtonContainer = document.createElement('div');
     cancelButtonContainer.classList.add('popup-confirm-buying-button');
@@ -53,16 +49,19 @@ function generateConfirmSellItemPopup(item) {
     
     const confirmButtonTextNo = document.createElement('div');
     confirmButtonTextNo.classList.add('popup-content-item-price-text');
-    confirmButtonTextNo.textContent = "Ne pas relâcher";
+    confirmButtonTextNo.textContent = "Ne pas vendre";
 
     confirmButtonContainer.addEventListener('click', () => {
-        let divDetail = document.getElementById("popup-your-pokemon-detail");
-        divDetail.remove();
-        
-        addItemInInventory(Items.ORAN_BERRY, pokedex[pokemon.pokedexId].rarity.sacrifice_reward);
-        removePokemonFromOwned(pokemon);
-        showNotification("Pokémon relâché", "validation");
+        addItemInInventory(Items.ORAN_BERRY, item.shop_price - 1);
+        removeItemInInventoryById(item.id, 1);
+        showNotification("Objet vendu", "validation");
         popupBackgroundContainer.remove();
+
+        let itemListDiv = document.getElementById("popup-content-inventory-list");
+        Array.from(itemListDiv.children).forEach(element => {
+            element.remove();
+        });
+        fillInventoryPopup(itemListDiv);
     });
 
     cancelButtonContainer.addEventListener('click', () => {
@@ -76,7 +75,6 @@ function generateConfirmSellItemPopup(item) {
     buttonsContainer.appendChild(cancelButtonContainer);
 
     popupContent.appendChild(title);
-    popupContent.appendChild(subtitle);
     popupContent.appendChild(gainExplanation);
     popupContent.appendChild(rewardParent);
     popupContent.appendChild(buttonsContainer);

@@ -4,6 +4,15 @@ function fillInventoryPopup(itemList) {
         const singleItem = document.createElement('div');
         singleItem.classList.add('popup-content-single-item');
 
+        if (inventoryItem.item.shop_price > 1) {
+            singleItem.addEventListener('click', () => {
+                generateConfirmSellItemPopup(inventoryItem.item);
+            });
+        } else {
+            singleItem.addEventListener('click', () => {
+                showNotification("Vous ne pouvez pas vendre cela", "error")
+            });
+        }
         // Partie gauche avec l'image et le type
         const leftSide = document.createElement('div');
         leftSide.classList.add('popup-content-left-side');
@@ -92,6 +101,7 @@ function generateInventoryPopup() {
     // Contenu de la liste des Pokémon
     const itemList = document.createElement('div');
     itemList.classList.add('popup-content-inventory-list');
+    itemList.id = 'popup-content-inventory-list';
 
     fillInventoryPopup(itemList);
 
