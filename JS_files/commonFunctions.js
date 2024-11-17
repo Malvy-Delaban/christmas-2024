@@ -497,6 +497,7 @@ function levelUpPokemon(pokemonId) {
     pokeToLevelUp.attack = getAttackOfPokemon(pokeToLevelUp.pokedexId, pokeToLevelUp.level);
     if (isFullHealth)
         pokeToLevelUp.hp = pokeToLevelUp.max_hp;
+    pokeToLevelUp.duelWon++;
     updateOwnedPokemons();
 }
 

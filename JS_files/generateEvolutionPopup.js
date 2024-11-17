@@ -23,7 +23,7 @@ function fillEvolutionList(evolutionListDiv, currentPokemon, remainingDuels, evo
 
         evolveButton.addEventListener('click', () => {
             if (remainingDuels > 0)
-                showNotification("Tu n'as pas gagné assez de combats avec " + pokedex[currentPokemon.pokedexId].name, "error");
+                showNotification("Tu n'as pas gagné assez de niveaux avec " + pokedex[currentPokemon.pokedexId].name, "error");
             else if (!hasEnoughItemInInventory(pokedex[currentPokemon.pokedexId].needed_item[i], pokedex[currentPokemon.pokedexId].needed_quantity[i]))
                 showNotification("Tu n'as pas les objets requis pour ça", "error");
             else {
@@ -97,9 +97,9 @@ function generateEvolutionPopup(pokemon, detailPopup) {
     const requirements = document.createElement('p');
     let remainingDuels = pokedex[pokemon.pokedexId].duelToWin - (pokemon.duelWon ? pokemon.duelWon : 0);
     if (remainingDuels > 0)
-        requirements.textContent = "Vous devez encore remportez " + remainingDuels + " duels avec " + pokedex[pokemon.pokedexId].name + " dans votre équipe pour pouvoir le faire évoluer.";
+        requirements.textContent = pokedex[pokemon.pokedexId].name + " doit encore monter de niveau " + remainingDuels + " fois pour pouvoir le faire évoluer.";
     else
-        requirements.textContent = "Vous avez remporté " + pokemon.duelWon + " duels avec " + pokedex[pokemon.pokedexId].name + ". Il est prêt à évoluer !";
+        requirements.textContent = pokedex[pokemon.pokedexId].name + " est prêt à évoluer !";
     requirements.classList.add('popup-evolution-requirements');
     
     const evolutionList = document.createElement('div');
