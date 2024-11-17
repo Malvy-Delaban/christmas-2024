@@ -116,6 +116,7 @@
     left: 0;
     height: 100%;
     z-index: 9;
+    filter: drop-shadow(0 0 4px black);
 }
 
 .popup-content-rarity-background {
