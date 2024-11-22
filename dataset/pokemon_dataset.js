@@ -11666,7 +11666,7 @@ let setup_pokedex = {
         name:"Météno",
         has_been_seen:false,
         has_been_captured:false,
-        rarity:Rarities.UNCOMMON,
+        rarity:Rarities.RARE,
         type:Types.ROCHE,
         max_hp_lvl1:36,
         attack_lvl1:12,
