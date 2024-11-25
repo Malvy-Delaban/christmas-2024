@@ -270,6 +270,7 @@ function duelIsOver(enemy, didPlayerWin) {
     duelCard.remove();
     enemy.trainer.has_been_beaten = true;
     updateEnemyTrainers();
+    HealPokemons();
 
     if (didPlayerWin) {
         playerTeam.forEach(pokemon => {

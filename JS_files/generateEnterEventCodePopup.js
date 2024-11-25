@@ -56,7 +56,15 @@ function generateEnterEventCodePopup(popupTrainer) {
         } else if (specificPokemonCase) {
             showNotification("Code utilisé avec succés !", "validation");
             generateStartRoutePopup(specificPokemonCase);
-        } else{
+        } else if (codeInput.value === "HEAL") {
+            HealPokemons();
+            showNotification("Vos pokémons sont en pleine forme", "validation");
+        }  else if (codeInput.value === "HARD_RESET") {
+            if (confirm("You will lose all your pokemons and progression !")) {
+                HardReset();
+                showNotification("Rechargez la page pour actualiser l'affichage", "validation");
+            }
+        } else {
             showNotification("Code invalide", "error");
         }
         popupBackgroundContainer.remove(); // Ferme le popup en supprimant l'élément

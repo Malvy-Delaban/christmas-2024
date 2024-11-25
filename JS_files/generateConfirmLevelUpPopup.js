@@ -14,6 +14,22 @@ function generateConfirmLevelUpPopup(pokemon) {
     title.classList.add('popup-confirm-buying-title');
     title.textContent = "Êtes-vous sûr(e) de vouloir monter en niveau " + pokedex[pokemon.pokedexId].name +" ?";
 
+    const subtitleLine = document.createElement('div');
+    subtitleLine.classList.add('popup-subtitle-line');
+
+    const subtitleText = document.createElement('p');
+    subtitleText.textContent = "Vous avez actuellement " + currentQuantityInInventory(Items.ORAN_BERRY);
+    subtitleText.classList.add('popup-subtitle-text');
+    subtitleText.id = 'popup-subtitle-text-berry-count';
+
+    const subtitleImg = document.createElement('img');
+    subtitleImg.src = './sprites/misc/oran_icon.png';
+    subtitleImg.alt = "oran berry img";
+    subtitleImg.classList.add('popup-subtitle-image');
+
+    subtitleLine.appendChild(subtitleText);
+    subtitleLine.appendChild(subtitleImg);
+
     const itemImg = document.createElement('img');
     itemImg.src = "";
     itemImg.classList.add('detail-confirm-buying-img');
@@ -74,6 +90,7 @@ function generateConfirmLevelUpPopup(pokemon) {
     buttonsContainer.appendChild(cancelButtonContainer);
 
     popupContent.appendChild(title);
+    popupContent.appendChild(subtitleLine);
     popupContent.appendChild(itemImg);
     popupContent.appendChild(buttonsContainer);
     popupContainer.appendChild(popupContent);

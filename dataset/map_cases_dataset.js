@@ -651,7 +651,7 @@ let setup_map_cases = [
         id: 25,
         code: '',
         name: "Route 25",
-        sprite: "./sprites/locations/location_41.png",
+        sprite: "./sprites/locations/location_42.png",
         unlock_day: new Date("2024-11-28"),
         has_been_used: false,
         shiny_lock: false,

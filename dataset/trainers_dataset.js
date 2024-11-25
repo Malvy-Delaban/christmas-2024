@@ -455,7 +455,7 @@ let setup_trainers = [
         unlock_day: new Date("2024-11-18"),
         has_been_used: false,
         has_been_beaten: false,
-        base_level: 20,
+        base_level: 19,
         rewards: [
             {
                 item: Items.ORAN_BERRY,
@@ -465,17 +465,17 @@ let setup_trainers = [
         pokemons: [
             {
                 pokedexId: "OHMASSACRE",
-                level: 20,
+                level: 17,
                 is_shiny: false,
             },
             {
                 pokedexId: "METANG",
-                level: 20,
+                level: 18,
                 is_shiny: false,
             },
             {
                 pokedexId: "ELEKABLE",
-                level: 20,
+                level: 19,
                 is_shiny: false,
             },
         ]
@@ -689,11 +689,11 @@ let setup_trainers = [
         id: 22,
         code: '',
         name: "Elif",
-        sprite: "./sprites/trainers/trainer_52.png",
+        sprite: "./sprites/trainers/trainer_14.png",
         unlock_day: new Date("2024-11-25"),
         has_been_used: false,
         has_been_beaten: false,
-        base_level: 27,
+        base_level: 29,
         rewards: [
             {
                 item: Items.ORAN_BERRY,
@@ -703,17 +703,17 @@ let setup_trainers = [
         pokemons: [
             {
                 pokedexId: "QUEULORIOR",
-                level: 26,
+                level: 28,
                 is_shiny: true,
             },
             {
                 pokedexId: "MMIME",
-                level: 27,
+                level: 28,
                 is_shiny: false,
             },
             {
                 pokedexId: "ROSERADE",
-                level: 28,
+                level: 30,
                 is_shiny: false,
             },
         ]

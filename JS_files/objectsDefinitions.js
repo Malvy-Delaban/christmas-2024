@@ -173,6 +173,18 @@ function CheckForUpdatesInEnemyTrainers() {
     updateEnemyTrainers();
 }
 
+function HardReset() {
+    forcePokedexUpdate = true;
+    forceMapCasesUpdate = true;
+    forceOwnedUpdate = true;
+    forceInventoryUpdate = true;
+    forceTrainerCardUpdate = true;
+    forceEnemyTrainerUpdate = true;
+    forceItemsCodeUpdate = true;
+    forceUpdatesDoneUpdate = true;
+    Setup();
+}
+
 function Setup() {
     CreateUpdatesDone();
     if (checkForForcedUpdate())
