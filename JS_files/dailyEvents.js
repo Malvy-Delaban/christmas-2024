@@ -23,91 +23,58 @@ function isToday(dateString) {
 function isPastTodayOrToday(dateString) {
     const date = new Date(dateString);
 
-    // Obtenir la date actuelle dans le fuseau horaire Europe/Paris
+    // Obtenir la date actuelle (sans l'heure) pour comparer avec la date donnée
     const now = new Date();
-    const frenchDateFormat = new Intl.DateTimeFormat('fr-FR', { 
-        timeZone: 'Europe/Paris', 
-        year: 'numeric', 
-        month: '2-digit', 
-        day: '2-digit'
-    });
+    now.setHours(0, 0, 0, 0); // Réinitialise l'heure à 00:00:00.000
 
-    // Formater les dates (celle passée en paramètre et celle de l'heure actuelle)
-    const formattedDate = frenchDateFormat.format(date);
-    const formattedNow = frenchDateFormat.format(now);
+    // Réinitialiser l'heure de la date donnée
+    date.setHours(0, 0, 0, 0);
 
-    // Vérifier si la date est dans le passé ou aujourd'hui
-    return formattedDate <= formattedNow;
+    // Comparer directement les timestamps
+    return date.getTime() <= now.getTime();
 }
 
 function isPastToday(dateString) {
     const date = new Date(dateString);
 
-    // Obtenir la date actuelle dans le fuseau horaire Europe/Paris
+    // Obtenir la date actuelle à minuit (sans l'heure)
     const now = new Date();
-    const frenchDateFormat = new Intl.DateTimeFormat('fr-FR', { 
-        timeZone: 'Europe/Paris', 
-        year: 'numeric', 
-        month: '2-digit', 
-        day: '2-digit'
-    });
+    now.setHours(0, 0, 0, 0);
 
-    // Formater les dates
-    const formattedDate = frenchDateFormat.format(date);
-    const formattedNow = frenchDateFormat.format(now);
+    // Réinitialiser l'heure de la date donnée
+    date.setHours(0, 0, 0, 0);
 
-    // Comparer les deux dates en utilisant les dates formatées
-    return formattedDate < formattedNow;
+    // Comparer directement les timestamps
+    return date.getTime() < now.getTime();
 }
 
 function isDatePastOrWithinNext3Days(dateString) {
     const date = new Date(dateString);
     
-    // Obtenir la date actuelle et la date dans 3 jours dans le fuseau horaire Europe/Paris
+    // Obtenir la date actuelle et la date dans 3 jours
     const now = new Date();
-    const threeDaysFromNow = new Date(now);
+    const threeDaysFromNow = new Date();
     threeDaysFromNow.setDate(now.getDate() + 3);
-
-    const frenchDateFormat = new Intl.DateTimeFormat('fr-FR', {
-        timeZone: 'Europe/Paris',
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit'
-    });
-
-    // Formater les dates pour la comparaison
-    const formattedDate = frenchDateFormat.format(date);
-    const formattedNow = frenchDateFormat.format(now);
-    const formattedThreeDaysFromNow = frenchDateFormat.format(threeDaysFromNow);
-
-    return formattedDate <= formattedThreeDaysFromNow;
+    
+    // Comparer les valeurs de temps (timestamps)    
+    return date.getTime() <= threeDaysFromNow.getTime();
 }
 
 function isDateWithinNext3Days(dateString) {
     const date = new Date(dateString);
-    
-    // Obtenir la date actuelle et les dates de demain et dans 3 jours dans le fuseau horaire Europe/Paris
+
+    // Obtenir la date actuelle et les limites des 3 prochains jours
     const now = new Date();
+    now.setHours(0, 0, 0, 0); // Réinitialiser à minuit
+
     const tomorrow = new Date(now);
     tomorrow.setDate(now.getDate() + 1);
 
     const threeDaysFromNow = new Date(now);
     threeDaysFromNow.setDate(now.getDate() + 3);
 
-    const frenchDateFormat = new Intl.DateTimeFormat('fr-FR', {
-        timeZone: 'Europe/Paris',
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit'
-    });
-
-    // Formater les dates pour la comparaison
-    const formattedDate = frenchDateFormat.format(date);
-    const formattedTomorrow = frenchDateFormat.format(tomorrow);
-    const formattedThreeDaysFromNow = frenchDateFormat.format(threeDaysFromNow);
-
-    // Vérifier si la date est entre demain et dans 3 jours (inclus)
-    return formattedDate >= formattedTomorrow && formattedDate <= formattedThreeDaysFromNow;
+    // Vérifier si la date est entre demain et dans 3 jours inclus
+    return date >= tomorrow && date <= threeDaysFromNow;
 }
 
 function HealPokemons() {
