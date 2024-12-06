@@ -32,6 +32,10 @@ function updateEnemyTrainers() {
     localStorage.setItem("enemy_trainers", JSON.stringify(enemy_trainers));
 }
 
+function updateItemCodes() {
+    localStorage.setItem("items_code", JSON.stringify(items_code));
+}
+
 function getHPinPercent(pokemon) {
     return (parseInt(pokemon.hp) / parseInt(pokemon.max_hp) * 100);
 }

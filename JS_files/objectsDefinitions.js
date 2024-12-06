@@ -173,6 +173,14 @@ function CheckForUpdatesInEnemyTrainers() {
     updateEnemyTrainers();
 }
 
+function CheckForUpdatesItemCodes() {
+    ItemsCodes.forEach(element => {
+        if (!items_code.find(code => code.id === element.id))
+            items_code.push(element);
+    });
+    updateItemCodes();
+}
+
 function HardReset() {
     forcePokedexUpdate = true;
     forceMapCasesUpdate = true;
