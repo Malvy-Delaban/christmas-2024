@@ -117,6 +117,7 @@ function CreateItemsCode() {
     } else {
         console.log("Une sauvegarde des codes objets existe déjà. Utilisation de la sauvegarde.");
         items_code = JSON.parse(stored_content);
+        CheckForUpdatesItemCodes();
     }
 }
 
