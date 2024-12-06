@@ -71,4 +71,28 @@ const ItemsCodes = [
         quantity: [2],
         has_been_used: false,
     },
+    {
+        id: 13,
+        code: "ROMAIN-EST-NUL",
+        message: "Tricheur",
+        items: [Items.ORAN_BERRY],
+        quantity: [10],
+        has_been_used: false,
+    },
+    {
+        id: 14,
+        code: "RATTRAPAGE",
+        message: "Un petit coup de pouce ?",
+        items: [Items.ORAN_BERRY],
+        quantity: [10],
+        has_been_used: false,
+    },
+    {
+        id: 15,
+        code: "DU-FRUIT",
+        message: "Bon pour la santé",
+        items: [Items.ORAN_BERRY],
+        quantity: [10],
+        has_been_used: false,
+    },
 ];
