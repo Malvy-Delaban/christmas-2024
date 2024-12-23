@@ -118,6 +118,7 @@ function CreateItemsCode() {
     } else {
         console.log("Une sauvegarde des codes objets existe déjà. Utilisation de la sauvegarde.");
         items_code = JSON.parse(stored_content);
+        CheckForUpdatesItemCodes();
     }
 }
 
@@ -182,6 +183,14 @@ function CheckForUpdatesInEnemyTrainers() {
             enemy_trainers.push(element);
     });
     updateEnemyTrainers();
+}
+
+function CheckForUpdatesItemCodes() {
+    ItemsCodes.forEach(element => {
+        if (!items_code.find(code => code.id === element.id))
+            items_code.push(element);
+    });
+    updateItemCodes();
 }
 
 function HardReset() {
