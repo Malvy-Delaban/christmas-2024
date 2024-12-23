@@ -8,6 +8,10 @@ function getAttackOfPokemon(pokedexEntry, currentLevel) {
     return maxHP;
 }
 
+function updatePokedex() {
+    localStorage.setItem("pokedex", JSON.stringify(pokedex));
+}
+
 function updateMapCases() {
     localStorage.setItem("map_cases", JSON.stringify(map_cases));
 }

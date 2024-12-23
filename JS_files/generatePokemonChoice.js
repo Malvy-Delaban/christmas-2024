@@ -11,8 +11,21 @@ function generatePokemonBasedOnPokedexEntry(pokedexEntry, currentCase) {
     let temp_attack = getAttackOfPokemon(pokedexEntry, temp_level);
     let temp_gender = Math.floor(Math.random() * 2) == 0 ? "male" : "female";
     let temp_sprite = GetSpriteByPokemon(pokedexEntry, temp_isShiny);
-    if (currentCase.adaptativeLevel)
-        temp_level = Math.max(...owned_pokemons.map(pokemon => pokemon.level));
+    if (currentCase.adaptativeLevel) {
+        let inTeamPokemonLevels = [];
+        owned_pokemons.forEach(pokemon => {
+            if (pokemon.isInTeam)
+                inTeamPokemons.push(pokemon.level);
+        });
+        let average = getAverageRoundedUp(inTeamPokemonLevels);
+        if (!average || average <= 5) {
+            temp_level = 5;
+        } else if (average > 90) {
+            temp_level = 90;
+        } else {
+            temp_level = average  + (Math.random() * (2 * currentCase.level_randomness) - currentCase.level_randomness);
+        }
+    }
 
     let newPokemon = {
         uuid: generateUUID(),

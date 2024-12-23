@@ -29,6 +29,7 @@ function CreatePokedex() {
     } else {
         console.log("Une sauvegarde du Pokedex existe déjà. Utilisation de la sauvegarde.");
         pokedex = JSON.parse(stored_content);
+        CheckForUpdatesInPokedex();
     }
     setEvolvingRelations();
 }
@@ -163,6 +164,16 @@ function CheckForUpdatesInMapCases() {
                 map_cases.push(element);
     });
     updateMapCases();
+}
+
+function CheckForUpdatesInPokedex() {
+    for (let element in setup_pokedex) {
+        let elementId = setup_pokedex[element].id;
+        if (!Object.values(pokedex).some(map_case => map_case.id === elementId)) {
+            pokedex[element] = setup_pokedex[element];
+        }
+    }
+    updatePokedex();
 }
 
 function CheckForUpdatesInEnemyTrainers() {

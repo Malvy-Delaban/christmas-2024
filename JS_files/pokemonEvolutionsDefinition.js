@@ -199,7 +199,7 @@ function setEvolvingRelations() {
     pokedex.MIAOUSS_A.needed_quantity = [1];
     pokedex.MIAOUSS_A.duelToWin = 2;
 
-    pokedex.MIAOUSS_G.evolving_pokemon = [pokedex.PERSIAN_G];
+    pokedex.MIAOUSS_G.evolving_pokemon = [pokedex.BERSERKATT];
     pokedex.MIAOUSS_G.needed_item = [Items.ORAN_BERRY];
     pokedex.MIAOUSS_G.needed_quantity = [1];
     pokedex.MIAOUSS_G.duelToWin = 2;
@@ -854,7 +854,7 @@ function setEvolvingRelations() {
     pokedex.ARMULYS.needed_quantity = [2];
     pokedex.ARMULYS.duelToWin = 3;
 
-    pokedex.BLINDALYS.evolving_pokemon = [pokedex.PAPYNOX];
+    pokedex.BLINDALYS.evolving_pokemon = [pokedex.PAPINOX];
     pokedex.BLINDALYS.needed_item = [Items.ORAN_BERRY];
     pokedex.BLINDALYS.needed_quantity = [2];
     pokedex.BLINDALYS.duelToWin = 3;

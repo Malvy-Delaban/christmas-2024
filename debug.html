@@ -19,6 +19,7 @@
 <script src="dataset/map_cases_dataset.js"></script>
 <script src="dataset/trainers_dataset.js"></script>
 <script src="dataset/items_codes_dataset.js"></script>
+<script src="dataset/basePokemons.js"></script>
 
 <!-- INCLUDE ALL FILES -->
 <script src="JS_files/objectsDefinitions.js"></script>
@@ -112,7 +113,7 @@ function displaySpecific() {
     let rarityContainer = null;
     let hi = 0;
 
-    sortedPokedex.forEach(pokemon => {
+    sortedPokedex.forEach((pokemon, index) => {
         const my_img_container = document.createElement('div');
         my_img_container.className = 'debug-item-container';
 
@@ -121,14 +122,14 @@ function displaySpecific() {
 
         const my_text = document.createElement('div');
         my_text.className = 'debug-item-text';
-        my_text.textContent = pokemon.name + " " + hi;
+        my_text.textContent = pokemon.name + " " + pokemon.attack_lvl1 + " " + pokemon.max_hp_lvl1;
 
         const key = getKeyPokedexFromId(pokemon.id);
         my_img.src = GetSpriteByPokemon(key, false);
         my_img.style.backgroundColor = pokemon.rarity.color;
 
         // if (!pokemon.isStarterLine && !listOfFindable.includes(pokemon) && pokemon.rarity.name == "RARE") {
-        if (!pokemon.isStarterLine && pokemon.rarity.name == "RARE") {
+        if (pokemon.rarity.name == "COMMON" && pokemon.evolving_pokemon.length > 0) {
             my_img_container.appendChild(my_img);
             my_img_container.appendChild(my_text);
             debugDisplay.appendChild(my_img_container);

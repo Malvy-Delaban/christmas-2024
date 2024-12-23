@@ -8441,13 +8441,27 @@ let setup_pokedex = {
         evolving_pokemon:[],
         isStarterLine: false
     },
+    DARUMACHO_G: {
+        id:"555.2",
+        name:"Darumacho de Galar",
+        has_been_seen:false,
+        has_been_captured:false,
+        rarity:Rarities.RARE,
+        type:Types.GLACE,
+        max_hp_lvl1:52,
+        attack_lvl1:32,
+        needed_quanity:[],
+        needed_item:[],
+        evolving_pokemon:[],
+        isStarterLine: false
+    },
     DARUMACHO: {
         id:555,
         name:"Darumacho",
         has_been_seen:false,
         has_been_captured:false,
         rarity:Rarities.RARE,
-        type:Types.GLACE,
+        type:Types.FEU,
         max_hp_lvl1:52,
         attack_lvl1:32,
         needed_quanity:[],

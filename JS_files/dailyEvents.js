@@ -48,6 +48,36 @@ function isPastToday(dateString) {
     return date.getTime() < now.getTime();
 }
 
+function isInXDays(dateString, x) {
+    const targetDate = new Date(dateString);
+
+    // Get the current date at midnight
+    const now = new Date();
+    now.setHours(0, 0, 0, 0);
+
+    // Set the target date to midnight
+    targetDate.setHours(0, 0, 0, 0);
+
+    // Calculate the difference in days
+    const diffInDays = (targetDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24);
+
+    // Check if the difference matches x
+    return diffInDays === x;
+}
+
+function getDateInXDay(x) {
+    // Obtenir la date actuelle
+    const now = new Date();
+
+    // Ajouter ou soustraire x jours
+    now.setDate(now.getDate() + x);
+
+    // Réinitialiser l'heure à minuit
+    now.setHours(0, 0, 0, 0);
+
+    return now;
+}
+
 function isDatePastOrWithinNext3Days(dateString) {
     const date = new Date(dateString);
     
@@ -91,4 +121,6 @@ function DailyEvents() {
 
     trainer_card.last_loading = new Date();
     updateTrainerCard();
+
+    GenerateRoutesRandomly();
 }
