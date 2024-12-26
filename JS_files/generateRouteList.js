@@ -54,13 +54,13 @@ function getRarityWeightedList() {
 
     for (let i = 0; i < 1; i++)
         raritiesPossible.push("LEGENDARY");
-    for (let i = 0; i < 3; i++)
-        raritiesPossible.push("EPIC");
     for (let i = 0; i < 5; i++)
-        raritiesPossible.push("RARE");
-    for (let i = 0; i < 6; i++)
-        raritiesPossible.push("UNCOMMON");
+        raritiesPossible.push("EPIC");
     for (let i = 0; i < 7; i++)
+        raritiesPossible.push("RARE");
+    for (let i = 0; i < 9; i++)
+        raritiesPossible.push("UNCOMMON");
+    for (let i = 0; i < 10; i++)
         raritiesPossible.push("COMMON");
 
     return raritiesPossible;
