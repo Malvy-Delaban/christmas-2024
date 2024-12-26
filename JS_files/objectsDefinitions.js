@@ -209,6 +209,7 @@ function FixPokemonLevel() {
     owned_pokemons.forEach(pokemon => {
         pokemon.level = Math.ceil(pokemon.level);
     });
+    updateOwnedPokemons();
 }
 
 function Setup() {
