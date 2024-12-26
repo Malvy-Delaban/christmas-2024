@@ -15,7 +15,7 @@ function generatePokemonBasedOnPokedexEntry(pokedexEntry, currentCase) {
         let inTeamPokemonLevels = [];
         owned_pokemons.forEach(pokemon => {
             if (pokemon.isInTeam)
-                inTeamPokemons.push(pokemon.level);
+                inTeamPokemonLevels.push(pokemon.level);
         });
         let average = getAverageRoundedUp(inTeamPokemonLevels);
         if (!average || average <= 5) {
