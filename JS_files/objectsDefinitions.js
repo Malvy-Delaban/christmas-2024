@@ -205,6 +205,12 @@ function HardReset() {
     Setup();
 }
 
+function FixPokemonLevel() {
+    owned_pokemons.forEach(pokemon => {
+        pokemon.level = Math.ceil(pokemon.level);
+    });
+}
+
 function Setup() {
     CreateUpdatesDone();
     if (checkForForcedUpdate())
@@ -217,4 +223,6 @@ function Setup() {
     CreateTrainerCard();
     CreateEnemyTrainers();
     CreateItemsCode();
+
+    FixPokemonLevel();
 }
