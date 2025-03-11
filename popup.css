@@ -89,11 +89,34 @@
     padding-bottom: 3rem;
 }
 
+.popup-content-pokedex-list {
+    padding-top: 5rem;
+    height: 80;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    overflow-y: auto;
+    flex-grow: 1; /* Remplit tout l'espace disponible */
+}
+
 /* Conteneur de chaque Pokémon */
 .popup-content-single-pokemon {
     position: relative;
     height: 14rem;
     width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    gap: 3rem;
+}
+
+.popup-content-single-pokemon-in-pokedex {
+    position: relative;
+    height: 14rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -110,6 +133,15 @@
     width: 16rem;
 }
 
+.popup-content-pokedex-entry {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+    width: 10rem;
+}
+
 .popup-content-pokemon-image {
     position: absolute;
     top: 0;
@@ -117,6 +149,20 @@
     height: 100%;
     z-index: 9;
     filter: drop-shadow(0 0 4px black);
+}
+
+.popup-content-pokedexs-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 9;
+}
+
+.popup-content-pokedexs-image-placeholder {
+    height: 50%;
+    z-index: 9;
+    opacity: 15%;
 }
 
 .popup-content-rarity-background {
@@ -146,6 +192,13 @@
     color: white;
     font-size: 1.8rem;
     font-weight: 400;
+    text-transform: uppercase;
+}
+
+.popup-content-gen-chip-text { 
+    color: rgb(43 26 67);
+    font-size: 2rem;
+    font-weight: 700;
     text-transform: uppercase;
 }
 
@@ -837,6 +890,27 @@
     border-radius: 3rem;
     border: solid 0.3rem #463460;
     color: #463460;
+}
+
+.detail-pokedex-container {
+    width: 40%;
+    height: 8rem;
+    text-align: center;
+    border-radius: 4rem;
+    color: white;
+    background-color: #685189;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+.detail-pokedex-icon {
+    width: 7rem;
+    height: 7rem;
 }
 
 .detail-enter-code-input {

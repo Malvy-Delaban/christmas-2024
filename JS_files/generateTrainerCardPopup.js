@@ -57,6 +57,24 @@ function generateTrainerCardPopup() {
     const capturedPokemon = document.createElement('div');
     capturedPokemon.classList.add('popup-trainer-card-captured-pokemons');
     capturedPokemon.textContent = "Pokémons capturés : " + getCapturedPokemonNmbr();
+    
+    const pokedexContainer = document.createElement('div');
+    pokedexContainer.classList.add('detail-pokedex-container');
+
+    const pokedexImg = document.createElement('img');
+    pokedexImg.src = 'sprites/misc/pokedex.png';
+    pokedexImg.style.cursor = 'pointer';
+    pokedexImg.classList.add('detail-pokedex-icon');
+
+    const pokedexDescription = document.createElement('div');
+    pokedexDescription.textContent = "Pokédex";
+
+    pokedexContainer.appendChild(pokedexImg);
+    pokedexContainer.appendChild(pokedexDescription);
+
+    pokedexContainer.addEventListener('click', () => {
+        generatePokedexPopup();
+    });
 
     const buttonsContainer = document.createElement('div');
     buttonsContainer.classList.add('popup-trainer-card-buttons-container');
@@ -78,6 +96,7 @@ function generateTrainerCardPopup() {
     popupContent.appendChild(trainerName);
     popupContent.appendChild(seenPokemon);
     popupContent.appendChild(capturedPokemon);
+    popupContent.appendChild(pokedexContainer);
     popupContent.appendChild(buttonsContainer);
     popupContainer.appendChild(popupContent);
     popupBackgroundContainer.appendChild(popupContainer);

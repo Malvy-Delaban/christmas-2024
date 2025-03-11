@@ -214,8 +214,8 @@ function FixPokemonLevel() {
 
 function Setup() {
     CreateUpdatesDone();
-    if (checkForForcedUpdate())
-        ClearPreviousSavesOnUpdateDates();
+    // if (checkForForcedUpdate())
+    //     ClearPreviousSavesOnUpdateDates();
 
     CreatePokedex();
     CreateMapCases();

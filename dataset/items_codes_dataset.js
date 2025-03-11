@@ -95,4 +95,12 @@ const ItemsCodes = [
         quantity: [10],
         has_been_used: false,
     },
+    {
+        id: 16,
+        code: "MERCI!",
+        message: "Merci d'être aussi fidèle au jeu !",
+        items: [Items.ORAN_BERRY],
+        quantity: [200],
+        has_been_used: false,
+    },
 ];

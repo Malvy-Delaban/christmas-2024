@@ -205,6 +205,21 @@ function GetSpriteByPokemon(pokedexEntry, isShiny) {
     return spriteName;
 }
 
+function GetThumbnailSpriteByPokemon(pokedexEntry, isShiny) {
+    let pokedexIdParsed = String(pokedex[pokedexEntry].id);
+
+    let pokedex_id = pokedexIdParsed.includes('.') ? pokedexIdParsed.split('.')[0] : pokedexIdParsed;
+    let altFormNumber = pokedexIdParsed.includes('.') ? GetSpriteAltNumberSpecialCases(pokedexIdParsed, isShiny) : 0;
+
+    let formattedPokedexId = pokedex_id.toString().padStart(4, '0');
+    let formattedAltFormNumber = altFormNumber.toString().padStart(3, '0');
+    let shinySuffix = isShiny ? 'r' : 'n';
+
+    let spriteName = `sprites/thumbnails/poke_capture_${formattedPokedexId}_${formattedAltFormNumber}_mf_n_00000000_f_${shinySuffix}.png`;
+
+    return spriteName;
+}
+
 function getKeyPokedexFromId(targetId) {
     let foundKey = null;
 
@@ -282,6 +297,99 @@ function getSeenPokemonNmbr() {
         if (pokemon.has_been_seen)
             seen++;
     return seen;
+}
+
+function getSeenPokemonNmbrForRegion(region) {
+    let seen = 0;
+
+    const regionData = Pokedexs[region];
+    if (!regionData) {
+        console.error(`Région ${region} non trouvée`);
+        return seen;
+    }
+
+    const startnum = parseFloat(regionData.startnum);
+    const endnum = parseFloat(regionData.endnum);
+
+    for (const [key, pokemon] of Object.entries(pokedex)) {
+        const pokemonId = parseFloat(pokemon.id);
+
+        if (pokemon.has_been_seen && pokemonId >= startnum && pokemonId <= endnum)
+            seen++;
+    }
+
+    return seen;
+}
+
+function getCapturedPokemonNmbrForRegion(region) {
+    let captured = 0;
+
+    const regionData = Pokedexs[region];
+    if (!regionData) {
+        console.error(`Région ${region} non trouvée`);
+        return captured;
+    }
+
+    const startnum = parseFloat(regionData.startnum);
+    const endnum = parseFloat(regionData.endnum);
+
+    for (const [key, pokemon] of Object.entries(pokedex)) {
+        const pokemonId = parseFloat(pokemon.id);
+
+        if (pokemon.has_been_captured && pokemonId >= startnum && pokemonId <= endnum)
+            captured++;
+    }
+
+    return captured;
+}
+
+function getPokemonsForRegion(region) {
+    let pokeList = {};
+
+    const regionData = Pokedexs[region];
+    if (!regionData) {
+        console.error(`Région ${region} non trouvée`);
+        return null;
+    }
+
+    const startnum = parseFloat(regionData.startnum);
+    const endnum = parseFloat(regionData.endnum);
+
+    for (const [key, pokemon] of Object.entries(pokedex)) {
+        const pokemonId = parseFloat(pokemon.id);
+
+        if (pokemonId >= startnum && pokemonId <= endnum)
+            pokeList[key] = pokemon;
+    }
+
+    return pokeList;
+}
+
+function getTotalPokemonNmbrForRegion(region) {
+    let total = 0;
+
+    // Accéder à la région spécifique dans Pokedexs
+    const regionData = Pokedexs[region];
+    if (!regionData) {
+        console.error(`Région ${region} non trouvée`);
+        return total;
+    }
+
+    // Convertir startnum et endnum en nombres
+    const startnum = parseFloat(regionData.startnum);
+    const endnum = parseFloat(regionData.endnum);
+
+    // Vérifier tous les Pokémon dans Pokedex
+    for (const [key, pokemon] of Object.entries(pokedex)) {
+        const pokemonId = parseFloat(pokemon.id);
+
+        // Vérifier si l'id du Pokémon est dans la plage de la région
+        if (pokemonId >= startnum && pokemonId <= endnum) {
+            total++;
+        }
+    }
+
+    return total;
 }
 
 function getCapturedPokemonNmbr() {
