@@ -58,7 +58,7 @@ body {
 
 .pokemon-choice {
     width: 70vw;
-    height: 28vh;
+    height: 24vh;
     color: white;
     position: relative;
 }
@@ -162,6 +162,15 @@ body {
     width: 5rem;
     bottom: 42%;
     right: 4rem;
+    z-index: 2; /* Assurez-vous que l'icône est au-dessus de l'image */
+}
+
+.captured-icon {
+    position: absolute;
+    height: 5rem;
+    width: 5rem;
+    bottom: 42%;
+    left: 4rem;
     z-index: 2; /* Assurez-vous que l'icône est au-dessus de l'image */
 }
 

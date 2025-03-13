@@ -212,6 +212,14 @@ function FixPokemonLevel() {
     updateOwnedPokemons();
 }
 
+function FixCatchedPokemon() {
+    owned_pokemons.forEach(pokemon => {
+        pokedex[pokemon.pokedexId].has_been_seen = true;
+        pokedex[pokemon.pokedexId].has_been_captured = true;
+    });
+    updatePokedex();
+}
+
 function Setup() {
     CreateUpdatesDone();
     // if (checkForForcedUpdate())
@@ -226,4 +234,5 @@ function Setup() {
     CreateItemsCode();
 
     FixPokemonLevel();
+    FixCatchedPokemon();
 }

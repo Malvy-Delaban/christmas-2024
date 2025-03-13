@@ -134,6 +134,15 @@ function generatePokemonChoiceDisplay(currentCase) {
             shinyIcon.className = 'shiny-icon';
             pokemonData.appendChild(shinyIcon);
         }
+        
+        // Ajouter l'icône shiny si nécessaire
+        if (pokedex[currentCase.generated_pokemons[i].pokedexId].has_been_captured) {
+            const catchedIcon = document.createElement('img');
+            catchedIcon.src = 'sprites/misc/pokeball_icon.png';
+            catchedIcon.alt = 'Icône captured';
+            catchedIcon.className = 'captured-icon';
+            pokemonData.appendChild(catchedIcon);
+        }
 
         // Conteneur pour les détails supplémentaires du Pokémon
         const pokemonDetails = document.createElement('div');
@@ -152,6 +161,11 @@ function generatePokemonChoiceDisplay(currentCase) {
         pokemonLevel.className = 'pokemon-choice-data-details-level';
         pokemonLevel.textContent = `niv. ${currentCase.generated_pokemons[i].level}`;
         nameLevelLine.appendChild(pokemonLevel);
+        pokemonDetails.appendChild(nameLevelLine);
+
+        const pokemonIsCatched = document.createElement('div');
+        pokemonIsCatched.className = 'pokemon-choice-data-details-level';
+        pokemonIsCatched.textContent = `niv. ${currentCase.generated_pokemons[i].level}`;
         pokemonDetails.appendChild(nameLevelLine);
 
         // Ligne pour la rareté et le type
