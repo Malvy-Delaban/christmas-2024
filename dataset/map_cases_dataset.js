@@ -861,6 +861,25 @@ let setup_map_cases = [
             COIFFETON: 1,
         },
     },
+    {
+        id: 1010,
+        code: 'MERCI-VRAIMENT!',
+        name: "Vous êtes des anges",
+        sprite: "./sprites/locations/location_44.png",
+        unlock_day: -1,
+        has_been_used: false,
+        shiny_lock: false,
+        adaptativeLevel: true,
+        base_level: 1,
+        level_randomness: 0,
+        generated_pokemons: [],
+        possible_pokemons: {
+            RAIKOU: 3,
+            SUICUNE: 3,
+            ENTEI: 3,
+            CELEBI: 1,
+        },
+    },
     // Custom codes for Lucy's advent calendar
     {
         id: 1100,
@@ -970,26 +989,6 @@ let setup_map_cases = [
             MAGICARPE: 30,
             KYOGRE: 28,
             GROUDON: 28,
-        },
-    },
-    // Later codes
-    {
-        id: 1200,
-        code: 'MERCI-VRAIMENT!',
-        name: "Vous êtes des anges",
-        sprite: "./sprites/locations/location_44.png",
-        unlock_day: -1,
-        has_been_used: false,
-        shiny_lock: false,
-        adaptativeLevel: true,
-        base_level: 1,
-        level_randomness: 0,
-        generated_pokemons: [],
-        possible_pokemons: {
-            RAIKOU: 3,
-            SUICUNE: 3,
-            ENTEI: 3,
-            CELEBI: 1,
         },
     },
 ];

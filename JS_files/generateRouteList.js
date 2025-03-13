@@ -72,7 +72,7 @@ function createSingleMapRandom(mapDate, idOffset) {
     let formattedNumber = numberLocation.toString().padStart(2, '0');
 
     let newMap = {
-        id: getBiggestIdMap() + idOffset,
+        id: getDailyUniqueId() + idOffset,
         code: '',
         name: "Une nouvelle rencontre est là !",
         sprite: "./sprites/locations/location_" + formattedNumber + ".png",

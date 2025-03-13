@@ -683,3 +683,12 @@ function removePokemonFromOwned(pokemon) {
     document.dispatchEvent(updateYourPokemonEvent);
     checkInTeamNumber();
 }
+
+function getDailyUniqueId() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = now.getMonth() + 1; // Les mois commencent à 0 en JS
+    const day = now.getDate();
+    
+    return `${year}${String(month).padStart(2, '0')}${String(day).padStart(2, '0')}`;
+}

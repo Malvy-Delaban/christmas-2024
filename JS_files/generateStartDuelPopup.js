@@ -117,9 +117,51 @@ function generateStartDuelPopup(trainer) {
     makeSelectionPokemonClickable(confirmButtonContainer, trainer, popupBackgroundContainer);
 }
 
+function generateTodaysDuel() {
+    return;
+
+    let newDuel = {
+        id: getDailyUniqueId(),
+        code: '',
+        name: Math.floor(Math.random(randomNames.length)),
+        sprite: "./sprites/trainers/trainer_" + (1 + Math.floor(Math.random(78))) + ".png",
+        unlock_day: new Date(),
+        has_been_used: false,
+        has_been_beaten: false,
+        base_level: 6,
+        rewards: [
+            {
+                item: Items.ORAN_BERRY,
+                quantity: 1,
+            },
+        ],
+        pokemons: [
+            {
+                pokedexId: "MAGICARPE",
+                level: 6,
+                is_shiny: false,
+            },
+            {
+                pokedexId: "MAGICARPE",
+                level: 6,
+                is_shiny: false,
+            },
+            {
+                pokedexId: "OTARIA",
+                level: 6,
+                is_shiny: false,
+            },
+        ]
+    };
+    // enemy_trainers.push();
+}
+
 function checkAvailableDuels() {
     let date = new Date();
 
+    let todaysDuel = enemy_trainers.find(trainer => isToday(trainer.unlock_day));
+    if (todaysDuel == undefined)
+        generateTodaysDuel();
     let trainersFound = enemy_trainers.filter(trainer => isToday(trainer.unlock_day) && trainer.has_been_used == false);
     let trainersIdFound = [];
     trainersFound.forEach(trainer => trainersIdFound.push(trainer.id));
