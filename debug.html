@@ -122,14 +122,14 @@ function displaySpecific() {
 
         const my_text = document.createElement('div');
         my_text.className = 'debug-item-text';
-        my_text.textContent = pokemon.name + " " + pokemon.attack_lvl1 + " " + pokemon.max_hp_lvl1;
+        my_text.textContent = pokemon.name + " " + (pokemon.max_hp_lvl1 + pokemon.attack_lvl1);
 
         const key = getKeyPokedexFromId(pokemon.id);
         my_img.src = GetSpriteByPokemon(key, false);
         my_img.style.backgroundColor = pokemon.rarity.color;
 
         // if (!pokemon.isStarterLine && !listOfFindable.includes(pokemon) && pokemon.rarity.name == "RARE") {
-        if (pokemon.rarity.name == "COMMON" && pokemon.evolving_pokemon.length > 0) {
+        if (true /*pokemon.rarity.name == "COMMON" && pokemon.evolving_pokemon.length > 0*/) {
             my_img_container.appendChild(my_img);
             my_img_container.appendChild(my_text);
             debugDisplay.appendChild(my_img_container);

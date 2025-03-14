@@ -23,7 +23,7 @@ function makeSelectionPokemonClickable(confirmButtonContainer, trainer, popupBac
             image.classList.remove('popup-start-duel-pokemon-own-icon-unselected');
 
             confirmButtonContainer.style.opacity = "100%";
-    
+
             confirmButtonContainer.addEventListener('click', () => {
                 if (!isDuelFinished(trainer.id)) {
                     generateDuel(trainer);
@@ -55,7 +55,7 @@ function generateStartDuelPopup(trainer) {
     const title = document.createElement('p');
     title.classList.add('popup-start-duel-title');
     title.textContent = trainer.name;
-    
+
     const closeButton = document.createElement('img');
     closeButton.src = 'sprites/misc/cross_icon.png';
     closeButton.style.cursor = 'pointer';
@@ -89,7 +89,7 @@ function generateStartDuelPopup(trainer) {
         imgPokeball.className = 'popup-start-duel-pokemon-list-icon';
         trainerPokemonList.appendChild(imgPokeball);
     });
-    
+
     const confirmButton = document.createElement('div');
     confirmButton.classList.add('popup-start-duel-button-text');
     confirmButton.textContent = "Lancer le duel";
@@ -117,48 +117,79 @@ function generateStartDuelPopup(trainer) {
     makeSelectionPokemonClickable(confirmButtonContainer, trainer, popupBackgroundContainer);
 }
 
+function GetTeamLevel() {
+    if (!owned_pokemons || owned_pokemons.length < 1)
+        return 5;
+    let inTeamPokemonLevels = [];
+    owned_pokemons.forEach(pokemon => {
+        if (pokemon.isInTeam)
+            inTeamPokemonLevels.push(pokemon.level);
+    });
+    if (inTeamPokemonLevels.length < 1)
+        return 5;
+    let average = getAverageRoundedUp(inTeamPokemonLevels);
+
+    if (!average || average <= 5) {
+        temp_level = 5;
+    } else if (average > 90) {
+        temp_level = 90;
+    } else {
+        temp_level = average;
+    }
+    return temp_level;
+}
+
 function generateTodaysDuel() {
-    return;
+    let sortedPokedex = Object.values(pokedex);
+    sortedPokedex = sortedPokedex.filter(poke => poke.rarity.name != "LEGENDARY");
+    sortedPokedex = Object.values(sortedPokedex).sort((pokemonA, pokemonB) => {
+        return (pokemonB.max_hp_lvl1 + pokemonB.attack_lvl1) - (pokemonA.max_hp_lvl1 + pokemonA.attack_lvl1);
+    });
+    let firstPoke = 0;
+    let secondPoke = 0;
+    let thirdPoke = 0;
+    firstPoke = Math.floor(Math.random() * (sortedPokedex.length / 3));
+    secondPoke = Math.floor(Math.random() * (sortedPokedex.length / 3) + (sortedPokedex.length / 3));
+    thirdPoke = Math.floor(Math.random() * (sortedPokedex.length / 3) + (2 * (sortedPokedex.length / 3)));
+    console.log(GetTeamLevel());
 
     let newDuel = {
         id: getDailyUniqueId(),
         code: '',
-        name: Math.floor(Math.random(randomNames.length)),
-        sprite: "./sprites/trainers/trainer_" + (1 + Math.floor(Math.random(78))) + ".png",
+        name: randomNames[Math.floor(Math.random() * randomNames.length)],
+        sprite: "./sprites/trainers/trainer_" + (1 + Math.floor(Math.random() * 78)) + ".png",
         unlock_day: new Date(),
         has_been_used: false,
         has_been_beaten: false,
-        base_level: 6,
+        base_level: GetTeamLevel(),
         rewards: [
             {
                 item: Items.ORAN_BERRY,
-                quantity: 1,
+                quantity: Math.floor(Math.random() * 4) + 1,
             },
         ],
         pokemons: [
             {
-                pokedexId: "MAGICARPE",
-                level: 6,
-                is_shiny: false,
+                pokedexId: getKeyPokedexFromId(Object.values(sortedPokedex)[thirdPoke].id),
+                level: GetTeamLevel(),
+                is_shiny: Math.floor(Math.random() * 20) == 1,
             },
             {
-                pokedexId: "MAGICARPE",
-                level: 6,
-                is_shiny: false,
+                pokedexId: getKeyPokedexFromId(Object.values(sortedPokedex)[secondPoke].id),
+                level: GetTeamLevel(),
+                is_shiny: Math.floor(Math.random() * 20) == 1,
             },
             {
-                pokedexId: "OTARIA",
-                level: 6,
-                is_shiny: false,
+                pokedexId: getKeyPokedexFromId(Object.values(sortedPokedex)[firstPoke].id),
+                level: GetTeamLevel(),
+                is_shiny: Math.floor(Math.random() * 20) == 1,
             },
         ]
     };
-    // enemy_trainers.push();
+    enemy_trainers.push(newDuel);
 }
 
 function checkAvailableDuels() {
-    let date = new Date();
-
     let todaysDuel = enemy_trainers.find(trainer => isToday(trainer.unlock_day));
     if (todaysDuel == undefined)
         generateTodaysDuel();
@@ -171,7 +202,7 @@ function checkAvailableDuels() {
 
 function GenerateDuelButtonDisplay() {
     let trainersId = checkAvailableDuels();
-    
+
     if (trainersId && trainersId.length) {
         const actionButton = document.createElement('button');
         actionButton.id = "duel-button";

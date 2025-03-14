@@ -18,7 +18,7 @@ function generatePokemonBasedOnPokedexEntry(pokedexEntry, currentCase) {
                 inTeamPokemonLevels.push(pokemon.level);
         });
         let average = getAverageRoundedUp(inTeamPokemonLevels);
-        console.log(average);
+
         if (!average || average <= 5) {
             temp_level = 5;
         } else if (average > 90) {
