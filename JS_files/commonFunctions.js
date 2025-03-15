@@ -67,7 +67,7 @@ function createTypeChipPopupYourPokemons(pokemon) {
     const typeChip = document.createElement('div');
     typeChip.classList.add('popup-content-type-chip');
     typeChip.style.backgroundColor = pokemon.type.color;
-    
+
     const typeChipText = document.createElement('p');
     typeChipText.textContent = pokemon.type.name;
     typeChipText.classList.add('popup-content-type-chip-text');
@@ -80,7 +80,7 @@ function createTypeChipPopupDetail(pokemon) {
     const typeChip = document.createElement('div');
     typeChip.classList.add('pokemon-detail-type-chip');
     typeChip.style.backgroundColor = pokedex[pokemon.pokedexId].type.color;
-    
+
     const typeChipText = document.createElement('p');
     typeChipText.textContent = pokedex[pokemon.pokedexId].type.name;
     typeChipText.classList.add('pokemon-detail-type-chip-text');
@@ -93,7 +93,7 @@ function createTypeChipFromPokedexID(PokedexID) {
     const typeChip = document.createElement('div');
     typeChip.classList.add('popup-evolution-type-chip');
     typeChip.style.backgroundColor = pokedex[PokedexID].type.color;
-    
+
     const typeChipText = document.createElement('p');
     typeChipText.textContent = pokedex[PokedexID].type.name;
     typeChipText.classList.add('popup-evolution-type-chip-text');
@@ -107,7 +107,7 @@ function createTypeChipFromPokedexIDDuel(PokedexID, isEnemy) {
     typeChip.classList.add('popup-evolution-type-chip');
     typeChip.id = isEnemy ? "enemy-pokemon-type" : "player-pokemon-type";
     typeChip.style.backgroundColor = pokedex[PokedexID].type.color;
-    
+
     const typeChipText = document.createElement('p');
     typeChipText.textContent = pokedex[PokedexID].type.name;
     typeChipText.classList.add('popup-evolution-type-chip-text');
@@ -155,7 +155,7 @@ function getInTeamPokemons() {
 }
 
 function generateUUID() {
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
         const r = Math.random() * 16 | 0;
         const v = c === 'x' ? r : (r & 0x3 | 0x8);
         return v.toString(16);
@@ -229,7 +229,7 @@ function getKeyPokedexFromId(targetId) {
             break; // Exit the loop once the key is found
         }
     }
-    
+
     return foundKey;
 }
 
@@ -482,7 +482,7 @@ function showNotification(message, status) {
     else
         notification.style.backgroundColor = "#4CAF50";
 
-    
+
     // Show the notification
     notification.classList.add('show');
 
@@ -634,8 +634,8 @@ function getAttackEfficiency(attackingPokemon, defendingPokemon, isRandomAttack,
 
 function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
-  }
-  
+}
+
 async function runWithDelay(delayInSecondes) {
     await delay(delayInSecondes * 1000);
 }
@@ -689,6 +689,65 @@ function getDailyUniqueId() {
     const year = now.getFullYear();
     const month = now.getMonth() + 1; // Les mois commencent à 0 en JS
     const day = now.getDate();
-    
+
     return `${year}${String(month).padStart(2, '0')}${String(day).padStart(2, '0')}`;
+}
+
+function downloadLocalStorage() {
+    // Convertir le LocalStorage en un objet JSON
+    const data = JSON.stringify(localStorage, null, 2);
+    const blob = new Blob([data], { type: "application/json" });
+
+    // Créer un lien de téléchargement
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    let date = new Date().toISOString().split("T")[0]; // YYYY-MM-DD
+    let name = "pokeadventure_save_" + date + ".json";
+    a.download = name;
+
+    // Simuler un clic pour télécharger
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+
+function restoreLocalStorageFromFile() {
+    const input = document.createElement("input");
+    input.type = "file";
+    input.accept = "application/json";
+
+    input.addEventListener("change", (event) => {
+        const file = event.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            try {
+                const data = JSON.parse(e.target.result);
+
+                // Vérifier que le fichier contient bien un objet valide
+                if (typeof data !== "object" || data === null) {
+                    alert("Fichier invalide : le contenu doit être un objet JSON.");
+                    return;
+                }
+
+                // Vider l'ancien localStorage
+                localStorage.clear();
+
+                // Remplir avec les nouvelles données
+                for (const key in data) {
+                    localStorage.setItem(key, data[key]);
+                }
+
+                alert("LocalStorage restauré avec succès !");
+                location.reload();
+            } catch (error) {
+                alert("Erreur lors du chargement du fichier : " + error.message);
+            }
+        };
+
+        reader.readAsText(file);
+    });
+
+    input.click();
 }

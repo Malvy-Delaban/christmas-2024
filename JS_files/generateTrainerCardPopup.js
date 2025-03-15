@@ -90,6 +90,28 @@ function generateTrainerCardPopup() {
 
     buttonsContainer.appendChild(eventCodeButton);
 
+    const downloadSaveButton = document.createElement('div');
+    downloadSaveButton.classList.add('popup-trainer-card-button', 'popup-trainer-card-button-dwl-save');
+    downloadSaveButton.style.cursor = 'pointer';
+    downloadSaveButton.textContent = "Télécharger la sauvegarde";
+
+    downloadSaveButton.addEventListener('click', () => {
+        downloadLocalStorage();
+    });
+
+    buttonsContainer.appendChild(downloadSaveButton);
+
+    const LoadSaveButton = document.createElement('div');
+    LoadSaveButton.classList.add('popup-trainer-card-button', 'popup-trainer-card-button-load-save');
+    LoadSaveButton.style.cursor = 'pointer';
+    LoadSaveButton.textContent = "Charger une sauvegarde";
+
+    LoadSaveButton.addEventListener('click', () => {
+        restoreLocalStorageFromFile();
+    });
+
+    buttonsContainer.appendChild(LoadSaveButton);
+
     popupContent.appendChild(title);
     popupContent.appendChild(closeButton);
     popupContent.appendChild(trainerImg);

@@ -851,6 +851,15 @@
     padding: 0 3rem;
 }
 
+.popup-trainer-card-button-dwl-save {
+    margin-top: 1rem;
+}
+
+.popup-trainer-card-button-load-save {
+    margin-top: 1rem;
+    background-color: #db2c2c;
+}
+
 .popup-end-duel-button {
     margin-top: 3rem;
 }
