@@ -94,6 +94,22 @@ function generateShopPopup() {
     subtitleText.classList.add('popup-subtitle-text');
     subtitleText.id = 'popup-subtitle-text-berry-count';
 
+    const eggShopButton = document.createElement('div');
+    eggShopButton.classList.add('popup-egg-shop-button');
+
+    eggShopButton.addEventListener('click', () => {
+        generateBuyingEggPopup();
+    });
+
+    const eggShopButtonText = document.createElement('p');
+    eggShopButtonText.textContent = "Voir les oeufs";
+    eggShopButton.appendChild(eggShopButtonText);
+
+    const eggShopButtonImg = document.createElement('img');
+    eggShopButtonImg.src = "sprites/pokemons/egg.png";
+    eggShopButtonImg.classList.add('popup-egg-shop-button-img');
+    eggShopButton.appendChild(eggShopButtonImg);
+
     const subtitleImg = document.createElement('img');
     subtitleImg.src = './sprites/misc/oran_icon.png';
     subtitleImg.alt = "oran berry img";
@@ -133,6 +149,7 @@ function generateShopPopup() {
     itemsListWrapper.appendChild(itemList);
     popupContent.appendChild(titleLine);
     popupContent.appendChild(subtitleLine);
+    // popupContent.appendChild(eggShopButton); TEMPORARILY DISABLED, WAITING FOR FEATURE TO BE FINISHED
     popupContent.appendChild(itemsListWrapper);
     popupContainer.appendChild(popupContent);
     popupBackgroundContainer.appendChild(popupContainer);
