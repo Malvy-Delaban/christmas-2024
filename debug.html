@@ -19,7 +19,11 @@
 <script src="dataset/map_cases_dataset.js"></script>
 <script src="dataset/trainers_dataset.js"></script>
 <script src="dataset/items_codes_dataset.js"></script>
+<script src="dataset/pokemon_event_codes_dataset.js"></script>
 <script src="dataset/basePokemons.js"></script>
+<script src="dataset/pokedex.js"></script>
+<script src="dataset/random_names.js"></script>
+<script src="dataset/egg_shop_dataset.js"></script>
 
 <!-- INCLUDE ALL FILES -->
 <script src="JS_files/objectsDefinitions.js"></script>
@@ -47,6 +51,9 @@
 <script src="JS_files/generateDuelEndPopup.js"></script>
 <script src="JS_files/dailyEvents.js"></script>
 <script src="JS_files/generateDuel.js"></script>
+<script src="JS_files/generatePokedexList.js"></script>
+<script src="JS_files/generatePokedexView.js"></script>
+<script src="JS_files/generateBuyingEggPopup.js"></script>
 
 <script>
     // Initialize all data / create them / retrieve them
@@ -101,13 +108,13 @@ function displaySpecific() {
         return (pokemonB.max_hp_lvl1 + pokemonB.attack_lvl1) - (pokemonA.max_hp_lvl1 + pokemonA.attack_lvl1);
     });
 
-    let listOfFindable = [];
-    map_cases.forEach(map => {
-        Object.keys(map.possible_pokemons).forEach(key => {
-            if (key && !listOfFindable.includes(pokedex[key]))
-                listOfFindable.push(pokedex[key]);
-        });
-    });
+    // let listOfFindable = [];
+    // map_cases.forEach(map => {
+    //     Object.keys(map.possible_pokemons).forEach(key => {
+    //         if (key && !listOfFindable.includes(pokedex[key]))
+    //             listOfFindable.push(pokedex[key]);
+    //     });
+    // });
 
     let currentRarity = null;
     let rarityContainer = null;
@@ -127,9 +134,8 @@ function displaySpecific() {
         const key = getKeyPokedexFromId(pokemon.id);
         my_img.src = GetSpriteByPokemon(key, false);
         my_img.style.backgroundColor = pokemon.rarity.color;
-
         // if (!pokemon.isStarterLine && !listOfFindable.includes(pokemon) && pokemon.rarity.name == "RARE") {
-        if (true /*pokemon.rarity.name == "COMMON" && pokemon.evolving_pokemon.length > 0*/) {
+        if (pokemon.type.name == "Fée" && allBasePokemons.includes(key) && pokemon.rarity.name != "LEGENDARY"/* && pokemon.evolving_pokemon.length > 0*/) {
             my_img_container.appendChild(my_img);
             my_img_container.appendChild(my_text);
             debugDisplay.appendChild(my_img_container);
@@ -243,7 +249,6 @@ function displayTrainers() {
 displaySpecific();
 // displayCurrentlyFindable();
 // displayTrainers();
-// 
-console.log(Object.keys(pokedex).length);
+
 </script>
 </html>

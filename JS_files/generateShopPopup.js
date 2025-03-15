@@ -98,7 +98,8 @@ function generateShopPopup() {
     eggShopButton.classList.add('popup-egg-shop-button');
 
     eggShopButton.addEventListener('click', () => {
-        generateBuyingEggPopup();
+        showNotification("Bientôt disponible", "error");
+        // generateBuyingEggPopup();
     });
 
     const eggShopButtonText = document.createElement('p');
@@ -149,7 +150,7 @@ function generateShopPopup() {
     itemsListWrapper.appendChild(itemList);
     popupContent.appendChild(titleLine);
     popupContent.appendChild(subtitleLine);
-    // popupContent.appendChild(eggShopButton); TEMPORARILY DISABLED, WAITING FOR FEATURE TO BE FINISHED
+    popupContent.appendChild(eggShopButton);
     popupContent.appendChild(itemsListWrapper);
     popupContainer.appendChild(popupContent);
     popupBackgroundContainer.appendChild(popupContainer);

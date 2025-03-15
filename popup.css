@@ -851,6 +851,10 @@
     padding: 0 3rem;
 }
 
+.popup-confirm-buying-button-egg {
+    margin-top: 5rem;
+}
+
 .popup-trainer-card-button-dwl-save {
     margin-top: 1rem;
 }
@@ -1139,4 +1143,37 @@
 .egg-custom-preview {
     height: 20rem;
     width: 20rem;
+}
+
+.gen-selection-wrapper {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.gen-selection-arrow {
+    height: 6rem;
+    width: 6rem;
+}
+
+.gen-selection-text {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #392c4d;
+    margin: 0;
+    text-align: center;
+}
+
+.gen-selection-img {
+    height: 10rem;
+    width: 10rem;
+}
+
+.gen-selection-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
