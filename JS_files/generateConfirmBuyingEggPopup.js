@@ -47,7 +47,7 @@ function generateConfirmBuyingEggPopup(egg, eggWindow) {
             removeItemInInventory(Items.ORAN_BERRY, egg.price);
             updateBerryCount();
             setEggInInventory(egg);
-            showNotification("Achat éfféctué", "validation");
+            showNotification("Achat effectué", "validation");
             popupBackgroundContainer.remove(); // Ferme le popup en supprimant l'élément
             eggWindow.remove(); // Ferme le popup de shop d'oeuf
         });
