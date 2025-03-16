@@ -8,6 +8,7 @@ let inventory = null;
 let trainer_card = null;
 let enemy_trainers = null;
 let items_code = null;
+let eggs = null;
 let updates_done = [];
 
 let forcePokedexUpdate = false; // While developping, will force pokedex to update at each session
@@ -122,6 +123,19 @@ function CreateItemsCode() {
     }
 }
 
+function CreateEggs() {
+    let stored_content = localStorage.getItem("eggs");
+
+    if (!stored_content) {
+        eggs = null;
+        localStorage.setItem("eggs", JSON.stringify(eggs));
+        console.log("Oeuf initialisé.");
+    } else {
+        console.log("Une sauvegarde de l'oeuf existe déjà. Utilisation de la sauvegarde.");
+        eggs = JSON.parse(stored_content);
+    }
+}
+
 function CreateUpdatesDone() {
     let stored_content = localStorage.getItem("updates_done");
 
@@ -232,6 +246,7 @@ function Setup() {
     CreateTrainerCard();
     CreateEnemyTrainers();
     CreateItemsCode();
+    CreateEggs();
 
     FixPokemonLevel();
     FixCatchedPokemon();

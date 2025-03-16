@@ -151,7 +151,6 @@ function generateTodaysDuel() {
     firstPoke = Math.floor(Math.random() * (sortedPokedex.length / 3));
     secondPoke = Math.floor(Math.random() * (sortedPokedex.length / 3) + (sortedPokedex.length / 3));
     thirdPoke = Math.floor(Math.random() * (sortedPokedex.length / 3) + (2 * (sortedPokedex.length / 3)));
-    console.log(GetTeamLevel());
 
     let newDuel = {
         id: getDailyUniqueId(),

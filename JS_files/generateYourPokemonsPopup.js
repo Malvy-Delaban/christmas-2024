@@ -7,6 +7,33 @@ function addListenerYourPokemonsPopup(pokemonList) {
 }
 
 function fillYourPokemonsPopup(pokemonList) {
+    if (eggs != null) {
+        const eggLine = document.createElement('div');
+        eggLine.classList.add('popup-content-egg-line');
+
+        const eggLineLeft = document.createElement('img');
+        eggLineLeft.src = "sprites/pokemons/egg.png";
+        eggLineLeft.style.filter = eggs.shiny.filter + " " + eggs.type.colorFilter;
+        eggLineLeft.classList.add('popup-content-egg-line-left');
+
+        const eggLineRight = document.createElement('div');
+        if (new Date(eggs.endDate) < new Date()) {
+            eggLineRight.textContent = "Cliquez pour faire éclore !";
+            eggLine.addEventListener('click', () => {
+                let pokemon = atchPokemonEgg();
+                generateAtchEggPopup(pokemon);
+                eggLine.remove();
+            });
+        } else {
+            eggLineRight.textContent = formatDateEgg(eggs.endDate);
+        }
+        eggLineRight.classList.add('popup-content-egg-line-right');
+
+        eggLine.appendChild(eggLineLeft);
+        eggLine.appendChild(eggLineRight);
+        pokemonList.appendChild(eggLine);
+    }
+
     for (let i = 0; i < Object.keys(owned_pokemons).length; i++) {
 
         // Créer un Pokémon unique à afficher
@@ -226,6 +253,7 @@ function generateYourPokemonsPopup() {
     // Créer les éléments principaux
     const popupBackgroundContainer = document.createElement('div');
     popupBackgroundContainer.classList.add('popup-background');
+    popupBackgroundContainer.id = 'popup-background-inventory';
 
     // Créer les éléments principaux
     const popupContainer = document.createElement('div');

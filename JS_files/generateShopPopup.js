@@ -98,8 +98,11 @@ function generateShopPopup() {
     eggShopButton.classList.add('popup-egg-shop-button');
 
     eggShopButton.addEventListener('click', () => {
-        showNotification("Bientôt disponible", "error");
-        // generateBuyingEggPopup();
+        if (eggs != null) {
+            showNotification("Vous avez déjà un oeuf", "error");
+        } else {
+            generateBuyingEggPopup();
+        }
     });
 
     const eggShopButtonText = document.createElement('p');

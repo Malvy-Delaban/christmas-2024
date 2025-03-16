@@ -40,6 +40,10 @@ function updateItemCodes() {
     localStorage.setItem("items_code", JSON.stringify(items_code));
 }
 
+function updateEggs() {
+    localStorage.setItem("eggs", JSON.stringify(eggs));
+}
+
 function getHPinPercent(pokemon) {
     return (parseInt(pokemon.hp) / parseInt(pokemon.max_hp) * 100);
 }
@@ -439,8 +443,6 @@ function getSpecificPokemonFromCode(code) {
 
 function generateRouteFromCodeIndex(index) {
     let pokemonKey = Object.entries(pokedex)[index];
-    console.log(pokemonKey);
-    console.log(index);
 
     let route = {
         id: "specific_" + index,
@@ -503,8 +505,8 @@ function evolvePokemon(id, newPokedexId, needed_item, needed_quantity) {
             owned_pokemons[key].hp = owned_pokemons[key].max_hp;
             owned_pokemons[key].attack = getAttackOfPokemon(newPokedexId, owned_pokemons[key].level);
             owned_pokemons[key].sprite = GetSpriteByPokemon(owned_pokemons[key].pokedexId, owned_pokemons[key].isShiny);
-            pokedex[newPokedexId].has_been_seen = true;
-            pokedex[newPokedexId].has_been_captured = true;
+            pokemonHasBeenSeen(newPokedexId);
+            pokemonHasBeenCaptured(newPokedexId);
             const updateYourPokemonEvent = new CustomEvent("updateYourPokemonEvent", {});
             document.dispatchEvent(updateYourPokemonEvent);
             removeItemInInventoryById(needed_item, needed_quantity);
@@ -750,4 +752,37 @@ function restoreLocalStorageFromFile() {
     });
 
     input.click();
+}
+
+function setEggInInventory(egg) {
+    if (eggs != null) {
+        showNotification("Vous avez déjà un oeuf", "error");
+        return;
+    } else {
+        eggs = egg;
+        updateEggs();
+    }
+}
+
+function formatDateEgg(myDate) {
+    myDate = new Date(myDate);
+    return myDate.toLocaleDateString("fr-FR", {
+        day: "numeric",
+        month: "long",
+        hour: "numeric",
+        minute: "2-digit",
+        hour12: false, // Format 24h
+    }).replace(":", "h"); // Remplace ":" par "h"
+}
+
+function atchPokemonEgg() {
+    owned_pokemons.push(eggs.pokemon);
+    pokemonHasBeenSeen(eggs.pokemon.pokedexId);
+    pokemonHasBeenCaptured(eggs.pokemon.pokedexId);
+    updateOwnedPokemons();
+    forceInTeamIfNeeded();
+    let poketemp = eggs.pokemon;
+    eggs = null;
+    updateEggs();
+    return poketemp;
 }
