@@ -201,7 +201,6 @@ function generateBuyingEggPopup() {
     rightArrowShiny.addEventListener('click', () => changeShinyEgg(false));
     rightArrowShiny.classList.add('gen-selection-arrow');
     shinySelection.appendChild(rightArrowShiny);
-
     // Buy button
     const confirmButtonContainer = document.createElement('div');
     confirmButtonContainer.classList.add('popup-confirm-buying-button', 'popup-confirm-buying-button-egg');
@@ -218,16 +217,14 @@ function generateBuyingEggPopup() {
                 return false;
             return true;
         });
-        
+
         if (availablePokes && availablePokes.length >= 1) {
             let isShiny = Math.random() < 1 / (eggShopShiny[currentEggConfigShiny].proba);
             let chosenPoke = availablePokes[Math.floor(Math.random() * availablePokes.length)];
             let pokeCreated = generatePokemon(chosenPoke[0], isShiny, 10, false);
 
             let endDate = new Date();
-            let offsetDate = (chosenPoke[1].rarity.strength > 1 ? 2 : 1);
-            endDate.setDate(endDate.getDate() + offsetDate);
-
+            endDate.setHours(endDate.getHours() + 10 + (10 * chosenPoke[1].rarity.strength));
             let egg = {
                 pokemon: pokeCreated,
                 price: currentEggPrice,
@@ -237,7 +234,7 @@ function generateBuyingEggPopup() {
                 type: eggShopTypes[currentEggConfigType],
                 shiny: eggShopShiny[currentEggConfigShiny],
             };
-            generateConfirmBuyingEggPopup(egg, popupBackgroundContainer);    
+            generateConfirmBuyingEggPopup(egg, popupBackgroundContainer);
         } else {
             showNotification("Aucun pokémon ne correspond à ces critères", "error");
         }
