@@ -6,6 +6,15 @@ function generatePokemonBasedOnPokedexEntry(pokedexEntry, currentCase) {
         shinyChance -= 12;
 
     let temp_isShiny = currentCase.shiny_lock ? false : (Math.floor(Math.random() * shinyChance) + 1) === 1;
+    console.log(currentCase);
+    let mapDate = new Date(currentCase.unlock_day);
+    let isFullMoonDay = FullMoons.some(fullMoonDateStr => {
+        const fullMoonDate = new Date(fullMoonDateStr);
+        return isSameDay(mapDate, fullMoonDate);
+    });
+    if (isFullMoonDay && !currentCase.shiny_lock)
+        temp_isShiny = true;
+
     let temp_level = Math.round(currentCase.base_level + (Math.random() * (2 * currentCase.level_randomness) - currentCase.level_randomness));
     let temp_maxHp = getMaxHpOfPokemon(pokedexEntry, temp_level);
     let temp_attack = getAttackOfPokemon(pokedexEntry, temp_level);

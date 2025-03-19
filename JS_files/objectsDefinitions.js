@@ -19,6 +19,7 @@ let forceTrainerCardUpdate = false; // While developping, will force trainer car
 let forceEnemyTrainerUpdate = false; // While developping, will force enemy trainers to update at each session
 let forceItemsCodeUpdate = false; // While developping, will force items code to update at each session
 let forceUpdatesDoneUpdate = false; // While developping, will force updates done to update at each session
+let forceEggsUpdate = false; // While developping, will force updates done to eggs at each session
 
 function CreatePokedex() {
     let stored_content = localStorage.getItem("pokedex");
@@ -126,7 +127,7 @@ function CreateItemsCode() {
 function CreateEggs() {
     let stored_content = localStorage.getItem("eggs");
 
-    if (!stored_content) {
+    if (!stored_content || forceEggsUpdate) {
         eggs = null;
         localStorage.setItem("eggs", JSON.stringify(eggs));
         console.log("Oeuf initialisé.");
@@ -216,6 +217,7 @@ function HardReset() {
     forceEnemyTrainerUpdate = true;
     forceItemsCodeUpdate = true;
     forceUpdatesDoneUpdate = true;
+    forceEggsUpdate = true;
     Setup();
 }
 

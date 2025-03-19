@@ -1,7 +1,7 @@
 function chanceOnX(x) {
     // Générer un nombre aléatoire entre 1 et x
     const randomNumber = Math.floor(Math.random() * x) + 1;
-    
+
     // Si le nombre est égal à 1, alors l'événement se produit (1 chance sur 30)
     return randomNumber === 1;
 }
@@ -26,9 +26,14 @@ function getBiggestIdMap() {
     return biggest;
 }
 
-function getRandomPokemonForRandomRoute(numPokemons = 3) {
+function getRandomPokemonForRandomRoute(numPokemons = 3, mapDate) {
+    let isNewMoonDay = NewMoons.some(newMoonDateStr => {
+        const newMoonDate = new Date(newMoonDateStr);
+        return isSameDay(mapDate, newMoonDate);
+    });
+
     const selectedPokemons = [];
-    const rarityPossible = getRarityWeightedList();
+    const rarityPossible = getRarityWeightedList(isNewMoonDay);
     let mustWeRollRarity = true;
     let randomRarity = "";
 
@@ -49,8 +54,16 @@ function getRandomPokemonForRandomRoute(numPokemons = 3) {
     return selectedPokemons;
 }
 
-function getRarityWeightedList() {
+function getRarityWeightedList(isNewMoon) {
     let raritiesPossible = [];
+
+    if (isNewMoon) {
+        raritiesPossible.push("EPIC");
+        raritiesPossible.push("EPIC");
+        raritiesPossible.push("EPIC");
+        raritiesPossible.push("LEGENDARY");
+        return raritiesPossible;
+    }
 
     for (let i = 0; i < 1; i++)
         raritiesPossible.push("LEGENDARY");
@@ -67,14 +80,29 @@ function getRarityWeightedList() {
 }
 
 function createSingleMapRandom(mapDate, idOffset) {
-    let pokemonKeys = getRandomPokemonForRandomRoute();
+    let isFullMoonDay = FullMoons.some(fullMoonDateStr => {
+        const fullMoonDate = new Date(fullMoonDateStr);
+        return isSameDay(mapDate, fullMoonDate);
+    });
+    let isNewMoonDay = NewMoons.some(newMoonDateStr => {
+        const newMoonDate = new Date(newMoonDateStr);
+        return isSameDay(mapDate, newMoonDate);
+    });
+
+    let name = "Une nouvelle rencontre est là !";
+    if (isNewMoonDay)
+        name = "Événement de nouvelle Lune";
+    else if (isFullMoonDay)
+        name = "Événement de pleine Lune";
+
+    let pokemonKeys = getRandomPokemonForRandomRoute(3, mapDate);
     let numberLocation = Math.floor(Math.random() * 43) + 1;
     let formattedNumber = numberLocation.toString().padStart(2, '0');
 
     let newMap = {
         id: getDailyUniqueId() + idOffset,
         code: '',
-        name: "Une nouvelle rencontre est là !",
+        name: name,
         sprite: "./sprites/locations/location_" + formattedNumber + ".png",
         unlock_day: new Date(mapDate).toISOString(),
         has_been_used: false,
@@ -157,6 +185,16 @@ function formatDate(date) {
 function GenerateSingleRouteDisplay(route) {
     const currentDate = new Date(); // Date actuelle
 
+    let mapDate = new Date(route.unlock_day)
+    let isFullMoonDay = FullMoons.some(fullMoonDateStr => {
+        const fullMoonDate = new Date(fullMoonDateStr);
+        return isSameDay(mapDate, fullMoonDate);
+    });
+    let isNewMoonDay = NewMoons.some(newMoonDateStr => {
+        const newMoonDate = new Date(newMoonDateStr);
+        return isSameDay(mapDate, newMoonDate);
+    });
+
     // Créer l'élément div avec la classe 'route-display'
     const routeDisplay = document.createElement('div');
     routeDisplay.classList.add('route-display');
@@ -180,22 +218,29 @@ function GenerateSingleRouteDisplay(route) {
     labelElement.classList.add('route-label');
     let isAvailable = isPastTodayOrToday(route.unlock_day);
     labelElement.textContent = isAvailable ? "Disponible maintenant !" : `Disponible le ${formatDate(route.unlock_day)}`;
+    if (isNewMoonDay && !isAvailable)
+        labelElement.textContent = "Événement de nouvelle Lune";
+    else if (isFullMoonDay && !isAvailable)
+        labelElement.textContent = "Événement de pleine Lune";
 
     // Ajouter l'image et le label dans le 'route-display'
     imgElementContainer.appendChild(imgElement);
     if (!isAvailable) {
         imgElementContainer.appendChild(imgLock);
-        routeDisplay.addEventListener('click', function() {
-            showNotification(`Disponible le ${formatDate(route.unlock_day)} à minuit`, "validation");
+        routeDisplay.addEventListener('click', function () {
+            showNotification(`événement disponible le ${formatDate(route.unlock_day)} à minuit`, "validation");
         });
     } else {
-        routeDisplay.addEventListener('click', function() {
+        routeDisplay.addEventListener('click', function () {
             generateStartRoutePopup(route);
         });
     }
 
     routeDisplay.appendChild(imgElementContainer);
     routeDisplay.appendChild(labelElement);
+
+    if (isNewMoonDay || isFullMoonDay)
+        imgElement.style.filter = "brightness(0.4) contrast(1.5) sepia(0.2) hue-rotate(180deg)";
 
     return routeDisplay;
 }

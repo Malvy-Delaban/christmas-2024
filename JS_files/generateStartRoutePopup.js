@@ -1,4 +1,14 @@
 function generateStartRoutePopup(route) {
+    let mapDate = new Date(route.unlock_day)
+    let isFullMoonDay = FullMoons.some(fullMoonDateStr => {
+        const fullMoonDate = new Date(fullMoonDateStr);
+        return isSameDay(mapDate, fullMoonDate);
+    });
+    let isNewMoonDay = NewMoons.some(newMoonDateStr => {
+        const newMoonDate = new Date(newMoonDateStr);
+        return isSameDay(mapDate, newMoonDate);
+    });
+
     // Créer les éléments principaux
     const popupBackgroundContainer = document.createElement('div');
     popupBackgroundContainer.classList.add('popup-background');
@@ -60,4 +70,8 @@ function generateStartRoutePopup(route) {
     popupContainer.appendChild(popupContent);
     popupBackgroundContainer.appendChild(popupContainer);
     document.body.appendChild(popupBackgroundContainer);
+
+    if (isNewMoonDay || isFullMoonDay) {
+        routeImg.style.filter = "brightness(0.4) contrast(1.5) sepia(0.2) hue-rotate(180deg)";
+    }
 }
