@@ -27,13 +27,13 @@ function CreatePokedex() {
     if (!stored_content || forcePokedexUpdate) {
         pokedex = setup_pokedex;
         localStorage.setItem("pokedex", JSON.stringify(pokedex));
+        setEvolvingRelations();
         console.log("Pokédex initialisé.");
     } else {
         console.log("Une sauvegarde du Pokedex existe déjà. Utilisation de la sauvegarde.");
         pokedex = JSON.parse(stored_content);
         CheckForUpdatesInPokedex();
     }
-    setEvolvingRelations();
 }
 
 function CreateMapCases() {
@@ -177,18 +177,23 @@ function ClearPreviousSavesOnUpdateDates() {
 function CheckForUpdatesInMapCases() {
     setup_map_cases.forEach(element => {
         if (!map_cases.find(map_case => map_case.id === element.id))
-                map_cases.push(element);
+            map_cases.push(element);
     });
     updateMapCases();
 }
 
 function CheckForUpdatesInPokedex() {
+    let mustBeFixed = false;
+
     for (let element in setup_pokedex) {
         let elementId = setup_pokedex[element].id;
         if (!Object.values(pokedex).some(map_case => map_case.id === elementId)) {
             pokedex[element] = setup_pokedex[element];
+            mustBeFixed = true;
         }
     }
+    if (mustBeFixed)
+        setEvolvingRelations();
     updatePokedex();
 }
 
@@ -229,9 +234,56 @@ function FixPokemonLevel() {
 }
 
 function FixCatchedPokemon() {
-    owned_pokemons.forEach(pokemon => {
-        pokedex[pokemon.pokedexId].has_been_seen = true;
-        pokedex[pokemon.pokedexId].has_been_captured = true;
+    // Créer un tableau avec les pokedexId des Pokémon détenus
+    let ownedPokemonIds = owned_pokemons.map(pokemon => pokemon.pokedexId);
+
+    // Parcourir chaque Pokémon détenu et mettre à jour les informations
+    ownedPokemonIds.forEach(pokedexId => {
+        let current = pokedex[pokedexId];
+
+        // Marquer le Pokémon comme vu et capturé
+        current.has_been_seen = true;
+        current.has_been_captured = true;
+
+        // Vérifier si des Pokémon ont cette évolution et ajouter leur ID
+        Object.values(pokedex).forEach(pokemon => {
+            if (pokemon.evolving_pokemon.some(evo => evo.id === getKeyPokedexFromId(current.id))) {
+                ownedPokemonIds.push(getKeyPokedexFromId(pokemon.id));  // Ajouter le Pokémon qui évolue vers le courant
+            }
+        });
+    });
+
+    // Mettre à jour les pré-évolutions des Pokémon dans le tableau
+    ownedPokemonIds.forEach(id => {
+        let pokemon = pokedex[id];
+        pokemon.has_been_seen = true;
+        pokemon.has_been_captured = true;
+    });
+
+    // Mise à jour du Pokédex
+    updatePokedex();
+}
+
+// set seen and catched for currently owned pokemons, their prevolution and same for every catched pokemon ever
+function FixCatchedPokemon() {
+    let ownedPokemonIds = owned_pokemons.map(pokemon => pokemon.pokedexId);
+    Object.values(pokedex).filter(pokemon => pokemon.has_been_captured).forEach(pokemon => ownedPokemonIds.push(getKeyPokedexFromId(pokemon.id)));
+
+    function markEvolutions(pokedexId) {
+        let current = pokedex[pokedexId];
+        current.has_been_seen = true;
+        current.has_been_captured = true;
+        Object.values(pokedex).forEach(pokemon => {
+            pokemon.evolving_pokemon.forEach(evolution => {
+                if (evolution.id === current.id) {
+                    markEvolutions(getKeyPokedexFromId(pokemon.id));
+                }
+            });
+        });
+    }
+
+    ownedPokemonIds.forEach(pokedexId => {
+        markEvolutions(pokedexId);
     });
     updatePokedex();
 }

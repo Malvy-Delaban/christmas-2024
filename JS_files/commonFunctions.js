@@ -224,6 +224,7 @@ function GetThumbnailSpriteByPokemon(pokedexEntry, isShiny) {
     return spriteName;
 }
 
+// GetPokedexId GetId
 function getKeyPokedexFromId(targetId) {
     let foundKey = null;
 
