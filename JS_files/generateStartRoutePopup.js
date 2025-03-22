@@ -34,9 +34,17 @@ function generateStartRoutePopup(route) {
     });
     closeButton.classList.add('popup-close-icon');
 
+    const routeImgContainer = document.createElement('div');
+    routeImgContainer.classList.add('detail-start-route-img-container');
+
     const routeImg = document.createElement('img');
     routeImg.src = route.sprite;
     routeImg.classList.add('detail-start-route-img');
+    routeImgContainer.appendChild(routeImg);
+
+    const moonPhaseImgPokeball = document.createElement('img');
+    moonPhaseImgPokeball.src = "sprites/misc/moonball.png";
+    moonPhaseImgPokeball.classList.add('detail-start-route-img-moon-poke');
 
     const confirmButtonContainer = document.createElement('div');
     confirmButtonContainer.classList.add('popup-start-route-button');
@@ -63,7 +71,7 @@ function generateStartRoutePopup(route) {
 
     popupContent.appendChild(title);
     popupContent.appendChild(closeButton);
-    popupContent.appendChild(routeImg);
+    popupContent.appendChild(routeImgContainer);
     popupContent.appendChild(routeName);
     popupContent.appendChild(routeLevel);
     popupContent.appendChild(confirmButtonContainer);
@@ -73,5 +81,6 @@ function generateStartRoutePopup(route) {
 
     if (isNewMoonDay || isFullMoonDay) {
         routeImg.style.filter = "brightness(0.4) contrast(1.5) sepia(0.2) hue-rotate(180deg)";
+        routeImgContainer.appendChild(moonPhaseImgPokeball);
     }
 }

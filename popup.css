@@ -809,9 +809,24 @@
     width: 90%;
 }
 
-.detail-start-route-img {
+.detail-start-route-img-container {
     width: 90%;
     margin-top: 5rem;
+}
+
+.detail-start-route-img {
+    width: 100%;
+}
+
+.detail-start-route-img-moon-poke {
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    width: 15rem;
+    height: 15rem;
+    filter: drop-shadow(0 0 1rem black);
 }
 
 .detail-start-duel-img {
