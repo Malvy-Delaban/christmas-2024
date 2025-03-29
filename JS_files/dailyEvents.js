@@ -58,19 +58,16 @@ function isPastToday(dateString) {
 
 function isInXDays(dateString, x) {
     const targetDate = new Date(dateString);
-
-    // Get the current date at midnight
     const now = new Date();
-    now.setHours(0, 0, 0, 0);
 
-    // Set the target date to midnight
+    // Normaliser les dates à minuit
+    now.setHours(0, 0, 0, 0);
     targetDate.setHours(0, 0, 0, 0);
 
-    // Calculate the difference in days
-    const diffInDays = (targetDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24);
-
-    // Check if the difference matches x
-    return diffInDays === x;
+    // Ajouter x jours à la date actuelle et comparer
+    now.setDate(now.getDate() + x);
+    
+    return now.getTime() === targetDate.getTime();
 }
 
 function getDateInXDay(x) {
@@ -131,4 +128,5 @@ function DailyEvents() {
     updateTrainerCard();
 
     GenerateRoutesRandomly();
+    CheckForDuplicateDay();
 }

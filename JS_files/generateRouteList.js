@@ -157,6 +157,7 @@ function getRemainingMapCases() {
 
 function GenerateRoutesRandomly() {
     let doesTheyExistsAlready = getRemainingMapCases();
+    console.log(doesTheyExistsAlready);
     let newMaps = createNewMaps(doesTheyExistsAlready);
 
     newMaps.forEach(newRoute => {
@@ -164,6 +165,23 @@ function GenerateRoutesRandomly() {
     });
     updateMapCases();
 }
+
+function CheckForDuplicateDay() {
+    const seenDays = new Set();
+    
+    Object.keys(map_cases).forEach((key) => {
+        const caseItem = map_cases[key];
+        const day = caseItem.unlock_day; // Supposé être une date sous forme de string
+
+        if (seenDays.has(day)) {
+            map_cases[key].has_been_used = true; // Supprime l'entrée en double
+        } else {
+            seenDays.add(day); // Marque ce jour comme vu
+        }
+    });
+    updateMapCases();
+}
+
 
 function GetAllValidRouteToDisplay() {
     let routeToDisplay = [];
