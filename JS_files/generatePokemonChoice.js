@@ -6,7 +6,6 @@ function generatePokemonBasedOnPokedexEntry(pokedexEntry, currentCase) {
         shinyChance -= 12;
 
     let temp_isShiny = currentCase.shiny_lock ? false : (Math.floor(Math.random() * shinyChance) + 1) === 1;
-    console.log(currentCase);
     let mapDate = new Date(currentCase.unlock_day);
     let isFullMoonDay = FullMoons.some(fullMoonDateStr => {
         const fullMoonDate = new Date(fullMoonDateStr);

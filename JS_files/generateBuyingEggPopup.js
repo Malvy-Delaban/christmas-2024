@@ -1,7 +1,7 @@
 let currentEggConfigGen = 0;
 let currentEggConfigType = 0;
 let currentEggConfigShiny = 0;
-let eggDefaultPrice = 5;
+let eggDefaultPrice = 4;
 let currentEggPrice = eggDefaultPrice;
 
 function updateEggPrice() {

@@ -12,7 +12,6 @@ function generateAtchEggPopup(pokemon) {
 
     const title = document.createElement('p');
     title.classList.add('popup-confirm-buying-title');
-    console.log(pokemon.pokedexId);
     title.textContent = "Votre oeuf a éclos en " + pokedex[pokemon.pokedexId].name;
 
     const pokemonSprite = document.createElement('img');

@@ -157,7 +157,6 @@ function getRemainingMapCases() {
 
 function GenerateRoutesRandomly() {
     let doesTheyExistsAlready = getRemainingMapCases();
-    console.log(doesTheyExistsAlready);
     let newMaps = createNewMaps(doesTheyExistsAlready);
 
     newMaps.forEach(newRoute => {

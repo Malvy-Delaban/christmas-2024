@@ -164,7 +164,7 @@ function generateTodaysDuel() {
         rewards: [
             {
                 item: Items.ORAN_BERRY,
-                quantity: Math.floor(Math.random() * 4) + 1,
+                quantity: Math.floor(Math.random() * 2) + 3,
             },
         ],
         pokemons: [
