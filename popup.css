@@ -72,8 +72,10 @@
 
 /* Liste des Pokémon */
 .popup-content-wrapper {
-    flex-grow: 1; /* Permet au wrapper d'occuper l'espace restant */
-    overflow-y: auto; /* Scroll vertical uniquement dans ce wrapper */
+    flex-grow: 1;
+    /* Permet au wrapper d'occuper l'espace restant */
+    overflow-y: auto;
+    /* Scroll vertical uniquement dans ce wrapper */
 }
 
 .popup-content-your-pokemons-list {
@@ -85,7 +87,8 @@
     flex-direction: column;
     gap: 1rem;
     overflow-y: auto;
-    flex-grow: 1; /* Remplit tout l'espace disponible */
+    flex-grow: 1;
+    /* Remplit tout l'espace disponible */
     padding-bottom: 3rem;
 }
 
@@ -99,7 +102,8 @@
     flex-wrap: wrap;
     gap: 1rem;
     overflow-y: auto;
-    flex-grow: 1; /* Remplit tout l'espace disponible */
+    flex-grow: 1;
+    /* Remplit tout l'espace disponible */
 }
 
 /* Conteneur de chaque Pokémon */
@@ -174,7 +178,7 @@
     z-index: 8;
 }
 
-.popup-content-type-chip { 
+.popup-content-type-chip {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -188,21 +192,21 @@
     z-index: 10;
 }
 
-.popup-content-type-chip-text { 
+.popup-content-type-chip-text {
     color: white;
     font-size: 1.8rem;
     font-weight: 400;
     text-transform: uppercase;
 }
 
-.popup-content-gen-chip-text { 
+.popup-content-gen-chip-text {
     color: rgb(43 26 67);
     font-size: 2rem;
     font-weight: 700;
     text-transform: uppercase;
 }
 
-.pokemon-detail-type-chip { 
+.pokemon-detail-type-chip {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -212,7 +216,7 @@
     z-index: 10;
 }
 
-.pokemon-detail-type-chip-text { 
+.pokemon-detail-type-chip-text {
     color: white;
     font-size: 2rem;
     font-weight: bold;
@@ -385,12 +389,11 @@
 }
 
 .detail-pokemon-buttons {
-    width: 70%;
-    position: absolute;
-    bottom: 4rem;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    margin-bottom: 4rem;
 }
 
 .detail-pokemon-button {
@@ -450,6 +453,11 @@
     flex-direction: column;
     justify-content: center;
     padding: 4rem 0;
+}
+
+.popup-trainer-card {
+    height: 85%;
+    justify-content: start;
 }
 
 .popup-put-in-team-title,
@@ -588,7 +596,7 @@
     padding: 0;
 }
 
-.popup-evolution-type-chip { 
+.popup-evolution-type-chip {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -599,7 +607,7 @@
     width: 12rem;
 }
 
-.popup-evolution-type-chip-text { 
+.popup-evolution-type-chip-text {
     color: white;
     font-size: 2rem;
     font-weight: bold;
@@ -609,7 +617,7 @@
 }
 
 .popup-evolution-img {
-    height: 18rem; 
+    height: 18rem;
     width: 18rem;
 }
 
@@ -665,7 +673,8 @@
     flex-direction: column;
     gap: 1rem;
     overflow-y: auto;
-    flex-grow: 1; /* Remplit tout l'espace disponible */
+    flex-grow: 1;
+    /* Remplit tout l'espace disponible */
     padding-bottom: 3rem;
 }
 
@@ -712,7 +721,7 @@
 }
 
 .popup-content-item-price,
-.popup-content-item-quantity { 
+.popup-content-item-quantity {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -756,7 +765,7 @@
 }
 
 .popup-content-item-price-text,
-.popup-content-item-quantity-text { 
+.popup-content-item-quantity-text {
     color: white;
     font-size: 2rem;
     font-weight: 800;
@@ -868,6 +877,7 @@
 
 .popup-confirm-buying-button-egg {
     margin-top: 5rem;
+    margin-bottom: 4rem;
 }
 
 .popup-trainer-card-button-dwl-save {
@@ -893,6 +903,12 @@
     justify-content: center;
     align-items: center;
     color: #685189;
+}
+
+#multiplier-assist-text,
+#multiplier-assist-text-random {
+    font-size: 2rem;
+    margin-left: 1rem;
 }
 
 .popup-egg-shop-button {
@@ -954,7 +970,7 @@
     align-items: center;
     font-size: 2rem;
     font-weight: bold;
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 
 .detail-pokedex-icon {
@@ -970,7 +986,7 @@
 
 .popup-trainer-card-captured-pokemons,
 .popup-trainer-card-seen-pokemons {
-    width: 90%;
+    width: 100%;
     color: #463460;
     font-size: 2rem;
     font-weight: bold;
@@ -1217,4 +1233,65 @@
     color: white;
     font-size: 2rem;
     font-weight: 600;
+}
+
+.assist-mode-line {
+    width: 100%;
+    font-size: 2rem;
+}
+
+/* Masque la checkbox native */
+.checkbox-container input[type="checkbox"] {
+    display: none;
+}
+
+/* Style du label qui remplace la checkbox */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    font-size: 2.2rem;
+    font-weight: 600;
+    font-family: Arial, sans-serif;
+    user-select: none;
+    color: #463460;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+/* Création de la checkbox stylisée */
+.checkbox-custom {
+    width: 3rem;
+    height: 3rem;
+    border: 0.3rem solid #463460;
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    margin-right: 1rem;
+}
+
+/* Coche affichée lorsqu'elle est cochée */
+.checkbox-custom::after {
+    content: "✔";
+    font-size: 2rem;
+    color: white;
+    display: none;
+}
+
+/* Changement d'état au clic */
+.checkbox-container input[type="checkbox"]:checked+.checkbox-custom {
+    background-color: #463460;
+    border-color: #463460;
+}
+
+.checkbox-container input[type="checkbox"]:checked+.checkbox-custom::after {
+    display: block;
+}
+
+/* Effet au survol */
+.checkbox-container:hover .checkbox-custom {
+    border-color: #463460;
 }

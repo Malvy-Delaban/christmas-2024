@@ -594,7 +594,7 @@ function getTypeKeyById(typeId) {
     return typeFound;
 }
 
-function getAttackDamage(attackingPokemon, defendingPokemon, isRandomAttack, randomType) {
+function getAttackDamageMultiplier(attackingPokemon, defendingPokemon, isRandomAttack, randomType) {
     let attackingType = isRandomAttack ? randomType : pokedex[attackingPokemon.pokedexId].type;
     let defendingType = getTypeKeyById(pokedex[defendingPokemon.pokedexId].type.id);
     let listOfStrength = attackingType.strength;
@@ -603,7 +603,7 @@ function getAttackDamage(attackingPokemon, defendingPokemon, isRandomAttack, ran
     let typeAdvantageModifier = 1;
 
     if (listOfStrength.includes(defendingType)) {
-        typeAdvantageModifier = 1.2;
+        typeAdvantageModifier = 1.5;
     } else if (listOfWeakness.includes(defendingType)) {
         typeAdvantageModifier = 0.5;
     } else if (listOfNulls.includes(defendingType)) {
@@ -611,7 +611,14 @@ function getAttackDamage(attackingPokemon, defendingPokemon, isRandomAttack, ran
     }
 
     let randomNerfModifier = isRandomAttack ? 0.8 : 1;
-    let damages = attackingPokemon.attack * typeAdvantageModifier * randomNerfModifier;
+    let multiplier = typeAdvantageModifier * randomNerfModifier;
+
+    return multiplier;
+}
+
+function getAttackDamage(attackingPokemon, defendingPokemon, isRandomAttack, randomType) {
+    let multiplier = getAttackDamageMultiplier(attackingPokemon, defendingPokemon, isRandomAttack, randomType);
+    let damages = attackingPokemon.attack * multiplier;
     damages = Math.floor(damages);
 
     return damages;

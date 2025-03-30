@@ -102,11 +102,21 @@ function generatePokedexPopup() {
     const pokemonList = document.createElement('div');
     pokemonList.classList.add('popup-content-pokedex-list');
 
+    const seenPokemon = document.createElement('div');
+    seenPokemon.classList.add('popup-trainer-card-seen-pokemons');
+    seenPokemon.textContent = "Pokémons vus : " + getSeenPokemonNmbr();
+
+    const capturedPokemon = document.createElement('div');
+    capturedPokemon.classList.add('popup-trainer-card-captured-pokemons');
+    capturedPokemon.textContent = "Pokémons capturés : " + getCapturedPokemonNmbr();
+
     fillPokedexsPopup(pokemonList);
     addListenerYourPokemonsPopup(pokemonList);
 
     pokemonListWrapper.appendChild(pokemonList);
     popupContent.appendChild(titleLine);
+    popupContent.appendChild(seenPokemon);
+    popupContent.appendChild(capturedPokemon);
     popupContent.appendChild(pokemonListWrapper);
     popupContainer.appendChild(popupContent);
     popupBackgroundContainer.appendChild(popupContainer);

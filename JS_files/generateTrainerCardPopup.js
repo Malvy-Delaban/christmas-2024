@@ -21,7 +21,7 @@ function generateTrainerCardPopup() {
     const title = document.createElement('p');
     title.classList.add('popup-trainer-card-title');
     title.textContent = "Carte de dresseur";
-    
+
     const closeButton = document.createElement('img');
     closeButton.src = 'sprites/misc/cross_icon.png';
     closeButton.style.cursor = 'pointer';
@@ -45,19 +45,11 @@ function generateTrainerCardPopup() {
     trainerName.name = 'enterName';
     trainerName.classList.add('detail-trainer-card-name');
 
-    trainerName.addEventListener('input', function(event) {
+    trainerName.addEventListener('input', function (event) {
         trainer_card.name = event.target.value;
         updateTrainerCard();
     });
 
-    const seenPokemon = document.createElement('div');
-    seenPokemon.classList.add('popup-trainer-card-seen-pokemons');
-    seenPokemon.textContent = "Pokémons vus : " + getSeenPokemonNmbr();
-
-    const capturedPokemon = document.createElement('div');
-    capturedPokemon.classList.add('popup-trainer-card-captured-pokemons');
-    capturedPokemon.textContent = "Pokémons capturés : " + getCapturedPokemonNmbr();
-    
     const pokedexContainer = document.createElement('div');
     pokedexContainer.classList.add('detail-pokedex-container');
 
@@ -78,6 +70,34 @@ function generateTrainerCardPopup() {
 
     const buttonsContainer = document.createElement('div');
     buttonsContainer.classList.add('popup-trainer-card-buttons-container');
+
+    const label = document.createElement("label");
+    label.className = "checkbox-container";
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.id = "combat-mode";
+    if (!trainer_card.assist_mode)
+        checkbox.checked = false;
+    else
+        checkbox.checked = true;
+    checkbox.addEventListener("change", function () {
+        if (checkbox.checked) {
+            console.log("Mode combat assisté activé !");
+            trainer_card.assist_mode = true;
+            updateTrainerCard();
+        } else {
+            console.log("Mode combat assisté désactivé !");
+            trainer_card.assist_mode = false;
+            updateTrainerCard();
+        }
+    });
+    const customCheckbox = document.createElement("span");
+    customCheckbox.className = "checkbox-custom";
+    const labelText = document.createTextNode("Mode combat assisté");
+    label.appendChild(checkbox);
+    label.appendChild(customCheckbox);
+    label.appendChild(labelText);
+    buttonsContainer.appendChild(label);
 
     const eventCodeButton = document.createElement('div');
     eventCodeButton.classList.add('popup-trainer-card-button');
@@ -105,19 +125,15 @@ function generateTrainerCardPopup() {
     LoadSaveButton.classList.add('popup-trainer-card-button', 'popup-trainer-card-button-load-save');
     LoadSaveButton.style.cursor = 'pointer';
     LoadSaveButton.textContent = "Charger une sauvegarde";
-
     LoadSaveButton.addEventListener('click', () => {
         restoreLocalStorageFromFile();
     });
-
     buttonsContainer.appendChild(LoadSaveButton);
 
     popupContent.appendChild(title);
     popupContent.appendChild(closeButton);
     popupContent.appendChild(trainerImg);
     popupContent.appendChild(trainerName);
-    popupContent.appendChild(seenPokemon);
-    popupContent.appendChild(capturedPokemon);
     popupContent.appendChild(pokedexContainer);
     popupContent.appendChild(buttonsContainer);
     popupContainer.appendChild(popupContent);

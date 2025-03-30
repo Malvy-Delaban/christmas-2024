@@ -99,6 +99,9 @@ function fillChoicesContainer(parentDiv) {
     ownTypeAttack.id = "duel-own-type-button";
     ownTypeAttack.textContent = "-";
 
+    const multiplierAssist = document.createElement('div');
+    multiplierAssist.id = 'multiplier-assist-text';
+    multiplierAssist.textContent = "";
 
     const ownTypeAttackLogo = document.createElement('img');
     ownTypeAttackLogo.className = 'duel-button-own-logo';
@@ -113,18 +116,26 @@ function fillChoicesContainer(parentDiv) {
     randomTypeAttack.className = 'duel-button';
     randomTypeAttack.id = "duel-random-type-button";
     randomTypeAttack.textContent = "-";
-
+    
+    const multiplierAssistRandom = document.createElement('div');
+    multiplierAssistRandom.id = 'multiplier-assist-text-random';
+    multiplierAssistRandom.textContent = "";
+    
     const randomTypeAttackLogo = document.createElement('img');
     randomTypeAttackLogo.className = 'duel-random-type-button';
     randomTypeAttackLogo.id = "duel-button-random-logo";
     randomTypeAttackLogo.src = "-";
-
+    
     const changePokemonButton = document.createElement('div');
     changePokemonButton.className = 'change-pokemon';
     changePokemonButton.id = 'switch-pokemon';
     changePokemonButton.textContent = "Changer de Pokémon";
     changePokemonButton.classList.add("player-turn-only");
-
+    
+    console.log(ownTypeAttack);
+    ownTypeAttack.appendChild(multiplierAssist);
+    console.log(ownTypeAttack);
+    randomTypeAttack.appendChild(multiplierAssistRandom);
     ownTypeAttackLine.appendChild(ownTypeAttack);
     ownTypeAttackLine.appendChild(ownTypeAttackLogo);
     randomTypeAttackLine.appendChild(randomTypeAttack);
@@ -455,19 +466,39 @@ function showButtonsChoices(enemy, randomType) {
     removeAllEventListeners(ownTypeButton);
     ownTypeButton = document.getElementById("duel-own-type-button");
     ownTypeButton.textContent = getAttackNameByRarity(pokedex[playerTeam[0].pokedexId].rarity, pokedex[playerTeam[0].pokedexId].type, false);
+
+    let multiplierAssist = document.getElementById('multiplier-assist-text');
+    if (!multiplierAssist) {
+        multiplierAssist = document.createElement('div');
+        multiplierAssist.id = "multiplier-assist-text";
+    }
+    if (trainer_card && trainer_card.assist_mode)
+        multiplierAssist.textContent = "(x" + (Math.round(getAttackDamageMultiplier(playerTeam[0], enemy.team[0], false, null) * 10) / 10) + ")";
+    ownTypeButton.appendChild(multiplierAssist);
+    
     ownTypeButton.addEventListener('click', () => {
         hideButtonsChoices();
         let damages = getAttackDamage(playerTeam[0], enemy.team[0], false, null);
         attackEnemy(enemy, damages, null);
     });
-
+    
     const ownTypeLogo = document.getElementById("duel-button-own-logo");
     ownTypeLogo.src = "sprites/types/" + pokedex[playerTeam[0].pokedexId].type.name + ".png";
-
+    
     let randomTypeButton = document.getElementById("duel-random-type-button");
     removeAllEventListeners(randomTypeButton);
     randomTypeButton = document.getElementById("duel-random-type-button");
     randomTypeButton.textContent = getAttackNameByRarity(null, randomType, true);
+    
+    let multiplierAssistRandom = document.getElementById('multiplier-assist-text-random');
+    if (!multiplierAssistRandom) {
+        multiplierAssistRandom = document.createElement('div');
+        multiplierAssistRandom.id = "multiplier-assist-text-random";
+    }
+    if (trainer_card && trainer_card.assist_mode)
+        multiplierAssistRandom.textContent = "(x" + (Math.round(getAttackDamageMultiplier(playerTeam[0], enemy.team[0], true, randomType) * 10) / 10) + ")";
+    randomTypeButton.appendChild(multiplierAssistRandom);
+
     randomTypeButton.addEventListener('click', () => {
         hideButtonsChoices();
         let damages = getAttackDamage(playerTeam[0], enemy.team[0], true, randomType);
